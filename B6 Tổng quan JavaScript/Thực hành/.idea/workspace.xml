@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2470c40-115e-4ab2-9e50-f0b7c1c86c19" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/.idea/B5 HTML Form &amp; Table.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/Thuc hanh/[Thực hành] Tạo form cơ bản/.idea/[Thực hành] Tạo form cơ bản.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../B5 HTML Form &amp; Table/Thuc hanh/simpleform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[Thực hành] Hiển thị đầu ra.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[Thực hành] Nhúng JavaScript 2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[Thực hành] Nhúng JavaScript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[thuchanh]sudungham_console.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[thực hành] hiển thị kết quả sử dụng hàm document.write.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhungma-html.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1wFI4q5GcexnnjjLQ23jZQXcRBj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2470c40-115e-4ab2-9e50-f0b7c1c86c19" name="Default Changelist" comment="" />
+      <created>1628047721098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628047721098</updated>
+      <workItem from="1628047722320" duration="3610000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
