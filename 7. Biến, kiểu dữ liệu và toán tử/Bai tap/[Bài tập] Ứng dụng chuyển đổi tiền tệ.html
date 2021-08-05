@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<p></p>
+
+
+<p>Tiện ích chuyển đổi tiền tệ</p>
+
+<table cellspacing="6" cellpadding="10">
+    <tr>
+        <th>Amount</th>
+        <th>From Curency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" id="amount"></td>
+        <td><select id="fromCurrency" style="width: 120px">
+            <option>VND</option>
+            <option>USD</option>
+        </select></td>
+        <td><select id="toCurrency" style="width: 120px">
+            <option>USD</option>
+            <option>VND</option>
+        </select></td>
+        <td><button style="width: 120px" onclick="convert()">Convert</button></td>
+    </tr>
+    <tr>
+        <td><p id="result"> </p></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+
+<script>
+    function convert() {
+        let amount = document.getElementById("amount").value;
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        if (isNaN(amount) || amount <= 0) {
+            document.getElementById('result').innerText = "Số tiền bạn nhập không phải là số hoặc số âm";
+        } else {
+            if (fromCurrency == "USD" && toCurrency == "VND") {
+                document.getElementById('result').innerText = "Kết quả là " + amount * 23000;
+            } else if (fromCurrency == "VND" && toCurrency == "USD")
+            {
+                document.getElementById('result').innerText ="Kết quả là "  + amount/23000;
+            }
+            else
+            {
+                document.getElementById('result')= "Loại tiền bạn nhập không chính xác";
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
