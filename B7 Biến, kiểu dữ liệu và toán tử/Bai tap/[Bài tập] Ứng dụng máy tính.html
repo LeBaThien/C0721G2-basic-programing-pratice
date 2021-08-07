@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>[Bài tập] Ứng dụng máy tính</title>
-    
+
     <style>
-        table{
+        table {
             border: solid 2px;
-            width: 80px; height: 20px;
+            width: 80px;
+            height: 20px;
         }
+
         th {
-            width: 60px; height:20px ;
+            width: 60px;
+            height: 20px;
 
         }
-        td{
-            width: 40px ; height: 20px;
+
+        td {
+            width: 40px;
+            height: 20px;
 
         }
     </style>
@@ -28,10 +33,18 @@
 
     </tr>
     <tr>
-        <td ><button id="addition" onclick="add1()">Addition(+)</button></td>
-        <td ><button id="subtraction" onclick="add2()">Subtraction(-)</button></td>
-        <td ><button id="multiplication" onclick="add3()">Multiplication(x)</button></td>
-        <td ><button id="division" onclick="add4 ()">division(/)</button></td>
+        <td>
+            <button id="addition" onclick="add ()">Addition(+)</button>
+        </td>
+        <td>
+            <button id="subtraction" onclick="sub ()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button id="multiplication" onclick="multip ()">Multiplication(x)</button>
+        </td>
+        <td>
+            <button id="division" onclick="div ()">division(/)</button>
+        </td>
     </tr>
     <td><b>Kết quả</b></td>
     <td id="result"></td>
@@ -39,33 +52,40 @@
 </table>
 
 <script>
-    function add1 (){
-    let number1 = document.getElementById("nhapVao1").value;
-    let number2 = document.getElementById("nhapVao2").value;
-   //alert(number1*1 + number2*1);
-        document.getElementById('result').innerText = number1*1 + number2*1;
+    function add() {
+        let number1 = document.getElementById("nhapVao1").value;
+        let number2 = document.getElementById("nhapVao2").value;
+        //alert(number1*1 + number2*1);
+        document.getElementById('result').innerText = number1 * 1 + number2 * 1;
     }
 
-    function add2 () {
-    let number3 = document.getElementById("nhapVao1").value;
-    let number4 = document.getElementById("nhapVao2").value;
-    // alert(number3*1 - number4*1);
-        document.getElementById('result').innerText = (number3*1) - (number4*1);
+    function sub() {
+        let number3 = document.getElementById("nhapVao1").value;
+        let number4 = document.getElementById("nhapVao2").value;
+        // alert(number3*1 - number4*1);
+        document.getElementById('result').innerText = (number3 * 1) - (number4 * 1);
     }
 
-    function add3 () {
-    let number5 = document.getElementById("nhapVao1").value;
-    let number6 = document.getElementById("nhapVao2").value;
-    // alert((number5*1) * (number6*1) );
-        document.getElementById('result').innerText = (number5*1) * (number6*1);
+    function multip() {
+        let number5 = document.getElementById("nhapVao1").value;
+        let number6 = document.getElementById("nhapVao2").value;
+        // alert((number5*1) * (number6*1) );
+        document.getElementById('result').innerText = (number5 * 1) * (number6 * 1);
     }
 
-    function add4 () {
-    let number7 = document.getElementById("nhapVao1").value;
-    let number8 = document.getElementById("nhapVao2").value;
-    // alert((number7*1) / (number8*1));
-        document.getElementById('result').innerText = (number7*1) / (number8*1);
+
+    function div() {
+        let number7 = document.getElementById("nhapVao1").value;
+        let number8 = document.getElementById("nhapVao2").value;
+        // alert((number7*1) / (number8*1));
+        if (number8 == 0) {
+            alert('Mẫu số phải khác "0", vui lòng nhâp lại');
+        } else {
+            document.getElementById('result').innerText = (number7 * 1) / (number8 * 1);
+        }
+
     }
+
 
 </script>
 </body>

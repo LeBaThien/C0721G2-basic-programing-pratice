@@ -8,8 +8,8 @@
 <body>
     <script>
 
-        //biến a là độ C
-        //biến b là độ F
+        //biến degreeC là độ C
+        //biến degreeF là độ F
         //gán biến
     let doC ;
     // Tạo prompt cho biến
@@ -17,14 +17,15 @@
         doC = prompt('Nhập giá trị độ C vào dưới đây để chuyển qua độ F');
 
     //Trả về một integer
-    let a = parseInt(doC);
+    let degreeC = parseInt(doC);
 
-    let b = 9*a/5 + 32;
+    let degreeF = 9*degreeC/5 + 32;
     //Trả về một giá trị interger
-    let c = parseInt(b)
-    document.write('Độ F là: ' + c);
+    let result = parseInt(degreeF);
+    document.write('Độ F là: ' + result );
 
     </script>
 
 </body>
 </html>
+

@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Tạo form đơn giản 2</title>
+    <style>
+        body {
+            background-color: powderblue;
+            padding: 20px;
+            line-height: 30px;
+            
+        }
+        h1 {
+            text-decoration-line:underline;
+            text-align: center;
+            font-size: xx-large;
+            color:chocolate;
+
+        }
+
+        form {
+            color: midnightblue;
+            margin-left: 40px;
+        }
+    </style>
 </head>
 <body>
 <form action="" method="post">
-    <p><b>ĐĂNG KÝ HỌC VIÊN</b></p>
-    <label for="1" style="color:darkblue">Họ và tên</label>
+    <h1><b>ĐĂNG KÝ HỌC VIÊN</b></h1>
+
+    <label for="1" >Họ và tên</label>
     <input type="text" name="userName" id="1"><br>
 
-    <label for="2" style="color:darkblue">Ngày sinh</label>
+    <label for="2" >Ngày sinh</label>
     <input type="date" name="dateofbirth" id="2"><br>
 
-    <label style="color: darkblue">Giới tính</label>
+    <label >Giới tính</label>
     <input type="radio" name="Giới tính" value="Nam">Nam
     <input type="radio" name="Giới tính" value="Nữ">Nữ
     <br>
-    <label type="text" style="color: darkblue">Địa chỉ</label><br>
+    <label type="text" >Địa chỉ</label><br>
     <textarea cols="50" rows="5"></textarea><br>
 
     <label tyle="color: darkblue" >Lớp</label>
@@ -28,10 +49,10 @@
     </select>
     <br>
 
-    <label for="4" style="color:darkblue">Email</label>
+    <label for="4" >Email</label>
     <input type="text" name="Email" id="4"><br>
 
-    <label for="5" style="color:darkblue">Số điện thoại</label>
+    <label for="5" >Số điện thoại</label>
     <input type="number" name="Số điện thoại" id="5"><br>
 
 

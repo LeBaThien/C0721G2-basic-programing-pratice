@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        table {
+           padding: px;
+        border-spacing: 20px;
+        }
+
+        h1 {
+            font-size: larger;
+            color: darkred;
+        }
+        th {
+           font-size: larger;
+            color: darkblue;
+        }
+
+        td {
+            column-width: 200px;
+        }
+        input {
+            height: 20px;
+            width: 200px;
+        }
+        select {
+            height: 20px;
+            width: 200px
+        }
+    </style>
 </head>
 <body>
 <p></p>
 
+<h1>Tiện ích chuyển đổi tiền tệ</h1>
 
-<p>Tiện ích chuyển đổi tiền tệ</p>
-
-<table cellspacing="6" cellpadding="10">
+<table >
     <tr>
         <th>Amount</th>
         <th>From Curency</th>
@@ -19,15 +45,15 @@
     </tr>
     <tr>
         <td><input type="text" id="amount"></td>
-        <td><select id="fromCurrency" style="width: 120px">
+        <td><select id="fromCurrency" >
             <option>VND</option>
             <option>USD</option>
         </select></td>
-        <td><select id="toCurrency" style="width: 120px">
+        <td><select id="toCurrency" >
             <option>USD</option>
             <option>VND</option>
         </select></td>
-        <td><button style="width: 120px" onclick="convert()">Convert</button></td>
+        <td><button onclick="convert()">Convert</button></td>
     </tr>
     <tr>
         <td><p id="result"> </p></td>
@@ -54,7 +80,7 @@
             }
             else
             {
-                document.getElementById('result')= "Loại tiền bạn nhập không chính xác";
+                document.getElementById('result').innerText= "Loại tiền bạn nhập không chính xác";
             }
 
         }
