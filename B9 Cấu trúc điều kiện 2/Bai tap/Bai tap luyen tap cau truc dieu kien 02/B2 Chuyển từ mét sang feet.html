@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ mét sang feet.</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<p>Nhập số Mét vào ô bên dưới để chuyển sang Feet</p>
+<input id="donvi" type="number" >
+<br>
+<br>
+<button id="result" onclick="convert()" >Click để đổi</button>
+
+<script>
+
+    function convert() {
+        let unitMet = (document.getElementById('donvi').value);
+        let unitFeet = unitMet * 3.2008;
+        if (unitMet < 0) {
+            alert('Giá trị bạn nhập chưa chính xác, có thể là số âm, vui lòng nhập lại số khác')
+        } else {
+            document.getElementById('result').innerText = unitMet + " Mét bằng " + unitFeet + " Feet ";
+        }
+    }
+
+
+</script>
+</body>
+</html>

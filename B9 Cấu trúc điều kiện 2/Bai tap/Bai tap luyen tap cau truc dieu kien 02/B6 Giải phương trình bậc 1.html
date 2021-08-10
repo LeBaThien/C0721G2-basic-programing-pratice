@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Giải phương trình bậc 1</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+
+</head>
+<body>
+<p><b>Phương trình bậc 1 có dạng " ax + b = 0 "</b></p>
+<p><b></b></p>
+Nhập số a bất kì vào đây <input id="soA" type="number">
+<br>
+<br>
+Nhập số b bất kì vào đây <input id="soB" type="number">
+<br>
+<br>
+<button id="ketqua" onclick="solve()">Click vào đây để hiển thị kết quả</button>
+</body>
+<script>
+
+    function solve() {
+        let number1 = document.getElementById('soA').value;
+        let number2 = document.getElementById('soB').value;
+
+        let resultPt = (-number2) / number1;
+
+        if (number1 == 0) {
+            if (number2 == 0) {
+                document.getElementById('ketqua').innerText = "Phương trình vô số nghiệm";
+            } else {
+                document.getElementById('ketqua').innerText = "Phương trình vô nghiệm"
+            }
+        } else {
+            document.getElementById('ketqua').innerText = "Phương trình có nghiệm là " + resultPt;
+        }
+
+
+    }
+
+</script>
+</html>

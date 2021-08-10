@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id="image1" src="quabong.png" height="260" width="260"/>
+    <p>click button below to move the image to right</p>
+    <input type="button" value="click Me" onclick="moveRight();"/>
+
+</form>
+
+<script>
+    let imgObjective = null;
+    imgObjective = document.getElementById('image1');
+
+    function init() {
+        imgObjective = document.getElementById('image1');
+        imgObjective.style.position = 'relative';
+        imgObjective.style.left = '0px';
+
+    }
+
+    function moveRight() {
+        imgObjective.style.left = parseInt(imgObjective.style.left) + 10 + 'px';
+
+    }
+
+    window.onload = init;
+
+</script>
+
+</body>
+</html>

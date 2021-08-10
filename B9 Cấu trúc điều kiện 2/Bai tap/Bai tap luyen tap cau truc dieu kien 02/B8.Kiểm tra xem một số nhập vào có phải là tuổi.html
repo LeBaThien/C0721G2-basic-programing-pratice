@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0</b></p>
+    <p><b></b></p>
+    Nhập số TUỔI bất kì vào đây <input id="so1" type="number">
+    <br>
+    <br>
+    <button id="ketqua" onclick="solve()">Click vào đây để hiển thị kết quả</button>
+    <script>
+
+        function solve() {
+            let soTuoi = parseInt(document.getElementById('so1').value);
+            if (soTuoi > 0 && soTuoi <= 120) {
+                document.getElementById('ketqua').innerText = "Đúng rồi, đây là số tuổi đấy, dễ thế mà cũng nhập kakaka"
+            } else {
+                alert('Bạn vui lòng nhập lại thử, "Số tuổi là số nguyên, và chỉ tử 0 đến 120 tuổi thôi"');
+            }
+        }
+    </script>
+
+</body>
+</html>

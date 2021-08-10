@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính thuế thu nhập cá nhân.</title>
+    <style>
+        body, input, button {
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+<p><b>Chương trình tính thuế thu nhập cá nhân.</b></p>
+<p> Thuế thu nhập cá nhân = thu nhập * Chỉ số thuế TNCN.</p>
+<p> Thu nhập dưới 10 triệu, mức thuế suất là 0%</p>
+<p> Thu nhập trên 50 triệu, mức thuế suất là 10%</p>
+<p> Thu nhập trên 100 triệu, mức thuế suất là 15%</p>
+<p> Đơn vị tính theo tháng</p>
+
+<p><b></b></p>
+Nhập MỨC THU NHẬP bất kì vào đây <input id="so1" type="number">
+<br>
+<br>
+<button id="ketqua" onclick="solve()">Click vào đây để hiển thị kết quả</button>
+<script>
+
+    function solve() {
+        let income = parseFloat(document.getElementById('so1').value);
+        // console.log(income)
+
+        if (income <10 ) {
+            document.getElementById('ketqua').innerText = "Thuế TNCN của bạn là " + 0;
+        } else if (income>=10 && income <=50) {
+            document.getElementById('ketqua').innerText = "Thuế TNCN của bạn là " + income * 0.1;
+        } else if (income>100) {
+            document.getElementById('ketqua').innerText = "Thuế TNCN của bạn là " + income * 0.15;
+        } else {
+            alert('Bạn vui lòng nhập lại thử, TNCN là số dương, tính theo đơn vị triệu');
+        }
+    }
+</script>
+
+</body>

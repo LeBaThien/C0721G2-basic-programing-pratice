@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01- bai5</title>
+    <style>
+        input {
+            font-size: larger;
+        }
+        body {
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    Điểm bài kiểm tra số 1: <input type="number" id="bai01" >
+    <br>
+    <br>
+    Điểm bài kiểm tra giữa kỳ: <input type="number" id="bai02">
+    <br>
+    <br>
+    Điểm bài kiểm tra cuối kỳ: <input type="number" id="bai03">
+    <br>
+    <br>
+    <button onclick="kiemTra()">Kiểm tra xếp hạng học lực </button>
+    <script>
+
+    // tính điểm trung bình bằng cách: (test01 + test02*2 +test03*3)/6
+    // Xếp loại ĐTB >= 9: xếp loại giỏi, ĐTB >=7: loại khá, ĐTB>= 5: loại trung bình, Còn lại: Yếu
+
+
+    function kiemTra() {
+        // Chú ý:phải khai báo biến trong function thì mới được, ko thì sẽ xuất hiện lỗi NaN
+        let test01 = parseFloat(document.getElementById('bai01').value);
+        let test02 = parseFloat(document.getElementById('bai02').value);
+        let test03 = parseFloat(document.getElementById('bai03').value);
+        // parseFloat để chuyển thành thập phân
+        let averageScore = (test01 + test02*2 + test03*3)/6;
+
+        // console.log(averageScore);
+
+        if (averageScore >= 9) {
+            alert('giỏi');
+        } else if (averageScore >= 7) {
+            alert('khá');
+        } else if (averageScore >= 5) {
+            alert('trung bình');
+        } else {
+            alert('Yếu')
+        }
+    }
+
+
+
+        //     // document.getElementById('result').innerText = "Loại giỏi";
+        //     alert('loại giỏi');
+        // } else if (averageScore >= 7) {
+        //     // document.getElementById('result').innerText = "Loại khá";
+        //     alert('loại khá')
+        // } else if (averageScore >= 5) {
+        //     // document.getElementById('result').innerText = "Loại trung bình";
+        //     alert('loại TB')
+        // } else {
+        //     // document.getElementById('result'). innerText = "Loại yếu";
+        //     alert('loại yếu')
+        // }
+
+    </script>
+</body>
+</html>

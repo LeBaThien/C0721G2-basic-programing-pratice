@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01-bai4</title>
+</head>
+<body>
+    <p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+
+<!--    Nếu người dùng không nhập số nguyên thì thêm lệnh nào để bắt buộc nhập số nguyên-->
+    <script>
+      let numberA = parseInt(prompt('Nhập số nguyên thứ nhất'));
+      let numberB = parseInt(prompt('Nhập số nguyên thứ hai'));
+      let numberC = parseInt(prompt('Nhập số nguyên thứ ba'));
+
+      let numberMax = numberA;
+
+      if (numberB > numberMax) {
+          (numberMax = numberB);  }
+
+      if (numberC > numberMax) {
+          numberMax =numberC;
+      }
+    alert(numberMax);
+    </script>
+
+
+</body>
+</html>

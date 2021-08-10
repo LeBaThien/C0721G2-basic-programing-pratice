@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ độ C sang độ F.</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<p>Nhập độ C vào ô bên dưới để chuyển sang độ F</p>
+<input id="doC" type="number" >
+<br>
+<br>
+<button id="result" onclick="convert()" >Click để đổi độ</button>
+
+<script>
+
+    function convert() {
+        let degreeC = parseInt(document.getElementById('doC').value);
+        let degreeF = degreeC * 9 / 5 + 32;
+        //Xem lại nếu độ C âm thì đổi ntn, công thức này còn đúng ko
+        document.getElementById('result').innerText = degreeC + " độ C bằng "+ degreeF + " độ F ";
+    }
+
+
+</script>
+</body>
+</html>

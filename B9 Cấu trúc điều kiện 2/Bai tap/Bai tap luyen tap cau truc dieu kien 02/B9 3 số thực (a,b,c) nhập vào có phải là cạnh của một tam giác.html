@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+        Điều kiện để a,b,c là cạnh của một tam giác là:</b></p>
+    <br>
+    Nhập số a vào đây: <input id="so1" type="number">
+    <br>
+    <br>
+    Nhập số b vào đây: <input id="so2" type="number">
+    <br>
+    <br>
+    Nhập số c vào đây: <input id="so3" type="number">
+    <br>
+    <br>
+    <button id="kq" onclick="solve()">Click vào đây để xem kết quả</button>
+
+    <script>
+    function solve() {
+        let number1 = parseFloat(document.getElementById('so1').value);
+        let number2 = parseFloat(document.getElementById('so2').value);
+        let number3 = parseFloat(document.getElementById('so3').value);
+        let sumAB = number1 + number2;
+        let sumAC = number1 + number3;
+        let sumBC = number2 + number3;
+        console.log(sumAB);
+        if (number1 > 0 && number2 > 0 && number3 > 0 && sumAB > number3 && sumAC > number2 && sumBC >number1) {
+            document.getElementById('kq').innerText = " Chúc mừng bác, đây là hình tam giác thần thánh"
+        } else {
+            alert ('Sai rồi, nhập lại đi bác :)))');
+        }
+
+    }
+
+    </script>
+
+
+
+</body>
+</html>

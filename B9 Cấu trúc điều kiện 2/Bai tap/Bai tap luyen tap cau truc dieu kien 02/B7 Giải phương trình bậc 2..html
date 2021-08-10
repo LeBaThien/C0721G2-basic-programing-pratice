@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2.</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<p><b>Giải phương trình bậc 2 (ax^2+bx+c=0)</b></p>
+<br>
+Nhập hệ số a vào đây: <input id="so1" type="number">
+<br>
+<br>
+Nhập hệ số b vào đây: <input id="so2" type="number">
+<br>
+<br>
+Nhập hệ số c vào đây: <input id="so3" type="number">
+<br>
+<br>
+<button id="kq" onclick="solve()">Click vào đây để xem kết quả</button>
+</body>
+<script>
+
+    function solve() {
+        let number1 = document.getElementById('so1').value;
+        let number2 = document.getElementById('so2').value;
+        let number3 = document.getElementById('so3').value;
+        let result1 = (-number3 / number2);
+        let delta = number2 ** 2 - 4 * number1 * number3;
+        let sqrtdelta = Math.sqrt(delta);
+
+        if (number1 == 0) {
+            if (number2 == 0) {
+                if (number3 == 0) {
+                    document.getElementById('kq').innerText = "Phương trình vô số nghiệm"
+                } else {
+                    document.getElementById('kq').innerText = "Phương trình vô nghiệm";
+                }
+            } else {
+                document.getElementById('kq').innerText = "Phương trình có nghiệm là: " + result1;
+            }
+
+        } else if (delta < 0) {
+            if (delta = 0) {
+                document.getElementById('kq').innerText = "Phương trình nghiệm kép là: " + (-number2 / number1 * 2);
+            } else {
+            document.getElementById('kq').innerText = "Phương trình vô nghiệm";
+            }
+        } else {
+            document.getElementById('kq').innerText = "Phương trình có hai nghiệm là: " + (-number2 + sqrtdelta) / (2 * number1) + " Và " + (-number2 - sqrtdelta) / (2 * number1);
+        }
+
+        //     document.getElementById('kq').innerText = "Phương trình vô nghiệm";
+        // }else if(delta = 0) {
+        //     document.getElementById('kq').innerText = "Phương trình nghiệm kép là: " + (-number2/number1*2) ;
+        // } else {
+        //     document.getElementById('kq').innerText = "Phương trình có hai nghiệm là: " + (-number2 + sqrtdelta)/(2*number1) + " Và " + (-number2 - sqrtdelta)/(2*number1);
+        // }
+    }
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Nhập mức doanh số vào để biết được mức hoa hồng mà bạn nhận được</p>
+    <ul>
+        <li>Doanh số 0 đến 200 triệu, sẽ nhận được mức hoa hồng 5% doanh số đạt được</li>
+        <li>Doanh số 200 đến 500 triệu, sẽ nhận được mức hoa hồng 10% doanh số đạt được </li>
+        <li>doanh số trên 500 triệu, sẽ nhận mức hoa hồng 15% doanh số đạt được </li>
+        <li style="color: red">Lưu ý đơn vị nhập là triệu, ví dụ: doanh số 500tr thì nhập là 500 </li>
+    </ul>
+    <input type="number" id="salesid">
+    <br>
+    <br>
+    <button onclick="commission()" >Kết quả</button>
+    <p id="result"></p>
+    <script>
+
+    function commission() {
+        let salesIndex = parseInt(document.getElementById('salesid').value);
+
+        // console.log (salesIndex)
+
+        if (salesIndex >=0 && salesIndex <=200) {
+            document.getElementById('result').innerText = "Hoa hồng là " + salesIndex*0.05 + " Triệu vnd";
+
+        } else if (salesIndex >200 && salesIndex <=500) {
+            document.getElementById('result').innerText = "Hoa hồng là " + salesIndex*0.1 + " Triệu vnd";
+
+        } else if (salesIndex >500) {
+            document.getElementById('result').innerText = "Hoa hồng là " + salesIndex*0.15 + " Triệu vnd";
+
+        } else {
+            alert('Mức doanh số đang sai, vui lòng nhập lại')
+        }
+
+
+    }
+
+    </script>
+</body>
+</html>

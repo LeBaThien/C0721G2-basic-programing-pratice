@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<script>
+
+
+   let height = prompt('chieucao');
+   let weight = prompt('cannang');
+    // console.log(height);
+    // console.log(weight);
+
+   let bmiIndex = weight / (height**2);
+
+   // console.log(bmiIndex);
+
+   if (bmiIndex < 18) {
+        alert('Underweight - Thiếu cân');}
+   else if (bmiIndex >= 18 && bmiIndex < 25) {
+       alert('Normal -Bình thường');}
+   else if (bmiIndex >= 25 && bmiIndex < 30) {
+       alert('Overweight - Thừa cân');}
+       else {
+           alert('Obese')
+       }
+
+
+
+    //     else if (bmiIndex >= 18 && bmiIndex < 25) {
+    //         alert('Normal - Bình thường');
+    //      else if (bmiIndex >= 25 && bmiIndex < 30) {
+    //         alert("Overweight - Thừa cân");
+    //      else {
+    //         alert('Obese');
+    //
+    // }
+
+</script>
+</body>
+</html>

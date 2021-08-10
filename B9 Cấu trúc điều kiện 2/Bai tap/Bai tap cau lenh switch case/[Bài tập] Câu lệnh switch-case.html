@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Câu lệnh switch-case</title>
+</head>
+<body>
+    <p>Nhập số tháng vào đây để tính số ngày trong tháng</p>
+    <label>Tháng: <input id="idmonth" type="number"></label>
+    <button onclick="tinh_so_ngay()">Tính số ngày</button>
+    <p id="result">Kết quả</p>
+    <script>
+
+        function tinh_so_ngay() {
+            let monthValue = document.getElementById("idmonth").value;
+
+            switch (monthValue) {
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':
+                    document.getElementById("result").innerText = "Tháng " + monthValue + " có "+ "31 ngày" ;
+                    break;
+                case '2':
+                    document.getElementById("result").innerText = "Tháng " + monthValue + " có "+ "28 ngày hoặc 29 ngày " ;
+                    // alert ('28 ngày hoặc 29 ngày')
+                    break;
+                // case '3':
+                //     alert ('31 ngày');
+                //     break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                    document.getElementById("result").innerText = "Tháng " + monthValue + " có "+ "31 ngày " ;
+                    break;
+                default :
+                    alert ("Bạn đã nhập sai số tháng");
+            }
+
+        }
+
+    </script>
+</body>
+</html>

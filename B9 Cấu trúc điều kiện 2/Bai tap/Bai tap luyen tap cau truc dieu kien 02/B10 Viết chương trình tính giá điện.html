@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình tính giá điện.</title>
+    <style>
+        body, input, button {
+            font-size: x-large;
+        }
+    </style>
+
+</head>
+<body>
+    <pre>
+    chương trình tính tiền điện với chỉ số. Được nhập vào từ bàn phím.
+    In ra màn hình số tiền phải trả.
+    Biết rằng 100 kWh đầu giá 1000, từ kWh 101 – 150 giá 1200, từ kWh 150 – 200 giá 2000, trên 200 trở lên giá 2500.
+    </pre>
+    Nhập số kWh mà bạn sử dụng vào đây: <input id="input1" type="number">
+    <br>
+    <br>
+    <button id="kq" onclick="solve()">Click vào đây để hiển thị số tiền bạn phải trả </button>
+    <script>
+        function solve() {
+            let soKwh = parseFloat(document.getElementById('input1').value);
+
+
+            if (soKwh > 0 && soKwh <= 100) {
+                document.getElementById('kq').innerText = "Số tiền bạn cần trả là: " + soKwh*1000;
+            } else if (soKwh>100 && soKwh < 150) {
+                document.getElementById('kq').innerText = "Số tiền bạn cần trả là " + soKwh*1200;
+            } else if (soKwh =>150 && soKwh <= 200) {
+                document.getElementById('kq').innerText = "Số tiền bạn cần trả là " + soKwh*2000;
+            } else if (soKwh > 200) {
+                document.getElementById('kq').innerText = "Số tiền bạn cần trả là " + soKwh*2500;
+            } else {
+                alert('Số chứ điện bạn nhập không chính xác, vui lòng nhập lại');
+            }
+        }
+
+    </script>
+
+</body>
+</html>

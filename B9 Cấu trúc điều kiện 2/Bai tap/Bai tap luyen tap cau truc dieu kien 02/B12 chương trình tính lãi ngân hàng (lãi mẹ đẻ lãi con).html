@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)Lãi suất tiết kiệm.</title>
+    <style>
+        body, input, button {
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+<p><b>Chương trình tính lãi suất tiết kiệm.</b></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+<p><b></b></p>
+Nhập MỨC SỐ TIỀN GỬI HIỆN TẠI của bạn vào đây (VNĐ):  <input id="so1" type="number">
+<br>
+<br>
+Nhập MỨC LÃI SUẤT của bạn vào đây (ví dụ 0.03 tương đương 3%): <input id="so2" type="number">
+<br>
+<br>
+Nhập số kỳ tính Lãi của bạn vào đây (ví dụ 1 tương đương 1 năm ): <input id="so3" type="number">
+<br>
+<br>
+<button id="ketqua" onclick="solve()">Click vào đây để hiển thị kết quả</button>
+<script>
+
+    function solve() {
+        let presentValue = parseFloat(document.getElementById('so1').value);
+        let interestRate = parseFloat(document.getElementById('so2').value);
+        let yearTime = parseInt(document.getElementById('so3').value);
+        let futureValue = presentValue * ((1+ interestRate)**yearTime);
+
+        if ( presentValue>0 && interestRate >0 && yearTime >0) {
+            document.getElementById('ketqua').innerText = "Số tiền gốc + lãi của bạn là " + futureValue;
+        } else {
+            alert('Vui lòng nhập lại theo hướng dẫn');
+        }
+    }
+</script>
+
+</body>

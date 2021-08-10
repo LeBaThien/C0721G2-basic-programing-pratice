@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+
+        }
+    </style>
+</head>
+<body>
+    <p><b>Nhập a, b vào bên dưới để tính diện tích hình chữ nhật bất kỳ</b></p>
+    <br>
+    Nhập cạnh a vào đây: <input id="nhapvao1" type="number">
+    <br>
+    <br>
+    Nhập cạnh b vào đây: <input id="nhapvao2" type="number">
+    <br>
+    <br>
+    <button id="resultarea" onclick="solve()">Click vào đây để hiển thị kết quả</button>
+
+</body>
+
+    <script>
+        function solve() {
+            let widthA = document.getElementById('nhapvao1').value;
+            let heightB = document.getElementById('nhapvao2').value;
+            let rectangularArea = widthA * heightB;
+
+            if (widthA > 0 && heightB > 0) {
+                document.getElementById('resultarea').innerText = "Diện tích hình chữ nhật là " + rectangularArea;
+            } else {
+                alert ('Giá trị bạn nhập sai (số âm), vui lòng nhập lại')
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b</title>
+    <style>
+        body, input, button {
+            font-size: xx-large;
+        }
+    </style>
+
+</head>
+<body>
+    <p><b>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b </b></p>
+    <br>
+    Nhập giá trị cạnh a vào đây: <input id="inputa1" type="number">
+    <br>
+    <br>
+    Nhập giá trị cạnh b vào đây: <input id="inputb1" type="number">
+    <br>
+    <br>
+    <button id="ketqua" onclick="solve()">Click vào đây để xem kết quả</button>
+</body>
+    <script>
+        function solve() {
+            let edgeA = document.getElementById('inputa1').value;
+            let edgeB = document.getElementById('inputb1').value;
+
+            let triangleArea = 0.5 * edgeA * edgeB;
+
+            if (edgeA>0 && edgeB>0) {
+                document.getElementById('ketqua').innerText = "Diện tích hình tam giác vuông này là " + triangleArea;
+            } else {
+                alert ('Giá trị bạn nhập không đúng (số âm), vui lòng nhập lại')
+            }
+        }
+
+    </script>
+</html>
