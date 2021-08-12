@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B3 Luyện tập vòng lặp 02</title>
+    <style>
+        body {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // {
+    //     let num = " ";
+    //     let i = 1;
+    //     for (i; i <= 5; i++) {
+    //         num = num + "*";
+    //         document.write(num + "<br>");
+    //     }
+    // }
+
+    for (let n = 1; n <= 5; n++ ) {
+        for (let i = 1; i <= n; i++ ) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    // Biến n đại diện cho số hàng, gồm có 5 hàng, cách nhau bởi 1 <br>;
+    // Biến i đại diện cho số ngôi sao, mỗi lâng lặp của i sẽ phụ thuộc vào
+    // giá trì n (trong biểu thức điều kiện của i<=n
+    document.write('<br>')
+
+    for (let n = 1; n <= 5; n++ ) {
+        for (let i = 5 ; i >= n; i--) {
+        document.write("*");
+        }
+        document.write("<br>");
+    }
+
+    document.write('<br>');
+
+    for (let n = 1; n <=5; n++) {
+        for (let i = 5; i >= n; i--) {
+            document.write("&nbsp&nbsp");
+        } for (let i = 1; i <= n; i++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+    for ( let n = 1; n <=5; n++) {
+        for ( let i = 1; i <= n; i++) {
+            document.write("&nbsp&nbsp")
+        } for (let i = 6; i > n; i--) {
+            document.write("*")
+        }
+        document.write("<br>");
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

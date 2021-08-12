@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Tạo bàn cờ caro đơn giản</title>
+</head>
+<body>
+    // Tạo giao diện, tạo button thì sẽ có onclick, và sẽ có hàm function
+    // Để tạo ra bảng như trên, ta sẽ dùng vòng lặp. Lặp 5 lần 0 và 5 lần rỗng.
+    => sử dụng hay hàm loop lồng vào nhau, dùng for và for,
+    1. Tạo ra hình.
+    2. Khai báo thêm biến,
+
+    // khởi tạo mảng hai chiều
+
+
+
+    <h3>Caro Game Simple</h3>
+    <p id="carogame" />
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <script>
+    let b = document.getElementById("carogame");
+
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 5; i++) {
+        board[i] = new Array(0, 0, 0, 0, 0); // tạo mảng 2 chiều
+    }
+
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>"; // tạo biến , để nhận chuỗi,
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    b.innerHTML = data; dịch string qua html để hiển thị
+    //Tới đây là đã tạo xong hình, việc còn lại là tạo ô người dùng nhập vào,
+
+    function changeValue() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "x";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        b.innerHTML = "<hr/>" + data;
+    }
+    </script>
+</body>
+</html>

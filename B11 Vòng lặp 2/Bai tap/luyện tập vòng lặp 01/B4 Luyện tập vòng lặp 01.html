@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B4 Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+    let num1 = 1;
+    let num2 = 1;
+    let count = 1;
+    while (count <20) {
+        let num3 = num1 + num2;
+        console.log(num3);
+        num1 = num2;
+        num2 = num3;
+        if (num3 % 5 == 0) {
+            document.write(num3 + "<br>");
+            break;
+        }
+        count++;
+
+
+
+    }
+
+</script>
+</body>
+</html>

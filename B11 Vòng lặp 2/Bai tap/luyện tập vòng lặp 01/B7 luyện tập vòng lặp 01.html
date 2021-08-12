@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B7 luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+    let num1 = 1;
+
+    while ( num1 <= 100) {
+        // console.log(count);
+        // Nên kiểm tra điều kiện lớn trước khi kiểm tra điều kiện nhỏ hơn,
+        // Kiểm tra điều kiện phức tạp trước,...
+        if(num1 % 3 == 0 && num1 % 5 == 0) {
+        document.write("FizzBuzz" + "<br>");}
+        else if (num1 % 3 == 0) {
+            document.write("Fizz" + "<br>");
+        } else if (num1 % 5 == 0) {
+            document.write("Buzz" + "<br>");
+        } else {
+            document.write(num1 + "<br>");
+        }
+        num1++;
+
+        // console.log(num1);
+    }
+</script>
+
+</body>
+</html>

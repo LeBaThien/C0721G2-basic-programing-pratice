@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B5 Luyện tập vòng lặp 02</title>
+</head>
+<body>
+<script>
+    let moneyInput = prompt("Nhập vào số tiền gửi của bạn").value;
+    let month = prompt("Nhập vào số tháng cho vay").value;
+    let interestRate = prompt("Nhập vào lãi suất hàng tháng").value;
+    let moneyOutput
+
+    if (moneyInput>0 && month>0 && interestRate>0) {
+        moneyOutput = moneyInput * (1 + interestRate )**month;
+        alert("Số tiền lãi của bạn là" + moneyOutput);
+    } else {
+        alert("Bạn nhập số sai rồi, vui lòng kiểm tra lại");
+    }
+</script>
+
+</body>
+</html>

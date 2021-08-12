@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B2 Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<p></p>
+
+<script>
+    let degree = parseInt(prompt("Nhập nhiệt độ của bạn vào đây, để biết xem nên làm gì tiếp theo?"));
+   console.log(degree);
+    while ( degree > 100 || degree <20) {
+        if (degree>100) {
+            document.write(" Giảm nhiệt độ đi, nếu bạn không muốn 'DIE'");
+            // degree = parseInt(prompt("Nhập nhiệt độ của bạn vào đây, để biết xem nên làm gì tiếp theo?"));
+        } else if (degree < 20) {
+            document.write("Tăng nhiệt độ đi, không thì lạnh lắm");
+        }
+        break;
+    }
+</script>
+
+</body>
+</html>

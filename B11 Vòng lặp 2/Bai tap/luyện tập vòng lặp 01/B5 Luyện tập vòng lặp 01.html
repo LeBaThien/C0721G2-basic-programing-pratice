@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B5 Luyện tập vòng lặp 01</title>
+</head>
+<body>
+<script>
+    let num1 = 1;
+    let num2 = 1;
+    let count = 0;
+
+
+    while (count < 20 ) {
+        let num3 = num1 + num2;
+        console.log (num3);
+        num1 = num2;
+        num2 = num3;
+
+        if ( count == 19) {
+            let sum = num1 + num2 + num3 + 1 + 1; // Cộng thêm 2 số đầu tiên vào
+            document.write(sum);
+            break;
+        }
+        count++;
+    }
+</script>
+
+</body>
+</html>
