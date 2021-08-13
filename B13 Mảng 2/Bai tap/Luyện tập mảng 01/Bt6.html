@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt6</title>
+</head>
+<body>
+<script>
+    let number = [20,14,1,3,4,5,7,-10,-11,1];
+    let i = 0;
+    let nhapVao = parseInt(prompt("Nhập số vào đây đi"));
+    let flag = false;
+    for ( i = 0; i <= number.length - 1; i++) {
+        // console.log(number[i]);
+        // xác định trường hợp tìm thấy, còn lại ko
+        // Vì sao chổ nào ko dùng if/else: là vì nếu dùng if/else thì sẽ ra lệnh lặp ,,, cả đúng cả sai rồi tăng i,
+        // như vậy thì ko đúng với yêu cầu đề bài. Nên chúng t sẽ gắn cờ
+        if (number[i] == nhapVao ) {
+            flag = true;
+        }
+
+    }
+     // gắn cờ này, chúng ta có thể để flag thôi, xuống if t gán flag == true thì nó cũng sẽ hiện ra kết quả. Chứ ko nhất
+    // gắn flag bằng false.
+    if (flag) {
+        alert( nhapVao + "is in the array ");
+    } else {
+        alert( nhapVao + "is not in the array");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bt7</title>
+</head>
+<body>
+<script>
+    // idea
+    // khởi tạo biến mảng gồm 10 phần tử số nguyên
+    // Tạo biến, cho người dùng nhập vào
+    // Nếu biến nhập vào thuộc mảng, ( Tức chổ này sẽ dùng vòng lặp để kiểm tra phần tử mảng)
+    // xóa biến này khỏi mảng(
+    // Tức là làm cho phần tử bên phải biến này dịch sang
+    // vị trí của biến này, và gán 0 cho phần tử cuối cùng của mảng
+
+    let number = [4, 7, 6, 20, 15, 2, 1, 4, 2, 11];
+    let nhapVao = parseInt(prompt("Nhập vào đây đi"));
+    let flag;
+    let index = 0
+    for (let i = 0; i <= number.length; i++ ) {
+        if ( number [i] == nhapVao) {
+                flag = true;
+                index = 0;
+
+        }
+    }
+    if (flag == true) {
+
+        alert("Số này là số trùng với phần tử trong mảng")
+    } else {
+        alert("Số này là số không thuộc trong mảng")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<body>
+<script>
+    //Nối các phần tử trong mảng này lại thành "Red, Green, White, Black"
+    //Sử dụng hàm toString, or join
+    let myColor = ["Red","Green", "White", "Black"];
+
+    // // hai cách viết,  i = 1, thì length ko trừ 1 bằng (i = 0, length - 1) cách này cho ra kết quả đúng,
+    // // còn cách i = 1, và length ko trừ 1, thì sẽ cho ra kết quả ko có giá trị RED và underfine ở cuối
+    // for ( let i = 0; i <= myColor.length -1;i++) {
+    //     document.write(myColor [i] + ", ");
+    // }
+    //Cách dùng hàm
+    console.log(myColor.toString());
+   // cách in ra:
+    document.write( myColor.toString());
+
+
+
+</script>
+</body>
+</html>

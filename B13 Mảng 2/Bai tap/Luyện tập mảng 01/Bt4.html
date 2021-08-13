@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt4</title>
+</head>
+<body>
+<script>
+    let varName = [3, 6, 7, 8, 3, -4];
+    let first = 0;
+    let last = varName.length - 1;
+    console.log(last);
+    while (first < last) {
+        let b = varName[first];
+        varName[first] = varName[last];
+        varName[last] = b;
+        first++;
+        last--;
+    }
+    document.write(varName);
+
+
+</script>
+</body>
+</html>

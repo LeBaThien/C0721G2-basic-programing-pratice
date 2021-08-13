@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let varName = [1, 5, 3, 6, 3, 0, 3, 2, -7, 10];
+        let max = varName[0]; // đặt biến max, giả sử vị trí đầu tiên của mảng  là max trog dãy
+        let index = 0; // vị trí đầu tiên của mảng
+
+
+        for ( let i = 0 ; i <= varName.length - 1 ; i++) {
+
+            if ( varName [i] > max) {
+                    max = varName [i];
+                    index = i;
+                    // console.log(index);
+
+            }
+        }
+
+        document.write("Giá trị lớn nhất " + max +" tại vị trí " + index);
+
+    </script>
+</body>
+</html>
