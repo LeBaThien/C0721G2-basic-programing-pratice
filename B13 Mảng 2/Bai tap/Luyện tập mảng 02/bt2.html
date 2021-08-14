@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt2</title>
+</head>
+<body>
+<script>
+    //Đảo ngược mảng t dùng hàm reverse()
+    let str = ['c','s','c','2','6','1'];
+    // let resv
+    // resv = str.reverse();
+    // document.write(resv);
+
+   //Cách khác,
+    // biến last có giá trị là: Độ dài của biến cuối cùng
+    // biến first có giá trị bằng 0, vị trí đầu tiên
+    //Khai báo một biến b, gán cho nó bằng vị trí đầu tiên
+    //Khai báo một biến b, gán cho nó bằng vị trí đầu tiên
+    // gán vị trí cuối cùng bằng vị trí đầu tiên
+    // gán vị trí đầu tiên tiếp theo cho biến b, tạo thành vòng lặp
+    // Tăng giá trị cho biến first đồng thời giảm giá trị cho biến last
+    let last = str.length - 1;
+    let first = 0;
+    while (first < last) {
+        let b = str[first];
+        str[first] = str[last];
+        str[last] = b ;
+        first++;
+        last--;
+
+    }
+    document.write(str);
+</script>
+
+</body>
+</html>

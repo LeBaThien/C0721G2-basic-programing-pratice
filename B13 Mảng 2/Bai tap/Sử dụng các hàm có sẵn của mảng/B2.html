@@ -6,9 +6,32 @@
 </head>
 <body>
 <script>
-    let numberInput = parseInt(prompt("Nhập số vào đây"));
-    let str = numberInput.toString();
-    let result = [str]
+
+    var num=parseInt(prompt("Nhập dãy số vào đây"));
+    var str = num.toString();
+    var result = [str[0]];
+    // Khai báo biến num
+    // Khai báo 1 biến str, chuyển num thành giá trị chuỗi
+    // Khai báo thêm một biến kết quả, để hiện thị
+    // Sử dụng vào lặp for, khoảng chạy của biến < độ dài của str
+    // Để nhập thêm dấu (-) vào giữa hai số chẵn, ta cần tìm số chẵn đã
+    // số chẵn sẽ là số chia hết cho 2, <=> str [x] % === 0.
+    // Tại sao có điều kiện x-1 và x???
+    for(var x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+            result.push('-', str[x]);
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write((result.join('')));
+
+
+
 </script>
 </body>
 </html>
