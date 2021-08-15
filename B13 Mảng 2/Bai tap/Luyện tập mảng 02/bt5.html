@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt5</title>
+</head>
+<body>
+<script>
+    let str1= prompt("Nhập chuỗi thứ nhất vào đây");
+    let str2 = prompt("Nhập chuỗi thứ hai vào đây ");
+    let array1 = str1.split("");
+    // mỗi ký tự là một phần tử, kể cả 1 dấu cách
+    let  array2 = str2.split("");
+    let flag = false; // khai báo false nếu đề bài yêu cầu đúng,
+    // khai báo true, nếu đề bài yêu cầu sai
+    if ( array1.length == array2.length ) {
+        for ( let i = 0; i < array1.length; i++) {
+            if (array1[i] == array2[i]) {
+                // Mỗi vòng lặp flag này có thể true và false,
+                // flag sẽ lấy giá trị này đem xuống dưới để xét
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            alert("2 chuỗi giống nhau");
+        } else  {
+            alert("2 chuỗi khác nhau");
+        }
+    } else {
+        alert ( "2 chuỗi khác nhau");
+    }
+
+
+
+</script>
+</body>
+</html>

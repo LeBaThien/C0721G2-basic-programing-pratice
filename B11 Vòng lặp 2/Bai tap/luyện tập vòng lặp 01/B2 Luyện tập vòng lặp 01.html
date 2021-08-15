@@ -8,6 +8,10 @@
 <p></p>
 
 <script>
+    // Tạo prompt để người dùng nhập nhiệt độ vào
+    // vì không biết được số lần lặp, nên ta dùng while
+    // Điều kiện trong while là bao gồm các điều kiện có thể xảy ra trong vòng lặp
+    // Nếu không biết giới hạn vòng lặp, dùng thêm break, (hoặc tăng giảm biến lặp), để dừng vòng lặp khi kết quả thỏa đk
     let degree = parseInt(prompt("Nhập nhiệt độ của bạn vào đây, để biết xem nên làm gì tiếp theo?"));
    console.log(degree);
     while ( degree > 100 || degree <20) {
