@@ -11,6 +11,7 @@
             height: 30px;
             text-align: center;
         }
+
         td {
             border: solid 1px;
             width: 200px;
@@ -21,22 +22,36 @@
 <body>
 <script>
 
+    // let i = 2;
+    // let j = 1;
+    // let bang = "<table>";
+    // for (i = 1; i <= 9; i++) {
+    //     bang = bang + "<tr>";
+    //     for (j = 2; j <= 9; j++) {
+    //
+    //         bang = bang + "<td>" + i + ' x ' + j + " = " + (i * j) + "</td>";
+    //
+    //     }
+    //     bang = bang + "</tr>";
+    // }
+    // bang = bang + "</table>";
+    // document.write(bang);
+
+    // //
     let i = 2;
     let j = 1;
-    let bang = "<table>"
-    for (i = 1 ; i <= 9; i++) {
-        bang = bang + "<tr>"
-        for (j = 2; j <= 9; j++) {
 
-            bang = bang + "<td>" + i + ' x ' + j + " = " +  (i*j) + "</td>";
+    let bang = "<table>";
+    for (i = 1; i <= 10; i++) {
+        bang = bang + "<tr>";
+        for (j = 2; j <= 9; j++) {
+            bang = bang + "<td>" + i + " x " + j + " = " + (i * j) + "</td>";
 
         }
         bang = bang + "</tr>";
     }
-    bang = bang + "</table>"
+    bang = bang + "</table>";
     document.write(bang);
-
-    // let col =
 
 </script>
 

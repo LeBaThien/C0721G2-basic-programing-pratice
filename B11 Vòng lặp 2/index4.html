@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //cách 1
+    // let array2d = [
+    //     [1, 2, 3, 4, 5], //0
+    //     [6, 7, 8, 9, 10, 11, 12], //1
+    //     [13, 14, 15, 16, 17] //2
+    // ];
+    //
+    // for (let row = 0; row < array2d.length; row++) {
+    //     for (let col = 0; col < array2d[row].length; col++) {
+    //         document.write(array2d[row][col] + " ");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    let rowArr = parseInt(prompt("input row:")); //3
+    let colArr = parseInt(prompt("input col:")); //4
+
+    let arr2d = new Array(rowArr);
+    // arr2d = [undefined, undefined, undefined];
+    for(let row = 0; row < arr2d.length; row++){
+        arr2d[row] = new Array(colArr);
+        /* arr2d = [
+        [undefined, undefined, undefined, undefined],
+        undefined,
+        undefined
+        ]; */
+        for(let col = 0; col < arr2d[row].length; col++){
+            let value = prompt("input at [" + row +"]["+col+"] ");
+            arr2d[row][col] = value;
+        }
+    }
+
+
+    for (let row = 0; row < arr2d.length; row++) {
+        for (let col = 0; col < arr2d[row].length; col++) {
+            document.write(arr2d[row][col] + " ");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>
