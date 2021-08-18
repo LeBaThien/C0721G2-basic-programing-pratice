@@ -34,7 +34,7 @@
     }
 
     function deleteProduct(index){
-        if (confirm("Are you sure to want to delete ") + arr[index]){
+        if (confirm("Are you sure to want to delete " + arr[index])){
         arr.splice(index,1);
         displayProduct();
         }
@@ -45,12 +45,25 @@
             if ( i == index) {
                 data += "<tr>";
                 data += "<td><input id='productEdit' value='"+ arr[i] +"'></td>";
-                data += "<td><button onclick='saveProduct'>Save</button></td>"
+                data += "<td><button onclick='saveProduct(" + i + ")'>Save</button></td>"
                 data += "</tr>";
             } else {
-
+                data += "<tr>";
+                data += "<td>" + arr[i] + "</td>";
+                data += "<td><button onclick ='editProduct(" + i +")' >Edit</button></td>";
+                data += "<td><button onclick='deleteProduct(" + i +")'>Delete</button></td>";
+                data += "</tr>";
             }
         }
+        data +="</table>";
+        document.getElementById("result").innerHTML = data;
+
+    }
+
+    function saveProduct(index) {
+        arr[index] = document.getElementById("productEdit").value;
+        displayProduct();
+        document.getElementById("editProduct").innerHTML="";
 
     }
 
