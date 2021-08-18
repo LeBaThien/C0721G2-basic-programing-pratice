@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi giua feet va meter</title>
+</head>
+<body>
+    <input type="number" oninput="footToMeter(this.value)"><br>
+
+    <span> Kết quả đổi feet sang meter là: </span><p id="id1" > </p>
+
+    <input type="number" oninput="meterToFoot(this.value)"><br>
+
+    <span> Kết quả đổi meter sang feet là:</span> <p id ="id2"></p>
+
+
+<script>
+    function footToMeter(foot) {
+        let meter = parseInt(foot)
+        let result = 0.305 * meter;
+        document.getElementById('id1').innerHTML = result ;
+    }
+
+    function meterToFoot(meter) {
+        let foot = parseInt(meter);
+        let result1 = 3.279 * foot;
+        document.getElementById('id2').innerHTML = result1;
+    }
+
+</script>
+</body>
+</html>

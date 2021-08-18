@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B3</title>
+</head>
+<body>
+<script>
+    function func1(a){
+
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    let number = parseInt(prompt("Nhập số cần tính giai thừa vào đây"));
+    let result = func1(number);
+    document.write(result);
+
+</script>
+</body>
+</html>

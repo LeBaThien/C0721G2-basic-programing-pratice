@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt6</title>
+</head>
+<body>
+<script>
+    function checkNumber () {
+            if (number == 0) {
+                alert("vui lòng nhập lại, 0 ko phải là số nguyên dương hoặc nguyên âm");
+            } else {
+                if (number> 0) {
+                    alert('Đây là số nguyên dương');
+                } else {
+                    alert("Đây là số nguyên âm");
+                }
+            }
+    }
+    let number = parseInt(prompt('Nhập số cần kiểm tra vào đây'));
+    checkNumber(number);
+</script>
+</body>
+</html>

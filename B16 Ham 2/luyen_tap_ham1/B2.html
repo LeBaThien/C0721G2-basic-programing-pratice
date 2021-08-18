@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao ham nhan vao mot doi so dang so</title>
+</head>
+<body>
+    <input type="number" oninput="increaseNumber(this.value)">
+    <br>
+    Giá trị sau khi tăng lên một đơn vị: <p id ="id1"> </p>
+
+
+<script>
+    function increaseNumber(num) {
+        let number = parseInt(num);
+        let result = ++number;
+        document.getElementById('id1').innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

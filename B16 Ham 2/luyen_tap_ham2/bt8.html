@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt8</title>
+</head>
+<body>
+<script>
+    function reverseArray() {
+        document.write(array.reverse());
+
+    }
+
+    let number = prompt("Nhập số phần tử bạn muốn tạo mảng 1 vô đây");
+    let array = [];
+    for ( let i = 0; i < number; i++) {
+        array [i] = prompt("Nhập vào kí tự thứ " + i);
+    }
+    // document.write(array);
+
+    reverseArray()
+
+    //Tham khảo thêm cách này
+    // function reverseArray() {
+    //     document.write("array reverse là : " + array.reverse());
+    //
+    // }
+    //
+    //
+    // let array = [];
+    // let i =0 ;
+    // while (true){
+    //     array [i] = prompt("Nhập vào kí tự thứ " + i);
+    //     let check = confirm("bạn có muốn nhập tiếp ko ?");
+    //     if (!check){
+    //         break ;
+    //     }
+    //     i++;
+    // }
+    // reverseArray(array);
+</script>
+</body>
+</html>

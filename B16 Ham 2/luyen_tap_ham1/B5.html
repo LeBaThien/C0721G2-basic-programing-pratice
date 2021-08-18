@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao mang 7 phan tu</title>
+</head>
+<body>
+
+<script>
+
+
+    function lookStar() {
+        let flag = false;
+        for (var i = 0; i < array1.length; i++) {
+
+            if (array1[i] == a) {
+                document.write("Tên chòm sao bạn cần tìm là " + array2[i]);
+                flag = true;
+            }
+        }
+        if (flag) {
+            // document.write("Tên chòm sao bạn cần tìm là " + array2[i]);
+        } else {
+            alert("Không tìm thấy tên ngôi sao, vui lòng nhập lại");
+
+        }
+
+    }
+
+    let a = prompt("Nhập tên ngôi sao cần tìm vào đây");
+    let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+
+    let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    lookStar();
+
+
+</script>
+</body>
+</html>

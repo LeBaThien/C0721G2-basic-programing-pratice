@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function exchangeNumber() {
+    let a = number1;
+    number1 = number2;
+    number2 = a;
+    document.write(number1, number2);
+    }
+
+    let number1 = parseInt(prompt("Nhập sô nguyên thứ nhất"));
+    let number2 = parseInt(prompt("Nhập số nguyên thứ hai"));
+    exchangeNumber(number1, number2);
+
+</script>
+</body>
+</html>

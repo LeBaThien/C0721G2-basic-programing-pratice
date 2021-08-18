@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt 9</title>
+</head>
+<body>
+<script>
+    function checkArray() {
+        let input = prompt('Nhập ký tự bất kỳ vào đây');
+        let count = 0;
+        var flag = false;
+        for ( var j = 0; j <array.length; j++) {
+            if (input == array [j]) {
+                count++;
+                flag = true;
+            }
+
+        }
+        if(flag ) {
+            document.write("Kí tự " + input + " có trong mảng và số lần xuất hiện là " + count);
+            // console.log(array[j]);
+        } else {
+            alert('Trả về -1');
+        }
+
+    }
+
+    let number = parseInt(prompt("Nhập vào số lượng phần tử bạn muốn tạo mảng"));
+    let array = [];
+    for (let i = 0; i < number; i++ ) {
+        array[i] = prompt("Nhập phần tử thứ " + i);
+    }
+
+    checkArray(array);
+
+
+
+</script>
+
+</body>
+</html>
