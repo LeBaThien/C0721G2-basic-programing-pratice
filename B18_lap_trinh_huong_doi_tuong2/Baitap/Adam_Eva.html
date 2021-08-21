@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam và Eva</title>
+    <style>
+        body {
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+        this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+        // decrease() {
+        //     if (this.weight > 0) {
+        //         this.weight--;
+        //     } else {
+        //         alert("Hết táo rồi");
+        //     }
+        //
+        // }
+
+
+    }
+    class Human {
+        constructor(name, gender, weightHuman) {
+            this.name = name;
+            this.gender = gender ;
+            this.weightHuman = weightHuman;
+
+        }
+
+        setGender() {
+            if (this.gender == "Nam" ){
+                return this.gender = "Nam";
+            } else {
+                return this.gender = "Nữ";
+            }
+
+        }
+
+        eat(Apple) {
+
+            if (Apple.weight > 0) {
+                Apple.weight--;
+                this.weightHuman++;
+            } else {
+                alert("Hết táo rồi");
+            }
+
+
+        }
+
+        getName () {
+            return this.name;
+        }
+        getWeight () {
+            return this.weightHuman;
+        }
+
+
+    }
+
+    let thanhAdam = new Human ("Adam", "Nam", 70);
+    document.write ("Tôi tên là " + thanhAdam.getName() + " và giới tính của tôi là " + thanhAdam.setGender() + ". Tôi có cân năng " + thanhAdam.getWeight() );
+    document.write("<br>");
+    let thanhEva = new Human("Eva", "Nữ", 65);
+    document.write ("Tôi tên là " + thanhEva.getName() + " và giới tính của tôi là " + thanhEva.setGender() + ". Tôi có cân nặng " + thanhEva.getWeight());
+
+    document.write("<br><br>");
+
+    let eating = new Apple(5);
+    document.write("Số lần cắn của táo là " + eating.getWeight());
+
+    document.write("<br><br>");
+
+    thanhAdam.eat(eating);
+    thanhAdam.eat(eating);
+    document.write ("Cân nặng của tôi sau khi ăn táo " + thanhAdam.getWeight() + " và số lần cắn táo còn lại là " + eating.getWeight() );
+
+</script>
+</body>
+</html>

@@ -19,15 +19,11 @@
         }
         return true;
     }
-    var a = parseInt(prompt("Nhập số cần kiểm tra vào đây"));
-    for ( var i = a; i<10000; i++) {
+    // var a = parseInt(prompt("Nhập số cần kiểm tra vào đây"));
+    for ( var i = 0; i<10000; i++) {
 
         if (isPrime(i)) {
-            document.write( i + " là số nguyên tố ");
-            break;
-        } else {
-            alert("Số " + a + " bạn nhập không phải là số nt");
-            break;
+            document.write( i + ", ");
         }
     }
 

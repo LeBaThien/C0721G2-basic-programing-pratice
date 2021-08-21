@@ -8,13 +8,13 @@
 <script>
     function testNumber(number) {
         // phủ định của isNaN là thêm dấu !
-        if (number == !isNaN ) {
+        if (!isNaN (number) ) {
            return true;
         } else {
             return false;
         }
     }
-    let number1 = prompt();
+    let number1 = prompt("Nhập ký tự bất kì vào đây để xem có phải là số hay không");
     testNumber(number1);
     console.log(testNumber(number1));
 </script>

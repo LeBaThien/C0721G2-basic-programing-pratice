@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xay dung lop mo ta hinh chu nhat</title>
+    <style>
+        canvas {
+            border: solid 2px;
+            color: black;
+
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" ></canvas>
+<script>
+
+    let Rectangle = function (height, weight) {
+        this.height = height;
+        this.weight = weight;
+        this.getheight = function () {
+            return this.height;
+        };
+        this.getweight = function () {
+            return this.weight;
+        };
+        this.getArea = function () {
+            return this.height * this.weight;
+        };
+        this.getPerimeter = function () {
+            return (this.height + this.weight)*2;
+        };
+        this.setHeight = function (setheight) {
+            this.height = setheight ;
+        };
+        this.setWeight = function (setwweight) {
+            this.weight = setwweight;
+        }
+        this.createRectangle = function () {
+            //cách 1
+            // let canvas = document.getElementById("myCanvas");
+            // let ctx = canvas.getContext("2d");
+            // let grd = ctx.createLinearGradient(0,0,300,0);
+            // grd.addColorStop(0,"Yellow");
+            // //chỉ nhận giá trị 0 và 1
+            // grd.addColorStop(1,"White");
+            // ctx.fillStyle = grd;
+            // // 30,30, khoảng cách từ hình vẽ,,, đến hai chiều của hình canvas
+            // ctx.fillRect(30,30,this.height,this.weight);
+            //cách 2
+            let canvas = document.getElementById("myCanvas").getContext("2d");
+            var color = "#5091C7";
+            canvas.fillStyle = color;
+            canvas.fillRect(30,30,this.height,this.weight);
+
+        }
+
+    };
+
+    let retangle = new Rectangle(prompt("Nhập chiều rộng vào đây"),prompt("Nhập chiều dài vào đây"));
+    retangle.createRectangle();
+    retangle.getheight();
+    retangle.getweight();
+    let area = retangle.getArea();
+    let perimeter = retangle.getPerimeter();
+    document.write("<br>");
+    document.write("Diện tích hình chữ nhật là " + area + "<br>" + " Chu vi hình chữ nhật là " + perimeter);
+
+    // retangle.setHeight();
+    // retangle.setWeight();
+    // document.write("Diện tích hình chữ nhật là " + retangle.getArea() + "<br>" + " Chu vi hình chữ nhật là " + retangle.getPerimeter());
+
+
+
+</script>
+</body>
+</html>

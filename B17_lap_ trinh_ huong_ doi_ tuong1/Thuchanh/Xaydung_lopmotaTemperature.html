@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xay dung temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (degree) {
+        this.degree = degree;
+        this.getDegreeC = function () {
+            return this.degree;
+        }
+        this.getDegreeF = function () {
+            return (this.degree * 9/5 + 32);
+        }
+        this.getDegreeK = function () {
+            return (this.degree * 9/5 + 32 + 273.15);
+        }
+
+    }
+
+    let convert = new Temperature(prompt("Nhập độ C vào đây để chuyển sang độ F và độ K"));
+    let degreeF = convert.getDegreeF();
+    let degreeK = convert.getDegreeK();
+    document.write("Độ F là " + degreeF + "<br>" + " Độ K là " +degreeK);
+
+
+
+</script>
+</body>
+</html>
