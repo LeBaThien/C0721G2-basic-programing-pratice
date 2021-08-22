@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>Nhập lương vào đây để tính thuế TNCN ( đơn vị: triệu vnd) </p>
+    <br>
+    <input id="idsalary" type="number">
+    <br>
+    <br>
+    <button id="idresult" onclick="result()">Click result</button>
+
+<script>
+    function result() {
+        let salary = document.getElementById("idsalary").value;
+
+        if (salary >= 15) {
+            document.getElementById("idresult").innerText = "Thuế TNCN là " + (salary * 0.2) + " triệu"
+            + ". Tiền lương bạn nhận được là " + 0.8 * salary + " triệu";
+        } else if (salary >= 7) {
+            document.getElementById("idresult").innerText = "Thuế TNCN là " + (salary * 0.1) + " triệu"
+            + ". Tiền lương bạn nhận được là " + 0.9 * salary + " triệu";
+        } else {
+            document.getElementById("idresult").innerText = "Thuế TNCN là " + (salary * 0.05) + " triệu"
+            + ". Tiền lương bạn nhận được là " + 0.95 * salary + " triệu";
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

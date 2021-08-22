@@ -38,20 +38,20 @@
         }
 
         soanMess() {
-            let mess = prompt("Mời bàn nhập tin nhắn: ")
+            let mess = prompt("Mời bàn nhập tin nhắn: ");
             //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin
             //nhắn hiện tại hay không?
             this.soanThao.push(mess);
             this.pin--;
         }
 
-        inboxMess(phoneName, mess) {
-            this.thuDen.push("Tên điện thoại: " + phoneName + " đã gửi tin" +
-                "lời nhắn: " + mess)
+        inboxMess(namePhone, mess) {
+            this.thuDen.push("Tên điện thoại: " + namePhone + " đã gửi tin" +
+                "lời nhắn: " + mess);
             this.pin--;
         }
 
-        sentMess(phone) {
+        sendMess(phone) {
             let data = "";
             for (let i = 0; i < this.soanThao.length; i++) {
                 data+= i+": "+this.soanThao[i];
@@ -63,11 +63,34 @@
             phone.inboxMess(this.namePhone,this.soanThao[index]);
             this.soanThao.splice(index,1);
         }
+
+        seeMessSent(phone) {
+            for ( let i = 0; i < this.daGui.length; i++) {
+                console.log("Xem tin nhắn đã gửi " + this.daGui[i] );
+            }
+        }
+
+        seeInbox() {
+            for ( let i = 0; this.thuDen.length; i++) {
+                console.log("Xem hộp thư đến " + this.thuDen[i]);
+            }
+        }
+
+
+
+
         //yêu cầu hoàn thiện
         //Viết phương thức xem tin nhắn đã gửi và hộp thư đến?
         //Các chức năng không thể hoạt động nếu điện thoại chưa bật.
         //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin nhắn hiện tại hay không?
     }
+
+    let phone1 = new Phone("Nokia", 95, true );
+    let phone2 = new Phone("Iphone", 100, true);
+    phone1.soanMess(phone2);
+    phone2.seeInbox();
+    phone2.sendMess(phone1);
+
 </script>
 </body>
 </html>

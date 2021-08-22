@@ -9,25 +9,22 @@
     class SwitchButton  {
         constructor(status) {
             this.status = status;
-            // this.lamp = lamp;
+
         }
 
+        // changestatus() {
+        //     //có 1 tham số truyền vào electric lamp
+        //     // gọi phương thức sáng den của electriclamp
 
 
-        connectToLamp () {
-            if (this.status == "On") {
-                alert("Connected");
-            } else {
-                alert("Not connected");
-            }
-        }
+       changeStatus (ElectricLamp) {
 
-        getStatus () {
+            //bỏ turn light và offlight vào đây
 
-           if (this.status == "On") {
-               alert(" Công tắc bật ");
+           if (ElectricLamp.statuslamp == true) {
+               ElectricLamp.statuslamp;
            } else {
-               alert(" Công tắc off ");
+               ElectricLamp.statuslamp;
            }
         }
 
@@ -40,36 +37,28 @@
         electricLamp () {
             return this.statuslamp;
         }
-        getElectricLamp (SwitchButton) {
-
-            if (SwitchButton.status == this.statuslamp) {
-               alert("Đèn sáng");
-            }
-            else {
-                alert("Đèn tắt");
-            }
+        turnOnLight() {
+            this.statuslamp = true;
+            alert("Bật đèn")
         }
+        turnOffLight() {
+            this.statuslamp = false;
+            alert("Tắt đèn")
+        }
+
+
     }
 
-    let button = new SwitchButton("On");
-    let lampStatus = new ElectricLamp("On");
-    button.connectToLamp();
-    button.getStatus();
+    let button = new SwitchButton(true);
+    let lampStatus = new ElectricLamp(true);
+    button.changeStatus(ElectricLamp);
+    lampStatus.turnOnLight();
+    lampStatus.turnOffLight();
     document.write("<br>");
-    lampStatus.electricLamp();
-    lampStatus.getElectricLamp(SwitchButton);
 
     // Ko đc bỏ button.getStatus() vào document.write, nó sẽ ra undefined, do ở trên hàm getstatus đã có document.wwrite
 
     ;
-
-
-
-
-
-
-
-
 
 
 
