@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var a, b, a1, b1, U;
+
+    do {
+        prompt("Nhap vao a1= ");
+        document.write(a1);
+        prompt("Nhap vao b1= ");
+        document.write( b1);
+        if (b1 == 0) {
+            document.write("Gia tri cua b khong hop ly, xin kta lai!");
+        }
+    } while (b1 == 0);
+    a1 = a;
+    b1 = b;
+    if (a == 0) {
+        document.write("ket qua la 0");
+    } else {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else if (b > a) {
+                b = b - a;
+            }
+        }
+        U = a;
+
+    }
+    document.write("Phan so toi gian la", a1 / U, b1 / U);
+
+</script>
+
+</body>
+</html>

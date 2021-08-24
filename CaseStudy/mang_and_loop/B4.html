@@ -6,15 +6,65 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt("Nhập một ký tự số vào đây"));
-    let array = [1,2,3,4,5,6];
-    let word = ["một", "hai", "ba", "bốn", "năm", "sáu"];
+    let number =(prompt("Nhập một ký tự số vào đây"));
+    console.log(number);
+    let array = [0,1,2,3,4,5,6,7,8,9];
+    let word = ["không","một", "hai", "ba", "bốn", "năm", "sáu","bảy","tám","chín",];
 
-    for (let i = 0; i <array.length; i++) {
-        if(number ==  array[i] ) {
-            document.write(word[i]);
+    for (let i = 0; i <number.length; i++) {
+        for(let j = 0; j <array.length; j++) {
+            if(number[i] ==  array[j] ) {
+                document.write(word[j] + ", ");
+                break;
+            }
         }
+
     }
+
+    // let n = parseInt(prompt("nh?p vào s? n"));
+    // let str = "";
+    // while (n != 0){
+    //     switch (n%10) {
+    //         case 0:
+    //             str+= "không";
+    //             break;
+    //         case 1:
+    //             str+= "môt";
+    //             break;
+    //         case 2:
+    //             str+= "hai";
+    //             break;
+    //         case 3:
+    //             str+= "ba";
+    //             break;
+    //         case 4:
+    //             str+= "b?n";
+    //             break;
+    //         case 5:
+    //             str+= "nam";
+    //             break;
+    //         case 6:
+    //             str+= "sáu";
+    //             break;
+    //         case 7:
+    //             str+= "b?y";
+    //             break;
+    //         case 8:
+    //             str+= "tám";
+    //             break;
+    //         case 9:
+    //             str+= "chín";
+    //             break;
+    //     }
+    //     n = Math.floor(n/10) ;
+    // }
+    // for (let i =0; i<str.length/2;i++){
+    //     str[i] = str[length];
+    //
+    // }
+    // document.write(str);
+    //
+    // console.log(str);
 
 </script>
 </body>

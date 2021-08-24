@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var a, b, a1, b1;
+    var h;
+
+
+
+    do {
+        a = parseInt(prompt("Nhap vao a= "));
+        b = parseInt(prompt("Nhap vao b= "));
+        a1 = parseInt(prompt("Nhap vao a1= "));
+        b1 = parseInt(prompt("Nhap vao b1= "));
+        console.log( a);
+        console.log(b);
+        console.log( a1);
+        console.log(b1);
+
+
+        var phepcong = (a / b) + (a1 / b1);
+        var pheptru = (a / b) - (a1 / b1);
+        var phepnhân = (a / b) * (a1 / b1);
+        var phepchia = (a / b) / (a1 / b1);
+
+
+        if (b1 == 0 || b == 0) {
+            alert("Gia tri cua mẫu số đang bằng 0, xin kta lai!");
+        };
+
+    } while (b1==0 || b == 0);
+
+    if (a == 0 && a1 == 0) {
+        document.write(" ket qua la 0");
+    } else if (a == 0 && a1 != 0) {
+        document.write(a1 / b1);
+    } else if (a != 0 && a1 == 0) {
+        document.write(a / b);
+    }
+    else if(a!=0 && a1!=0) {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else if (b > a) {
+                b = b - a;
+            }
+        }
+        h = a;
+    }
+    document.write("phép cộng " + phepcong + "<br>");
+    document.write("phéo trừ " + pheptru + "<br>");
+    document.write("phép chia " + phepchia + "<br>");
+    document.write("phép nhân " + phepnhân + "<br>");
+    // document.write("Phan so toi gian la " + a1 / h + "/" + b1 / h)
+
+
+
+</script>
+
+</body>
+</html>

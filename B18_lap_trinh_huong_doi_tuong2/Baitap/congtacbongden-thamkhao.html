@@ -2,31 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>cong tac va bong den</title>
+    <title>Title</title>
 </head>
 <body>
 <script>
-    class SwitchButton {
-        constructor(status, lamp) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        // connectToLamp(lamp) {
-        //     this.lamp = lamp;
-        // }
-        switchOff() {
-            alert("Đèn tắt");
-            this.status = false;
-            this.lamp.turnOff();
-        }
-
-        switchOn() {
-            alert("Đèn bật");
-            this.status = true;
-            this.lamp.turnOn();
-        }
-    }
-
     class ElectricLamp{
         constructor(status) {
             this.status = status;
@@ -39,15 +18,29 @@
             this.status = false;
         }
     }
+    class SwitchButton {
+        constructor(status, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+        switchOff() {
+            alert("Đèn tắt")
+            this.status = false;
+            this.lamp.turnOff();
+        }
 
+        switchOn() {
+            alert("Đèn bật")
+            this.status = true;
+            this.lamp.turnOn();
+        }
+    }
     let electricLamp = new ElectricLamp(false);
     let switchButton = new SwitchButton(false,electricLamp);
     switchButton.switchOn();
     switchButton.switchOff();
-    ;
-
-
-
 </script>
 </body>
-</html>
