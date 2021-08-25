@@ -6,62 +6,62 @@
 </head>
 <body>
 <script>
-    // let numbera = prompt('Nhập số a');
-    // let numberb = prompt('Nhập số b');
+    let numbera = prompt('Nhập số a');
+    let numberb = prompt('Nhập số b');
+
+    if (numbera % numberb == 0) {
+        alert('Số a chia hết cho số b');
+    } else {
+        alert('Số a không chia hết cho b');
+    }
+
+    // class SwitchButton{
+    //     constructor(status, lamp) {
+    //         this.status = status;
+    //         this.lamp = lamp;
+    //     }
+    //     connectToLamp(){
+    //         if(this.status){
+    //             this.lamp.turnOn();
+    //         }
+    //         else(this.lamp.turnOff());
     //
-    // if (numbera % numberb == 0) {
-    //     alert('Số a chia hết cho số b');
-    // } else {
-    //     alert('Số a không chia hết cho b');
+    //     }
+    //     switchOff(){
+    //         this.status = false;
+    //         this.connectToLamp();
+    //     }
+    //     switchOn(){
+    //         this.status = true;
+    //         this.connectToLamp();
+    //     }
     // }
-
-    class SwitchButton{
-        constructor(status, lamp) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        connectToLamp(){
-            if(this.status){
-                this.lamp.turnOn();
-            }
-            else(this.lamp.turnOff());
-
-        }
-        switchOff(){
-            this.status = false;
-            this.connectToLamp();
-        }
-        switchOn(){
-            this.status = true;
-            this.connectToLamp();
-        }
-    }
-    class ElectricLamp{
-        constructor(status) {
-            this.status = status;
-        }
-        turnOff(){
-            this.status = false;
-        }
-        turnOn(){
-            this.status = true;
-        }
-    }
-    let lamp = new ElectricLamp(true);
-    let button = new SwitchButton(false, lamp);
-    console.log("trạng thái ban đầu: ");
-    console.log("button: " + button.status + ", lamp: "+ lamp.status);
-    button.connectToLamp();
-    console.log("sau khi kết nối button to lamp ");
-    console.log("button: " + button.status + ", lamp: "+ lamp.status);
-    for(let i = 1; i <= 10; i++){
-        console.log("Bật công tắc lần " + i);
-        button.switchOn();
-        console.log("button: " + button.status + ", lamp: "+ lamp.status);
-        console.log("tắt công tắc lần " + i);
-        button.switchOff();
-        console.log("button: " + button.status + ", lamp: "+ lamp.status);
-    }
+    // class ElectricLamp{
+    //     constructor(status) {
+    //         this.status = status;
+    //     }
+    //     turnOff(){
+    //         this.status = false;
+    //     }
+    //     turnOn(){
+    //         this.status = true;
+    //     }
+    // }
+    // let lamp = new ElectricLamp(true);
+    // let button = new SwitchButton(false, lamp);
+    // console.log("trạng thái ban đầu: ");
+    // console.log("button: " + button.status + ", lamp: "+ lamp.status);
+    // button.connectToLamp();
+    // console.log("sau khi kết nối button to lamp ");
+    // console.log("button: " + button.status + ", lamp: "+ lamp.status);
+    // for(let i = 1; i <= 10; i++){
+    //     console.log("Bật công tắc lần " + i);
+    //     button.switchOn();
+    //     console.log("button: " + button.status + ", lamp: "+ lamp.status);
+    //     console.log("tắt công tắc lần " + i);
+    //     button.switchOff();
+    //     console.log("button: " + button.status + ", lamp: "+ lamp.status);
+    // }
 </script>
 
 </body>

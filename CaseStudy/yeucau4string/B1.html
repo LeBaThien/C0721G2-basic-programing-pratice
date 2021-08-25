@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b1</title>
+</head>
+<body>
+<script>
+   let str = "truong   taN  HAI";
+
+   str.split(" ");
+
+   let array = str.toLowerCase().split(" ");// là 1 mảng
+   //duyệt mảng
+    var newString = "";
+    console.log(array);
+    for ( let i = 0 ; i <array.length; i++) {
+        if ( array[i] != "") {
+           let firstLetter = array[i].substr(0,1);
+           let result = firstLetter.toUpperCase() + array[i].substr(1,array[i].length);
+           newString += result + " ";
+        }
+    }
+   console.log(newString);
+
+    // document.write(newArray.substr(0,1).toUpperCase() + newArray.substr(1,6) +
+    //     newArray.substr(7,1).toUpperCase() + newArray.substr(8,3)+
+    //     newArray.substr(11,1).toUpperCase() + newArray.substr(12,2)
+    //     );
+
+    // let a = "thien";
+    // console.log(a.substr(0,1).toUpperCase());
+    // console.log(a.substr(1,a.length));
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

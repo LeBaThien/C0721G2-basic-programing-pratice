@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập chuỗi vào đây");
+
+    let c = [];
+
+    let count = 0;
+    c.push(number[0]);
+    for (let i = 1; i < number.length; i++) {
+        let check = false;
+        for (let j = 0; j < c.length; j++) {
+            if( number[i] == c[j]) {
+                check = true;
+            }
+        }
+        if(!check) {
+            c.push(number[i]);
+        }
+    }
+
+    document.write(c);
+
+
+    // // if(!check) {
+    // //
+    // // }
+    //
+    // document.write(c);
+</script>
+
+</body>
+</html>
