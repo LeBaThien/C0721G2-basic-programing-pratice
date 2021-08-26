@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array2d = [
+        [1, 2, 3, 4],
+        [5, 4, 7, 4],
+        [9, 4, 11, 4],
+    ];
+
+
+    function checkPrime (array2d) {
+        let newArray = [];
+        for (let i = 0; i < array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                let flag = true;
+                if (array2d[i][j] < 2) {
+                    flag = false;
+                }
+                for ( var n = 2 ; n < array2d[i][j]; n++ ){
+                    if ( array2d[i][j] % n == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    newArray.push(array2d[i][j]);
+                }
+            }
+
+
+        }
+        return newArray;
+
+    }
+
+    let result = checkPrime(array2d);
+    console.log(result);
+    console.log(result.length);
+
+</script>
+
+</body>
+</html>

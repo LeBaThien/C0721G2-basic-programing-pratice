@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(id, chanel, volume, status, tivi) {
+            this.id = id;
+            this.chanel = chanel;
+            this.volume = volume;
+            this.status = status;
+            this.tivi = tivi;
+
+        }
+
+        switchOn () {
+            alert("Bật tivi");
+            this.status  = true;
+            this.tivi.turnOn();
+            alert("Bạn đã chuyển đến kênh thứ " +  this.chanel);
+        }
+        switchOff () {
+            alert("Tắt Tivi");
+            this.status = false;
+            this.tivi.turnOff();
+        }
+
+        changeChanel() {
+            let chanel = prompt("Mời bạn nhập kênh mới")
+            this.chanel = chanel;
+            alert("Bạn đã chuyển đến kênh thứ " +  this.chanel);
+        }
+        changeVolume() {
+            this.volume = volume;
+        }
+    }
+    class Tivi {
+        constructor(chanel,volume,status) {
+            this.status = status;
+            this.volume = volume;
+            this.chanel = chanel;
+
+        }
+        turnOn () {
+            this.status = true;
+        }
+        turnOff () {
+            this.status = false;
+        }
+
+    }
+
+    // Quan hệ sở hữu
+    let tivi = new Tivi(1,2,false);
+
+    let remote = new Remote(1,7,10,false,tivi);
+    tivi.turnOn();
+    tivi.turnOff();
+    // remote.changeChanel();
+    // remote.changeVolume();
+    remote.switchOn();
+    remote.changeChanel();
+
+   // Dùng remote chuyển đến kênh 3.
+
+
+
+
+</script>
+</body>
+</html>

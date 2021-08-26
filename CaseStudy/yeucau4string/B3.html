@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabccd";
+    let s2 = "adcaa";
+
+    let c = [];
+
+    for ( let  i = 0; i < s1.length; i ++) {
+        for ( let j = 0; j < s2.length; j++){
+            if(s1[i] == s2[j]) {
+                c.push(s1[i]);
+            }
+        }
+    }
+    document.write(c);
+    // document.write("<br>");
+    // let dSet = [...new Set(c)];
+    // document.write(dSet + "<br>" +  " Số kí tự giống nhau giữa hai sâu là " + dSet.length);
+
+    // Hàm set dùng để rút gọn, chỉ để lại những phàn tử unique
+
+    let d = [];
+    d.push(c[0]);
+    for ( let n = 1; n < c.length; n++) {
+        let check = false;
+        for ( let k = 0; k < d.length; k++) {
+            if (c[n] == d[k]) {
+                check = true;
+
+            }
+        }
+        if(!check) {
+            d.push(c[n]);
+        }
+    }
+
+    document.write("<br>");
+    document.write(d);
+
+
+</script>
+</body>
+</html>
