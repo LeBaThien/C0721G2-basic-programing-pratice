@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkPrime (number) {
+        if(number < 2) {
+            return false;
+        }
+        else {
+            for (let i = 2; i < number; i++) {
+                if(number % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
+
+   let number = [1,5,6,23,8,47,10,3];
+    let newArray = [];
+    for ( let  j = 0; j < number.length; j++) {
+       if(checkPrime(number[j])) {
+           newArray. push(number[j]);
+       }
+    }
+    document.write(newArray);
+
+    newArray.sort(function (a,b) {
+        return a - b;
+    });
+
+    document.write("<br>" + newArray);
+
+
+
+
+</script>
+
+</body>
+</html>

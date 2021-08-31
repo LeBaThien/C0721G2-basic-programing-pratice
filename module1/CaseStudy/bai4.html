@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input placeholder="Tên sản phẩm" id="product">
+<button onclick="addNewProduct()">Add product</button>
+<body>
+<script>
+    class Phone {
+        constructor(id, name, label, price  ) {
+            this.id = id;
+            this.name = name;
+            this.label = label;
+            this.price = price;
+        }
+        creatPhone () {
+            alert("Điện thoại mới được tạo có dữ liệu sau có id là" + this.id + ", có tên là " + this.name + ", có nhãn hiệu là " +
+                 this.label + ", có giá là " + this.price);
+        }
+        setIdPhone (){
+            this.id = id;
+        }
+        setName (){
+            this.name = name;
+        }
+        setLabel (){
+            this.label = label;
+        }
+        setPrice (){
+            this.price = price;
+        }
+        getIdPhone (){
+            this.id = id;
+        }
+        getName (){
+            this.name = name;
+        }
+        getLabel (){
+            this.label = label;
+        }
+        getPrice (){
+            this.price = price;
+        }
+
+    }
+
+
+
+    let newPhone = new Phone ("1", "Iphone","Apple","300");
+    newPhone.creatPhone();
+
+
+</script>
+</body>
+</html>

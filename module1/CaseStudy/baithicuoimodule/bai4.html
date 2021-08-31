@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<label>id: </label>
+<input id="id">
+<label>Name: </label>
+<input id="name">
+<label>label: </label>
+<input id="label">
+<label>Price: </label>
+<input id="price">
+<button onclick="createProduct()">Create Product</button>
+<div id="display"></div>
+
+<body>
+<script>
+
+    class Product {
+        constructor(id, name,label, price) {
+            this.id = id;
+            this.name = name;
+            this.label = label;
+            this.price = price;
+        }
+
+    }
+
+    function createProduct() {
+        let id = document.getElementById("id").value;
+        document.getElementById("id").value="";
+        let name = document.getElementById("name").value;
+        document.getElementById("name").value="";
+        let price = document.getElementById("price").value;
+        document.getElementById("price").value ="";
+        let label = document.getElementById("label").value;
+        document.getElementById("label").value ="";
+
+        products.push(new Product(id, name, label, price));
+        displayProduct();
+    }
+
+
+    function displayProduct() {
+        let temp="";
+        temp+="<table border='1'>";
+        temp+="<tr><th>id</th><th>Name</th><th>Label</th><th>Price</th></tr>";
+        for(let i =0; i<products.length;i++) {
+            temp+="<tr>";
+            temp+="<td>"+products[i].id+"</td>";
+            temp+="<td>"+products[i].name+"</td>";
+            temp+="<td>"+products[i].label+"</td>";
+            temp+="<td>"+products[i].price+"</td>";
+            temp+="</tr>";
+        }
+        temp+="</table>";
+        document.getElementById("display").innerHTML=temp;
+    }
+
+  
+    let products = [];
+    products.push(new Product("1", "Iphone","Apple","300"));
+    displayProduct();
+    console.log(products);
+
+
+
+</script>
+</body>
+</html>

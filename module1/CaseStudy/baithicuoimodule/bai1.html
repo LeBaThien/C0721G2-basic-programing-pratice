@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập vào số phần tử bạn muốn tạo mảng"));
+    let arrayA = [];
+
+    for (let j = 0; j < number; j++) {
+        arrayA[j] = parseInt(prompt("Nhập vào giá trị phần tử thứ " + j));
+
+    }
+    document.write(arrayA);
+
+    document.write("<br>");
+    let sum = 0;
+    let sum1 = 0;
+    let sum2 = 0;
+    for ( let i = 0; i < arrayA.length; i++) {
+        if ( arrayA[i] %  2 == 0 ){
+            sum1 = sum1 + arrayA[i];
+        } else {
+            sum2 = sum2 + arrayA[i];
+        }
+
+    }
+    sum = sum1 - sum2;
+    document.write("Tổng số chẵn" + sum1 + "<br>");
+    document.write("Tổng số lẽ " + sum2 + "<br>");
+    document.write("Kết quả" + sum);
+
+
+
+</script>
+</body>
+</html>

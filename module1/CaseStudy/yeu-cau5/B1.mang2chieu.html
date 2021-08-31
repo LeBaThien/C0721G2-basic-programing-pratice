@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.-->
+<script>
+    // let rowArr = parseInt(prompt("Nhập số row "));
+    // let colArr = parseInt(prompt("Nhập số col"));
+    //
+    // let arr2d = new Array (rowArr);
+    //
+    // for ( let row= 0; row < arr2d.length; row++ ) {
+    //     arr2d[row] = new Array(colArr);
+    //     for ( let col = 0; col < arr2d[row].length; col++) {
+    //         let value = prompt(" Nhập phần tử [" + row + "][" + col + "]");
+    //         arr2d[row][col] = value;
+    //     }
+    // }
+    //
+    // for ( let row = 0; row < arr2d.length; row++) {
+    //     for (let col = 0; col < arr2d[row].length; col++) {
+    //         document.write(arr2d[row][col] + " ");
+    //     }
+    //     document.write("<br>");
+    // }
+    // let array2d = [
+    //     [1,2,3,4],
+    //     [5,4,7,4],
+    //     [9,4,11,4],
+    // ];
+    //
+    // let sum = 0;
+    //  for ( let i = 0; i < array2d.length; i++){
+    //      for ( let j = 0; j < array2d[i].length; j++ ){
+    //          if (array2d[i][j] % 2 == 0) {
+    //              sum = sum + array2d [i][j];
+    //
+    //          }
+    //      }
+    //  }
+    //  document.write(sum);
+
+    // let number = 5;
+    //
+    // if (++number > 5) {
+    //     number += 1;
+    // } else {
+    //     number -= 1;
+    // }
+    // console.log(number);//5
+    // //lúc đầu bằng 5 so sánh với 5, sai => number++ là 6 => chạy xuống nhánh else gán vào, -1 , => kq cuối là 5
+
+    // let day = "Mon";
+    // let message = "";
+    //
+    // switch (day) {
+    //     case "Mon":
+    //         message = "Ngày đầu tuần";
+    //
+    //     case "Wed":
+    //         message = "Ngày giữa tuần";
+    //
+    //     case "Sat":
+    //     case "Sun":
+    //         message = "Ngày nghỉ";
+    // }
+
+    // console.log(message)
+        // let count = 0;
+        // while (count++ < 10) {
+        //     count++;
+        // }// Kết quả count vẫn bằng 11 , nếu thay 10 bằng 9
+
+    // let count = 0;
+    // do {
+    //     count++;
+    // } while (count++ < 10);
+
+    // let x = 1;
+    // for (let i = 0; i < 3; i++) {
+    //     break;
+    //     x = x + 1;
+    //
+    // }
+    // console.log(x);
+
+      // let i = 3;
+    // while (i < 6) {
+    //     console.log(i);//345
+    //     i += 1;
+    //     console.log(i);//456
+    // }
+    // console.log(i)//6
+    //
+    // let a = new Array (12,false,"text");
+    // console.log(a);
+
+    // let iMax = 20;
+    // let jMax = 10;
+    // let f = new Array();
+    //
+    // for (i = 0; i < iMax; i++) {
+    //     f[i] = new Array();
+    //     for (j = 0; j < jMax; j++) {
+    //         f[i][j] = 5;
+    //     }
+    // }
+    // console.log(f);
+
+    function func1(a){
+        if(a == 2)
+            return 2;
+        return a * func1(a - 1);
+    }
+    let result = func1(5);
+    console.log(result)
+
+</script>
+</body>
+</html>

@@ -30,7 +30,7 @@
     //     document.write("<br>");
     // }
 
-    let height = prompt("Nhập vào chiều cao tam giác cân: ");
+    // let height = prompt("Nhập vào chiều cao tam giác cân: ");
     // // tam giác cân rỗng
     // for (let row = 1; row <= height * 2; row++) {
     //     if (row % 2 == 0) {
@@ -61,23 +61,45 @@
     //
     //     }
     // }
-    //tam giác cân đặc
-    for (let row = 1; row <= height * 2; row++) {
-        if (row % 2 == 0) {
-            document.write("<br>");
-        } else {
-            for (let j = row; j <= 2 * height - 1; j++) {
-                document.write("&nbsp;");
-            }
-            for (let i = 1; i <= row; i++) {
-                document.write("*");
+    //
+    //Cách 2: tam giác cân rỗng
 
-
-            }
-
+    let h = parseInt(prompt("nhập vào h:"));
+    let n = h-1;
+    let m =1;
+    for (let i = 1;i <= h;i++){
+        for (let j = 1;j <= n;j++){
+            document.write("&nbsp"+" ")
         }
+        n--;
+        for (let k=1;k<=m;k++){
+            if (k==1 || k ==m || i==h){
+                document.write("*")
+            } else {
+                document.write("&nbsp" + " ")
+            }
+        }
+        m+=2;
+        document.write("<br>");
     }
 
+    //tam giác cân đặc
+
+    //*2 => dễ nhìn
+    // for (let row = 1; row <= height*2; row++) {
+    //     if (row % 2 == 0) {
+    //         document.write("<br>");
+    //     } else {
+    //         for (let j = row; j <= 2 * height - 1; j++) {
+    //             document.write("&nbsp;");
+    //         }
+    //         for (let i = 1; i <= row; i++) {
+    //             document.write("*");
+    //
+    //         }
+    //
+    //     }
+    // }
 
 </script>
 </body>
