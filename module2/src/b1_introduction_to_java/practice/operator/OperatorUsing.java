@@ -1,0 +1,18 @@
+package _01_introduction_to_java.practice.operator;
+import java.util.Scanner;// input library
+public class OperatorUsing {
+    public static void main(String[] args) {
+        float width;
+        float height;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter width: ");
+        width = scanner.nextFloat();
+        System.out.println("Enter height: ");
+        height = scanner.nextFloat();
+
+        float area = width * height;
+        System.out.println("Area is: " +area);
+
+    }
+}
