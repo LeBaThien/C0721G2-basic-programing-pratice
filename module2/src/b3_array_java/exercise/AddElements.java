@@ -1,0 +1,35 @@
+package b3_array_java.exercise;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class AddElements {
+    public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
+        int [] array = {1,2,5,7,3,0,8,5,6};
+        System.out.println("Enter number that you want to add ");
+        int number = input.nextInt();
+        System.out.println(" Enter the index of array, you want to add");
+        int index = input.nextInt();
+        int [] newArray = new int[ array.length + 1];
+
+        System.out.println(Arrays.toString(newArray));
+
+        if ( index <= -1 || index >= array.length) {
+            System.out.println("Please check your index");
+        } else {
+            for ( int i = 0; i < array.length; i++) {
+                    newArray[i] = array[i];
+
+            }
+            for (int j = newArray.length; j>0; j--){
+                if ( index == newArray[j]){
+
+                    newArray[j] = number;
+                }
+
+            }
+            System.out.println(Arrays.toString(newArray));
+        }
+    }
+}

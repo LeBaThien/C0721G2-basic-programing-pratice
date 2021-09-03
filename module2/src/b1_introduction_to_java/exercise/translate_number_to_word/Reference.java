@@ -271,6 +271,6 @@ public class Reference {
                 }
             }
         }
-        System.out.printf("%shundred and %s %s",datahundres,dataDozens,dataUnit);
+        System.out.printf("%s hundred and %s %s",datahundres,dataDozens,dataUnit);
     }
 }
