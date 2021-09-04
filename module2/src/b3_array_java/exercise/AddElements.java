@@ -5,31 +5,39 @@ import java.util.Scanner;
 
 public class AddElements {
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
-        int [] array = {1,2,5,7,3,0,8,5,6};
+        Scanner input = new Scanner(System.in);
+        int[] array = {1, 2, 5, 7, 3, 0, 8, 5, 6};
         System.out.println("Enter number that you want to add ");
         int number = input.nextInt();
         System.out.println(" Enter the index of array, you want to add");
         int index = input.nextInt();
-        int [] newArray = new int[ array.length + 1];
+        int[] newArray = new int[array.length + 1];
 
         System.out.println(Arrays.toString(newArray));
 
-        if ( index <= -1 || index >= array.length) {
+        if (index <= -1 || index > array.length) {
             System.out.println("Please check your index");
         } else {
-            for ( int i = 0; i < array.length; i++) {
-                    newArray[i] = array[i];
+            for (int i = 0; i < array.length; i++) {
+                newArray[i] = array[i];
 
             }
-            for (int j = newArray.length; j>0; j--){
-                if ( index == newArray[j]){
+            for (int j = 0; j < newArray.length; j++) {
 
-                    newArray[j] = number;
+                if (index == j) {
+                    for ( int k = 0; k <= index; k++) {
+                        newArray[j] = number;
+                    }
+                } else if (j <index){
+                    array[j] = newArray[j];
+                } else {
+                    newArray[j] = array[ j - 1];
                 }
 
             }
-            System.out.println(Arrays.toString(newArray));
+
         }
+        System.out.println(Arrays.toString(newArray));
+
     }
 }
