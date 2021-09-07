@@ -20,24 +20,33 @@ public class AddElements {
         } else {
             for (int i = 0; i < array.length; i++) {
                 newArray[i] = array[i];
-
             }
+            System.out.println(Arrays.toString(newArray));
             for (int j = 0; j < newArray.length; j++) {
-
-                if (index == j) {
-                    for ( int k = 0; k <= index; k++) {
-                        newArray[j] = number;
+                if (j == index) {
+                    for (int k = newArray.length - 1; k > index; k--) {
+                        newArray[k] = newArray[k - 1];
                     }
-                } else if (j <index){
-                    array[j] = newArray[j];
-                } else {
-                    newArray[j] = array[ j - 1];
+                    newArray[j] = number;
                 }
 
             }
+            //Ra rồi a :v, kakaka, sợ fixbug ko kịp :v
+
+            System.out.println(Arrays.toString(newArray));
 
         }
-        System.out.println(Arrays.toString(newArray));
-
     }
 }
+
+
+//Thao tác với mảng 1 rồi
+//                if (index == j) {
+//                    for ( int k = 0; k <= index; k++) {
+//                        newArray[j] = number;
+//                    }
+//                } else if (j <index){
+//                    array[j] = newArray[j];
+//                } else {
+//                    newArray[j] = array[ j - 1];
+//                }

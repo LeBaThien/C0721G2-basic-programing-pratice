@@ -25,19 +25,33 @@ public class MergeArray {
             array2[i] = b;
         }
         System.out.println(Arrays.toString(array2));
+//        double[] array3 = new double[size1 + size2];
+//        for (int i = 0; i <= size1 ; i++) {
+//
+//            if (i < size1) {
+//                array3[i] = array1[i];
+//            } else {
+//                for (int k = 0 ; k <size2; k++ ) {
+//                    array3[size1 + k] = array2[k];
+//                }
+//            }
+//
+//        }
+//        System.out.println(" New Array is below: ");
         double[] array3 = new double[size1 + size2];
-        for (int i = 0; i <= size1 ; i++) {
 
-            if (i < size1) {
-                array3[i] = array1[i];
-            } else {
-                for (int k = 0 ; k <size2; k++ ) {
-                    array3[size1 + k] = array2[k];
-                }
-            }
+        int pos = 0;
 
+        for (double element : array1) {
+            array3[pos] = element;
+            pos++;
         }
-        System.out.println(" New Array is below: ");
+
+        for (double element : array2) {
+            array3[pos] = element;
+            pos++;
+        }
+
         System.out.println(Arrays.toString(array3));
     }
 }
