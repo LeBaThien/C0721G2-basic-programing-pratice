@@ -31,7 +31,7 @@ public class AddElements {
                 }
 
             }
-            //Ra rồi a :v, kakaka, sợ fixbug ko kịp :v
+            //Ra rồi a :v, kakaka, fix sớm hơn dự tính :v
 
             System.out.println(Arrays.toString(newArray));
 

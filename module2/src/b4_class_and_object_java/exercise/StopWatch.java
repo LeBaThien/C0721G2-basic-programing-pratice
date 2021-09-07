@@ -1,9 +1,12 @@
 package b4_class_and_object_java.exercise;
 
-public class StopWatch {
-    private int startTime;
+import java.util.Date;
 
-    public int getStartTime() {
+public class StopWatch {
+    private double startTime;
+    private double endTime;
+
+    public double getStartTime() {
         return startTime;
     }
 
@@ -11,21 +14,28 @@ public class StopWatch {
         this.startTime = startTime;
     }
 
-    public int getEndTime() {
+    public double getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(int endTime) {
+    public void setEndTime(double endTime) {
         this.endTime = endTime;
     }
 
-    private int endTime;
-
-    public StopWatch (int startTime, int endTime){
+    public StopWatch (double startTime, double endTime){
         this.startTime = startTime;
         this.endTime = endTime;
     }
-//    public int start() {
-//
-//    }
+    public void start() {
+        this.startTime = System.currentTimeMillis();
+    }
+    public void  stop() {
+       this.endTime = System.currentTimeMillis();
+    }
+    public double getElapsedTime(){
+        return this.endTime -  this.startTime ;
+    }
+
+
+
 }
