@@ -5,9 +5,9 @@ public class test {
         Student.change(); //calling change method
 
         //creating objects
-        Student s1 = new Student(111, "Hoang");
-        Student s2 = new Student(222, "Khanh");
-        Student s3 = new Student(333, "Nam");
+        Student s1 = new Student(111, "Thien");
+        Student s2 = new Student(222, "joseph");
+        Student s3 = new Student(333, "peter");
 
         //calling display method
         s1.display();

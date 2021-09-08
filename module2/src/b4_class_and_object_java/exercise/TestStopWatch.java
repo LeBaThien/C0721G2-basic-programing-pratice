@@ -5,8 +5,6 @@ import java.util.Random;
 public class TestStopWatch {
     public static void main(String[] args) {
         StopWatch watch = new StopWatch(System.currentTimeMillis(),System.currentTimeMillis());
-
-
         SelectionSort ob = new SelectionSort();
             int arr[] = new int [100000];
             for (int i = 0; i < 100000; i++) {
