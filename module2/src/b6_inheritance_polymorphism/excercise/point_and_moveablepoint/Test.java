@@ -5,8 +5,8 @@ public class Test {
         Point point = new Point(1, 2);
         System.out.println(point);
         MovablePoint movablePoint = new MovablePoint(3, 4);
-        movablePoint.setX(2);
-        movablePoint.setY(2);
+        movablePoint.setX(0);
+        movablePoint.setY(0);
         movablePoint.setxSpeed(2);
         movablePoint.setySpeed(3);
         System.out.println(movablePoint.move().move());
