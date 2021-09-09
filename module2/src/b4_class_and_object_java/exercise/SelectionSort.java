@@ -4,6 +4,7 @@ import java.sql.Array;
 import java.util.Random;
 
 public class SelectionSort {
+
     void sort(int arr[])
     {
         int n = arr.length;
