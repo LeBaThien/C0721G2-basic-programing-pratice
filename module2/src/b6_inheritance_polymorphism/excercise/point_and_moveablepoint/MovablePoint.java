@@ -22,7 +22,7 @@ public class MovablePoint extends Point {
     }
 
     public float getxSpeed() {
-        return xSpeed;
+        return xSpeed += getX();
     }
 
     public void setxSpeed(float xSpeed) {
@@ -30,24 +30,23 @@ public class MovablePoint extends Point {
     }
 
     public float getySpeed() {
-        return ySpeed;
+        return ySpeed += getY();
     }
 
     public void setySpeed(float ySpeed) {
         this.ySpeed = ySpeed;
     }
 
-    public float[] move() {
-        float[] array1 = new float[2];
-        array1[0] = getX() + getxSpeed();
-        array1[1] = getY() + getySpeed();
-        return array1;
+    public MovablePoint move(){
+        System.out.println("(" + getX() + ", " + getY() + ") = (" + getxSpeed() + ", " + getySpeed()+ ")");
+        return this;
     }
 
-    @Override
-    public String toString() {
-        return "MovablePoint{" + getX() + "," + getY() +
-                '}' + ", (x speed: " + getxSpeed() + ", y speed: " + getySpeed() +
-                ") = " + Arrays.toString(move());
-    }
+
+//    @Override
+//    public String toString() {
+//        return "MovablePoint{" + getX() + "," + getY() +
+//                '}' + ", (x speed: " + getxSpeed() + ", y speed: " + getySpeed() +
+//                ") = " + Arrays.toString(move());
+//    }
 }

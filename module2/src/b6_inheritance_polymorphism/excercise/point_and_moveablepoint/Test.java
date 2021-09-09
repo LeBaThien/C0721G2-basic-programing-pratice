@@ -9,7 +9,7 @@ public class Test {
         movablePoint.setY(2);
         movablePoint.setxSpeed(2);
         movablePoint.setySpeed(3);
-        System.out.println(movablePoint);
+        System.out.println(movablePoint.move().move());
     }
 
 }
