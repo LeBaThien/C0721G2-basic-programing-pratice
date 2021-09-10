@@ -11,7 +11,7 @@ public class Circle {
 
     public void setRadius(double radius) {
         this.radius = radius;
-        this.area = this.radius * this.radius * 3.14;
+        this.area = this.radius * this.radius * Math.PI;
 
     }
 
@@ -34,7 +34,7 @@ public class Circle {
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
-        this.area = this.radius * this.radius * 3.14;
+        this.area = this.radius * this.radius * Math.PI;
     }
 
     @Override
