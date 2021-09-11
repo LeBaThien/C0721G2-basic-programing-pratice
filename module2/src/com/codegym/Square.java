@@ -50,6 +50,6 @@ public class Square extends Shape implements InterfaceResizeable, InterfaceColor
 
     @Override
     public String howToColor(String str) {
-        return "Color all four sides";
+        return str;
     }
 }
