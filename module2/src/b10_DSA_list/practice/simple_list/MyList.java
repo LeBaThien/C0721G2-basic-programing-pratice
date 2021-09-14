@@ -11,14 +11,14 @@ public class MyList<E> {
         elements = new Object[DEFAULT_CAPACITY];
     }
 
-    private void ensureCapa() {
+    private void ensureCapacity() {
         int newSize = elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
     }
 
     public void add(E e) {
         if (size == elements.length) {
-            ensureCapa();
+            ensureCapacity();
         }
         elements[size++] = e;
     }
