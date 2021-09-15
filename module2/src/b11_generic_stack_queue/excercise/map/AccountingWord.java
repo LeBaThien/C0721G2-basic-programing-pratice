@@ -2,7 +2,7 @@ package b11_generic_stack_queue.excercise.map;
 
 import java.util.Map;
 
-public class TreeMap {
+public class AccountingWord {
     public static void accountWord (String str){
         Map<String, Integer> string = new java.util.TreeMap<String, Integer>();
         String strUpCase = str.toUpperCase();
