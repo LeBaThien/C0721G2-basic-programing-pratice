@@ -16,7 +16,7 @@ public class AccountingWord {
         }
 
         for (Map.Entry<String,Integer> entry :string.entrySet()){
-            System.out.println(entry.getKey() + ": " +entry.getValue());
+            System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }
     public static void main(String args[]) {
