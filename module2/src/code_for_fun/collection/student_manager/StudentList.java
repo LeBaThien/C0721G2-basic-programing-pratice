@@ -3,7 +3,7 @@ package code_for_fun.collection.student_manager;
 import java.util.ArrayList;
 
 public class StudentList {
-    private ArrayList<Student> studentArrayList;
+    private final ArrayList<Student> studentArrayList;
 
     public StudentList(){
         this.studentArrayList = new ArrayList<Student>();
@@ -20,7 +20,7 @@ public class StudentList {
     }
     public void printList(){
         for(Student sv : studentArrayList){
-            System.out.println(studentArrayList);
+            System.out.println(sv);
         }
     }
 
