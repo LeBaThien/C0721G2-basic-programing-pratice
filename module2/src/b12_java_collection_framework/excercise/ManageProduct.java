@@ -17,16 +17,17 @@ public class ManageProduct {
     }
 
     public void editProduct(int idProduct) {
-        System.out.println("Enter number your want to edit");
-        System.out.println("1. Edit id");
-        System.out.println("2. Edit name product");
-        System.out.println("3. Edit Price");
-        System.out.println("4. Exit edit");
-        Scanner sc = new Scanner(System.in);
+
 
         for (Product product : productArrayList) {
             if (product.getId() == idProduct) {
-                do {
+                while (true){
+                    System.out.println("Enter number your want to edit");
+                    System.out.println("1. Edit id");
+                    System.out.println("2. Edit name product");
+                    System.out.println("3. Edit Price");
+                    System.out.println("4. Exit edit");
+                    Scanner sc = new Scanner(System.in);
                     int selection = sc.nextInt();
                     switch (selection) {
                         case 1:
@@ -42,13 +43,14 @@ public class ManageProduct {
                             product.setPriceProduct(sc.nextDouble());
                             break;
                         case 4:
-                            return;
+                            return ;
                         default:
                             System.out.println("Please check your number");
-                            continue;
+                            break;
                     }
+                }
 
-                } while (true);
+//                } while (selection != 0);
             } else {
                 System.out.println("Please check your Id, It maybe wrong ");
             }

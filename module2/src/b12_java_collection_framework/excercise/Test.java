@@ -45,7 +45,6 @@ public class Test {
                     System.out.println("Enter your id product, that you want to delete");
                     int idProduct2 = sc.nextInt();
                     manageProduct.deleteProduct(idProduct2);
-                    manageProduct.displayProduct();
                     break;
                 }
 
