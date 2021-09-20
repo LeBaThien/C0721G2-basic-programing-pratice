@@ -21,6 +21,7 @@ public class Test {
             System.out.println("5. Search Product List");
             System.out.println("6. Ordering a->z Product List");
             System.out.println("7. Ordering z->a Product List");
+            System.out.println("0. Exit");
             selection = sc.nextInt();
 
             switch (selection) {
