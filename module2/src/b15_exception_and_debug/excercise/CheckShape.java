@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CheckShape {
     public static void checkTriangle() throws IllegalTriangleException {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the  first side of Triangle: ");
         double a = scanner.nextDouble();
@@ -12,7 +11,6 @@ public class CheckShape {
         double b = scanner.nextDouble();
         System.out.println("Enter the third side of Triangle: ");
         double c = scanner.nextDouble();
-
         double x = a + b;
         double y = a + c;
         double z = b + c;
@@ -27,7 +25,8 @@ public class CheckShape {
         }
         System.out.println("The Triangle with side : " + a + ", " + b + ", " + c);
     }
-    public static void main(String[] args)  {
+
+    public static void main(String[] args) {
         boolean flag = true;
         while (flag) {
             flag = false;
