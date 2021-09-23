@@ -1,4 +1,4 @@
-package b10_DSA_list.exercise.arraylist;
+package b10_dsa_list.exercise.arraylist;
 
 public class MyListTest {
     public static void main(String[] args) {

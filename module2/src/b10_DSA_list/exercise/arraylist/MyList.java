@@ -1,4 +1,4 @@
-package b10_DSA_list.exercise.arraylist;
+package b10_dsa_list.exercise.arraylist;
 
 import java.util.Arrays;
 

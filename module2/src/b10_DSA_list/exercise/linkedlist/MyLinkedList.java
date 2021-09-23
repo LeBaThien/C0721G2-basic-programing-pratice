@@ -1,4 +1,4 @@
-package b10_DSA_list.exercise.linkedlist;
+package b10_dsa_list.exercise.linkedlist;
 
 public class MyLinkedList<E> {
     private class Node {

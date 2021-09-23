@@ -1,4 +1,4 @@
-package b10_DSA_list.practice.simple_list;
+package b10_dsa_list.practice.simple_list;
 
 public class MyListTest {
     public static void main(String[] args) {

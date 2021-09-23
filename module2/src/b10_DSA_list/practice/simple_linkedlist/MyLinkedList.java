@@ -1,4 +1,4 @@
-package b10_DSA_list.practice.simple_linkedlist;
+package b10_dsa_list.practice.simple_linkedlist;
 
 public class MyLinkedList {
     private Node head;
