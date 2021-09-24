@@ -9,7 +9,7 @@ public class ProductManager {
     //dùng static
     private static List<Product> products = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
-    private static File file = new File("D:\\codegym_final\\module2\\src\\b17_io_binary_file_and_serialization\\excercise\\product.txt");
+    private static final File file = new File("D:\\codegym_final\\module2\\src\\b17_io_binary_file_and_serialization\\excercise\\product.txt");
 
     public static void writeToFile(List<Product> products) {
         try {
@@ -31,9 +31,7 @@ public class ProductManager {
             products = (List<Product>) ois.readObject();//ép kiểu
             fis.close();
             ois.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return products;
@@ -66,6 +64,7 @@ public class ProductManager {
 
     public void findProduct (){
         System.out.println("Enter name product");
+        List<Product> products = readDataFromFile();//Tạo ra để hứng lại dữ liệu, đọc file lậi, vô list rồi mới tìm đc
         String nameProduct = scanner.next();
         for (Product product :products) {
             //dùng equals vì string
