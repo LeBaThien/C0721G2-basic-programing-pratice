@@ -40,7 +40,7 @@ public class Main {
 
         try {
             copyFileUsingJava7Files(sourceFile, destFile);
-            //copyFileUsingStream(sourceFile, destFile);
+//            copyFileUsingStream(sourceFile, destFile);
             System.out.printf("Copy completed");
         } catch (IOException ioe) {
             System.out.printf("Can't copy that file");
