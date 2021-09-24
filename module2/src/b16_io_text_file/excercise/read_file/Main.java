@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        List<Country> countries = new ArrayList<>();
 
         BufferedReader br = null;
         try {
@@ -15,38 +16,21 @@ public class Main {
             br = new BufferedReader(new FileReader("D:\\codegym_final\\module2\\src\\b16_io_text_file\\excercise\\read_file\\national.csv"));
 
             while ((line = br.readLine()) != null) {
-                printCountry(parseCsvLine(line));
+             String[] strings = line.split(",");
+            int id = Integer.parseInt(strings[0]);
+            String code = strings[1];
+            String name = strings[2];
+            countries.add(new Country(id,code,name));
             }
+            br.close();
 
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (br != null)
-                    br.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
+//        for(Country country : countries){
+//            System.out.println(country);
+//        }
+        countries.forEach(System.out :: println);
     }
 
-    public static List<String> parseCsvLine(String csvLine) {
-        List<String> result = new ArrayList<>();
-        if (csvLine != null) {
-            String[] splitData = csvLine.split(",");
-            for (int i = 0; i < splitData.length; i++) {
-                result.add(splitData[i]);
-            }
-        }
-        return result;
-    }
-
-    private static void printCountry(List<String> country) {
-        System.out.println(
-                "Country [id= "
-                        + country.get(0)
-                        + ", code= " + country.get(1)
-                        + " , name=" + country.get(2)
-                        + "]");
-    }
 }
