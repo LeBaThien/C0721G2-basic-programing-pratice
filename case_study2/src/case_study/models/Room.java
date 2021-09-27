@@ -3,8 +3,11 @@ package case_study.models;
 public class Room extends Facility {
     private String serviceFree;
 
-    public Room(String nameService, double usingArea, double priceRental, int numberPersonInRoom, String typeOfRent) {
+
+    public Room(String nameService, double usingArea, double priceRental, int numberPersonInRoom,
+                String typeOfRent, String serviceFree) {
         super(nameService, usingArea, priceRental, numberPersonInRoom, typeOfRent);
+        this.serviceFree = serviceFree;
     }
 
     public String getServiceFree() {
@@ -19,6 +22,6 @@ public class Room extends Facility {
     public String toString() {
         return "Room{" +
                 "serviceFree='" + serviceFree + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }

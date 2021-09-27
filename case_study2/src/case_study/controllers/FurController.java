@@ -1,11 +1,60 @@
 package case_study.controllers;
 
 import case_study.models.Employee;
+import case_study.services.CustomerServiceImpl;
+import case_study.services.EmployeeServiceImpl;
+import case_study.services.FacilityServiceImpl;
 
 import java.util.Scanner;
 
 public class FurController {
+    private static Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        while (true) {
+            System.out.println("===Menu===");
+            System.out.println("1. Employee Management");
+            System.out.println("2. Customer Management");
+            System.out.println("3. Facility Management ");
+            System.out.println("4. Booking Management");
+            System.out.println("5. Promotion Management");
+            System.out.println("6. Exit");
+            System.out.print("Enter number, you want to use: ");
+            Scanner sc = new Scanner(System.in);
+            int selection = sc.nextInt();
+            switch (selection) {
+                case 1: {
+                    displayMainMenu(1);
+                    break;
+                }
+                case 2:{
+                    displayMainMenu(2);
+                    break;
+                }
+                case 3:{
+                    displayMainMenu(3);
+                    break;
+                }
+                case 4: {
+                    displayMainMenu(4);
+                    break;
+                }
+                case 5: {
+                    displayMainMenu(5);
+                    break;
+                }
+                case 6: {
+                    return;
+                }
+            }
+
+        }
+    }
+
     public static void displayMainMenu(int selection) {
+        EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
+        FacilityServiceImpl facilityService = new FacilityServiceImpl();
         switch (selection) {
             case 1: {
                 while (true) {
@@ -19,8 +68,18 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
+                            employeeService.showList();
                             break;
                         }
+                        case 2: {
+                            employeeService.add();
+                            break;
+                        }
+                        case 3:
+                            System.out.print("Enter your id employee, you want to edit: ");
+                            int id = scanner.nextInt();
+                            employeeService.editEmployee(id);
+                            break;
                         case 4:{
                             return;
                         }
@@ -30,7 +89,7 @@ public class FurController {
             case 2: {
                 while (true) {
                     System.out.println("=== Customer Management ===");
-                    System.out.println("1. Display list customers");
+                    System.out.println("1. Show list customers");
                     System.out.println("2. Add new customer");
                     System.out.println("3. Edit customers");
                     System.out.println("4. Return main menu");
@@ -38,9 +97,25 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
+                            customerService.showList();
                             break;
                         }
-
+                        case 2: {
+                            customerService.addNewCustomer();
+                            break;
+                        }
+                        case 3:{
+                            System.out.print("Enter id customer, you want to edit: ");
+                            int id = scanner.nextInt();
+                            customerService.editList(id);
+                            break;
+                        }
+                        case 4:{
+                            return;
+                        }
+                        default:{
+                            System.out.println("Please check your number!!!");
+                        }
                     }
                 }
 
@@ -56,6 +131,11 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
+                            facilityService.showList();
+                            break;
+                        }
+                        case 2: {
+                            facilityService.addFacility();
                             break;
                         }
                         case 4: {
@@ -108,51 +188,6 @@ public class FurController {
 
         }
 
-    }
-
-    public static void main(String[] args) {
-        FurController furController = new FurController();
-        Employee employee = new Employee("Peter",23/2/1990,"Male",1,12312,"peter@gmail.com",1, Employee.COLLEGE,1200,Employee.SUPERVISOR);
-        Employee employee1 = new Employee("Rose",12/2/1995,"Female",2,12244,"rose@gmail.com",2, Employee.MASTER,1200,Employee.RECEPTIONIST);
-
-        while (true) {
-            System.out.println("===Menu===");
-            System.out.println("1. Employee Management");
-            System.out.println("2. Customer Management");
-            System.out.println("3. Facility Management ");
-            System.out.println("4. Booking Management");
-            System.out.println("5. Promotion Management");
-            System.out.println("6. Exit");
-            System.out.print("Enter number, you want to use: ");
-            Scanner sc = new Scanner(System.in);
-            int selection = sc.nextInt();
-            switch (selection) {
-                case 1: {
-                    displayMainMenu(1);
-                    break;
-                }
-                case 2:{
-                    displayMainMenu(2);
-                    break;
-                }
-                case 3:{
-                    displayMainMenu(3);
-                    break;
-                }
-                case 4: {
-                    displayMainMenu(4);
-                    break;
-                }
-                case 5: {
-                    displayMainMenu(5);
-                    break;
-                }
-                case 6: {
-                    return;
-                }
-            }
-
-        }
     }
 
 }

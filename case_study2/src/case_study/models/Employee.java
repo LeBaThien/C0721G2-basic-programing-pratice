@@ -64,6 +64,9 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "Employee{" +
+                super.toString() + //Phải ghi thêm dòng này thì mới kế thừa lại kiểu in của thèn cha,
+                // vì sao khi bấm toString của thèn con, nó ko hiện ra toString của thèn cha luôn,
+                // mà mình phải dùng super để override lại ?
                 "idEmployee=" + idEmployee +
                 ", academicLevel='" + academicLevel + '\'' +
                 ", salaryStaff=" + salaryStaff +
