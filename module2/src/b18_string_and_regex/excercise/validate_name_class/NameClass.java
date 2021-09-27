@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class NameClass {
     private static Pattern pattern;
     private Matcher matcher;
-    private static final String NAME_ClASS = "^[CAP][0-9]{4,}[GHIKLM]$";
+    private static final String NAME_ClASS = "^[CAP][0-9]{4}[GHIKLM]$";
 
     public NameClass(){
         pattern = Pattern.compile(NAME_ClASS);

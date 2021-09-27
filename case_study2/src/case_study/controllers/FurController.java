@@ -158,6 +158,7 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
+
                             break;
                         }
                         case 4: {
