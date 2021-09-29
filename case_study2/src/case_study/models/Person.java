@@ -2,14 +2,13 @@ package case_study.models;
 
 public abstract class Person {
     private String name;
-    private int dateBirth;
+    private String dateBirth;
     private String sex;
     private int identification;
     private int phoneNumber;
     private String email;
 
-    public Person(String name, int dateBirth, String sex, int identification,
-                  int phoneNumber, String email) {
+    public Person(String name, String dateBirth, String sex, int identification, int phoneNumber, String email) {
         this.name = name;
         this.dateBirth = dateBirth;
         this.sex = sex;
@@ -17,7 +16,6 @@ public abstract class Person {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
 
     public String getName() {
         return name;
@@ -27,11 +25,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public int getDateBirth() {
+    public String getDateBirth() {
         return dateBirth;
     }
 
-    public void setDateBirth(int dateBirth) {
+    public void setDateBirth(String dateBirth) {
         this.dateBirth = dateBirth;
     }
 

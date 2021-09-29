@@ -20,8 +20,7 @@ public class Employee extends Person {
     public final static String DIRECTOR = "Director";
 
 
-    public Employee(String name, int dateBirth, String sex, int identification, int phoneNumber,
-                    String email, int idEmployee, String academicLevel, double salaryStaff,String position) {
+    public Employee(String name, String dateBirth, String sex, int identification, int phoneNumber, String email, int idEmployee, String academicLevel, double salaryStaff, String position) {
         super(name, dateBirth, sex, identification, phoneNumber, email);
         this.idEmployee = idEmployee;
         this.academicLevel = academicLevel;

@@ -1,6 +1,8 @@
 package case_study.controllers;
 
+import case_study.models.Booking;
 import case_study.models.Employee;
+import case_study.services.BookingServiceImpl;
 import case_study.services.CustomerServiceImpl;
 import case_study.services.EmployeeServiceImpl;
 import case_study.services.FacilityServiceImpl;
@@ -8,7 +10,7 @@ import case_study.services.FacilityServiceImpl;
 import java.util.Scanner;
 
 public class FurController {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
         while (true) {
@@ -55,6 +57,7 @@ public class FurController {
         EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
+        BookingServiceImpl bookingService = new BookingServiceImpl();
         switch (selection) {
             case 1: {
                 while (true) {
@@ -158,7 +161,11 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
-
+                            bookingService.addBookingService();
+                            break;
+                        }
+                        case 2: {
+                            bookingService.showBookingService();
                             break;
                         }
                         case 4: {

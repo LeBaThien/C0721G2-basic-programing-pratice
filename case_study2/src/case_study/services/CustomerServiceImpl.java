@@ -8,28 +8,29 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
-    private static final List<Customer>customerList = new LinkedList<>();
-    private static final Scanner scanner = new Scanner(System.in);
+    protected static List<Customer>customerList = new LinkedList<>();
+    protected static Scanner scanner = new Scanner(System.in);
 
     static {
-    Customer customer1 = new Customer("jose",12/7/1990,"Female",12321,
-            1237,"jose@gmail.com",12,Customer.DIAMOND,"dn");
-    Customer customer2 = new Customer("thomas",5/7/1999,"Female",12761,
-                20017,"thomas@gmail.com",10,Customer.GOLD,"qn");
+    Customer customer1 = new Customer("jose","12/7/1990","Female",12321, 1237,
+            "jose@gmail.com",12,Customer.DIAMOND,"dn");
+    Customer customer2 = new Customer("thomas","5/7/1999","Female",12761, 20017,
+            "thomas@gmail.com",10,Customer.GOLD,"qn");
     //Viet truc tiep
-    customerList.add(new Customer("Grace",4/7/1995,"male",88021,
-                347137,"grace@gmail.com",8,Customer.MEMBER,"uk"));
+    customerList.add(new Customer("Grace","4/7/1995","male",88021, 347137,
+            "grace@gmail.com",8,Customer.MEMBER,"uk"));
     customerList.add(customer1);
     customerList.add(customer2);
 
     }
+
 
     @Override
     public void addNewCustomer() {
         System.out.print("Enter customer name: ");
         String nameCustomer = scanner.next();
         System.out.print("Enter customer date birth: ");
-        int dateBirth = scanner.nextInt();
+        String dateBirth = scanner.next();
         System.out.print("Enter customer sex: ");
         String sex = scanner.next();
         System.out.print("Enter customer identification: ");
@@ -75,7 +76,7 @@ public class CustomerServiceImpl implements CustomerService {
                     }
                     case "b": {
                         System.out.print("Enter new date birth: ");
-                        int dateBirth = scanner.nextInt();
+                        String dateBirth = scanner.next();
                         customer.setDateBirth(dateBirth);
                         break;
                     }

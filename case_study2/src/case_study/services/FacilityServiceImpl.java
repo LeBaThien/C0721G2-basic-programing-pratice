@@ -13,8 +13,8 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class FacilityServiceImpl implements FacilityService {
-    private static final Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
-    private static final Scanner scanner = new Scanner(System.in);
+    protected static Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
+    protected static Scanner scanner = new Scanner(System.in);
 
     static {
         facilityIntegerMap.put(new House("House rental",200,300,2,House.DATE,"A",2),0);
@@ -38,6 +38,18 @@ public class FacilityServiceImpl implements FacilityService {
 //        for(Map.Entry<Facility,Integer> entry : entries){
 //            System.out.println(entry.getKey() + ": " + entry.getValue());
 //        }
+    }
+
+    public static Facility getFacility (String nameFacility) {
+       Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
+       //equals or contains
+       for(Map.Entry<Facility,Integer> map : entries){
+           if(map.getKey().getNameService().equals(nameFacility)){
+               map.setValue(map.getValue() + 1);
+               return map.getKey();
+           }
+       }
+        return null;
     }
 
     @Override
