@@ -4,18 +4,29 @@ import java.util.Date;
 
 public class Booking {
     private int bookingCode;
-    private String bookingStartDate;
-    private String bookingEndDate;
+//    private String bookingStartDate;
+//    private String bookingEndDate;
     private Customer customer;
     private Facility facility;
+    private Date dateBookingStart;
+    private Date dateBookingEnd;
 
 
-    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate, Customer customer, Facility facility) {
+
+//    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate, Customer customer, Facility facility) {
+//        this.bookingCode = bookingCode;
+//        this.bookingStartDate = bookingStartDate;
+//        this.bookingEndDate = bookingEndDate;
+//        this.customer = customer;
+//        this.facility = facility;
+//    }
+
+    public Booking(int bookingCode, Customer customer, Facility facility, Date dateBookingStart, Date dateBookingEnd) {
         this.bookingCode = bookingCode;
-        this.bookingStartDate = bookingStartDate;
-        this.bookingEndDate = bookingEndDate;
         this.customer = customer;
         this.facility = facility;
+        this.dateBookingStart = dateBookingStart;
+        this.dateBookingEnd = dateBookingEnd;
     }
 
     public int getBookingCode() {
@@ -57,6 +68,7 @@ public class Booking {
     public void setFacility(Facility facility) {
         this.facility = facility;
     }
+
 
     @Override
     public String toString() {

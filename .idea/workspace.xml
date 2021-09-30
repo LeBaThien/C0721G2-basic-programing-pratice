@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08c31280-3ff2-47a9-aa82-6bcd139b03d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case_study2/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/BookingComparator.java" afterDir="false" />
+    <list default="true" id="b98ba3ce-9586-4511-af2e-94fc457af330" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects/hacker.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/.idea/uiDesigner.xml" afterDir="false" />
@@ -102,6 +100,16 @@
       <change afterPath="$PROJECT_DIR$/module2/src/b1_introduction_to_java/practice/first_degree_equation/FirstDegreeEquation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/b1_introduction_to_java/practice/operator/OperatorUsing.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/b1_introduction_to_java/practice/system_time/SystemTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice1/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice1/MathCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice1/MathCalculatorProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/Facebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/LinkedIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/SocialMediaFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/SocialShare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/b20_structural_design_pattern/practice/practice2/Twitter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/b2_loop_java/exercise/ShowPicture.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/b2_loop_java/exercise/ShowPrimeNumbersWithCondition.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/b2_loop_java/exercise/ShowPrimesNumber.java" afterDir="false" />
@@ -227,6 +235,11 @@
       <change afterPath="$PROJECT_DIR$/module2/src/student/ManagerStudent.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/src/student/Student.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module2/student.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codegym_final.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/C0721G2/B1 Hoc cach hoc/thuc hanh/Cornell notes.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/C0721G2/B1 Hoc cach hoc/thuc hanh/quiz1.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/C0721G2/B10 Vòng lặp 1/Thực hành/[Thực hành] Sử dụng vòng lặp do-while 1.html" beforeDir="false" />
@@ -344,28 +357,7 @@
       <change beforePath="$PROJECT_DIR$/C0721G2/B9 Cấu trúc điều kiện 2/Bai tap/thamkhao2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/C0721G2/B9 Cấu trúc điều kiện 2/Thuc hanh/[Thực hành] Sự kiện bàn phím.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/C0721G2/B9 Cấu trúc điều kiện 2/Thuc hanh/[Thực hành] Sự kiện chuột.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/controllers/FurController.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/controllers/FurController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Contract.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/BookingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/BookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/BookingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/out/production/case_study2/case_study/services/FacilityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/controllers/FurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/controllers/FurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/models/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/models/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/services/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_study2/src/case_study/services/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/case_study2/src/case_study/services/FacilityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/module2/.idea/vcs.xml" afterDir="false" />
@@ -380,9 +372,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/module2" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1yoI2kpfr97YTs1yIlYBUXgZQ4s" />
+  <component name="ProjectId" id="1yqRWStZcWUMwnuHKYe5M0kgMw9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -393,19 +385,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/module2" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="08c31280-3ff2-47a9-aa82-6bcd139b03d9" name="Default Changelist" comment="" />
-      <created>1632911308540</created>
+      <changelist id="b98ba3ce-9586-4511-af2e-94fc457af330" name="Default Changelist" comment="" />
+      <created>1632977162585</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1632911308540</updated>
-      <workItem from="1632911309978" duration="55000" />
+      <updated>1632977162585</updated>
+      <workItem from="1632977165564" duration="175000" />
     </task>
     <servers />
   </component>
@@ -413,9 +404,13 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1632911364537">
+    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1632977277730">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1632911364537" />
+    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1632977277730" />
+    <state x="91" y="0" key="new project wizard" timestamp="1632977279107">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1632977279107" />
   </component>
 </project>

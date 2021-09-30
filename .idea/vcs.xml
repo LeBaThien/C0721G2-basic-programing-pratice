@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/C0721G2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module1/B4 Git &amp; HTML/Bài tập/[Bài tập] Sử dụng Git/GitProject" vcs="Git" />
