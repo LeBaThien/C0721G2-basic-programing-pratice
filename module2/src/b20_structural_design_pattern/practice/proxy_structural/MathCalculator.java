@@ -1,4 +1,4 @@
-package b20_structural_design_pattern.practice.practice1;
+package b20_structural_design_pattern.practice.proxy_structural;
 
 public class MathCalculator implements Calculator {
     @Override

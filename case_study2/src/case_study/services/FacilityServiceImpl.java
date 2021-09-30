@@ -22,7 +22,6 @@ public class FacilityServiceImpl implements FacilityService {
         facilityIntegerMap.put(new Room("Room rental",400,250,1, Room.DATE,"Free"),0);
     }
 
-
     @Override
     public void showList() {
         //option 1: print out

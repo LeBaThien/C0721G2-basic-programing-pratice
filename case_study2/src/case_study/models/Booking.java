@@ -1,19 +1,19 @@
 package case_study.models;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Booking {
     private int bookingCode;
-//    private String bookingStartDate;
-//    private String bookingEndDate;
+    private String bookingStartDate;
+    private String bookingEndDate;
     private Customer customer;
     private Facility facility;
     private Date dateBookingStart;
     private Date dateBookingEnd;
 
 
-
-//    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate, Customer customer, Facility facility) {
+//    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate , Customer customer, Facility facility) {
 //        this.bookingCode = bookingCode;
 //        this.bookingStartDate = bookingStartDate;
 //        this.bookingEndDate = bookingEndDate;
@@ -21,7 +21,7 @@ public class Booking {
 //        this.facility = facility;
 //    }
 
-    public Booking(int bookingCode, Customer customer, Facility facility, Date dateBookingStart, Date dateBookingEnd) {
+    public Booking(int bookingCode, Date dateBookingStart, Date dateBookingEnd, Customer customer, Facility facility) {
         this.bookingCode = bookingCode;
         this.customer = customer;
         this.facility = facility;
@@ -69,13 +69,28 @@ public class Booking {
         this.facility = facility;
     }
 
+    public Date getDateBookingStart() {
+        return dateBookingStart;
+    }
+
+    public void setDateBookingStart(Date dateBookingStart) {
+        this.dateBookingStart = dateBookingStart;
+    }
+
+    public Date getDateBookingEnd() {
+        return dateBookingEnd;
+    }
+
+    public void setDateBookingEnd(Date dateBookingEnd) {
+        this.dateBookingEnd = dateBookingEnd;
+    }
 
     @Override
     public String toString() {
         return "Booking{" +
                 "bookingCode=" + bookingCode +
-                ", bookingStartDate='" + bookingStartDate + '\'' +
-                ", bookingEndDate='" + bookingEndDate + '\'' +
+                ", bookingStartDate='" + dateBookingStart + '\'' +
+                ", bookingEndDate='" + dateBookingEnd + '\'' +
                 ", customer=" + customer +
                 ", facility=" + facility +
                 '}';

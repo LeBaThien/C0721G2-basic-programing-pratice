@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class FurController {
     private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-
         while (true) {
             System.out.println("===Menu===");
             System.out.println("1. Employee Management");

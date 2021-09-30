@@ -1,4 +1,4 @@
-package b20_structural_design_pattern.practice.practice2;
+package b20_structural_design_pattern.practice.facade_structural;
 
 public class Twitter implements SocialShare {
     private String message;

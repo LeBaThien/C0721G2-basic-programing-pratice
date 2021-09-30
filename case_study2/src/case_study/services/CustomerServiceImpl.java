@@ -24,6 +24,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
+    public int getIndexCustomer (int idCustomer) {
+        for(Customer customer : customerList){
+            if(customerList)
+        }
+    }
+
 
     @Override
     public void addNewCustomer() {
