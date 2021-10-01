@@ -61,12 +61,13 @@ public class BookingServiceImpl implements BookingService {
         customerService.showList();
         System.out.print("Enter the customer id: ");
         int idCustomer = scanner.nextInt();
-        System.out.print("Enter the name of service: ");
+        System.out.println("Enter the name of service: ");
+        scanner.nextLine();// Thêm lệnh để khư nextline;
         String nameService = scanner.nextLine();
         //next # nextline ...
         //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
         bookingTreeSet.add(new Booking(bookingCode,utilities.convertDate(bookingStartDate),utilities.convertDate(bookingEndDate),
-                CustomerServiceImpl.customerList.get(0),FacilityServiceImpl.getFacility(nameService)));
+                CustomerServiceImpl.customerList.get(idCustomer),FacilityServiceImpl.getFacility(nameService)));
     }
 
 

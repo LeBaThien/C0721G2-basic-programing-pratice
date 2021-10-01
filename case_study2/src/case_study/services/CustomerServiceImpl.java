@@ -24,11 +24,14 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
-    public int getIndexCustomer (int idCustomer) {
-        for(Customer customer : customerList){
-            if(customerList)
-        }
-    }
+//    public static int getIndexCustomer (int idCustomer) {
+//        for(Customer customer : customerList) {
+//            if (customer.getIdCustomer() == idCustomer) {
+//                return customerList.indexOf();
+//            }
+//        }
+//        return
+//    }
 
 
     @Override
