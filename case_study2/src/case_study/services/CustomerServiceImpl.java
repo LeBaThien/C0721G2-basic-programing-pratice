@@ -2,10 +2,7 @@ package case_study.services;
 
 import case_study.models.Customer;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class CustomerServiceImpl implements CustomerService {
     protected static List<Customer>customerList = new LinkedList<>();
@@ -19,19 +16,23 @@ public class CustomerServiceImpl implements CustomerService {
     //Viet truc tiep
     customerList.add(new Customer("Grace","4/7/1995","male",88021, 347137,
             "grace@gmail.com",8,Customer.MEMBER,"uk"));
+        customerList.add(new Customer("jordan","4/7/1995","male",88021, 347137,
+                "jordan@gmail.com",15,Customer.MEMBER,"uk"));
     customerList.add(customer1);
     customerList.add(customer2);
 
     }
-
-//    public static int getIndexCustomer (int idCustomer) {
-//        for(Customer customer : customerList) {
-//            if (customer.getIdCustomer() == idCustomer) {
-//                return customerList.indexOf();
-//            }
-//        }
-//        return
-//    }
+    public static Customer getIndexCustomer (int idCustomer) {
+        while (true) {
+            for (Customer customer : customerList) {
+                if (customer.getIdCustomer() == idCustomer) {
+//                int index  = customerList.indexOf(customer);
+                    return customer;
+                }
+            }
+            return null;
+        }
+    }
 
 
     @Override

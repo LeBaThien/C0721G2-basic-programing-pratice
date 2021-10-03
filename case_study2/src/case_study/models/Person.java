@@ -1,5 +1,7 @@
 package case_study.models;
 
+import java.io.Serializable;
+
 public abstract class Person {
     private String name;
     private String dateBirth;

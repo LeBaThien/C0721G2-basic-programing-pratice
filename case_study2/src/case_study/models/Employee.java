@@ -72,4 +72,12 @@ public class Employee extends Person {
                 ", position='" + position + '\'' +
                 '}';
     }
+
+    public String getInformationEmployee (){
+        return getName() + "," + getDateBirth() + "," + getSex()+ ","
+                + getIdentification() + "," + getPhoneNumber() + ","
+                + getEmail() + "," + getIdEmployee() +","
+                + getAcademicLevel() + "," + getSalaryStaff() +"," + getPosition();
+
+    }
 }

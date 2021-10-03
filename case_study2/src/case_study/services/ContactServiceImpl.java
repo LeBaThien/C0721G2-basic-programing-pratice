@@ -1,4 +1,0 @@
-package case_study.services;
-
-public class ContactServiceImpl implements ContactService {
-}

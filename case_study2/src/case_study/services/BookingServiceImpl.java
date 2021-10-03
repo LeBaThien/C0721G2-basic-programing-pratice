@@ -1,16 +1,10 @@
 package case_study.services;
 
 import case_study.models.Booking;
-import case_study.models.Facility;
-import case_study.models.Villa;
+import case_study.utils.BookingComparator;
 import case_study.utils.Utilities;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class BookingServiceImpl implements BookingService {
     private static final TreeSet<Booking> bookingTreeSet = new TreeSet<>(new BookingComparator());
@@ -67,8 +61,20 @@ public class BookingServiceImpl implements BookingService {
         //next # nextline ...
         //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
         bookingTreeSet.add(new Booking(bookingCode,utilities.convertDate(bookingStartDate),utilities.convertDate(bookingEndDate),
-                CustomerServiceImpl.customerList.get(idCustomer),FacilityServiceImpl.getFacility(nameService)));
+               CustomerServiceImpl.getIndexCustomer(idCustomer) ,FacilityServiceImpl.getFacility(nameService)));
     }
 
+//    public void creatNewContracts (){
+//
+//
+//    }
+    public static Queue<Booking> changeSetToQueue(){
+        Queue<Booking> bookingQueue = new ArrayDeque<>();
+        for(Booking booking: bookingTreeSet) {
+            bookingQueue.offer(booking);
+            //offer để chèn phần tử vào bookingQueue
+        }
+        return bookingQueue;
+    }
 
 }

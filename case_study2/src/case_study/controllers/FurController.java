@@ -167,7 +167,10 @@ public class FurController {
                             bookingService.showBookingService();
                             break;
                         }
-                        case 4: {
+                        case 3: {
+//                            bookingService
+                        }
+                        case 6: {
                             return;
                         }
                     }

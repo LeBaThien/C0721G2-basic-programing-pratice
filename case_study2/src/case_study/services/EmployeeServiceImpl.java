@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.libs.EmployeeToCsv;
 import case_study.models.Employee;
 import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 
@@ -12,23 +13,26 @@ public class EmployeeServiceImpl implements EmployeeService {
     //   private static  ArrayList<Employee> employeeArrayList;
     private static final List<Employee> employeeArrayList = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
-
+//    protected static EmployeeToCsv employeeToCsv = new EmployeeToCsv();
+    //1.ko cần khai báo chấm trực tiếp từ class, vẫn đc à?
+    //2. sau khi edit, như trong file employee lại ko cập nhật kết quả sửa?
 
 //   public EmployeeServiceImpl (ArrayList<Employee>employeeServices) {
 //      this.employeeArrayList = new ArrayList<>();
 //   }
 
-    static {
-        Employee employee1 = new Employee("Peter", "23 / 9 / 1990", "Male", 11123, 1129, "peter@gmail.com", 1, Employee.COLLEGE, 1200, Employee.RECEPTIONIST);
-        Employee employee2 = new Employee("Camel", "24 / 4 / 1990", "Female", 1243, 12324, "camel@gmail.com", 2, Employee.UNIVERSITY, 2300, Employee.SUPERVISOR);
-        Employee employee3 = new Employee("Son", "12 / 3 / 1898", "Male", 2532, 7352, "Son@gamil.com", 3, Employee.INTERMEDIATE, 900, Employee.SPECIALIST);
-        employeeArrayList.add(employee1);
-        employeeArrayList.add(employee2);
-        employeeArrayList.add(employee3);
-
-    }
+//    static {
+//        Employee employee1 = new Employee("Peter", "23 / 9 / 1990", "Male", 11123, 1129, "peter@gmail.com", 1, Employee.COLLEGE, 1200, Employee.RECEPTIONIST);
+//        Employee employee2 = new Employee("Camel", "24 / 4 / 1990", "Female", 1243, 12324, "camel@gmail.com", 2, Employee.UNIVERSITY, 2300, Employee.SUPERVISOR);
+//        Employee employee3 = new Employee("Son", "12 / 3 / 1898", "Male", 2532, 7352, "Son@gamil.com", 3, Employee.INTERMEDIATE, 900, Employee.SPECIALIST);
+//        employeeArrayList.add(employee1);
+//        employeeArrayList.add(employee2);
+//        employeeArrayList.add(employee3);
+//
+//    }
 
     public void showList() {
+        EmployeeToCsv.readData();
         for (Employee e : employeeArrayList) {
             System.out.println(e);
         }
@@ -57,9 +61,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         String position = scanner.next();
         Employee employee = new Employee(nameEmployee, dateBirth, sex, id, numberPhone, email, idEmployee, degree, salary, position);
         employeeArrayList.add(employee);
+        EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
     }
 
     public void editEmployee(int id) {
+        EmployeeToCsv.readData();
         for (Employee employee : employeeArrayList) {
             if (employee.getIdEmployee() == id) {
                 while (true) {
@@ -122,7 +128,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                         }
                         case "i":{
                             System.out.print("Enter new salary: ");
-                            int salary = scanner.nextInt();
+                            double salary = scanner.nextDouble();
                             employee.setSalaryStaff(salary);
                             break;
                         }
@@ -147,7 +153,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
 
         }
-
+        EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
     }
     //
 
