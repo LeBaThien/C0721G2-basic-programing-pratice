@@ -6,6 +6,7 @@ public class Contract {
     private double depositAdvance;
     private double totalPayment;
     private int idCustomer;
+    private Booking booking;
 
     public Contract(int idContract, int idBooking, double depositAdvance, double totalPayment, int idCustomer) {
         this.idContract = idContract;
@@ -13,6 +14,21 @@ public class Contract {
         this.depositAdvance = depositAdvance;
         this.totalPayment = totalPayment;
         this.idCustomer = idCustomer;
+    }
+
+    public Contract(int idContract, double depositAdvance, double totalPayment, Booking booking) {
+        this.idContract = idContract;
+        this.depositAdvance = depositAdvance;
+        this.totalPayment = totalPayment;
+        this.booking = booking;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 
     public int getIdContract() {
@@ -55,14 +71,24 @@ public class Contract {
         this.idCustomer = idCustomer;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Contract{" +
+//                "idContract=" + idContract +
+//                ", idBooking=" + idBooking +
+//                ", depositAdvance=" + depositAdvance +
+//                ", totalPayment=" + totalPayment +
+//                ", idCustomer=" + idCustomer +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return "Contract{" +
                 "idContract=" + idContract +
-                ", idBooking=" + idBooking +
                 ", depositAdvance=" + depositAdvance +
                 ", totalPayment=" + totalPayment +
-                ", idCustomer=" + idCustomer +
+                "\n" + booking +
                 '}';
     }
 }

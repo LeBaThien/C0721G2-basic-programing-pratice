@@ -2,10 +2,7 @@ package case_study.controllers;
 
 import case_study.models.Booking;
 import case_study.models.Employee;
-import case_study.services.BookingServiceImpl;
-import case_study.services.CustomerServiceImpl;
-import case_study.services.EmployeeServiceImpl;
-import case_study.services.FacilityServiceImpl;
+import case_study.services.*;
 
 import java.util.Scanner;
 
@@ -57,6 +54,7 @@ public class FurController {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         BookingServiceImpl bookingService = new BookingServiceImpl();
+        ContractServiceImpl contractService = new ContractServiceImpl();
         switch (selection) {
             case 1: {
                 while (true) {
@@ -168,7 +166,16 @@ public class FurController {
                             break;
                         }
                         case 3: {
-//                            bookingService
+                            contractService.creatNewContract();
+                            break;
+                        }
+                        case 4: {
+                            contractService.displayContract();
+                            break;
+                        }
+                        case 5: {
+                            contractService.editContract();
+                            break;
                         }
                         case 6: {
                             return;

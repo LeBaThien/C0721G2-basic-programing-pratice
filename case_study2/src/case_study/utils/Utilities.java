@@ -6,13 +6,15 @@ import java.util.Date;
 
 public class Utilities {
     public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-    public Date convertDate (String bookingDate) {
+    public static Date convertDate (String bookingDate) {
         Date date = null;
+//        String checkTimeFormat = "";
         try {
             date = simpleDateFormat.parse(bookingDate);
+//          checkTimeFormat = simpleDateFormat.format(date);
         } catch (ParseException e) {
             e.printStackTrace();
-            System.out.println("loi format");
+            System.out.println("error format");
         }
         return date;
     }

@@ -14,7 +14,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private static final List<Employee> employeeArrayList = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 //    protected static EmployeeToCsv employeeToCsv = new EmployeeToCsv();
-    //1.ko cần khai báo chấm trực tiếp từ class, vẫn đc à?
+    //1.ko cần khai báo chấm trực tiếp từ class, vẫn đc à?//do import thư viện à?
     //2. sau khi edit, như trong file employee lại ko cập nhật kết quả sửa?
 
 //   public EmployeeServiceImpl (ArrayList<Employee>employeeServices) {
@@ -64,6 +64,21 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
     }
 
+    @Override
+    public void edit() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void display() {
+
+    }
+
     public void editEmployee(int id) {
         EmployeeToCsv.readData();
         for (Employee employee : employeeArrayList) {
@@ -96,52 +111,52 @@ public class EmployeeServiceImpl implements EmployeeService {
                             employee.setSex(sex);
                             break;
                         }
-                        case "d":{
+                        case "d": {
                             System.out.print("Enter new identification: ");
                             int identification = scanner.nextInt();
                             employee.setIdentification(identification);
                             break;
                         }
-                        case "e":{
+                        case "e": {
                             System.out.print("Enter new phone number: ");
                             int numberPhone = scanner.nextInt();
                             employee.setPhoneNumber(numberPhone);
                             break;
                         }
-                        case "f":{
+                        case "f": {
                             System.out.print("Enter new email: ");
                             String email = scanner.next();
                             employee.setEmail(email);
                             break;
                         }
-                        case "g":{
+                        case "g": {
                             System.out.print("Enter new Id: ");
                             int idEmployee = scanner.nextInt();
                             employee.setIdentification(idEmployee);
                             break;
                         }
-                        case "h":{
+                        case "h": {
                             System.out.print("Enter new academic level: ");
                             String degree = scanner.next();
                             employee.setAcademicLevel(degree);
-                           break;
+                            break;
                         }
-                        case "i":{
+                        case "i": {
                             System.out.print("Enter new salary: ");
                             double salary = scanner.nextDouble();
                             employee.setSalaryStaff(salary);
                             break;
                         }
-                        case "j":{
+                        case "j": {
                             System.out.print("Enter new position: ");
                             String position = scanner.next();
                             employee.setPosition(position);
                             break;
                         }
-                        case "o":{
+                        case "o": {
                             return;
                         }
-                        default:{
+                        default: {
                             System.out.println("Please check your 'letter'");
                             break;
                         }

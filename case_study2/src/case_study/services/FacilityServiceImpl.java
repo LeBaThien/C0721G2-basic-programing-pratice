@@ -4,6 +4,7 @@ import case_study.models.Facility;
 import case_study.models.House;
 import case_study.models.Room;
 import case_study.models.Villa;
+import case_study.utils.CheckValidate;
 
 import javax.xml.ws.FaultAction;
 import java.math.RoundingMode;
@@ -15,11 +16,12 @@ import java.util.Set;
 public class FacilityServiceImpl implements FacilityService {
     protected static Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
     protected static Scanner scanner = new Scanner(System.in);
+//    private static CheckValidate checkValidate = new CheckValidate();
 
     static {
-        facilityIntegerMap.put(new House("House rental",200,300,2,House.DATE,"A",2),0);
-        facilityIntegerMap.put(new Villa("Villa rental",300,400,4,Villa.MONTH,"A",200,3),0);
-        facilityIntegerMap.put(new Room("Room rental",400,250,1, Room.DATE,"Free"),0);
+        facilityIntegerMap.put(new House("HO",200,300,2,House.DATE,"A",2),0);
+        facilityIntegerMap.put(new Villa("VL",300,400,4,Villa.MONTH,"A",200,3),0);
+        facilityIntegerMap.put(new Room("RO",400,250,1, Room.DATE,"Free"),0);
     }
 
     @Override
@@ -65,8 +67,11 @@ public class FacilityServiceImpl implements FacilityService {
                 case 1: {
                     System.out.print("Enter name service: ");
                     String nameService = scanner.next();
+                    ;
                     System.out.print("Enter using Area: ");
                     double usingArea = scanner.nextDouble();
+                    //chuyển về string, thuộc tính class ko đổi,
+                    //dùng regex kieểm tra, chuyển đổi string đó sang kiểu số...roồi đẩy vào đối tiowjng
                     System.out.print("Enter price rental: ");
                     double priceRental = scanner.nextDouble();
                     System.out.print("Enter number person in room: ");
@@ -79,7 +84,7 @@ public class FacilityServiceImpl implements FacilityService {
                     double poolArea = scanner.nextDouble();
                     System.out.print("Enter the number of floor: ");
                     int numberOfFloor = scanner.nextInt();
-                    Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
+                    Villa villa = new Villa(CheckValidate.checkNameService(nameService),usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
                     facilityIntegerMap.put(villa,0);
                     break;
                 }
@@ -135,5 +140,25 @@ public class FacilityServiceImpl implements FacilityService {
     @Override
     public void editFacility() {
         //ko y/cau
+    }
+
+    @Override
+    public void add() {
+
+    }
+
+    @Override
+    public void edit() {
+
+    }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void display() {
+
     }
 }

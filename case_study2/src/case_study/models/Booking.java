@@ -1,9 +1,10 @@
 package case_study.models;
 
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 
-public class Booking {
+public class Booking  {
     private int bookingCode;
     private String bookingStartDate;
     private String bookingEndDate;
@@ -11,23 +12,26 @@ public class Booking {
     private Facility facility;
     private Date dateBookingStart;
     private Date dateBookingEnd;
+//    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//    public Date dateChecking;
 
 
-//    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate , Customer customer, Facility facility) {
-//        this.bookingCode = bookingCode;
-//        this.bookingStartDate = bookingStartDate;
-//        this.bookingEndDate = bookingEndDate;
-//        this.customer = customer;
-//        this.facility = facility;
-//    }
-
-    public Booking(int bookingCode, Date dateBookingStart, Date dateBookingEnd, Customer customer, Facility facility) {
+    public Booking(int bookingCode, String bookingStartDate, String bookingEndDate , Customer customer, Facility facility) {
         this.bookingCode = bookingCode;
+        this.bookingStartDate = bookingStartDate;
+        this.bookingEndDate = bookingEndDate;
         this.customer = customer;
         this.facility = facility;
-        this.dateBookingStart = dateBookingStart;
-        this.dateBookingEnd = dateBookingEnd;
     }
+
+
+//    public Booking(int bookingCode, Date dateBookingStart, Date dateBookingEnd, Customer customer, Facility facility) {
+//        this.bookingCode = bookingCode;
+//        this.customer = customer;
+//        this.facility = facility;
+//        this.dateBookingStart = dateBookingStart;
+//        this.dateBookingEnd = dateBookingEnd;
+//    }
 
     public int getBookingCode() {
         return bookingCode;
@@ -89,10 +93,14 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "bookingCode=" + bookingCode +
-                ", bookingStartDate='" + dateBookingStart + '\'' +
-                ", bookingEndDate='" + dateBookingEnd + '\'' +
+//                ", bookingStartDate='" + dateBookingStart + '\'' +
+//                ", bookingEndDate='" + dateBookingEnd + '\'' +
+                ", bookingStartDate='" + bookingStartDate + '\'' +
+                ", bookingEndDate='" + bookingEndDate + '\'' +
                 ", customer=" + customer +
                 ", facility=" + facility +
                 '}';
     }
+
+
 }
