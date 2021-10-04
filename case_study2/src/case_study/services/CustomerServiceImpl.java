@@ -36,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
     @Override
-    public void addNewCustomer() {
+    public void add() {
         System.out.print("Enter customer name: ");
         String nameCustomer = scanner.next();
         System.out.print("Enter customer date birth: ");
@@ -60,14 +60,14 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void showList() {
+    public void display() {
         for(Customer customer : customerList){
             System.out.println(customer);
         }
     }
 
     @Override
-    public void editList(int id) {
+    public void edit(int id) {
         for (Customer customer : customerList) {
             if (customer.getIdCustomer() == id) {
                 System.out.println("==Chose letter your want to edit ");
@@ -144,10 +144,6 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-    @Override
-    public void add() {
-
-    }
 
     @Override
     public void edit() {
@@ -159,8 +155,5 @@ public class CustomerServiceImpl implements CustomerService {
 
     }
 
-    @Override
-    public void display() {
 
-    }
 }

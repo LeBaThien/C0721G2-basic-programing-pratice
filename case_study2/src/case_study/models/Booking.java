@@ -89,6 +89,22 @@ public class Booking  {
         this.dateBookingEnd = dateBookingEnd;
     }
 
+//    @Override
+//    public int hashCode() {
+//        return super.hashCode();
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj instanceof Booking) {
+//            Booking booking = (Booking) obj;
+//            if (this.getBookingCode() == (booking.getBookingCode())) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
     @Override
     public String toString() {
         return "Booking{" +

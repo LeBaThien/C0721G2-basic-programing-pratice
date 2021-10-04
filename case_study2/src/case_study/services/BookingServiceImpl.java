@@ -7,7 +7,7 @@ import case_study.utils.Utilities;
 import java.util.*;
 
 public class BookingServiceImpl implements BookingService {
-    private static final Set<Booking> bookingTreeSet = new TreeSet<>(new BookingCompare());
+    protected static Set<Booking> bookingTreeSet = new TreeSet<>(new BookingCompare());
     private static Scanner scanner = new Scanner(System.in);
     private static CustomerServiceImpl customerService = new CustomerServiceImpl();
     private static Utilities utilities = new Utilities();
@@ -22,7 +22,7 @@ public class BookingServiceImpl implements BookingService {
     static {
 
         //viết hàm get id,
-        bookingTreeSet.add(new Booking(1, "01/02/2021", "02/03/2021",
+        bookingTreeSet.add(new Booking(1, "01/02/2020", "02/03/2021",
                 CustomerServiceImpl.customerList.get(0), FacilityServiceImpl.getFacility("VL")));
         bookingTreeSet.add(new Booking(2, "05/04/2021", "07/04/2021",
                 CustomerServiceImpl.customerList.get(1), FacilityServiceImpl.getFacility("HO")));
@@ -34,42 +34,9 @@ public class BookingServiceImpl implements BookingService {
 //                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
 
     }
-//
 
-    @Override
-    public void showBookingService() {
-        for (Booking booking : bookingTreeSet) {
-            System.out.println(booking);
-        }
-    }
-    // viet 1 hafm.. name => convert =, ddawtj hafm nafy trong class util, khai báo hàm kiểu static, public
+//    // viet 1 hafm.. name => convert =, ddawtj hafm nafy trong class util, khai báo hàm kiểu static, public
 
-
-    @Override
-    public void addBookingService() {
-        System.out.print("Enter booking code: ");
-        int bookingCode = scanner.nextInt();
-        System.out.print("Enter the booking start date: ");
-        String bookingStartDate = scanner.next();
-        System.out.print("Enter the booking end date: ");
-        String bookingEndDate = scanner.next();
-        System.out.println("THE CUSTOMER LIST HERE ");
-        customerService.showList();
-        System.out.print("Enter the customer id: ");
-        int idCustomer = scanner.nextInt();
-        System.out.println("Enter the name of service: ");
-        scanner.nextLine();// Thêm lệnh để khư nextline;
-        String nameService = scanner.nextLine();
-        //next # nextline ...
-        //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
-        bookingTreeSet.add(new Booking(bookingCode,bookingStartDate,bookingEndDate,
-               CustomerServiceImpl.getIndexCustomer(idCustomer) ,FacilityServiceImpl.getFacility(nameService)));
-    }
-
-//    public void creatNewContracts (){
-//
-//
-//    }
     public static Queue<Booking> changeSetToQueue(){
         Queue<Booking> bookingQueue = new ArrayDeque<>();
         for(Booking booking: bookingTreeSet) {
@@ -82,7 +49,23 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void add() {
-
+        System.out.print("Enter booking code: ");
+        int bookingCode = scanner.nextInt();
+        System.out.print("Enter the booking start date: ");
+        String bookingStartDate = scanner.next();
+        System.out.print("Enter the booking end date: ");
+        String bookingEndDate = scanner.next();
+        System.out.println("THE CUSTOMER LIST HERE ");
+        customerService.display();
+        System.out.print("Enter the customer id: ");
+        int idCustomer = scanner.nextInt();
+        System.out.println("Enter the name of service: ");
+        scanner.nextLine();// Thêm lệnh để khư nextline;
+        String nameService = scanner.nextLine();
+        //next # nextline ...
+        //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
+        bookingTreeSet.add(new Booking(bookingCode,bookingStartDate,bookingEndDate,
+                CustomerServiceImpl.getIndexCustomer(idCustomer) ,FacilityServiceImpl.getFacility(nameService)));
     }
 
     @Override
@@ -97,6 +80,8 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void display() {
-
+        for (Booking booking : bookingTreeSet) {
+            System.out.println(booking);
+        }
     }
 }

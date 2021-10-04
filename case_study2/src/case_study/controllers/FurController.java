@@ -55,6 +55,7 @@ public class FurController {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         BookingServiceImpl bookingService = new BookingServiceImpl();
         ContractServiceImpl contractService = new ContractServiceImpl();
+        PromotionServiceImpl promotionService = new PromotionServiceImpl();
         switch (selection) {
             case 1: {
                 while (true) {
@@ -68,7 +69,7 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
-                            employeeService.showList();
+                            employeeService.display();
                             break;
                         }
                         case 2: {
@@ -78,7 +79,7 @@ public class FurController {
                         case 3:
                             System.out.print("Enter your id employee, you want to edit: ");
                             int id = scanner.nextInt();
-                            employeeService.editEmployee(id);
+                            employeeService.edit(id);
                             break;
                         case 4:{
                             return;
@@ -97,17 +98,17 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
-                            customerService.showList();
+                            customerService.display();
                             break;
                         }
                         case 2: {
-                            customerService.addNewCustomer();
+                            customerService.add();
                             break;
                         }
                         case 3:{
                             System.out.print("Enter id customer, you want to edit: ");
                             int id = scanner.nextInt();
-                            customerService.editList(id);
+                            customerService.edit(id);
                             break;
                         }
                         case 4:{
@@ -131,11 +132,11 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
-                            facilityService.showList();
+                            facilityService.display();
                             break;
                         }
                         case 2: {
-                            facilityService.addFacility();
+                            facilityService.add();
                             break;
                         }
                         case 4: {
@@ -158,23 +159,23 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
-                            bookingService.addBookingService();
+                            bookingService.add();
                             break;
                         }
                         case 2: {
-                            bookingService.showBookingService();
+                            bookingService.display();
                             break;
                         }
                         case 3: {
-                            contractService.creatNewContract();
+                            contractService.add();
                             break;
                         }
                         case 4: {
-                            contractService.displayContract();
+                            contractService.display();
                             break;
                         }
                         case 5: {
-                            contractService.editContract();
+                            contractService.edit();
                             break;
                         }
                         case 6: {
@@ -194,6 +195,7 @@ public class FurController {
                     int number = sc.nextInt();
                     switch (number) {
                         case 1: {
+                            promotionService.display();
                             break;
                         }
                         case 4: {

@@ -17,6 +17,10 @@ public class BookingCompare implements Comparator<Booking> {
 
     @Override
     public int compare(Booking o1,Booking o2) {
+        //hashCode() để xử lý phần không trùng lặp trong bookingTreeSet.
+//        if(o1.getBookingCode() == o2.getBookingCode()) {
+//            return 0;
+//        }
         if(Utilities.convertDate(o1. getBookingStartDate()).compareTo(Utilities.convertDate(o2.getBookingStartDate())) == 0){
             return (Utilities.convertDate(o1.getBookingEndDate()).compareTo(Utilities.convertDate(o2.getBookingEndDate())));
         }

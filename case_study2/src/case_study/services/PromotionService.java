@@ -1,7 +1,6 @@
 package case_study.services;
 
-public interface FacilityService extends Services {
-
+public interface PromotionService extends Services {
     @Override
     void add();
 

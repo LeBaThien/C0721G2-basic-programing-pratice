@@ -30,56 +30,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 //        employeeArrayList.add(employee3);
 //
 //    }
-
-    public void showList() {
-        EmployeeToCsv.readData();
-        for (Employee e : employeeArrayList) {
-            System.out.println(e);
-        }
-    }
-
-    public void add() {
-        System.out.print("Enter employee name: ");
-        String nameEmployee = scanner.next();
-        System.out.print("Enter employee date birth: ");
-        String dateBirth = scanner.next();
-        System.out.print("Enter employee sex: ");
-        String sex = scanner.next();
-        System.out.print("Enter employee identification: ");
-        int id = scanner.nextInt();
-        System.out.print("Enter employee phone number: ");
-        int numberPhone = scanner.nextInt();
-        System.out.print("Enter employee email: ");
-        String email = scanner.next();
-        System.out.print("Enter employee id: ");
-        int idEmployee = scanner.nextInt();
-        System.out.print("Enter employee education degree: ");
-        String degree = scanner.next();
-        System.out.print("Enter employee salary: ");
-        double salary = scanner.nextDouble();
-        System.out.print("Enter employee position: ");
-        String position = scanner.next();
-        Employee employee = new Employee(nameEmployee, dateBirth, sex, id, numberPhone, email, idEmployee, degree, salary, position);
-        employeeArrayList.add(employee);
-        EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
-    }
-
     @Override
-    public void edit() {
-
-    }
-
-    @Override
-    public void delete() {
-
-    }
-
-    @Override
-    public void display() {
-
-    }
-
-    public void editEmployee(int id) {
+    public void edit(int id) {
         EmployeeToCsv.readData();
         for (Employee employee : employeeArrayList) {
             if (employee.getIdEmployee() == id) {
@@ -90,7 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                             + "e. Edit phone number\n" + "f. Edit email\n"
                             + "g. Edit id\n" + "h. Edit academic level\n"
                             + "i. Edit salary\n" + "j. Edit position\n"
-                    + "o. Exit edit");
+                            + "o. Exit edit");
                     String letter = scanner.next();
                     switch (letter) {
                         case "a": {
@@ -169,7 +121,56 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         }
         EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
+
     }
+
+    @Override
+    public void delete() {
+
+    }
+
+    @Override
+    public void display() {
+        EmployeeToCsv.readData();
+        for (Employee e : employeeArrayList) {
+            System.out.println(e);
+        }
+
+    }
+
+    @Override
+    public void add() {
+        System.out.print("Enter employee name: ");
+        String nameEmployee = scanner.next();
+        System.out.print("Enter employee date birth: ");
+        String dateBirth = scanner.next();
+        System.out.print("Enter employee sex: ");
+        String sex = scanner.next();
+        System.out.print("Enter employee identification: ");
+        int id = scanner.nextInt();
+        System.out.print("Enter employee phone number: ");
+        int numberPhone = scanner.nextInt();
+        System.out.print("Enter employee email: ");
+        String email = scanner.next();
+        System.out.print("Enter employee id: ");
+        int idEmployee = scanner.nextInt();
+        System.out.print("Enter employee education degree: ");
+        String degree = scanner.next();
+        System.out.print("Enter employee salary: ");
+        double salary = scanner.nextDouble();
+        System.out.print("Enter employee position: ");
+        String position = scanner.next();
+        Employee employee = new Employee(nameEmployee, dateBirth, sex, id, numberPhone, email, idEmployee, degree, salary, position);
+        employeeArrayList.add(employee);
+        EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
+
+    }
+
+    @Override
+    public void edit() {
+
+    }
+
     //
 
 }

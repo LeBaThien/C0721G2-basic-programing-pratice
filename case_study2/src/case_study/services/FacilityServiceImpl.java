@@ -24,23 +24,6 @@ public class FacilityServiceImpl implements FacilityService {
         facilityIntegerMap.put(new Room("RO",400,250,1, Room.DATE,"Free"),0);
     }
 
-    @Override
-    public void showList() {
-        //option 1: print out
-        // System.out.println(facilityIntegerMap.toString());
-       //option 2: using
-        //need to review
-        Set<Facility> facilitySet = facilityIntegerMap.keySet();
-        for (Facility facility: facilitySet){
-            System.out.println(facility + ": times " + facilityIntegerMap.get(facility));
-        }
-        //option3:
-//        Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
-//        for(Map.Entry<Facility,Integer> entry : entries){
-//            System.out.println(entry.getKey() + ": " + entry.getValue());
-//        }
-    }
-
     public static Facility getFacility (String nameFacility) {
        Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
        //equals or contains
@@ -53,8 +36,10 @@ public class FacilityServiceImpl implements FacilityService {
         return null;
     }
 
+
+
     @Override
-    public void addFacility() {
+    public void add() {
         while (true) {
             System.out.println("Enter the number, you want to add Facility \r"
                     + "1. Add New Villa\n"
@@ -138,16 +123,6 @@ public class FacilityServiceImpl implements FacilityService {
     }
 
     @Override
-    public void editFacility() {
-        //ko y/cau
-    }
-
-    @Override
-    public void add() {
-
-    }
-
-    @Override
     public void edit() {
 
     }
@@ -159,6 +134,18 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public void display() {
-
+        //option 1: print out
+        // System.out.println(facilityIntegerMap.toString());
+        //option 2: using
+        //need to review
+        Set<Facility> facilitySet = facilityIntegerMap.keySet();
+        for (Facility facility: facilitySet){
+            System.out.println(facility + ": times " + facilityIntegerMap.get(facility));
+        }
+        //option3:
+//        Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
+//        for(Map.Entry<Facility,Integer> entry : entries){
+//            System.out.println(entry.getKey() + ": " + entry.getValue());
+//        }
     }
 }
