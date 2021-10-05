@@ -12,4 +12,5 @@ public interface PromotionService extends Services {
 
     @Override
     void display();
+
 }

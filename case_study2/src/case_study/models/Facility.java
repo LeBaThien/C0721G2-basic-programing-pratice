@@ -68,6 +68,6 @@ public abstract class Facility {
                 ", priceRental=" + priceRental +
                 ", numberPersonInRoom=" + numberPersonInRoom +
                 ", typeOfRent='" + typeOfRent + '\'' +
-                '}';
+                '}' + "\n";
     }
 }

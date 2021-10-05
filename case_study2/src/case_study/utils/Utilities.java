@@ -20,6 +20,16 @@ public class Utilities {
         }
         return date;
     }
+    //Date date = new Date();
+    //        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+    //        String strDate = formatter.format(date);
+    //        System.out.println(strDate);
+
+    public static String convertDateToString (Date date) {
+        String dateToString  = "";
+        dateToString = simpleDateFormat.format(date);
+        return dateToString;
+    }
 
     public static String convertYear (String bookingDate) {
         Date date = null;
@@ -35,18 +45,18 @@ public class Utilities {
         return year;
     }
 
-//    public static String convertMonth (String bookingDate) {
-//        Date date = null;
-////        String checkTimeFormat = "";
-//        String month = "" ;
-//        try {
-//            date = simpleDateFormat.parse(bookingDate);
-//            month = simpleDateFormat2.format(date);
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//            System.out.println("error format");
-//        }
-//        return month;
-//    }
+    public static String convertMonth (String bookingDate) {
+        Date date = null;
+//        String checkTimeFormat = "";
+        String month = "" ;
+        try {
+            date = simpleDateFormat.parse(bookingDate);
+            month = simpleDateFormat2.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            System.out.println("error format");
+        }
+        return month;
+    }
 
 }

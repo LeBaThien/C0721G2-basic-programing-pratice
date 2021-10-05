@@ -107,15 +107,15 @@ public class Booking  {
 
     @Override
     public String toString() {
-        return "Booking{" +
+        return "Booking " +
                 "bookingCode=" + bookingCode +
 //                ", bookingStartDate='" + dateBookingStart + '\'' +
 //                ", bookingEndDate='" + dateBookingEnd + '\'' +
                 ", bookingStartDate='" + bookingStartDate + '\'' +
                 ", bookingEndDate='" + bookingEndDate + '\'' +
                 ", customer=" + customer +
-                ", facility=" + facility +
-                '}';
+                ", facility=" + facility
+                ;
     }
 
 

@@ -26,7 +26,7 @@ public class BookingServiceImpl implements BookingService {
                 CustomerServiceImpl.customerList.get(0), FacilityServiceImpl.getFacility("VL")));
         bookingTreeSet.add(new Booking(2, "05/04/2021", "07/04/2021",
                 CustomerServiceImpl.customerList.get(1), FacilityServiceImpl.getFacility("HO")));
-        bookingTreeSet.add(new Booking(4, "06/03/2021", "08/03/2021",
+        bookingTreeSet.add(new Booking(4, "06/10/2021", "15/10/2021",
                 CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
 //        bookingTreeSet.add(new Booking(5, utilities.convertDate("06/03/2021"), utilities.convertDate("07/04/2021"),
 //                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("HO")));
