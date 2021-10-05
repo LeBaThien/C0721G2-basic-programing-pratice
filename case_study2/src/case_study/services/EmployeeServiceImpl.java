@@ -126,7 +126,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void delete() {
-
+        //cap nhat sau
     }
 
     @Override
@@ -166,10 +166,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    @Override
-    public void edit() {
-
-    }
 
     //
 

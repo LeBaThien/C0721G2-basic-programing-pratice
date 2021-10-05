@@ -1,8 +1,11 @@
 package case_study.models;
 
+import case_study.services.CustomerServiceImpl;
+import case_study.services.FacilityServiceImpl;
+import case_study.utils.BookingCompare;
+
 import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.Date;
+import java.util.*;
 
 public class Booking  {
     private int bookingCode;
@@ -89,20 +92,28 @@ public class Booking  {
         this.dateBookingEnd = dateBookingEnd;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return super.hashCode();
-//    }
-//
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (obj instanceof Booking) {
-//            Booking booking = (Booking) obj;
-//            if (this.getBookingCode() == (booking.getBookingCode())) {
-//                return true;
-//            }
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingCode);
+//        public int hashCode() {
+//            return Objects.hash(name, age);
 //        }
-//        return false;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Booking) {
+            Booking booking = (Booking) obj;
+            return this.getBookingCode() == (booking.getBookingCode());
+        }
+        return false;
+    }
+    //=> Vừa so sánh ngày trùng và cả mã booking trùng thì mới loại booking đó ra khỏi danh sách, chỉ 1 trong 2 trùng thì ko loai
+//    public static void main(String[] args) {
+//        TreeSet<Booking> treeSet = new TreeSet<>(new BookingCompare());
+//        treeSet.add(new Booking(4, "04/04/2021", "05/05/2021", new Customer(), new Villa() ));
+//        treeSet.add(new Booking(4, "06/04/2021", "07/05/2021", new Customer(), new Villa() ));
+//        System.out.println(treeSet);
 //    }
 
     @Override

@@ -21,9 +21,14 @@ public class BookingCompare implements Comparator<Booking> {
 //        if(o1.getBookingCode() == o2.getBookingCode()) {
 //            return 0;
 //        }
-        if(Utilities.convertDate(o1. getBookingStartDate()).compareTo(Utilities.convertDate(o2.getBookingStartDate())) == 0){
-            return (Utilities.convertDate(o1.getBookingEndDate()).compareTo(Utilities.convertDate(o2.getBookingEndDate())));
+        //So sanh theo kieu after before voi Date,
+        if(Utilities.convertDate(o1. getBookingStartDate()).after(Utilities.convertDate(o2.getBookingStartDate()))){
+            return 1;
+            //(Utilities.convertDate(o1.getBookingEndDate()).compareTo(Utilities.convertDate(o2.getBookingEndDate())))
+        } else if(Utilities.convertDate(o1. getBookingStartDate()).before(Utilities.convertDate(o2.getBookingStartDate()))){
+            return -1;
         }
-        return (Utilities.convertDate(o1.getBookingStartDate()).compareTo(Utilities.convertDate(o2.getBookingStartDate())));
+        return 0;
+//        (Utilities.convertDate(o1.getBookingStartDate()).compareTo(Utilities.convertDate(o2.getBookingStartDate())))
     }
 }

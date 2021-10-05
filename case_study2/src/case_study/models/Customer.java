@@ -10,7 +10,10 @@ public class Customer extends Person {
     public static final String GOLD = "Gold";
     public static final String SILVER = "Silver";
     public static final String MEMBER = "Member";
-
+//
+    public Customer (){
+        super();
+    }
 
     public Customer(String name, String dateBirth, String sex, int identification, int phoneNumber, String email,
                     int idCustomer, String typeOfCustomer, String addressCustomer) {

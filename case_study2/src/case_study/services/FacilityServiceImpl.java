@@ -6,8 +6,7 @@ import case_study.models.Room;
 import case_study.models.Villa;
 import case_study.utils.CheckValidate;
 
-import javax.xml.ws.FaultAction;
-import java.math.RoundingMode;
+import javax.print.attribute.standard.MediaSize;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,12 +15,18 @@ import java.util.Set;
 public class FacilityServiceImpl implements FacilityService {
     protected static Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
     protected static Scanner scanner = new Scanner(System.in);
+    private static final String NAME_SERVICE_HO = "^SV[HO]{2}-[0-9]{4}$";
+    private static final String NAME_SERVICE_VL = "^SV[VL]{2}-[0-9]{4}$";
+    private static final String NAME_SERVICE_RO = "^SV[RO]{2}-[0-9]{4}$";
 //    private static CheckValidate checkValidate = new CheckValidate();
 
     static {
-        facilityIntegerMap.put(new House("HO",200,300,2,House.DATE,"A",2),0);
-        facilityIntegerMap.put(new Villa("VL",300,400,4,Villa.MONTH,"A",200,3),0);
-        facilityIntegerMap.put(new Room("RO",400,250,1, Room.DATE,"Free"),0);
+        facilityIntegerMap.put(new House("SVHO-1312",200,300,2,House.DATE,
+                "A",2),0);
+        facilityIntegerMap.put(new Villa("SVVL-1231",300,400,4,Villa.MONTH,
+                "A",200,3),0);
+        facilityIntegerMap.put(new Room("SVRO-1213",400,250,1, Room.DATE,
+                "Free"),0);
     }
 
     public static Facility getFacility (String nameFacility) {
@@ -36,8 +41,6 @@ public class FacilityServiceImpl implements FacilityService {
         return null;
     }
 
-
-
     @Override
     public void add() {
         while (true) {
@@ -50,59 +53,38 @@ public class FacilityServiceImpl implements FacilityService {
             int choice = scanner.nextInt();
             switch (choice){
                 case 1: {
-                    System.out.print("Enter name service: ");
-                    String nameService = scanner.next();
-                    ;
-                    System.out.print("Enter using Area: ");
-                    double usingArea = scanner.nextDouble();
+                    String nameService = CheckValidate.checkNameService(NAME_SERVICE_VL);
+                    double usingArea = Double.parseDouble(CheckValidate.checkAreaUsing());
                     //chuyển về string, thuộc tính class ko đổi,
                     //dùng regex kieểm tra, chuyển đổi string đó sang kiểu số...roồi đẩy vào đối tiowjng
-                    System.out.print("Enter price rental: ");
-                    double priceRental = scanner.nextDouble();
-                    System.out.print("Enter number person in room: ");
-                    int numberPersonInRoom = scanner.nextInt();
-                    System.out.print("Enter type of rent: ");
-                    String typeOfRent = scanner.next();
-                    System.out.print("Enter the room standard: ");
-                    String roomStandard = scanner.next();
-                    System.out.print("Enter the pool Area: ");
-                    double poolArea = scanner.nextDouble();
-                    System.out.print("Enter the number of floor: ");
-                    int numberOfFloor = scanner.nextInt();
-                    Villa villa = new Villa(CheckValidate.checkNameService(nameService),usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
+                    double priceRental = Double.parseDouble(CheckValidate.checkPriceRental());
+                    int numberPersonInRoom = Integer.parseInt(CheckValidate.checkPeople());
+                    String typeOfRent = CheckValidate.typeOfRent(NAME_SERVICE_VL);
+                    String roomStandard = CheckValidate.standardRoom(NAME_SERVICE_VL);
+                    double poolArea = Double.parseDouble(CheckValidate.checkAreaPool());
+                    int numberOfFloor = Integer.parseInt(CheckValidate.numberOfFloor());
+                    Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
                     facilityIntegerMap.put(villa,0);
                     break;
                 }
                 case 2: {
-                    System.out.print("Enter name service: ");
-                    String nameService = scanner.next();
-                    System.out.print("Enter using Area: ");
-                    double usingArea = scanner.nextDouble();
-                    System.out.print("Enter price rental: ");
-                    double priceRental = scanner.nextDouble();
-                    System.out.print("Enter number person in room: ");
-                    int numberPersonInRoom = scanner.nextInt();
-                    System.out.print("Enter type of rent: ");
-                    String typeOfRent = scanner.next();
-                    System.out.print("Enter the room standard: ");
-                    String houseStandard = scanner.next();
-                    System.out.print("Enter the number of floor house: ");
-                    int numberOfFloorHouse = scanner.nextInt();
+                    String nameService = CheckValidate.checkNameService(NAME_SERVICE_RO);
+                    double usingArea = Double.parseDouble(CheckValidate.checkAreaUsing());
+                    double priceRental = Double.parseDouble(CheckValidate.checkPriceRental());
+                    int numberPersonInRoom = Integer.parseInt(CheckValidate.checkPeople());
+                    String typeOfRent = CheckValidate.typeOfRent(NAME_SERVICE_RO);
+                    String houseStandard = CheckValidate.standardRoom(NAME_SERVICE_RO);
+                    int numberOfFloorHouse = Integer.parseInt(CheckValidate.numberOfFloor());
                     House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,numberOfFloorHouse);
                     facilityIntegerMap.put(house,0);
                     break;
                 }
                 case 3:{
-                    System.out.print("Enter name service: ");
-                    String nameService = scanner.next();
-                    System.out.print("Enter using Area: ");
-                    double usingArea = scanner.nextDouble();
-                    System.out.print("Enter price rental: ");
-                    double priceRental = scanner.nextDouble();
-                    System.out.print("Enter number person in room: ");
-                    int numberPersonInRoom = scanner.nextInt();
-                    System.out.print("Enter type of rent: ");
-                    String typeOfRent = scanner.next();
+                    String nameService = CheckValidate.checkNameService(NAME_SERVICE_HO);
+                    double usingArea = Double.parseDouble(CheckValidate.checkAreaUsing());
+                    double priceRental = Double.parseDouble(CheckValidate.checkPriceRental());
+                    int numberPersonInRoom = Integer.parseInt(CheckValidate.checkPeople());
+                    String typeOfRent = CheckValidate.typeOfRent(NAME_SERVICE_HO);
                     System.out.print("enter the service free: ");
                     String serviceFree = scanner.next();
                     Room room = new Room (nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,serviceFree);
@@ -122,14 +104,10 @@ public class FacilityServiceImpl implements FacilityService {
 
     }
 
-    @Override
-    public void edit() {
-
-    }
 
     @Override
     public void delete() {
-
+    //cap nhat sau
     }
 
     @Override

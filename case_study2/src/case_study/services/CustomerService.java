@@ -1,9 +1,17 @@
 package case_study.services;
 
 public interface CustomerService extends Services {
+//Ke thua tu cha
+    @Override
     void add();
-    void display();
-    void edit(int id);
-    void edit();
+
+    @Override
     void delete();
+
+    @Override
+    void display();
+
+    void edit(int id);
+
+
 }

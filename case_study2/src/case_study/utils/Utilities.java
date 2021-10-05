@@ -32,8 +32,7 @@ public class Utilities {
     }
 
     public static String convertYear (String bookingDate) {
-        Date date = null;
-//        String checkTimeFormat = "";
+        Date date;
         String year = "" ;
         try {
             date = simpleDateFormat.parse(bookingDate);
@@ -47,7 +46,6 @@ public class Utilities {
 
     public static String convertMonth (String bookingDate) {
         Date date = null;
-//        String checkTimeFormat = "";
         String month = "" ;
         try {
             date = simpleDateFormat.parse(bookingDate);

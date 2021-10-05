@@ -6,9 +6,6 @@ public interface FacilityService extends Services {
     void add();
 
     @Override
-    void edit();
-
-    @Override
     void delete();
 
     @Override

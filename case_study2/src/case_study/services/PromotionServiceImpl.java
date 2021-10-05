@@ -70,17 +70,12 @@ public class PromotionServiceImpl implements Services {
 
     @Override
     public void add() {
-
-    }
-
-    @Override
-    public void edit() {
-
+    //Dang lam
     }
 
     @Override
     public void delete() {
-
+    //Cap nhat sau
     }
 
 

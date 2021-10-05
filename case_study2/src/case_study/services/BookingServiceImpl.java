@@ -28,6 +28,8 @@ public class BookingServiceImpl implements BookingService {
                 CustomerServiceImpl.customerList.get(1), FacilityServiceImpl.getFacility("HO")));
         bookingTreeSet.add(new Booking(4, "06/10/2021", "15/10/2021",
                 CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
+        bookingTreeSet.add(new Booking(4, "07/10/2021", "15/10/2021",
+                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
 //        bookingTreeSet.add(new Booking(5, utilities.convertDate("06/03/2021"), utilities.convertDate("07/04/2021"),
 //                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("HO")));
 //        bookingTreeSet.add(new Booking(6, utilities.convertDate("01/01/2021"), utilities.convertDate("02/04/2021"),
@@ -69,13 +71,8 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public void edit() {
-
-    }
-
-    @Override
     public void delete() {
-
+        //cap nhat sau
     }
 
     @Override

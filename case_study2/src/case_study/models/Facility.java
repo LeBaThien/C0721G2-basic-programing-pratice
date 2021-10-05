@@ -12,6 +12,7 @@ public abstract class Facility {
     public final static String DATE = "Date";
     public final static String HOURS = "hours";
 
+    public Facility(){};
     public Facility(String nameService, double usingArea, double priceRental, int numberPersonInRoom, String typeOfRent) {
         this.nameService = nameService;
         this.usingArea = usingArea;

@@ -5,35 +5,33 @@ import case_study.models.Customer;
 import java.util.*;
 
 public class CustomerServiceImpl implements CustomerService {
-    protected static List<Customer>customerList = new LinkedList<>();
+    protected static List<Customer> customerList = new LinkedList<>();
     protected static Scanner scanner = new Scanner(System.in);
 
     static {
-    Customer customer1 = new Customer("jose","12/7/1990","Female",12321, 1237,
-            "jose@gmail.com",12,Customer.DIAMOND,"dn");
-    Customer customer2 = new Customer("thomas","5/7/1999","Female",12761, 20017,
-            "thomas@gmail.com",10,Customer.GOLD,"qn");
-    //Viet truc tiep
-    customerList.add(new Customer("Grace","4/7/1995","male",88021, 347137,
-            "grace@gmail.com",8,Customer.MEMBER,"uk"));
-        customerList.add(new Customer("jordan","4/7/1995","male",88021, 347137,
-                "jordan@gmail.com",15,Customer.MEMBER,"uk"));
-    customerList.add(customer1);
-    customerList.add(customer2);
+        Customer customer1 = new Customer("jose", "12/7/1990", "Female", 12321, 1237,
+                "jose@gmail.com", 12, Customer.DIAMOND, "dn");
+        Customer customer2 = new Customer("thomas", "5/7/1999", "Female", 12761, 20017,
+                "thomas@gmail.com", 10, Customer.GOLD, "qn");
+        //Viet truc tiep
+        customerList.add(new Customer("Grace", "4/7/1995", "male", 88021, 347137,
+                "grace@gmail.com", 8, Customer.MEMBER, "uk"));
+        customerList.add(new Customer("jordan", "4/7/1995", "male", 88021, 347137,
+                "jordan@gmail.com", 15, Customer.MEMBER, "uk"));
+        customerList.add(customer1);
+        customerList.add(customer2);
 
     }
-    public static Customer getIndexCustomer (int idCustomer) {
-        while (true) {
-            for (Customer customer : customerList) {
+
+    public static Customer getIndexCustomer(int idCustomer) {
+        for (Customer customer : customerList) {
                 if (customer.getIdCustomer() == idCustomer) {
 //                int index  = customerList.indexOf(customer);
                     return customer;
                 }
             }
             return null;
-        }
     }
-
 
     @Override
     public void add() {
@@ -55,13 +53,14 @@ public class CustomerServiceImpl implements CustomerService {
         String typeOfCustomer = scanner.next();
         System.out.print("Enter customer address: ");
         String addressCustomer = scanner.next();
-        Customer customer = new Customer(nameCustomer,dateBirth,sex,identification,numberPhone,email,idCustomer,typeOfCustomer,addressCustomer);
+        Customer customer = new Customer(nameCustomer, dateBirth, sex, identification, numberPhone, email, idCustomer,
+                typeOfCustomer, addressCustomer);
         customerList.add(customer);
     }
 
     @Override
     public void display() {
-        for(Customer customer : customerList){
+        for (Customer customer : customerList) {
             System.out.println(customer);
         }
     }
@@ -72,7 +71,7 @@ public class CustomerServiceImpl implements CustomerService {
             if (customer.getIdCustomer() == id) {
                 System.out.println("==Chose letter your want to edit ");
                 System.out.println("a. Edit name\n" + "b. Edit date birth\n"
-                        + "c. Edit sex\n" + "d. Edit identification\n"
+                        + "c. Edit gender\n" + "d. Edit identification\n"
                         + "e. Edit phone number\n" + "f. Edit email\n"
                         + "g. Edit id Customer\n" + "h. Edit type of customer\n"
                         + "i. Edit address\n" + "o. Exit edit");
@@ -91,7 +90,7 @@ public class CustomerServiceImpl implements CustomerService {
                         break;
                     }
                     case "c": {
-                        System.out.print("Enter new sex: ");
+                        System.out.print("Enter new gender: ");
                         String sex = scanner.next();
                         customer.setSex(sex);
                         break;
@@ -144,15 +143,9 @@ public class CustomerServiceImpl implements CustomerService {
         }
     }
 
-
-    @Override
-    public void edit() {
-
-    }
-
     @Override
     public void delete() {
-
+    //cap nhat sau
     }
 
 

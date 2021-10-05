@@ -5,9 +5,6 @@ public interface PromotionService extends Services {
     void add();
 
     @Override
-    void edit();
-
-    @Override
     void delete();
 
     @Override

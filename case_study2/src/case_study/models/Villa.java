@@ -5,6 +5,7 @@ public class Villa extends Facility {
     private double poolArea;
     private int numberOfFloor;
 
+    public Villa(){}
 
     public Villa(String nameService, double usingArea, double priceRental, int numberPersonInRoom, String typeOfRent,
                  String roomStandard, double poolArea, int numberOfFloor) {
