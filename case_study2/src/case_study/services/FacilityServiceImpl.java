@@ -16,7 +16,8 @@ import java.util.Set;
 
 public class FacilityServiceImpl implements FacilityService {
     protected static Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
-    protected static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
+    private static Map<House,Integer> houseIntegerMap = new LinkedHashMap<>();
     private static final String NAME_SERVICE_HO = "^SV[HO]{2}-[0-9]{4}$";
     private static final String NAME_SERVICE_VL = "^SV[VL]{2}-[0-9]{4}$";
     private static final String NAME_SERVICE_RO = "^SV[RO]{2}-[0-9]{4}$";
@@ -33,6 +34,7 @@ public class FacilityServiceImpl implements FacilityService {
         facilityIntegerMap.put(new Room("SVRO-1234",400,250,1, Room.DATE,
                 "Free"),0);
     }
+
 
     public static Facility getFacility (String nameFacility) {
        Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
@@ -59,14 +61,21 @@ public class FacilityServiceImpl implements FacilityService {
             switch (choice){
                 case 1: {
                     String nameService = CheckValidate.checkNameService(NAME_SERVICE_VL);
+                    System.out.print("Enter the area using: ");
                     double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
                     //chuyển về string, thuộc tính class ko đổi,
                     //dùng regex kieểm tra, chuyển đổi string đó sang kiểu số...roồi đẩy vào đối tiowjng
+                    System.out.print("Enter the price rental: ");
                     double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
+                    System.out.print("Enter the number people in room: ");
                     int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
+                    System.out.print("Enter the type of rent: ");
                     String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_VL);
+                    System.out.print("Enter the type of standard: ");
                     String roomStandard = CheckValidate.checkNameService(NAME_SERVICE_VL);
+                    System.out.print("Enter the area pool: ");
                     double poolArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
+                    System.out.print("Enter the number of floor: ");
                     int numberOfFloor = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
                     Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
                     facilityIntegerMap.put(villa,0);
@@ -74,23 +83,33 @@ public class FacilityServiceImpl implements FacilityService {
                 }
                 case 2: {
                     String nameService = CheckValidate.checkNameService(NAME_SERVICE_HO);
-
+                    System.out.print("Enter the area using: ");
                     double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
+                    System.out.print("Enter the price rental: ");
                     double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
+                    System.out.print("Enter the number people in room: ");
                     int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
+                    System.out.print("Enter the type of rent: ");
                     String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_HO);
+                    System.out.print("Enter the type of standard: ");
                     String houseStandard = CheckValidate.checkNameService(NAME_SERVICE_HO);
+                    System.out.print("Enter the number of floor: ");
                     int numberOfFloorHouse = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
                     House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,numberOfFloorHouse);
                     facilityIntegerMap.put(house,0);
+                    houseIntegerMap.put(house,0);
+                    HouseToCsv.writeListEmployeeToCSV(houseIntegerMap);
                     break;
-//                    HouseToCsv.writeListEmployeeToCSV;
                 }
                 case 3:{
                     String nameService = CheckValidate.checkNameService(NAME_SERVICE_RO);
+                    System.out.print("Enter the area using: ");
                     double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
+                    System.out.print("Enter the price rental: ");
                     double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
+                    System.out.print("Enter the number people in room: ");
                     int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
+                    System.out.print("Enter the type of rent: ");
                     String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_RO);
                     System.out.print("enter the service free: ");
                     String serviceFree = scanner.next();
