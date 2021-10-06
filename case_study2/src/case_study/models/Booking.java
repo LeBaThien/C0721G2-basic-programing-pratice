@@ -129,5 +129,11 @@ public class Booking  {
                 ;
     }
 
+    public String getInformationBooking(){
+        return getBookingCode() + "," + getBookingStartDate() + ","
+                + getBookingEndDate() + "," + getCustomer() + ","
+                + getFacility();
+    }
+
 
 }

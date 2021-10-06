@@ -127,7 +127,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         }
         EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
-
     }
 
     @Override
@@ -171,8 +170,5 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
 
     }
-
-
-    //
 
 }

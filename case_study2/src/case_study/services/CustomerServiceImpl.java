@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.libs.CustomerToCsv;
 import case_study.models.Customer;
 import case_study.utils.CheckInput;
 
@@ -57,10 +58,12 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = new Customer(nameCustomer, dateBirth, sex, identification, numberPhone, email, idCustomer,
                 typeOfCustomer, addressCustomer);
         customerList.add(customer);
+        CustomerToCsv.writeListEmployeeToCSV(customerList);
     }
 
     @Override
     public void display() {
+        CustomerToCsv.readData();
         for (Customer customer : customerList) {
             System.out.println(customer);
         }
@@ -68,6 +71,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void edit(int id) {
+        CustomerToCsv.readData();
         boolean flag = true;
             for (Customer customer : customerList) {
                 if (customer.getIdCustomer() == id) {
@@ -146,6 +150,7 @@ public class CustomerServiceImpl implements CustomerService {
                 }
             }
         }
+            CustomerToCsv.writeListEmployeeToCSV(customerList);
     }
 
     @Override

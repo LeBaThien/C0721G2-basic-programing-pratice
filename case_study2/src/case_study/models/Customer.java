@@ -57,4 +57,15 @@ public class Customer extends Person {
                 "} " + super.toString() +"\n";
 
     }
+
+    public String getInformationCustomer(){
+        return getName() +"," + getDateBirth() + ","
+                + getSex() + "," + getIdCustomer() +","
+                + getPhoneNumber() + "," + getEmail() + ","
+                + getIdCustomer() + "," + getTypeOfCustomer() + ","
+                + getAddressCustomer();
+    }
+
+
+
 }

@@ -20,15 +20,15 @@ public class FacilityServiceImpl implements FacilityService {
     private static final String NAME_SERVICE_RO = "^SV[RO]{2}-[0-9]{4}$";
     private static final String USING_AREA = "^[3-9]+[0-9]+[.][0-9]+$";
     private static final String PRICE_RENTAL = "^[0-9]+$";
-    private static final String PEOPLE = "^[0-9]{1,2}$";
+    private static final String PEOPLE = "^[1-9]|[1][0-9]$";
     private static final String NUMBER_FLOOR = "^[1-9]+$";
 
     static {
-        facilityIntegerMap.put(new House("SVHO-1312",200,300,2,House.DATE,
+        facilityIntegerMap.put(new House("SVHO-1234",200,300,2,House.DATE,
                 "A",2),0);
-        facilityIntegerMap.put(new Villa("SVVL-1231",300,400,4,Villa.MONTH,
+        facilityIntegerMap.put(new Villa("SVVL-1234",300,400,4,Villa.MONTH,
                 "A",200,3),0);
-        facilityIntegerMap.put(new Room("SVRO-1213",400,250,1, Room.DATE,
+        facilityIntegerMap.put(new Room("SVRO-1234",400,250,1, Room.DATE,
                 "Free"),0);
     }
 

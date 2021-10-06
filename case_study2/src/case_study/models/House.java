@@ -34,4 +34,10 @@ public class House extends Facility {
                 ", numberOfFloorHouse=" + numberOfFloorHouse +
                 "} " + super.toString();
     }
+
+    public String getInformationHouse(){
+        return getNameService() + ", " + getUsingArea() + "," + getPriceRental() + ","
+                + getNumberPersonInRoom() + "," + getTypeOfRent() + "," + getHouseStandard() + ","
+                + getNumberOfFloorHouse();
+    }
 }

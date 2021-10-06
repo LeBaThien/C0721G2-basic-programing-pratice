@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.libs.BookingToCsv;
 import case_study.models.Booking;
 import case_study.utils.BookingCompare;
 import case_study.utils.Utilities;
@@ -19,13 +20,13 @@ public class BookingServiceImpl implements BookingService {
 
         //viết hàm get id,
         bookingTreeSet.add(new Booking(1, "01/02/2020", "02/03/2021",
-                CustomerServiceImpl.customerList.get(0), FacilityServiceImpl.getFacility("VL")));
+                CustomerServiceImpl.customerList.get(0), FacilityServiceImpl.getFacility("SVVL-1234")));
         bookingTreeSet.add(new Booking(2, "05/04/2021", "07/04/2021",
-                CustomerServiceImpl.customerList.get(1), FacilityServiceImpl.getFacility("HO")));
+                CustomerServiceImpl.customerList.get(1), FacilityServiceImpl.getFacility("SVHO-1234")));
         bookingTreeSet.add(new Booking(4, "06/10/2021", "15/10/2021",
-                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
+                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("SVRO-1234")));
         bookingTreeSet.add(new Booking(4, "07/10/2021", "15/10/2021",
-                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("RO")));
+                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("SVRO-1234")));
 //        bookingTreeSet.add(new Booking(5, utilities.convertDate("06/03/2021"), utilities.convertDate("07/04/2021"),
 //                CustomerServiceImpl.customerList.get(2), FacilityServiceImpl.getFacility("HO")));
 //        bookingTreeSet.add(new Booking(6, utilities.convertDate("01/01/2021"), utilities.convertDate("02/04/2021"),
@@ -64,6 +65,7 @@ public class BookingServiceImpl implements BookingService {
         //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
         bookingTreeSet.add(new Booking(bookingCode,bookingStartDate,bookingEndDate,
                 CustomerServiceImpl.getIndexCustomer(idCustomer) ,FacilityServiceImpl.getFacility(nameService)));
+        BookingToCsv.writeSetBookingToCSV(bookingTreeSet);
     }
 
     @Override
@@ -73,6 +75,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void display() {
+        BookingToCsv.readData();
         for (Booking booking : bookingTreeSet) {
             System.out.println(booking);
         }

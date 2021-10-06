@@ -10,11 +10,11 @@ public class CheckValidate {
     private static Scanner scanner = new Scanner(System.in);
 //    private static final String USING_AREA = "^[3-9]+[0-9]+[.][0-9]+$";
 //    private static final String PRICE_RENTAL = "^[0-9]+$";
-//    private static final String PEOPLE = "^[0-9]{1,2}$";
+//    private static final String PEOPLE = "^[1-9]|[1][0-9]$";
 //    private static final String NUMBER_FLOOR = "^[1-9]+$";
 
 //    private static Pattern nameInput(){
-//        return pattern = Pattern.compile(USING_AREA);
+//        return pattern = Pattern.compile(PEOPLE);
 //    }
 
 //    public static boolean checkName1 (String nameService){

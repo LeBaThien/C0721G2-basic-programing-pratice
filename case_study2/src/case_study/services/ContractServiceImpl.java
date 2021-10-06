@@ -44,9 +44,10 @@ public class ContractServiceImpl implements ContractService {
     @Override
     public void edit() {
         boolean flag = true;
-        int idContract = scanner.nextInt();
+        System.out.println("Enter the id contract");
+        int id = CheckInput.checkInputSelection();
         for(Contract contract : contractQueue){
-            if(contract.getIdContract() == idContract){
+            if(contract.getIdContract() == id){
                 while (flag){
                     System.out.println("Enter number you want to edit\n"
                             +"1. Edit id\n"
