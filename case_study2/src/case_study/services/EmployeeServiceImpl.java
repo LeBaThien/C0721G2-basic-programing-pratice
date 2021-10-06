@@ -2,6 +2,7 @@ package case_study.services;
 
 import case_study.libs.EmployeeToCsv;
 import case_study.models.Employee;
+import case_study.utils.CheckInput;
 import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 
 import java.util.ArrayList;
@@ -22,9 +23,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 //   }
 
 //    static {
-//        Employee employee1 = new Employee("Peter", "23 / 9 / 1990", "Male", 11123, 1129, "peter@gmail.com", 1, Employee.COLLEGE, 1200, Employee.RECEPTIONIST);
-//        Employee employee2 = new Employee("Camel", "24 / 4 / 1990", "Female", 1243, 12324, "camel@gmail.com", 2, Employee.UNIVERSITY, 2300, Employee.SUPERVISOR);
-//        Employee employee3 = new Employee("Son", "12 / 3 / 1898", "Male", 2532, 7352, "Son@gamil.com", 3, Employee.INTERMEDIATE, 900, Employee.SPECIALIST);
+//        Employee employee1 = new Employee("Peter", "23 / 9 / 1990", "Male", 11123, 1129, "peter@gmail.com", 1,
+//        Employee.COLLEGE, 1200, Employee.RECEPTIONIST);
+//        Employee employee2 = new Employee("Camel", "24 / 4 / 1990", "Female", 1243, 12324, "camel@gmail.com", 2,
+//        Employee.UNIVERSITY, 2300, Employee.SUPERVISOR);
+//        Employee employee3 = new Employee("Son", "12 / 3 / 1898", "Male", 2532, 7352, "Son@gamil.com", 3,
+//        Employee.INTERMEDIATE, 900, Employee.SPECIALIST);
 //        employeeArrayList.add(employee1);
 //        employeeArrayList.add(employee2);
 //        employeeArrayList.add(employee3);
@@ -33,80 +37,82 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void edit(int id) {
         EmployeeToCsv.readData();
+        boolean flag = true;
         for (Employee employee : employeeArrayList) {
             if (employee.getIdEmployee() == id) {
-                while (true) {
+                while (flag) {
                     System.out.println("==Chose letter your want to edit ");
-                    System.out.println("a. Edit name\n" + "b. Edit date birth\n"
-                            + "c. Edit sex\n" + "d. Edit identification\n"
-                            + "e. Edit phone number\n" + "f. Edit email\n"
-                            + "g. Edit id\n" + "h. Edit academic level\n"
-                            + "i. Edit salary\n" + "j. Edit position\n"
-                            + "o. Exit edit");
-                    String letter = scanner.next();
+                    System.out.println("1. Edit name\n" + "2. Edit date birth\n"
+                            + "3. Edit sex\n" + "4. Edit identification\n"
+                            + "5. Edit phone number\n" + "6. Edit email\n"
+                            + "7. Edit id\n" + "8. Edit academic level\n"
+                            + "9. Edit salary\n" + "10. Edit position\n"
+                            + "11. Exit edit");
+                    int letter = CheckInput.checkInputSelection();
                     switch (letter) {
-                        case "a": {
+                        case 1: {
                             System.out.print("Enter new name: ");
                             String name = scanner.next();
                             employee.setName(name);
                             break;
                         }
-                        case "b": {
+                        case 2: {
                             System.out.print("Enter new date birth: ");
                             String dateBirth = scanner.next();
                             employee.setDateBirth(dateBirth);
                             break;
                         }
-                        case "c": {
+                        case 3: {
                             System.out.print("Enter new sex: ");
                             String sex = scanner.next();
                             employee.setSex(sex);
                             break;
                         }
-                        case "d": {
+                        case 4: {
                             System.out.print("Enter new identification: ");
                             int identification = scanner.nextInt();
                             employee.setIdentification(identification);
                             break;
                         }
-                        case "e": {
+                        case 5: {
                             System.out.print("Enter new phone number: ");
                             int numberPhone = scanner.nextInt();
                             employee.setPhoneNumber(numberPhone);
                             break;
                         }
-                        case "f": {
+                        case 6: {
                             System.out.print("Enter new email: ");
                             String email = scanner.next();
                             employee.setEmail(email);
                             break;
                         }
-                        case "g": {
+                        case 7: {
                             System.out.print("Enter new Id: ");
                             int idEmployee = scanner.nextInt();
                             employee.setIdentification(idEmployee);
                             break;
                         }
-                        case "h": {
+                        case 8: {
                             System.out.print("Enter new academic level: ");
                             String degree = scanner.next();
                             employee.setAcademicLevel(degree);
                             break;
                         }
-                        case "i": {
+                        case 9: {
                             System.out.print("Enter new salary: ");
                             double salary = scanner.nextDouble();
                             employee.setSalaryStaff(salary);
                             break;
                         }
-                        case "j": {
+                        case 10: {
                             System.out.print("Enter new position: ");
                             String position = scanner.next();
                             employee.setPosition(position);
                             break;
                         }
-                        case "o": {
-                            return;
+                        case 11: {
+                            flag = false;
+                            break;
                         }
                         default: {
                             System.out.println("Please check your 'letter'");

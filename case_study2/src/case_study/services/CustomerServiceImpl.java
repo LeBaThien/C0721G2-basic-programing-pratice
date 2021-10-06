@@ -1,6 +1,7 @@
 package case_study.services;
 
 import case_study.models.Customer;
+import case_study.utils.CheckInput;
 
 import java.util.*;
 
@@ -67,76 +68,80 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void edit(int id) {
-        for (Customer customer : customerList) {
-            if (customer.getIdCustomer() == id) {
-                System.out.println("==Chose letter your want to edit ");
-                System.out.println("a. Edit name\n" + "b. Edit date birth\n"
-                        + "c. Edit gender\n" + "d. Edit identification\n"
-                        + "e. Edit phone number\n" + "f. Edit email\n"
-                        + "g. Edit id Customer\n" + "h. Edit type of customer\n"
-                        + "i. Edit address\n" + "o. Exit edit");
-                String letter = scanner.next();
-                switch (letter) {
-                    case "a": {
-                        System.out.print("Enter new name: ");
-                        String name = scanner.next();
-                        customer.setName(name);
-                        break;
-                    }
-                    case "b": {
-                        System.out.print("Enter new date birth: ");
-                        String dateBirth = scanner.next();
-                        customer.setDateBirth(dateBirth);
-                        break;
-                    }
-                    case "c": {
-                        System.out.print("Enter new gender: ");
-                        String sex = scanner.next();
-                        customer.setSex(sex);
-                        break;
-                    }
-                    case "d": {
-                        System.out.print("Enter new identification: ");
-                        int identification = scanner.nextInt();
-                        customer.setIdentification(identification);
-                        break;
-                    }
-                    case "e": {
-                        System.out.print("Enter new phone number: ");
-                        int numberPhone = scanner.nextInt();
-                        customer.setPhoneNumber(numberPhone);
-                        break;
-                    }
-                    case "f": {
-                        System.out.print("Enter new email: ");
-                        String email = scanner.next();
-                        customer.setEmail(email);
-                        break;
-                    }
-                    case "g": {
-                        System.out.print("Enter new Id: ");
-                        int idEmployee = scanner.nextInt();
-                        customer.setIdentification(idEmployee);
-                        break;
-                    }
-                    case "h": {
-                        System.out.print("Enter new type of customer: ");
-                        String degree = scanner.next();
-                        customer.setTypeOfCustomer(degree);
-                        break;
-                    }
-                    case "i": {
-                        System.out.print("Enter new address: ");
-                        String address = scanner.next();
-                        customer.setAddressCustomer(address);
-                        break;
-                    }
-                    case "o": {
-                        return;
-                    }
-                    default: {
-                        System.out.println("Please check your 'letter'");
-                        break;
+        boolean flag = true;
+            for (Customer customer : customerList) {
+                if (customer.getIdCustomer() == id) {
+                    System.out.println("==Chose letter your want to edit ");
+                    System.out.println("1. Edit name\n" + "2. Edit date birth\n"
+                            + "3. Edit gender\n" + "4. Edit identification\n"
+                            + "5. Edit phone number\n" + "6. Edit email\n"
+                            + "7. Edit id Customer\n" + "8. Edit type of customer\n"
+                            + "9. Edit address\n" + "10. Exit edit");
+                    while (flag) {
+                    int selection = CheckInput.checkInputSelection();
+                    switch (selection) {
+                        case 1: {
+                            System.out.print("Enter new name: ");
+                            String name = scanner.next();
+                            customer.setName(name);
+                            break;
+                        }
+                        case 2: {
+                            System.out.print("Enter new date birth: ");
+                            String dateBirth = scanner.next();
+                            customer.setDateBirth(dateBirth);
+                            break;
+                        }
+                        case 3: {
+                            System.out.print("Enter new gender: ");
+                            String sex = scanner.next();
+                            customer.setSex(sex);
+                            break;
+                        }
+                        case 4: {
+                            System.out.print("Enter new identification: ");
+                            int identification = scanner.nextInt();
+                            customer.setIdentification(identification);
+                            break;
+                        }
+                        case 5: {
+                            System.out.print("Enter new phone number: ");
+                            int numberPhone = scanner.nextInt();
+                            customer.setPhoneNumber(numberPhone);
+                            break;
+                        }
+                        case 6: {
+                            System.out.print("Enter new email: ");
+                            String email = scanner.next();
+                            customer.setEmail(email);
+                            break;
+                        }
+                        case 7: {
+                            System.out.print("Enter new Id: ");
+                            int idEmployee = scanner.nextInt();
+                            customer.setIdentification(idEmployee);
+                            break;
+                        }
+                        case 8: {
+                            System.out.print("Enter new type of customer: ");
+                            String degree = scanner.next();
+                            customer.setTypeOfCustomer(degree);
+                            break;
+                        }
+                        case 9: {
+                            System.out.print("Enter new address: ");
+                            String address = scanner.next();
+                            customer.setAddressCustomer(address);
+                            break;
+                        }
+                        case 10: {
+                            flag = false;
+                            break;
+                        }
+                        default: {
+                            System.err.println("Please check your 'letter'");
+                            break;
+                        }
                     }
                 }
             }

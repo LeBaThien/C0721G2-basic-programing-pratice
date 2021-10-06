@@ -10,10 +10,6 @@ public class BookingServiceImpl implements BookingService {
     protected static Set<Booking> bookingTreeSet = new TreeSet<>(new BookingCompare());
     private static Scanner scanner = new Scanner(System.in);
     private static CustomerServiceImpl customerService = new CustomerServiceImpl();
-    private static Utilities utilities = new Utilities();
-
-
-
     // String sDate = "17/07/2017";
     // Date date = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);
 

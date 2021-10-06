@@ -1,6 +1,7 @@
 package case_study.services;
 
 import case_study.models.*;
+import case_study.utils.CheckInput;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -42,16 +43,17 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public void edit() {
+        boolean flag = true;
         int idContract = scanner.nextInt();
         for(Contract contract : contractQueue){
             if(contract.getIdContract() == idContract){
-                while (true){
+                while (flag){
                     System.out.println("Enter number you want to edit\n"
                             +"1. Edit id\n"
                             +"2. Edit deposit advanced\n"
                             +"3. Edit total payment\n"
                             +"4. Exit edit\n");
-                    int selection = scanner.nextInt();
+                    int selection = CheckInput.checkInputSelection();
                     switch(selection){
                         case 1: {
                             System.out.print("Enter the new id contract: ");
@@ -72,7 +74,8 @@ public class ContractServiceImpl implements ContractService {
                             break;
                         }
                         case 4: {
-                            return;
+                            flag = false;
+                            break;
                         }
                         default:{
                             System.out.println("Please check your number!!!");
