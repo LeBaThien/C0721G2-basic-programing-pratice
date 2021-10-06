@@ -58,12 +58,12 @@ public class CustomerServiceImpl implements CustomerService {
         Customer customer = new Customer(nameCustomer, dateBirth, sex, identification, numberPhone, email, idCustomer,
                 typeOfCustomer, addressCustomer);
         customerList.add(customer);
-        CustomerToCsv.writeListEmployeeToCSV(customerList);
+        CustomerToCsv.writeListCustomerToCSV(customerList);
     }
 
     @Override
     public void display() {
-        CustomerToCsv.readData();
+        customerList = CustomerToCsv.readData();
         for (Customer customer : customerList) {
             System.out.println(customer);
         }
@@ -71,7 +71,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void edit(int id) {
-        CustomerToCsv.readData();
+       customerList = CustomerToCsv.readData();
         boolean flag = true;
             for (Customer customer : customerList) {
                 if (customer.getIdCustomer() == id) {
@@ -150,7 +150,7 @@ public class CustomerServiceImpl implements CustomerService {
                 }
             }
         }
-            CustomerToCsv.writeListEmployeeToCSV(customerList);
+            CustomerToCsv.writeListCustomerToCSV(customerList);
     }
 
     @Override

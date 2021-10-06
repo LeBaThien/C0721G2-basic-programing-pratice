@@ -9,12 +9,12 @@ public class CheckValidate {
     private static Matcher matcher;
     private static Scanner scanner = new Scanner(System.in);
 //    private static final String USING_AREA = "^[3-9]+[0-9]+[.][0-9]+$";
-//    private static final String PRICE_RENTAL = "^[0-9]+$";
+//    private static final String PRICE_RENTAL = "^[0-9]+.?[0-9]$";
 //    private static final String PEOPLE = "^[1-9]|[1][0-9]$";
 //    private static final String NUMBER_FLOOR = "^[1-9]+$";
 
 //    private static Pattern nameInput(){
-//        return pattern = Pattern.compile(PEOPLE);
+//        return pattern = Pattern.compile(PRICE_RENTAL);
 //    }
 
 //    public static boolean checkName1 (String nameService){

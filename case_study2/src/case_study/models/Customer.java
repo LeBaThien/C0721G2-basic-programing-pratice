@@ -54,7 +54,7 @@ public class Customer extends Person {
                 "idCustomer=" + idCustomer +
                 ", typeOfCustomer='" + typeOfCustomer + '\'' +
                 ", addressCustomer='" + addressCustomer + '\'' +
-                "} " + super.toString() +"\n";
+                "} " + super.toString() ;
 
     }
 

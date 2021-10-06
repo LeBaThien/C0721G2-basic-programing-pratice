@@ -14,11 +14,9 @@ public class CustomerToCsv {
         List<Customer> customerList = new LinkedList<>();
         try {
             FileReader fileReader = new FileReader(file);
-//
 //            if(!file.exists()){
 //                throw  new FileNotFoundException();
 //            }
-
             BufferedReader br = new BufferedReader(fileReader);
             String line="";
             while ((line = br.readLine()) != null){
@@ -35,7 +33,7 @@ public class CustomerToCsv {
         return customerList;
     }
 
-    public static void writeListEmployeeToCSV (List<Customer> customers){
+    public static void writeListCustomerToCSV (List<Customer> customers){
         try{
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

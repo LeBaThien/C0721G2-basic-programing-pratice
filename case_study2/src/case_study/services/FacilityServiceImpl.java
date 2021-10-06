@@ -1,6 +1,8 @@
 package case_study.services;
 
 import case_study.libs.HouseToCsv;
+import case_study.libs.RoomToCsv;
+import case_study.libs.VillaToCsv;
 import case_study.models.Facility;
 import case_study.models.House;
 import case_study.models.Room;
@@ -18,22 +20,24 @@ public class FacilityServiceImpl implements FacilityService {
     protected static Map<Facility,Integer> facilityIntegerMap = new LinkedHashMap<>();
     private static Scanner scanner = new Scanner(System.in);
     private static Map<House,Integer> houseIntegerMap = new LinkedHashMap<>();
+    private static Map<Villa,Integer> villaIntegerMap = new LinkedHashMap<>();
+    private static Map<Room,Integer> roomIntegerMap = new LinkedHashMap<>();
     private static final String NAME_SERVICE_HO = "^SV[HO]{2}-[0-9]{4}$";
     private static final String NAME_SERVICE_VL = "^SV[VL]{2}-[0-9]{4}$";
     private static final String NAME_SERVICE_RO = "^SV[RO]{2}-[0-9]{4}$";
     private static final String USING_AREA = "^[3-9]+[0-9]+[.][0-9]+$";
-    private static final String PRICE_RENTAL = "^[0-9]+$";
+    private static final String PRICE_RENTAL = "^[0-9]+.?[0-9]$";
     private static final String PEOPLE = "^[1-9]|[1][0-9]$";
     private static final String NUMBER_FLOOR = "^[1-9]+$";
 
-    static {
-        facilityIntegerMap.put(new House("SVHO-1234",200,300,2,House.DATE,
-                "A",2),0);
-        facilityIntegerMap.put(new Villa("SVVL-1234",300,400,4,Villa.MONTH,
-                "A",200,3),0);
-        facilityIntegerMap.put(new Room("SVRO-1234",400,250,1, Room.DATE,
-                "Free"),0);
-    }
+//    static {
+//        facilityIntegerMap.put(new House("SVHO-1234",200,300,2,House.DATE,
+//                "A",2),0);
+//        facilityIntegerMap.put(new Villa("SVVL-1234",300,400,4,Villa.MONTH,
+//                "A",200,3),0);
+//        facilityIntegerMap.put(new Room("SVRO-1234",400,250,1, Room.DATE,
+//                "Free"),0);
+//    }
 
 
     public static Facility getFacility (String nameFacility) {
@@ -77,8 +81,11 @@ public class FacilityServiceImpl implements FacilityService {
                     double poolArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
                     System.out.print("Enter the number of floor: ");
                     int numberOfFloor = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
-                    Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,poolArea,numberOfFloor);
+                    Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,
+                            poolArea,numberOfFloor);
                     facilityIntegerMap.put(villa,0);
+                    villaIntegerMap.put(villa,0);
+                    VillaToCsv.writeListVillaToCSV(villaIntegerMap);
                     break;
                 }
                 case 2: {
@@ -95,10 +102,11 @@ public class FacilityServiceImpl implements FacilityService {
                     String houseStandard = CheckValidate.checkNameService(NAME_SERVICE_HO);
                     System.out.print("Enter the number of floor: ");
                     int numberOfFloorHouse = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
-                    House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,numberOfFloorHouse);
+                    House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,
+                            numberOfFloorHouse);
                     facilityIntegerMap.put(house,0);
                     houseIntegerMap.put(house,0);
-                    HouseToCsv.writeListEmployeeToCSV(houseIntegerMap);
+                    HouseToCsv.writeListHouseToCSV(houseIntegerMap);
                     break;
                 }
                 case 3:{
@@ -115,6 +123,8 @@ public class FacilityServiceImpl implements FacilityService {
                     String serviceFree = scanner.next();
                     Room room = new Room (nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,serviceFree);
                     facilityIntegerMap.put(room,0);
+                    roomIntegerMap.put(room,0);
+                    RoomToCsv.writeListRoomToCSV(roomIntegerMap);
                     break;
                 }
                 case 4: {
@@ -142,11 +152,23 @@ public class FacilityServiceImpl implements FacilityService {
         // System.out.println(facilityIntegerMap.toString());
         //option 2: using
         //need to review
-        HouseToCsv.readData();
-//        Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
-//        for(Map.Entry<House,Integer> entry : entries){
-//            System.out.println(entry.getKey().toString() + "," + entry.getValue() );
-//        }
+        houseIntegerMap = HouseToCsv.readData();
+        Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
+        for(Map.Entry<House,Integer> entry : entries){
+            System.out.println(entry.getKey() + "," + entry.getValue() );
+        }
+        //Nếu ko chuyển về ghi đè sẽ sai
+        villaIntegerMap = VillaToCsv.readData();
+        Set<Map.Entry<Villa,Integer>> entries1 = villaIntegerMap.entrySet();
+        for(Map.Entry<Villa,Integer> entry : entries1){
+            System.out.println(entry.getKey() + "," + entry.getValue() );
+        }
+
+        roomIntegerMap = RoomToCsv.readData();
+        Set<Map.Entry<Room,Integer>> entries2 = roomIntegerMap.entrySet();
+        for(Map.Entry<Room,Integer> entry : entries2){
+            System.out.println(entry.getKey() + "," + entry.getValue() );
+        }
 
         Set<Facility> facilitySet = facilityIntegerMap.keySet();
         for (Facility facility: facilitySet){

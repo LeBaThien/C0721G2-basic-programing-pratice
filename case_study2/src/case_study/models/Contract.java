@@ -91,4 +91,8 @@ public class Contract {
                 "\n" + booking +
                 '}';
     }
+
+    public String getInformationContract (){
+        return getIdContract() + "," + getDepositAdvance() + ", " + getTotalPayment() + ", " + getBooking();
+    }
 }

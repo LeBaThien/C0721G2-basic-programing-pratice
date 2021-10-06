@@ -12,7 +12,7 @@ import java.util.SortedMap;
 
 public class EmployeeServiceImpl implements EmployeeService {
     //   private static  ArrayList<Employee> employeeArrayList;
-    private static final List<Employee> employeeArrayList = new ArrayList<>();
+    private static List<Employee> employeeArrayList = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 //    protected static EmployeeToCsv employeeToCsv = new EmployeeToCsv();
     //1.ko cần khai báo chấm trực tiếp từ class, vẫn đc à?//do import thư viện à?
@@ -36,7 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 //    }
     @Override
     public void edit(int id) {
-        EmployeeToCsv.readData();
+        employeeArrayList = EmployeeToCsv.readData();
         boolean flag = true;
         for (Employee employee : employeeArrayList) {
             if (employee.getIdEmployee() == id) {
@@ -136,7 +136,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
-        EmployeeToCsv.readData();
+        employeeArrayList = EmployeeToCsv.readData();//Đổ từ CSDL vao employeeArrayList để duyệt lại
         for (Employee e : employeeArrayList) {
             System.out.println(e);
         }

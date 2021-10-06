@@ -35,9 +35,9 @@ public class RoomToCsv {
         return houseMap;
     }
 
-    public static void writeListEmployeeToCSV (Map<Room,Integer> roomIntegerMap){
+    public static void writeListRoomToCSV (Map<Room,Integer> roomIntegerMap){
         try{
-            FileWriter fileWriter = new FileWriter(file);
+            FileWriter fileWriter = new FileWriter(file,true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             Set<Map.Entry<Room,Integer>> entries = roomIntegerMap.entrySet();
             for(Map.Entry<Room,Integer> entry : entries){
