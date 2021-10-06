@@ -37,22 +37,9 @@ public class HouseToCsv {
         try{
             FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            //Set<Facility> facilitySet = facilityIntegerMap.keySet();
-            //        for (Facility facility: facilitySet){
-            //            System.out.println(facility + ": times " + facilityIntegerMap.get(facility));
-            //        }
-            //Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
-            ////        for(Map.Entry<Facility,Integer> entry : entries){
-            ////            System.out.println(entry.getKey() + ": " + entry.getValue());
-            ////        }
             Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
             for(Map.Entry<House,Integer> entry : entries){
-                bufferedWriter.write(entry.getValue() + "," + entry.getKey());
-                bufferedWriter.newLine();
-            }
-
-            for(House house : houseIntegerMap) {
-                bufferedWriter.write(houseIntegerMap.getInformationHouse());
+                bufferedWriter.write( entry.getKey().getInformationHouse() + "," + entry.getValue() );
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();

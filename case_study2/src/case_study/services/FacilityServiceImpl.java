@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.libs.HouseToCsv;
 import case_study.models.Facility;
 import case_study.models.House;
 import case_study.models.Room;
@@ -7,6 +8,7 @@ import case_study.models.Villa;
 import case_study.utils.CheckValidate;
 
 import javax.print.attribute.standard.MediaSize;
+import javax.xml.ws.Holder;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -71,23 +73,25 @@ public class FacilityServiceImpl implements FacilityService {
                     break;
                 }
                 case 2: {
+                    String nameService = CheckValidate.checkNameService(NAME_SERVICE_HO);
+
+                    double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
+                    double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
+                    int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
+                    String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_HO);
+                    String houseStandard = CheckValidate.checkNameService(NAME_SERVICE_HO);
+                    int numberOfFloorHouse = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
+                    House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,numberOfFloorHouse);
+                    facilityIntegerMap.put(house,0);
+                    break;
+//                    HouseToCsv.writeListEmployeeToCSV;
+                }
+                case 3:{
                     String nameService = CheckValidate.checkNameService(NAME_SERVICE_RO);
                     double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
                     double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
                     int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
                     String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_RO);
-                    String houseStandard = CheckValidate.checkNameService(NAME_SERVICE_RO);
-                    int numberOfFloorHouse = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
-                    House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,numberOfFloorHouse);
-                    facilityIntegerMap.put(house,0);
-                    break;
-                }
-                case 3:{
-                    String nameService = CheckValidate.checkNameService(NAME_SERVICE_HO);
-                    double usingArea = Double.parseDouble(CheckValidate.validateInput(USING_AREA));
-                    double priceRental = Double.parseDouble(CheckValidate.validateInput(PRICE_RENTAL));
-                    int numberPersonInRoom = Integer.parseInt(CheckValidate.validateInput(PEOPLE));
-                    String typeOfRent = CheckValidate.checkNameService(NAME_SERVICE_HO);
                     System.out.print("enter the service free: ");
                     String serviceFree = scanner.next();
                     Room room = new Room (nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,serviceFree);
