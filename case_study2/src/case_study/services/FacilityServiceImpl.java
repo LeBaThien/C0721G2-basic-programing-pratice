@@ -142,10 +142,18 @@ public class FacilityServiceImpl implements FacilityService {
         // System.out.println(facilityIntegerMap.toString());
         //option 2: using
         //need to review
+        HouseToCsv.readData();
+//        Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
+//        for(Map.Entry<House,Integer> entry : entries){
+//            System.out.println(entry.getKey().toString() + "," + entry.getValue() );
+//        }
+
         Set<Facility> facilitySet = facilityIntegerMap.keySet();
         for (Facility facility: facilitySet){
             System.out.println(facility + ": times " + facilityIntegerMap.get(facility));
         }
+
+
         //option3:
 //        Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
 //        for(Map.Entry<Facility,Integer> entry : entries){

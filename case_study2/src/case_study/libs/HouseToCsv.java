@@ -13,10 +13,6 @@ public class HouseToCsv {
         Map<House, Integer> houseMap = new LinkedHashMap<>();
         try {
             FileReader fileReader = new FileReader(file);
-//
-//            if(!file.exists()){
-//                throw  new FileNotFoundException();
-//            }
 
             BufferedReader br = new BufferedReader(fileReader);
             String line="";

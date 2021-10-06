@@ -24,4 +24,10 @@ public class Room extends Facility {
                 "serviceFree='" + serviceFree + '\'' +
                 "} " + super.toString();
     }
+
+    public String getInformationRoom() {
+        return getNameService() + "," + getUsingArea() + "," + getPriceRental() + "," + getNumberPersonInRoom()
+                + "," + getTypeOfRent() + "," + getServiceFree();
+
+    }
 }
