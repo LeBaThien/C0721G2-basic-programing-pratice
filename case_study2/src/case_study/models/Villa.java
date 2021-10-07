@@ -47,6 +47,13 @@ public class Villa extends Facility {
                 ", numberOfFloor=" + numberOfFloor +
                 "} " + super.toString();
     }
+
+    @Override
+    public String getInformationFacility() {
+        return getNameService() + "," + getUsingArea() +"," + getPriceRental() + ","
+                + getNumberPersonInRoom() + "," + getTypeOfRent() + ","
+                + getRoomStandard() + "," + getPoolArea() +"," + getNumberOfFloor();
+    }
     //String nameService, double usingArea, double priceRental, int numberPersonInRoom, String typeOfRent,
     //                 String roomStandard, double poolArea, int numberOfFloor
 

@@ -59,8 +59,10 @@ public class BookingServiceImpl implements BookingService {
         System.out.print("Enter the customer id: ");
         int idCustomer = scanner.nextInt();
         System.out.println("Enter the name of service: ");
-        scanner.nextLine();// Thêm lệnh để khư nextline;
+        // Thêm lệnh để khư nextline;
+        scanner.nextLine();
         String nameService = scanner.nextLine();
+
         //next # nextline ...
         //next thì chỉ đọc ký tự dính liền # nextLine đọc hết dòng
         bookingTreeSet.add(new Booking(bookingCode,bookingStartDate,bookingEndDate,
@@ -75,7 +77,7 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void display() {
-        BookingToCsv.readData();
+        bookingTreeSet = BookingToCsv.readData();
         for (Booking booking : bookingTreeSet) {
             System.out.println(booking);
         }

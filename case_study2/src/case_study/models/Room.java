@@ -30,4 +30,10 @@ public class Room extends Facility {
                 + "," + getTypeOfRent() + "," + getServiceFree();
 
     }
+
+    @Override
+    public String getInformationFacility() {
+        return getNameService() + "," + getUsingArea() + "," + getPriceRental() + "," + getNumberPersonInRoom()
+                + "," + getTypeOfRent() + "," + getServiceFree();
+    }
 }

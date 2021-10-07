@@ -1,5 +1,6 @@
 package case_study.services;
 
+import case_study.libs.ContractToCsv;
 import case_study.models.*;
 import case_study.utils.CheckInput;
 
@@ -26,6 +27,7 @@ public class ContractServiceImpl implements ContractService {
                 double totalPayment = scanner.nextDouble();
                 Contract contract = new Contract(idContract, depositAdvance, totalPayment, booking);
                 contractQueue.add(contract);
+                ContractToCsv.writeListContractToCSV(contractQueue);
             } else if (booking.getFacility() instanceof House) {
                 System.out.print("Enter the contract id: ");
                 int idContract = scanner.nextInt();
@@ -35,6 +37,7 @@ public class ContractServiceImpl implements ContractService {
                 double totalPayment = scanner.nextDouble();
                 Contract contract = new Contract(idContract, depositAdvance, totalPayment, booking);
                 contractQueue.add(contract);
+                ContractToCsv.writeListContractToCSV(contractQueue);
             }
 
         }
@@ -43,6 +46,7 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public void edit() {
+        contractQueue = ContractToCsv.readData();
         boolean flag = true;
         System.out.println("Enter the id contract");
         int id = CheckInput.checkInputSelection();
@@ -85,6 +89,7 @@ public class ContractServiceImpl implements ContractService {
                 }
             }
         }
+        contractQueue = ContractToCsv.readData();
     }
 
     @Override
@@ -94,6 +99,7 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public void display() {
+        contractQueue = ContractToCsv.readData();
         for(Contract contract : contractQueue){
             System.out.println(contract);
         }

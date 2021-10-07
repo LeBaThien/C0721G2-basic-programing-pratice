@@ -71,4 +71,6 @@ public abstract class Facility {
                 ", typeOfRent='" + typeOfRent + '\'' +
                 '}' + "\n";
     }
+
+    public abstract String getInformationFacility();
 }
