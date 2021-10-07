@@ -6,10 +6,7 @@ import case_study.services.FacilityServiceImpl;
 import case_study.utils.BookingCompare;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class BookingToCsv {
     public static File file = new File("D:\\codegym_final\\case_study2\\src\\case_study\\data\\booking.csv");
@@ -45,7 +42,6 @@ public class BookingToCsv {
                 }
 
                 bookingTreeSet.add(new Booking(bookingCode, bookingStartDate, bookingEndDate, customer, facility ));
-
             }
             br.close();
         } catch (IOException e) {
@@ -54,6 +50,7 @@ public class BookingToCsv {
         }
         return bookingTreeSet;
     }
+
 
     public static void writeSetBookingToCSV(Set<Booking> bookings) {
         try {

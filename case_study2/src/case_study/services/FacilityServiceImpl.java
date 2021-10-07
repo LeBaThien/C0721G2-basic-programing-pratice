@@ -11,6 +11,7 @@ import case_study.utils.CheckValidate;
 
 import javax.print.attribute.standard.MediaSize;
 import javax.xml.ws.Holder;
+import java.math.RoundingMode;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -41,16 +42,54 @@ public class FacilityServiceImpl implements FacilityService {
 
 
     public static Facility getFacility (String nameFacility) {
-       Set<Map.Entry<Facility,Integer>> entries = facilityIntegerMap.entrySet();
-       //equals or contains
-       for(Map.Entry<Facility,Integer> map : entries){
-           if(map.getKey().getNameService().equals(nameFacility)){
-               map.setValue(map.getValue() + 1);
-               return map.getKey();
-           }
-       }
+       houseIntegerMap = HouseToCsv.readData();
+//        System.out.println(houseIntegerMap);
+        Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
+        for(Map.Entry<House,Integer> entry : entries){
+//            System.out.println(entry.getKey() + "," + entry.getValue() );
+            if(entry.getKey().getNameService().contains(nameFacility)) {
+               entry.setValue(entry.getValue() + 1);
+                return entry.getKey();
+            }
+        }
+
+        villaIntegerMap = VillaToCsv.readData();
+//        System.out.println(houseIntegerMap);
+        Set<Map.Entry<Villa,Integer>> entries1 = villaIntegerMap.entrySet();
+        for(Map.Entry<Villa,Integer> entry1 : entries1){
+//            System.out.println(entry.getKey() + "," + entry.getValue() );
+            if(entry1.getKey().getNameService().contains(nameFacility)) {
+                entry1.setValue(entry1.getValue() + 1);
+                return entry1.getKey();
+            }
+        }
+
+        roomIntegerMap = RoomToCsv.readData();
+//        System.out.println(houseIntegerMap);
+        Set<Map.Entry<Room,Integer>> entries2 = roomIntegerMap.entrySet();
+        for(Map.Entry<Room,Integer> entry2 : entries2){
+//            System.out.println(entry.getKey() + "," + entry.getValue() );
+            if(entry2.getKey().getNameService().contains(nameFacility)) {
+                entry2.setValue(entry2.getValue() + 1);
+                return entry2.getKey();
+            }
+        }
+
+
+//       Set<Map.Entry<Facility,Integer>> entries3 = facilityIntegerMap.entrySet();
+//       //equals or contains
+//       for(Map.Entry<Facility,Integer> map : entries3){
+//           if(map.getKey().getNameService().equals(nameFacility)){
+//               map.setValue(map.getValue() + 1);
+//               return map.getKey();
+//           }
+//       }
         return null;
     }
+//
+//    public static void main(String[] args) {
+//        getFacility();
+//    }
 
     @Override
     public void add() {
@@ -83,6 +122,9 @@ public class FacilityServiceImpl implements FacilityService {
                     int numberOfFloor = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
                     Villa villa = new Villa(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,roomStandard,
                             poolArea,numberOfFloor);
+                    if(VillaToCsv.file.length() > 0){
+                        villaIntegerMap = VillaToCsv.readData();
+                    }
                     facilityIntegerMap.put(villa,0);
                     villaIntegerMap.put(villa,0);
                     VillaToCsv.writeListVillaToCSV(villaIntegerMap);
@@ -104,6 +146,9 @@ public class FacilityServiceImpl implements FacilityService {
                     int numberOfFloorHouse = Integer.parseInt(CheckValidate.validateInput(NUMBER_FLOOR));
                     House house = new House(nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,houseStandard,
                             numberOfFloorHouse);
+                    if(HouseToCsv.file.length() > 0){
+                        houseIntegerMap = HouseToCsv.readData();
+                    }
                     facilityIntegerMap.put(house,0);
                     houseIntegerMap.put(house,0);
                     HouseToCsv.writeListHouseToCSV(houseIntegerMap);
@@ -122,6 +167,9 @@ public class FacilityServiceImpl implements FacilityService {
                     System.out.print("enter the service free: ");
                     String serviceFree = scanner.next();
                     Room room = new Room (nameService,usingArea,priceRental,numberPersonInRoom,typeOfRent,serviceFree);
+                    if(RoomToCsv.file.length() > 0) {
+                        roomIntegerMap = RoomToCsv.readData();
+                    }
                     facilityIntegerMap.put(room,0);
                     roomIntegerMap.put(room,0);
                     RoomToCsv.writeListRoomToCSV(roomIntegerMap);

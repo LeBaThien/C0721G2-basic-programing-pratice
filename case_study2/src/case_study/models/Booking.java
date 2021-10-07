@@ -132,7 +132,7 @@ public class Booking  {
     public String getInformationBooking(){
         return getBookingCode() + "," + getBookingStartDate() + ","
                 + getBookingEndDate() + "," + getCustomer().getInformationCustomer() + ","
-                + getFacility().getInformationFacility();
+                + getFacility().getInformation();
     }
 
 

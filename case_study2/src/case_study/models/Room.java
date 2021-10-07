@@ -24,15 +24,15 @@ public class Room extends Facility {
                 "serviceFree='" + serviceFree + '\'' +
                 "} " + super.toString();
     }
-
-    public String getInformationRoom() {
-        return getNameService() + "," + getUsingArea() + "," + getPriceRental() + "," + getNumberPersonInRoom()
-                + "," + getTypeOfRent() + "," + getServiceFree();
-
-    }
+//
+//    public String getInformationRoom() {
+//        return getNameService() + "," + getUsingArea() + "," + getPriceRental() + "," + getNumberPersonInRoom()
+//                + "," + getTypeOfRent() + "," + getServiceFree();
+//
+//    }
 
     @Override
-    public String getInformationFacility() {
+    public String getInformation() {
         return getNameService() + "," + getUsingArea() + "," + getPriceRental() + "," + getNumberPersonInRoom()
                 + "," + getTypeOfRent() + "," + getServiceFree();
     }

@@ -57,6 +57,9 @@ public class CustomerServiceImpl implements CustomerService {
         String addressCustomer = scanner.next();
         Customer customer = new Customer(nameCustomer, dateBirth, sex, identification, numberPhone, email, idCustomer,
                 typeOfCustomer, addressCustomer);
+        if(CustomerToCsv.file.length() > 0){
+            customerList = CustomerToCsv.readData();
+        }
         customerList.add(customer);
         CustomerToCsv.writeListCustomerToCSV(customerList);
     }

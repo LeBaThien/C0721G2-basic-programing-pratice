@@ -72,5 +72,5 @@ public abstract class Facility {
                 '}' + "\n";
     }
 
-    public abstract String getInformationFacility();
+    public abstract String getInformation();
 }

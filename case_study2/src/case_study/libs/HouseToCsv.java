@@ -34,11 +34,11 @@ public class HouseToCsv {
 
     public static void writeListHouseToCSV (Map<House,Integer> houseIntegerMap){
         try{
-            FileWriter fileWriter = new FileWriter(file,true);
+            FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             Set<Map.Entry<House,Integer>> entries = houseIntegerMap.entrySet();
             for(Map.Entry<House,Integer> entry : entries){
-                bufferedWriter.write( entry.getKey().getInformationHouse() + "," + entry.getValue() );
+                bufferedWriter.write( entry.getKey().getInformation() + "," + entry.getValue() );
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();

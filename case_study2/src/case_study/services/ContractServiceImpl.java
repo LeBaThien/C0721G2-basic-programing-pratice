@@ -36,6 +36,9 @@ public class ContractServiceImpl implements ContractService {
                 System.out.print("Enter the total payment: ");
                 double totalPayment = scanner.nextDouble();
                 Contract contract = new Contract(idContract, depositAdvance, totalPayment, booking);
+                if(ContractToCsv.file.length() > 0){
+                    contractQueue = ContractToCsv.readData();
+                }
                 contractQueue.add(contract);
                 ContractToCsv.writeListContractToCSV(contractQueue);
             }

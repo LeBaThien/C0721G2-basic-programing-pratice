@@ -36,15 +36,15 @@ public class House extends Facility {
     }
 
     @Override
-    public String getInformationFacility() {
+    public String getInformation() {
         return getNameService() + ", " + getUsingArea() + "," + getPriceRental() + ","
                 + getNumberPersonInRoom() + "," + getTypeOfRent() + "," + getHouseStandard() + ","
                 + getNumberOfFloorHouse();
     }
 
-    public String getInformationHouse(){
-        return getNameService() + ", " + getUsingArea() + "," + getPriceRental() + ","
-                + getNumberPersonInRoom() + "," + getTypeOfRent() + "," + getHouseStandard() + ","
-                + getNumberOfFloorHouse();
-    }
+//    public String getInformationHouse(){
+//        return getNameService() + ", " + getUsingArea() + "," + getPriceRental() + ","
+//                + getNumberPersonInRoom() + "," + getTypeOfRent() + "," + getHouseStandard() + ","
+//                + getNumberOfFloorHouse();
+//    }
 }

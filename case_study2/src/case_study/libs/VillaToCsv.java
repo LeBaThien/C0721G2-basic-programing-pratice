@@ -35,13 +35,13 @@ public class VillaToCsv {
 
     public static void writeListVillaToCSV (Map<Villa,Integer> villaIntegerMap){
         try{
-            FileWriter fileWriter = new FileWriter(file,true);
+            FileWriter fileWriter = new FileWriter(file);
             //Nếu ko chuyển về false, ko ghi đè ,,, khi ghi lại
             //sẽ bị sai??? thắc mắc
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             Set<Map.Entry<Villa,Integer>> entries = villaIntegerMap.entrySet();
             for(Map.Entry<Villa,Integer> entry : entries){
-                bufferedWriter.write( entry.getKey().getInformationVilla() + "," + entry.getValue() );
+                bufferedWriter.write( entry.getKey().getInformation() + "," + entry.getValue() );
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();

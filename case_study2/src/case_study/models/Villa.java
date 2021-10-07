@@ -49,7 +49,7 @@ public class Villa extends Facility {
     }
 
     @Override
-    public String getInformationFacility() {
+    public String getInformation() {
         return getNameService() + "," + getUsingArea() +"," + getPriceRental() + ","
                 + getNumberPersonInRoom() + "," + getTypeOfRent() + ","
                 + getRoomStandard() + "," + getPoolArea() +"," + getNumberOfFloor();
@@ -57,9 +57,9 @@ public class Villa extends Facility {
     //String nameService, double usingArea, double priceRental, int numberPersonInRoom, String typeOfRent,
     //                 String roomStandard, double poolArea, int numberOfFloor
 
-    public String getInformationVilla(){
-        return getNameService() + "," + getUsingArea() +"," + getPriceRental() + ","
-                + getNumberPersonInRoom() + "," + getTypeOfRent() + ","
-                + getRoomStandard() + "," + getPoolArea() +"," + getNumberOfFloor();
-    }
+//    public String getInformationVilla(){
+//        return getNameService() + "," + getUsingArea() +"," + getPriceRental() + ","
+//                + getNumberPersonInRoom() + "," + getTypeOfRent() + ","
+//                + getRoomStandard() + "," + getPoolArea() +"," + getNumberOfFloor();
+//    }
 }

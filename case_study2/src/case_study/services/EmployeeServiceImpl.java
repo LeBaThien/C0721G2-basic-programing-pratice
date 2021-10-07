@@ -166,6 +166,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         System.out.print("Enter employee position: ");
         String position = scanner.next();
         Employee employee = new Employee(nameEmployee, dateBirth, sex, id, numberPhone, email, idEmployee, degree, salary, position);
+        if(EmployeeToCsv.file.length() > 0){
+            employeeArrayList = EmployeeToCsv.readData();
+        }
         employeeArrayList.add(employee);
         EmployeeToCsv.writeListEmployeeToCSV(employeeArrayList);
 

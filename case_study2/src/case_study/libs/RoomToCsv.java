@@ -37,11 +37,11 @@ public class RoomToCsv {
 
     public static void writeListRoomToCSV (Map<Room,Integer> roomIntegerMap){
         try{
-            FileWriter fileWriter = new FileWriter(file,true);
+            FileWriter fileWriter = new FileWriter(file);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             Set<Map.Entry<Room,Integer>> entries = roomIntegerMap.entrySet();
             for(Map.Entry<Room,Integer> entry : entries){
-                bufferedWriter.write( entry.getKey().getInformationRoom() + "," + entry.getValue() );
+                bufferedWriter.write( entry.getKey().getInformation() + "," + entry.getValue() );
                 bufferedWriter.newLine();
             }
             bufferedWriter.close();
