@@ -27,8 +27,13 @@ ma_nha_cung_cap int not null auto_increment primary key,
 ma_so_don_hang int,
 ten_nha_cung_cap varchar(30),
 dia_chi varchar(40),
-so_dien_thoai varchar(20),
 foreign key (ma_so_don_hang) references don_dat_hang (ma_so_don_hang) 
+);
+
+create table dien_thoai(
+so_dien_thoai varchar(20),
+ma_nha_cung_cap int,
+primary key (ma_nha_cung_cap)
 );
 
 create table chi_tiet_phieu_nhap(
