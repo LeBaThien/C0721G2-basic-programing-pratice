@@ -6,10 +6,12 @@ create table phieu_nhap(
 ma_so_phieu_nhap int not null auto_increment primary key,
 ngay_nhap date
 );
+
 create table phieu_xuat(
 ma_so_phieu_xuat int not null auto_increment primary key,
 ngay_xuat date
 );
+
 create table don_dat_hang(
 ma_so_don_hang int not null auto_increment primary key,
 ngay_dat_hang date
@@ -38,6 +40,7 @@ primary key(ma_so_phieu_nhap, ma_so_vat_tu),
 foreign key (ma_so_vat_tu) references vat_tu (ma_so_vat_tu),
 foreign key (ma_so_phieu_nhap) references phieu_nhap (ma_so_phieu_nhap)
 );
+
 create table chi_tiet_phieu_xuat(
 don_gia_xuat int,
 so_luong_xuat int,
@@ -47,6 +50,7 @@ primary key(ma_so_phieu_xuat,ma_so_vat_tu),
 foreign key (ma_so_phieu_xuat) references phieu_xuat (ma_so_phieu_xuat),
 foreign key (ma_so_vat_tu) references vat_tu (ma_so_vat_tu)
 );
+
 create table chi_tiet_don_dat_hang (
 ma_so_vat_tu int,
 ma_so_don_hang int,
