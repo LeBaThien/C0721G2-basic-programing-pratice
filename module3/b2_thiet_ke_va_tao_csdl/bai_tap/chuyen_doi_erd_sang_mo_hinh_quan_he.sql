@@ -64,5 +64,3 @@ foreign key (ma_so_vat_tu) references vat_tu (ma_so_vat_tu),
 foreign key (ma_so_don_hang) references don_dat_hang (ma_so_don_hang)
 );
 
-
-

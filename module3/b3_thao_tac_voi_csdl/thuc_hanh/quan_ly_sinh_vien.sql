@@ -43,6 +43,8 @@ values (1,"A1","2008-12-20",1);
 insert into class
 values (2,"A2","2008-12-20",1);
 insert into class
+values (4,"A3","2008-04-12",1);
+insert into class
 values (3,"A3",current_date,0);
 
 insert into student (student_name, address, phone, `status`, class_id)
@@ -51,6 +53,8 @@ insert into student (student_name, address, phone, `status`, class_id)
 value ("Tu", "Sai gon","01281024012",1,1);
 insert into student (student_name, address, phone, `status`, class_id)
 values ("Manh", "Da nang", "0936272412", 0,2);
+insert into student (student_name, address, phone, `status`, class_id)
+values ("Hanh", "Da nang", "0934272422", 1,2);
 
 insert into subject 
 values (1,"CF",5,1),

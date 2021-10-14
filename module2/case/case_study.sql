@@ -98,6 +98,7 @@ foreign key (id_khach_hang) references khach_hang (id_khach_hang)
 
 create table hop_dong_chi_tiet(
 id_hop_dong_chi_tiet int not null auto_increment primary key,
+-- hop_dong_chi_tiet có khóa chính rồi, thì ko cần thêm
 id_hop_dong int,
 id_dich_vu_di_kem int,
 so_luong int,
@@ -105,3 +106,4 @@ foreign key (id_hop_dong) references hop_dong (id_hop_dong),
 foreign key (id_dich_vu_di_kem) references dich_vu_di_kem (id_dich_vu_di_kem)
 
 );
+
