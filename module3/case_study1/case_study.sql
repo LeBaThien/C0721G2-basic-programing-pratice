@@ -48,7 +48,8 @@ so_dien_thoai varchar (45),
 email varchar (45),
 trinh_do varchar(45),
 vi_tri varchar (45),
-luong int, 
+luong int,
+dia_chi varchar(45), 
 foreign key (id_vi_tri) references vi_tri (id_vi_tri),
 foreign key (id_trinh_do) references trinh_do (id_trinh_do),
 foreign key (id_bo_phan) references bo_phan (id_bo_phan)
@@ -105,5 +106,6 @@ so_luong int,
 foreign key (id_hop_dong) references hop_dong (id_hop_dong),
 foreign key (id_dich_vu_di_kem) references dich_vu_di_kem (id_dich_vu_di_kem)
 
-);
+)
+
 
