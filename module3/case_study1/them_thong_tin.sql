@@ -66,14 +66,17 @@ insert into dich_vu (id_kieu_thue ,id_loai_dich_vu, ten_dich_vu, dien_tich, so_t
  values (1,'Nguyễn thị Phương','1995-03-20',12375,091361821,'phuong@gmail.com','Quảng Nam'),
  (4,'Trần Hoa Phước Thịnh','1990-09-21',14235,090561821,'thinh@gmail.com','Hải Phòng'),
  (5,'Nguyễn Công Tâm','1991-01-26',14975,093461821,'tam@gmail.com','Đà Nẵng'),
- (2,'Lê Quang Huy','1980-07-24',52475,091461821,'huy@gmail.com','Hồ Chí Minh');
+ (2,'Lê Quang Huy','1980-07-24',52475,091461821,'huy@gmail.com','Hồ Chí Minh'),
+ (3,'Huỳnh Thị Mỹ Nhung','1997-04-15',124475,0241461821,'nhung@gmail.com','Hà Nội');
  
  
   insert into nhan_vien( id_vi_tri, id_trinh_do, id_bo_phan, ho_va_ten, ngay_sinh,
  so_cmnd, so_dien_thoai, email, dia_chi)
  values (1,2,2,'Nguyễn Hoài Nam', '1995-05-28',12412,090713942,'nam@gmail.com','Đà Nẵng'),
  (2,3,4,'Phạm Ngọc Thạch', '1997-07-12',41412,09013412942,'thach@gmail.com','Quảng Trị'),
- (3,2,1,'Nguyễn Thị Lan Anh', '1980-03-25',41212,0902318212,'anh@gmail.com','Cà Mau');
+ (3,2,1,'Nguyễn Thị Lan Anh', '1980-03-25',41212,0902318212,'anh@gmail.com','Cà Mau'),
+ (4,1,3,'Lê Thị Bích', '1989-03-20',15212,090131526,'bich@gmail.com','Vũng tàu'),
+ (5,3,5,'Nguyễn Ngọc Hiếu', '1985-07-30',12422,012318212,'hieu@gmail.com','Khánh Hóa');
 
 SET FOREIGN_KEY_CHECKS=0;
 -- SET GLOBAL FOREIGN_KEY_CHECKS=0;
@@ -85,9 +88,10 @@ values (1,1,2),
  SET FOREIGN_KEY_CHECKS=0;
 insert into hop_dong (id_nhan_vien, id_khach_hang, id_dich_vu,
 ngay_lam_hop_dong, ngay_ket_thuc_hop_dong, tien_dat_coc, tong_tien_thanh_toan)
- values(1,1,1,'2010-04-13','2010-05-14',1500000,2000000),
- (1,2,1,'2020-05-20','2020-06-25',1500000,12000000),
- (2,3,3,'2021-04-10','2021-05-14',3000000,60000000);
+ values(1,1,1,'2010-04-13','2010-05-14',null,null),
+ (1,2,1,'2020-05-20','2020-06-25',null,null),
+ (2,3,3,'2021-04-10','2021-05-14',null,null),
+ (3,4,2,'2021-10-10','2021-12-14',null,null);
  
 
  
