@@ -168,11 +168,39 @@ having count(nhan_vien.id_nhan_vien ) <=3 ;
 
 -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
 
--- delete from nhan_vien where (
--- select nhan_vien.id_nhan_vien
--- from nhan_vien join hop_dong on nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
--- where hop_dong.id_hop_dong is null and year(hop_dong.ngay_lam_hop_dong) between 2017 and 2019 
--- );
+SET SQL_SAFE_UPDATES = 0;
+-- tắt safe mode
+delete  from nhan_vien 
+where id_nhan_vien not in (
+select id_nhan_vien from hop_dong
+ where year(hop_dong.ngay_lam_hop_dong) between 2017 and 2019)
+;
+ 
+
+-- 17.	Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond, 
+-- chỉ cập nhật những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.
+SET SQL_SAFE_UPDATES = 0;
+update khach_hang
+set id_loai_khach = 1
+where khach_hang.id_khach_hang in (
+select id_khach_hang from hop_dong
+where hop_dong.tong_tien_thanh_toan > 10000000
+);
+
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
+SET SQL_SAFE_UPDATES = 0;
+delete id_khach_hang from khach_hang
+where year 
+
+
+
+
+
+
+
+
+
+
 
 
 

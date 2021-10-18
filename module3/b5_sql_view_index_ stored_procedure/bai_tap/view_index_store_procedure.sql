@@ -43,16 +43,60 @@ select * from products_view;
 drop view products_view;
 
 
-
+-- Tạo store procedure lấy tất cả thông tin của tất cả các sản phẩm trong bảng product
 
 DELIMITER //
 
-CREATE PROCEDURE findAllCustomers()
+CREATE PROCEDURE find_product_infor()
 
 BEGIN
 
-  SELECT * FROM customers;
+  SELECT * FROM products;
 
 END //
 
 DELIMITER ;
+
+call find_product_infor();
+
+-- Tạo store procedure thêm một sản phẩm mới
+
+DELIMITER //
+
+CREATE PROCEDURE insert_new_product(product_code int,product_name varchar(20),product_price int, 
+product_amount int,product_description varchar(45), product_status varchar(45))
+BEGIN
+
+  insert into products (product_code,product_name, product_price, product_amount,product_description, product_status)
+  values (product_code,product_name, product_price, product_amount,product_description, product_status);
+
+END //
+
+DELIMITER ;
+call insert_new_product (2,'macbook pro', 3000,10,'macbook pro M1 full box', 'con hang');
+
+-- Tạo store procedure sửa thông tin sản phẩm theo id
+
+DELIMITER //
+CREATE PROCEDURE set_product_infor (id_find int, new_product_description varchar(45))
+BEGIN
+update products
+set product_description = new_product_description
+where id = id_find;
+END //
+DELIMITER ;
+
+call set_product_infor(8,'macbook pro M1 100%');
+
+
+-- Tạo store procedure xoá sản phẩm theo id
+
+DELIMITER //
+CREATE PROCEDURE delete_product (id_find int)
+BEGIN
+delete from products
+where id = id_find;
+END //
+DELIMITER ;
+call delete_product(8);
+
