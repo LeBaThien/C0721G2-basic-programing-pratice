@@ -138,4 +138,41 @@ sum(hop_dong_chi_tiet.id_dich_vu_di_kem * hop_dong_chi_tiet.so_luong) 'So kuong 
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+select max(hop_dong_chi_tiet.id_dich_vu_di_kem) as 'id dich vu duoc su dung nhieu nhat', dich_vu_di_kem.ten_dich_vu_di_kem
+from hop_dong_chi_tiet join dich_vu_di_kem;
+
+-- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
+--  Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
+-- số lần sử dụng được tính ntn???, mỗi lần có một hp dong chi tiết, thì có 1 lần sử dụng dịch vụ kèm theo à???
+select hop_dong.id_hop_dong, loai_dich_vu.ten_loai_dich_vu, dich_vu_di_kem.ten_dich_vu_di_kem, count(hop_dong_chi_tiet.id_hop_dong_chi_tiet) as 'dich vu di kem chi su dung 1 lan'
+from hop_dong join dich_vu on dich_vu.id_dich_vu = hop_dong.id_dich_vu
+join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
+join hop_dong_chi_tiet on hop_dong.id_hop_dong = hop_dong_chi_tiet.id_hop_dong
+join dich_vu_di_kem on hop_dong_chi_tiet.id_dich_vu_di_kem = dich_vu_di_kem.id_dich_vu_di_kem
+group by(hop_dong_chi_tiet.id_hop_dong_chi_tiet)
+ having hop_dong_chi_tiet.id_hop_dong_chi_tiet = 1
+;
+
+-- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi
+--  mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
+
+select nhan_vien.id_nhan_vien, nhan_vien.ho_va_ten, bo_phan.ten_bo_phan, trinh_do.trinh_do, nhan_vien.so_dien_thoai, nhan_vien.dia_chi,
+ count(nhan_vien.id_nhan_vien ) as 'so luong hop dong/ moi nhan vien'
+from nhan_vien join bo_phan on nhan_vien.id_bo_phan = bo_phan.id_bo_phan
+join trinh_do on nhan_vien.id_trinh_do = trinh_do.id_trinh_do 
+join hop_dong on hop_dong.id_nhan_vien = nhan_vien.id_nhan_vien
+-- where year(hop_dong.ngay_lam_hop_dong) between 2018 and 2019
+where year(hop_dong.ngay_lam_hop_dong) between 2020 and 2021 
+group by(nhan_vien.id_nhan_vien)
+having count(nhan_vien.id_nhan_vien ) <=3 ;
+
+-- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
+
+-- delete from nhan_vien where (
+-- select nhan_vien.id_nhan_vien
+-- from nhan_vien join hop_dong on nhan_vien.id_nhan_vien = hop_dong.id_nhan_vien
+-- where hop_dong.id_hop_dong is null and year(hop_dong.ngay_lam_hop_dong) between 2017 and 2019 
+-- );
+
+
 
