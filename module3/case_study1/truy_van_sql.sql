@@ -189,14 +189,178 @@ where hop_dong.tong_tien_thanh_toan > 10000000
 
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
 SET SQL_SAFE_UPDATES = 0;
-delete id_khach_hang from khach_hang
-where year 
+delete from khach_hang
+where khach_hang.id_khach_hang in ( 
+select id_khach_hang from hop_dong 
+where year (ngay_lam_hop_dong) < 2016
+);
+
+-- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
+
+SET SQL_SAFE_UPDATES = 0;
+update dich_vu_di_kem
+set gia_dich_vu = gia_dich_vu * 2
+where id_dich_vu_di_kem in (
+select id_dich_vu_di_kem from hop_dong_chi_tiet
+	where (select id_dich_vu from hop_dong
+		where year(hop_dong.ngay_lam_hop_dong) = 2010)
+having count(dich_vu_di_kem.id_dich_vu_di_kem) >=1
+);
 
 
+-- 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, 
+-- thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
+select id_nhan_vien 'ID'  , ho_va_ten,
+email, so_dien_thoai, ngay_sinh, dia_chi, 'id nhan vien' as 'id type'
+from nhan_vien
+union all
+select id_khach_hang , ho_va_ten,
+email, so_dien_thoai, ngay_sinh, dia_chi, 'id khach hang'
+from khach_hang;
+
+-- 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” 
+-- và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+
+create view v_nhan_vien as
+select id_nhan_vien, ho_va_ten ,dia_chi
+from nhan_vien
+where nhan_vien.dia_chi = 'Hải Châu' and id_nhan_vien in
+(select id_nhan_vien from hop_dong
+where date(hop_dong.ngay_lam_hop_dong) = '2019-12-12');
+
+select * from v_nhan_vien;
+
+-- 22.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+
+ create or replace view v_nhan_vien as
+ select id_nhan_vien, ho_va_ten, dia_chi
+ from nhan_vien
+ where dia_chi ='Liên Chiểu';
+ 
+--  23.	Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó với Id Khách hàng được truyền vào như là 1 tham số của Sp_1
+
+ DELIMITER //
+CREATE PROCEDURE xoa_kh (id_find int)
+BEGIN
+delete from khach_hang
+where id_khach_hang = id_find;
+END //
+DELIMITER ;
+call xoa_kh(6);
+
+-- 24.	Tạp Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, 
+-- với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+-- làm sao để kiểm tra tính hợp lệ của dữ liệu khi tham chiếu đến bảng khác
+delimiter //
+create procedure them_moi_hop_dong (id_nhan_vien int,id_khach_hang int,id_dich_vu int,ngay_lam_hop_dong date, 
+ngay_ket_thuc_hop_dong date, tien_dat_coc int, tong_tien_thanh_toan int)
+begin
+	insert into hop_dong (id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hop_dong, 
+	ngay_ket_thuc_hop_dong, tien_dat_coc, tong_tien_thanh_toan)
+	values (id_nhan_vien, id_khach_hang, id_dich_vu, ngay_lam_hop_dong, 
+	ngay_ket_thuc_hop_dong, tien_dat_coc, tong_tien_thanh_toan);
+    
+end //
+delimiter ;
+
+call them_moi_hop_dong(4,3,3,'2021-10-10','2021-10-14',1000000,2300000);
+
+-- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì 
+-- hiển thị tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database
 
 
+set @result = 0;
+delimiter //
+create trigger tr_1
+after delete 
+on khach_hang for each row
+begin
+	set @result =(select count(id_khach_hang) 'so luong khach hang con lai'
+    from khach_hang);
+end
+// delimiter ;
+
+drop trigger tr_1;
+
+call xoa_kh(5);
+
+select @result 'so khach hang con lai';
+
+-- 26.	Tạo triggers có tên Tr_2 Khi cập nhật Ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật có phù hợp hay không, với quy tắc sau: 
+-- Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày. 
+-- Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database
+
+delimiter //
+create trigger tr_2
+before update
+on hop_dong for each row
+begin
+
+	set @result1 =(select if( (date (hop_dong.ngay_ket_thuc_hop_dong) - date(hop_dong.ngay_lam_hop_dong)) >=2, 'Cập nhật','Ngày làm hợp đồng phải lớn hơn ít nhất 2 ngày')) ;
+end
+// delimiter ; 
+select @result1;  
 
 
+-- 27.	Tạo user function thực hiện yêu cầu sau:
+-- a.	Tạo user function func_1: Đếm các dịch vụ đã được sử dụng với Tổng tiền là > 2.000.000 VNĐ.
+-- b.	Tạo user function Func_2: Tính khoảng thời gian dài nhất tính từ lúc bắt đầu làm hợp đồng đến lúc kết thúc hợp đồng 
+-- mà Khách hàng đã thực hiện thuê dịch vụ (lưu ý chỉ xét các khoảng thời gian dựa vào từng lần làm hợp đồng thuê dịch vụ, 
+-- không xét trên toàn bộ các lần làm hợp đồng). Mã của Khách hàng được truyền vào như là 1 tham số của function này.
+
+DELIMITER //
+
+CREATE PROCEDURE count_service()
+
+BEGIN
+
+  SELECT tong_tien_thanh_toan FROM hop_dong
+  where tong_tien_thanh_toan >2000000;
+
+END //
+
+DELIMITER ;
+
+call count_service();
+
+----------------------------------
+DELIMITER //
+
+CREATE PROCEDURE count_booking_time(id_kh int)
+
+BEGIN
+
+  SELECT id_hop_dong, (day(hop_dong.ngay_ket_thuc_hop_dong) - day(hop_dong.ngay_lam_hop_dong)) 'Thoi gian thue dich vu'
+  FROM hop_dong
+  where id_khach_hang = id_kh;
+
+END //
+
+DELIMITER ;
+
+drop procedure count_booking_time;
+call count_booking_time(3);
+
+
+-- 28.	Tạo Store procedure Sp_3 để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là “Room” từ đầu năm 2015 đến hết năm 2019 để xóa thông tin của các dịch vụ đó
+--  (tức là xóa các bảng ghi trong bảng DichVu) và xóa những HopDong sử dụng dịch vụ liên quan (tức là phải xóa những bản gi trong bảng HopDong) và những bản liên quan khác.
+
+DELIMITER //
+
+CREATE PROCEDURE find_service ()
+
+BEGIN
+
+  SELECT loai_dich_vu.id_loai_dich_vu, loai_dich_vu.ten_loai_dich_vu 
+   from loai_dich_vu join dich_vu on loai_dich_vu.id_loai_dich_vu = dich_vu.id_loai_dich_vu
+   join hop_dong on hop_dong.id_dich_vu = dich_vu.id_dich_vu
+   where loai_dich_vu.ten_loai_dich_vu = 'Room' and year (hop_dong.ngay_lam_hop_dong) between 2015 and 2019;
+
+END //
+
+DELIMITER ;
+drop procedure find_service;
+call find_service();
 
 
 
