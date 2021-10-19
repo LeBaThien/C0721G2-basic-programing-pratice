@@ -308,35 +308,35 @@ select @result1;
 -- mà Khách hàng đã thực hiện thuê dịch vụ (lưu ý chỉ xét các khoảng thời gian dựa vào từng lần làm hợp đồng thuê dịch vụ, 
 -- không xét trên toàn bộ các lần làm hợp đồng). Mã của Khách hàng được truyền vào như là 1 tham số của function này.
 
-DELIMITER //
+delimiter //
 
-CREATE PROCEDURE count_service()
+create procedure count_service()
 
-BEGIN
+begin
 
-  SELECT tong_tien_thanh_toan FROM hop_dong
+  select tong_tien_thanh_toan from hop_dong
   where tong_tien_thanh_toan >2000000;
 
-END //
+end //
 
-DELIMITER ;
+delimiter ;
 
 call count_service();
 
 ----------------------------------
-DELIMITER //
+delimiter //
 
-CREATE PROCEDURE count_booking_time(id_kh int)
+create procedure count_booking_time(id_kh int)
 
-BEGIN
+begin
 
-  SELECT id_hop_dong, (day(hop_dong.ngay_ket_thuc_hop_dong) - day(hop_dong.ngay_lam_hop_dong)) 'Thoi gian thue dich vu'
-  FROM hop_dong
+  select id_hop_dong, (day(hop_dong.ngay_ket_thuc_hop_dong) - day(hop_dong.ngay_lam_hop_dong)) 'Thoi gian thue dich vu'
+  from hop_dong
   where id_khach_hang = id_kh;
 
-END //
+end //
 
-DELIMITER ;
+delimiter ;
 
 drop procedure count_booking_time;
 call count_booking_time(3);
@@ -345,20 +345,20 @@ call count_booking_time(3);
 -- 28.	Tạo Store procedure Sp_3 để tìm các dịch vụ được thuê bởi khách hàng với loại dịch vụ là “Room” từ đầu năm 2015 đến hết năm 2019 để xóa thông tin của các dịch vụ đó
 --  (tức là xóa các bảng ghi trong bảng DichVu) và xóa những HopDong sử dụng dịch vụ liên quan (tức là phải xóa những bản gi trong bảng HopDong) và những bản liên quan khác.
 
-DELIMITER //
+delimiter //
 
-CREATE PROCEDURE find_service ()
+create procedure find_service ()
 
-BEGIN
+begin
 
-  SELECT loai_dich_vu.id_loai_dich_vu, loai_dich_vu.ten_loai_dich_vu 
+  select loai_dich_vu.id_loai_dich_vu, loai_dich_vu.ten_loai_dich_vu 
    from loai_dich_vu join dich_vu on loai_dich_vu.id_loai_dich_vu = dich_vu.id_loai_dich_vu
    join hop_dong on hop_dong.id_dich_vu = dich_vu.id_dich_vu
    where loai_dich_vu.ten_loai_dich_vu = 'Room' and year (hop_dong.ngay_lam_hop_dong) between 2015 and 2019;
 
-END //
+end //
 
-DELIMITER ;
+delimiter ;
 drop procedure find_service;
 call find_service();
 
