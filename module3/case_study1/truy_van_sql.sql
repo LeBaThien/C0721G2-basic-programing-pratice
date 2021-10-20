@@ -50,13 +50,11 @@ hop_dong.id_hop_dong, dich_vu.ten_dich_vu, hop_dong.ngay_lam_hop_dong, hop_dong.
 	left join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
 	left join hop_dong_chi_tiet on hop_dong_chi_tiet.id_hop_dong = hop_dong.id_hop_dong
 	left join dich_vu_di_kem on dich_vu_di_kem.id_dich_vu_di_kem = hop_dong_chi_tiet.id_dich_vu_di_kem
-group by (khach_hang.id_khach_hang);
+group by (hop_dong.id_hop_dong);
 
 
 -- 6.	Hiển thị IDDichVu, TenDichVu, DienTich, ChiPhiThue, TenLoaiDichVu của tất cả các loại Dịch vụ
 --  chưa từng được Khách hàng thực hiện đặt từ quý 1 của năm 2019 (Quý 1 là tháng 1, 2, 3).
-
-
 
 select hop_dong.id_dich_vu, hop_dong.id_hop_dong, loai_dich_vu.id_loai_dich_vu, loai_dich_vu.ten_loai_dich_vu,
  dich_vu.ten_dich_vu, dich_vu.dien_tich, dich_vu.chi_phi_thue
@@ -65,11 +63,10 @@ on dich_vu.id_dich_vu = hop_dong.id_dich_vu
 right join loai_dich_vu
 on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
 where hop_dong.id_hop_dong is null 
-and ( year( hop_dong.ngay_lam_hop_dong) = '2019' and (
- month ( hop_dong.ngay_lam_hop_dong) = '1' or
- month ( hop_dong.ngay_lam_hop_dong) = '2' or
- month ( hop_dong.ngay_lam_hop_dong) = '3'))
+and ( year( hop_dong.ngay_lam_hop_dong) = '2019' and (ngay_lam_hop_dong between '2019-01-01' and '2019-03-31'))
  ;
+-- ngay_lam_hop_dong between '2019-01-01' and '2019-03-31', ghi ngắn lại
+
 
 -- 7.	Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu của tất cả các loại dịch vụ
 --  đã từng được Khách hàng đặt phòng trong năm 2018 nhưng chưa từng được Khách hàng đặt phòng  trong năm 2019.
@@ -88,6 +85,8 @@ from khach_hang;
 select ho_va_ten
 from khach_hang
 group by(ho_va_ten);
+
+-- dùng union
 
 -- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
 
@@ -129,17 +128,27 @@ sum(hop_dong_chi_tiet.id_dich_vu_di_kem * hop_dong_chi_tiet.so_luong) 'So kuong 
  join dich_vu on hop_dong.id_dich_vu = dich_vu.id_dich_vu
  join loai_dich_vu on dich_vu.id_loai_dich_vu = loai_dich_vu.id_loai_dich_vu
  join hop_dong_chi_tiet on hop_dong_chi_tiet.id_hop_dong = hop_dong.id_hop_dong
- where quarter(hop_dong.ngay_lam_hop_dong) = 4 and not (quarter(hop_dong.ngay_lam_hop_dong) = 1 or quarter(hop_dong.ngay_lam_hop_dong) = 2)
- and year (hop_dong.ngay_lam_hop_dong) = 2019
---  where quarter(hop_dong.ngay_lam_hop_dong) = 2 and not (quarter(hop_dong.ngay_lam_hop_dong) = 1 or quarter(hop_dong.ngay_lam_hop_dong) = 3)
---  and year (hop_dong.ngay_lam_hop_dong) = 2010
+--  where quarter(hop_dong.ngay_lam_hop_dong) = 4 and not (quarter(hop_dong.ngay_lam_hop_dong) = 1 or quarter(hop_dong.ngay_lam_hop_dong) = 2)
+--  and year (hop_dong.ngay_lam_hop_dong) = 2019
+ where quarter(hop_dong.ngay_lam_hop_dong) = 2 and not (quarter(hop_dong.ngay_lam_hop_dong) = 1 or quarter(hop_dong.ngay_lam_hop_dong) = 3)
+ and year (hop_dong.ngay_lam_hop_dong) = 2010
  group by (id_hop_dong);
  -- --Tiền đặt cọc chưa truyền vào
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
 -- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
-select max(hop_dong_chi_tiet.id_dich_vu_di_kem) as 'id dich vu duoc su dung nhieu nhat', dich_vu_di_kem.ten_dich_vu_di_kem
-from hop_dong_chi_tiet join dich_vu_di_kem;
+-- tính count rồi tính max
+
+
+select hop_dong_chi_tiet.id_dich_vu_di_kem, count(hop_dong_chi_tiet.id_dich_vu_di_kem) as 'Số lần sử dụng dịch vụ'
+from hop_dong_chi_tiet
+group by hop_dong_chi_tiet.id_dich_vu_di_kem
+order by count(hop_dong_chi_tiet.id_dich_vu_di_kem) desc
+limit 1;
+
+
+-- select max(hop_dong_chi_tiet.id_dich_vu_di_kem) as 'id dich vu duoc su dung nhieu nhat', dich_vu_di_kem.ten_dich_vu_di_kem
+-- from hop_dong_chi_tiet join dich_vu_di_kem;
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.
 --  Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
