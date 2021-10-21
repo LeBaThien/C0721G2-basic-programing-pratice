@@ -1,3 +1,9 @@
+html {
+    background-color: mintcream;
+
+
+}
+
 body {
     color: blue;
     font-size: medium;
@@ -14,6 +20,13 @@ h1 {
 
 h2 {
     color: darkblue;
+}
+
+h3 {
+    color: royalblue;
+    font-size: x-large;
+    font-family: Arial;
+    text-align: center;
 }
 
 table, th, td{
