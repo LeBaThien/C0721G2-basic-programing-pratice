@@ -7,7 +7,7 @@ create table vi_tri(
 id_vi_tri int auto_increment primary key,
 ten_vi_tri varchar (45)
 );
--- ko cần not null, vì primary key, và unique
+-- ko cần not null tại id_vi_tri, vì primary key, và unique
 create table trinh_do(
 id_trinh_do int auto_increment primary key,
 trinh_do varchar(45)

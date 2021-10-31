@@ -44,7 +44,7 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         int id = (int)(Math.random() * 10000);
-
+//        math.random de lam gi
         Customer customer = new Customer(id, name, email, address);
         this.customerService.save(customer);
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
@@ -95,6 +95,7 @@ public class CustomerServlet extends HttpServlet {
             this.customerService.remove(id);
             try {
                 response.sendRedirect("/customers");
+//                Có thể gọi lại phương thức  listCustomers
             } catch (IOException e) {
                 e.printStackTrace();
             }

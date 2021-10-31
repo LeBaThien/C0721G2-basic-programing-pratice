@@ -100,3 +100,4 @@ END //
 DELIMITER ;
 call delete_product(8);
 
+
