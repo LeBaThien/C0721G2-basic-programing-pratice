@@ -7,6 +7,7 @@ import service.IProductService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class ProductService implements IProductService {
     private IProductRepository iProductRepository = new ProductRepository();
@@ -18,6 +19,11 @@ public class ProductService implements IProductService {
     @Override
     public Product findById(Integer id) {
         return iProductRepository.findById(id);
+    }
+
+    @Override
+    public Product findByName(String name) {
+        return iProductRepository.findByName(name);
     }
 
     @Override

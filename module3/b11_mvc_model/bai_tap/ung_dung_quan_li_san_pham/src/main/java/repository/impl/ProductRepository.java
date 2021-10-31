@@ -3,10 +3,7 @@ package repository.impl;
 import bean.Product;
 import repository.IProductRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class ProductRepository implements IProductRepository {
 //    static  List<Product> productList = new ArrayList<>();
@@ -24,6 +21,17 @@ public class ProductRepository implements IProductRepository {
     @Override
     public Product findById(Integer id) {
         return productMap.get(id);
+    }
+
+    @Override
+    public Product findByName(String name) {
+        Set<Integer> set = productMap.keySet();
+        for (Integer key : set) {
+            if (productMap.get(key).getProductName().contains(name)){
+                return productMap.get(key);
+            }
+        }
+        return null;
     }
 
     @Override

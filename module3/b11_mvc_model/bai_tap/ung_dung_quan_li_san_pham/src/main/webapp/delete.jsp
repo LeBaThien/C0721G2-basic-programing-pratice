@@ -15,7 +15,7 @@
 <h1>Delete Product</h1>
 <div>
     <c:if test="${message!=null}">
-        <span>${message}</span>
+        <span class="message">${message}</span>
     </c:if>
 </div>
 <div>
@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td>Description:</td>
-                <td>${requestScope["productList"].getProductDescription()}</td>
+                <td>${requestScope["productList"].getDescriptionProduct()}</td>
             </tr>
             <tr>
                 <td>Price:</td>

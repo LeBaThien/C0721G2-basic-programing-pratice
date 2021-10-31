@@ -15,7 +15,7 @@
 <h1>Edit customer</h1>
 <p>
     <c:if test='${requestScope["message"] != null}'>
-        <span >${requestScope["message"]}</span>
+        <span class="message">${requestScope["message"]}</span>
     </c:if>
 </p>
 <p>
@@ -31,7 +31,8 @@
 <%--            </tr>--%>
             <tr>
                 <td>Product Name: </td>
-                <td><input type="text" name="productName" id="productName" value="${requestScope["productList"].getProductName()}"></td>
+                <td><input type="text" name="productName" id="productName" value="${requestScope["productList"].getProductName()}" ></td>
+
             </tr>
             <tr>
                 <td>Price: </td>
@@ -39,19 +40,18 @@
             </tr>
             <tr>
                 <td>Description: </td>
-                <td><input type="text" name="productDescription" id="productDescription" value="${requestScope["productList"].getProductDescription()}"></td>
+                <td><input type="text" name="productDescription" id="productDescription" value="${requestScope["productList"].getDescriptionProduct()}"></td>
+
             </tr>
             <tr>
                 <td>Producer: </td>
                 <td><input type="text" name="producer" id="producer" value="${requestScope["productList"].getProducer()}"></td>
             </tr>
             <tr>
-                <td></td>
                 <td><input type="submit" value="Update product"></td>
             </tr>
         </table>
     </fieldset>
-
 </form>
 </body>
 </html>

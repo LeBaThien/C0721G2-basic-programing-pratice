@@ -14,6 +14,7 @@
   <body>
   <h2>Products management</h2>
   <a href="/product_servlet?action=create">Create a new product</a>
+  <a href="/product_servlet?action=search">Find product</a>
 <%--  <a href="/product_servlet?action=edit">Edit product</a>--%>
   <table border="1">
     <tr>
