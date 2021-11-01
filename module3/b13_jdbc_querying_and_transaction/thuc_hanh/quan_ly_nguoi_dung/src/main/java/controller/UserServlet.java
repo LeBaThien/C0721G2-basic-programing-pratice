@@ -59,9 +59,17 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
-                case "permision":
-                    addUserPermision(request, response);
+                    //thuc hanh 2
+                case "permission":
+                    addUserPermission(request, response);
                     break;
+                case "test-without-tran":
+                    testWithoutTran(request, response);
+                    break;
+                case "test-use-tran":
+                    testUseTran(request, response);
+                    break;
+
                 default:
                     listUser(request, response);
                     break;
@@ -70,8 +78,8 @@ public class UserServlet extends HttpServlet {
             throw new ServletException(ex);
         }
     }
-
-    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+    //thuc hanh 2
+    private void addUserPermission(HttpServletRequest request, HttpServletResponse response) {
 
         User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
 
@@ -79,6 +87,10 @@ public class UserServlet extends HttpServlet {
 
         userDAO.addUserTransaction(user, permission);
 
+    }
+    //thuc-hanh 3
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userDAO.insertUpdateWithoutTransaction();
     }
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)
@@ -88,7 +100,11 @@ public class UserServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         dispatcher.forward(request, response);
     }
+    //thuc hanh -4
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        userDAO.insertUpdateUseTransaction();
 
+    }
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");

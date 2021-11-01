@@ -19,6 +19,8 @@ public class UserDAO implements IUserDAO {
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set `name` = ?,email= ?, country =? where id = ?;";
+    private static final String SELECT_USER_BY_NAME_COUNTRY = "select id,`name`,email,country from users where `country` =?;";
+    private static final String ORDER_BY_NAME = "select * from users order by `name`;";
 
     public UserDAO() {
     }
@@ -156,6 +158,74 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
+    public List<User> findUserByCountry(String nameCountry) {
+        List<User> userArrayList = new ArrayList<>();
+
+
+//        String query = "{CALL find_user_by_country(?)}";
+        // Step 1: Establishing a Connection
+        try (Connection connection = getConnection();
+             // Step 2:Create a statement using connection object
+             CallableStatement callableStatement = (CallableStatement) connection.prepareCall(SELECT_USER_BY_NAME_COUNTRY);) {
+            callableStatement.setString(1, nameCountry);
+            // Step 3: Execute the query or update query
+            ResultSet rs = callableStatement.executeQuery();
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                User user = new User(rs.getInt("id"), rs.getString("name"), rs.getString("email"), rs.getString("country"));
+//                user.setId(rs.getInt("id"));
+//                user.setName(rs.getString("name"));
+//                user.setEmail(rs.getString("email"));
+//                user.setCountry(rs.getString("country"));
+                userArrayList.add(user);
+
+//                int id = rs.getInt("id");
+//                String name = rs.getString("name");
+//                String email = rs.getString("email");
+//                String country = rs.getString("country");
+//                user = new User(id, name, email, country);
+
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+
+        return userArrayList;
+
+//        while (resultSet.next()){
+//            user = new User();
+//            user.setId(resultSet.getInt("id"));
+//            user.setName(resultSet.getString("name"));
+//            user.setEmail(resultSet.getString("email"));
+//            user.setCountry(resultSet.getString("country"));
+//            userList.add(user);
+//        }
+    }
+
+    @Override
+    public List<User> sortByName() {
+        List<User> users = new ArrayList<>();
+        try (Connection connection = getConnection();
+
+             PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY_NAME);) {
+//            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                String country = rs.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
+    }
+
+    @Override
     public void insertUserStore(User user) throws SQLException {
         String query = "{CALL insert_user(?,?,?}";
         // try-with-resource statement will auto close the connection.
@@ -173,20 +243,21 @@ public class UserDAO implements IUserDAO {
         }
     }
 
-        private void printSQLException (SQLException ex){
-            for (Throwable e : ex) {
-                if (e instanceof SQLException) {
-                    e.printStackTrace(System.err);
-                    System.err.println("SQLState: " + ((SQLException) e).getSQLState());
-                    System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
-                    System.err.println("Message: " + e.getMessage());
-                    Throwable t = ex.getCause();
-                    while (t != null) {
-                        System.out.println("Cause: " + t);
-                        t = t.getCause();
-                    }
+
+    private void printSQLException(SQLException ex) {
+        for (Throwable e : ex) {
+            if (e instanceof SQLException) {
+                e.printStackTrace(System.err);
+                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                System.err.println("Message: " + e.getMessage());
+                Throwable t = ex.getCause();
+                while (t != null) {
+                    System.out.println("Cause: " + t);
+                    t = t.getCause();
                 }
             }
         }
-
     }
+
+}

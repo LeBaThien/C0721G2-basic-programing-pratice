@@ -13,6 +13,7 @@ public interface IUserDAO {
         boolean updateUser(User user) throws SQLException;
         User getUserById(int id);
         void insertUserStore(User user) throws SQLException;
-        void addUserTransaction(User user, int[] permision);
-
+        void addUserTransaction(User user, int[] permission);//Thuc hanh 2
+        void insertUpdateWithoutTransaction();//thuc hanh 3
+        public void insertUpdateUseTransaction(); //thuc hanh4
 }
