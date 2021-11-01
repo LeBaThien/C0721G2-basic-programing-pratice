@@ -3,11 +3,17 @@ package dao;
 import com.mysql.cj.jdbc.CallableStatement;
 import model.User;
 
+import java.math.BigDecimal;
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
+//    private static final String SQL_TABLE_DROP = ;
+//    private static final String SQL_TABLE_CREATE = ;
+//    private static final String SQL_INSERT = ;
+//    private static final String SQL_UPDATE = ;
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo?useSSL=false";
     private String jdbcUsername = "root";
     private String jdbcPassword = "12345678";
@@ -107,6 +113,7 @@ public class UserDAO implements IUserDAO {
         }
         return users;
     }
+
     //btap 1
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
@@ -229,7 +236,8 @@ public class UserDAO implements IUserDAO {
     @Override
     public List<User> showUser() {
         List<User> userList = new ArrayList<>();
-        try{Connection connection = getConnection();
+        try {
+            Connection connection = getConnection();
             CallableStatement callableStatement = (CallableStatement) connection.prepareCall("Call show_user()");
             ResultSet rs = callableStatement.executeQuery();
 
@@ -249,8 +257,48 @@ public class UserDAO implements IUserDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return userList  ;
+        return userList;
     }
+
+    @Override
+    public void insertUpdateUseTransaction() {
+
+        try (Connection conn = getConnection();
+             Statement statement = conn.createStatement();
+             PreparedStatement psInsert = conn.prepareStatement(INSERT_USERS_SQL);
+             PreparedStatement psUpdate = conn.prepareStatement(UPDATE_USERS_SQL )) {
+
+//            statement.execute(SQL_TABLE_DROP);
+//            statement.execute(SQL_TABLE_CREATE);
+            conn.setAutoCommit(false); // default true
+            psInsert.setString(1, "Quynh");
+            psInsert.setBigDecimal(2, new BigDecimal(10));
+            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
+
+            psInsert.execute();
+            psInsert.setString(1, "Ngan");
+            psInsert.setBigDecimal(2, new BigDecimal(20));
+            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
+
+            psInsert.execute();
+            psUpdate.setBigDecimal(2, new BigDecimal(999.99));
+            //psUpdate.setBigDecimal(1, new BigDecimal(999.99));
+            psUpdate.setString(2, "Quynh");
+
+            psUpdate.execute();
+            conn.commit();
+
+            conn.setAutoCommit(true);
+        } catch (Exception e) {
+
+            System.out.println(e.getMessage());
+
+            e.printStackTrace();
+
+        }
+
+    }
+
 
     @Override
     public void insertUserStore(User user) throws SQLException {
