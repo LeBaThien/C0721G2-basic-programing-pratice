@@ -16,5 +16,5 @@ public interface IUserDAO {
         List<User> findUserByCountry(String nameCountry);
         List<User> sortByName();
         List<User> showUser ();
-        void insertUpdateUseTransaction();
+
 }

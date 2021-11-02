@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
-//    private static final String SQL_TABLE_DROP = ;
+    //    private static final String SQL_TABLE_DROP = ;
 //    private static final String SQL_TABLE_CREATE = ;
 //    private static final String SQL_INSERT = ;
 //    private static final String SQL_UPDATE = ;
@@ -50,6 +50,7 @@ public class UserDAO implements IUserDAO {
         System.out.println(INSERT_USERS_SQL);
         // try-with-resource statement will auto close the connection.???
         try (Connection connection = getConnection();
+//             connection.setAutoCommit(false);
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
@@ -260,44 +261,6 @@ public class UserDAO implements IUserDAO {
         return userList;
     }
 
-    @Override
-    public void insertUpdateUseTransaction() {
-
-        try (Connection conn = getConnection();
-             Statement statement = conn.createStatement();
-             PreparedStatement psInsert = conn.prepareStatement(INSERT_USERS_SQL);
-             PreparedStatement psUpdate = conn.prepareStatement(UPDATE_USERS_SQL )) {
-
-//            statement.execute(SQL_TABLE_DROP);
-//            statement.execute(SQL_TABLE_CREATE);
-            conn.setAutoCommit(false); // default true
-            psInsert.setString(1, "Quynh");
-            psInsert.setBigDecimal(2, new BigDecimal(10));
-            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
-
-            psInsert.execute();
-            psInsert.setString(1, "Ngan");
-            psInsert.setBigDecimal(2, new BigDecimal(20));
-            psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
-
-            psInsert.execute();
-            psUpdate.setBigDecimal(2, new BigDecimal(999.99));
-            //psUpdate.setBigDecimal(1, new BigDecimal(999.99));
-            psUpdate.setString(2, "Quynh");
-
-            psUpdate.execute();
-            conn.commit();
-
-            conn.setAutoCommit(true);
-        } catch (Exception e) {
-
-            System.out.println(e.getMessage());
-
-            e.printStackTrace();
-
-        }
-
-    }
 
 
     @Override
