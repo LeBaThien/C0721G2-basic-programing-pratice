@@ -135,7 +135,6 @@ public class UserDAO implements IUserDAO {
             statement.setString(3, user.getEmail());
             statement.setString(4, user.getCountry());
 
-
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;

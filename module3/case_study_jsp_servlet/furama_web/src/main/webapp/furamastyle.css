@@ -1,0 +1,15 @@
+/*html {*/
+
+/*}*/
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    /*top: auto;*/
+    /*bottom: 100%;*/
+}
+#footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
