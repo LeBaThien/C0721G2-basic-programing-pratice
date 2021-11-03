@@ -1,18 +1,26 @@
 package bean.service;
 
 public class Service {
+    private Integer serviceId;
     private String serviceName;
     private String serviceArea;
     private double serviceCost;
     private Integer serviceMaxPeople;
-    private Integer rentTypeId;
 
-    public Service(String serviceName, String serviceArea, double serviceCost, Integer serviceMaxPeople, Integer rentTypeId) {
+    public Service(Integer serviceId, String serviceName, String serviceArea, double serviceCost, Integer serviceMaxPeople) {
+        this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;
         this.serviceCost = serviceCost;
         this.serviceMaxPeople = serviceMaxPeople;
-        this.rentTypeId = rentTypeId;
+    }
+
+    public Integer getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(Integer serviceId) {
+        this.serviceId = serviceId;
     }
 
     public String getServiceName() {
@@ -45,13 +53,5 @@ public class Service {
 
     public void setServiceMaxPeople(Integer serviceMaxPeople) {
         this.serviceMaxPeople = serviceMaxPeople;
-    }
-
-    public Integer getRentTypeId() {
-        return rentTypeId;
-    }
-
-    public void setRentTypeId(Integer rentTypeId) {
-        this.rentTypeId = rentTypeId;
     }
 }

@@ -11,14 +11,14 @@
     <title>Furama Management</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="furamastyle.css">
+    <link rel="stylesheet" href="css_add/furamastyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-success fs-5 fw-bold ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img
-                src="https://lh3.googleusercontent.com/proxy/27TmbHeTYo3hcbPE1wrtXBSZrxvKKeuKnDz9eWdEHvPe7Bw8Pd4Jne5syVKTXKvR-Jr1kjo7lcl6Kv5SFLnN22F6GdtI06gHrwJzoJuSALhO5wd-jbW9SQ"
+                src="https://cardy.vn/upload/images/san-pham/logo-diem-uu-dai/640x480/2/fvd.jpg"
                 height="50px" width="100px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                         <li><a class="dropdown-item" href="#">Add Employee</a></li>
                         <li><a class="dropdown-item" href="#">Edit Employee</a></li>
                         <li><a class="dropdown-item" href="#">Delete Employee</a></li>
-                        <li><a class="dropdown-item" href="#">Show Employee</a></li>
+                        <li><a class="dropdown-item" href="">Show Employee</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -50,10 +50,10 @@
                         Customer
                     </a>
                     <ul class="dropdown-menu fs-6 bg-secondary fw-bold" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Add Customer</a></li>
+                        <li><a class="dropdown-item" href="/customerServlet?action=create">Add Customer</a></li>
                         <li><a class="dropdown-item" href="#">Edit Customer</a></li>
                         <li><a class="dropdown-item" href="#">Delete Customer</a></li>
-                        <li><a class="dropdown-item" href="#">Show Customer</a></li>
+                        <li><a class="dropdown-item" href="/customerServlet">Show Customer</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
