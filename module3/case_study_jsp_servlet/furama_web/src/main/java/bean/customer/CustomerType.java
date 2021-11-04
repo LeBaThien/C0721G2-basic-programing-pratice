@@ -9,6 +9,10 @@ public class CustomerType {
         this.customerTypeName = customerTypeName;
     }
 
+    public CustomerType(Integer customerTypeId) {
+        this.customerTypeId = customerTypeId;
+    }
+
     public Integer getCustomerTypeId() {
         return customerTypeId;
     }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +26,9 @@ public class CustomerServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
-//            case "create":
-//                create(request, response);
-//                break;
+            case "create":
+                create(request, response);
+                break;
 //            case "edit":
 //                try {
 //                    update(request, response);
@@ -35,6 +36,11 @@ public class CustomerServlet extends HttpServlet {
 //                    throwables.printStackTrace();
 //                }
 //                break;
+            case "edit":
+                update(request, response);
+                break;
+            case "delete":
+                delete(request, response);
 //            default:
 //                showList(request, response);
 //                break;
@@ -50,12 +56,12 @@ public class CustomerServlet extends HttpServlet {
             case "create":
                 showCreate(request, response);
                 break;
-//            case "edit":
-//                showUpdate(request, response);
-//                break;
-//            case "delete":
-//                delete(request, response);
-//                break;
+            case "edit":
+                showUpdate(request, response);
+                break;
+            case "delete":
+                showDelete(request, response);
+                break;
             default:
                 showList(request, response);
                 break;
@@ -76,9 +82,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     public void showCreate(HttpServletRequest request, HttpServletResponse response){
-        List<Customer> customerList;
-        customerList = customerRepository.showList();
-        request.setAttribute("customerType", customerList);
+        List<CustomerType> customerTypeList ;
+        customerTypeList = customerRepository.showCustomerType();
+        request.setAttribute("customerType", customerTypeList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/create.jsp");
         try {
             dispatcher.forward(request, response);
@@ -88,9 +94,71 @@ public class CustomerServlet extends HttpServlet {
 
     }
 
-    public void creat(HttpServletRequest request, HttpServletResponse response){
+    public void create(HttpServletRequest request, HttpServletResponse response) {
+//        String customerType = request.getParameter("customerType");
+        String name = request.getParameter("name");
+        String birthDay = request.getParameter("birthDay");
+        String gender = request.getParameter("gender");
+        String idCard = request.getParameter("idCard");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+//
+        int id = Integer.parseInt(request.getParameter("customerType"));
+        Customer customer = new Customer(name, birthDay, gender,
+                idCard, phone, address, new CustomerType(id));
+        try {
+            customerRepository.insert(customer);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/create.jsp");
+//            request.setAttribute("message", "Da xoa");
+            dispatcher.forward(request, response);
 
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void showUpdate(HttpServletRequest request, HttpServletResponse response){
+//        List<Customer> customerList ;
+        Customer customer = customerRepository.findById();
+        request.setAttribute("customerType", customer);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/update.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void update(HttpServletRequest request, HttpServletResponse response){
+//        String name = request.getParameter("name");
+//        String birthDay = request.getParameter("birthDay");
+//        String gender = request.getParameter("gender");
+//        String idCard = request.getParameter("idCard");
+//        String phone = request.getParameter("phone");
+//        String address = request.getParameter("address");
+////
+//        int id = Integer.parseInt(request.getParameter("customerType"));
+//        Customer customer = new Customer(name, birthDay, gender,
+//                idCard, phone, address, new CustomerType(id));
+        try {
+//            customerRepository.insert(customer);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/update.jsp");
+//            request.setAttribute("message", "Da xoa");
+            dispatcher.forward(request, response);
+
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showDelete(HttpServletRequest request, HttpServletResponse response){
+
+    } public void delete(HttpServletRequest request, HttpServletResponse response){
 
     }
+
 }

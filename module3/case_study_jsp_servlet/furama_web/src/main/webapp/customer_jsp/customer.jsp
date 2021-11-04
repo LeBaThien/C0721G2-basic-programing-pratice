@@ -48,7 +48,15 @@
                         <td>${customer.customerId}</td>
                         <td>${customer.getCustomerName()}</td>
                         <td>${customer.getCustomerBirthDay()}</td>
-                        <td>${customer.getCustomerGender()}</td>
+                        <td>
+                            <c:if test='${customer.getCustomerGender() == 1}'>
+                                Nam
+                            </c:if>
+                            <c:if test='${customer.getCustomerGender() == 0}'>
+                                Nữ
+                            </c:if>
+
+                        </td>
                         <td>${customer.getCustomerIdCard()}</td>
                         <td>${customer.getCustomerPhone()}</td>
 <%--                        <td>${customer.getCustomerEmail()}</td>--%>
@@ -56,36 +64,37 @@
                         <td>${customer.getCustomerType().getCustomerTypeName()}</td>
 
                         <td class="text-center">
-                            <a href="/?action=edit&id=${customer.getCustomerId()}"
-                               role="button" class="btn btn-large btn-warning">Sua</a>
+                            <a href="/customerServlet?action=edit&id=${customer.getCustomerId()}"
+<%--                            <a href="/customerServlet?action=edit"--%>
+                               role="button" class="btn btn-large btn-warning">Edit</a>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target="#exampleModal-${customer.getCustomerId()}">
-                                Xóa
+                                Delete
                             </button>
                         </td>
                     </tr>
                     <!-- Modal -->
-<%--                    <div class="modal fade" id="exampleModal-${customer.getId()}" tabindex="-1" role="dialog"--%>
-<%--                         aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--                        <div class="modal-dialog" role="document">--%>
-<%--                            <div class="modal-content">--%>
-<%--                                <div class="modal-header">--%>
-<%--                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--%>
-<%--                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                                        <span aria-hidden="true">&times;</span>--%>
-<%--                                    </button>--%>
-<%--                                </div>--%>
-<%--                                <div class="modal-body">--%>
-<%--                                    Bạn có chắc muốn xóa Customer có Id = ${customer.id} và Tên là: ${customer.name}--%>
-<%--                                </div>--%>
-<%--                                <div class="modal-footer">--%>
-<%--                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--                                    <a href="/?action=delete&id=${customer.id}" role="button" class="btn-danger"> Xác--%>
-<%--                                        nhận </a>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
+                    <div class="modal fade" id="exampleModal-${customer.getCustomerId()}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Bạn có chắc muốn xóa Customer có Id = ${customer.customerId} và Tên là: ${customer.customerName}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <a href="/?action=delete&id=${customer.customerId}" role="button" class="btn-danger"> Xác
+                                        nhận </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </c:forEach>
                 </tbody>
             </table>

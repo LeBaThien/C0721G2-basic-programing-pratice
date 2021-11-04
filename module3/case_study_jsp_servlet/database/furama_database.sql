@@ -54,7 +54,7 @@ role_name varchar(255)
 );
 
 create table `user` (
-user_name varchar(255),
+user_name varchar(255) primary key,
 `password`varchar(255)
 );
 
@@ -63,7 +63,7 @@ role_id int,
 user_name varchar(255),
 primary key (role_id, user_name),
 foreign key (role_id) references `role`(role_id),
-foreign key (user_name) references `user` (user_name)
+foreign key (user_name) references `user`(user_name)
 );
 
 create table employee(
@@ -96,12 +96,13 @@ attach_service_status varchar(45)
 
 
 create table service (
-service_id int,
+service_id int auto_increment primary key,
 service_name varchar(45),
 service_area int,
 service_cost double,
 service_max_people int,
 rent_type_id int,
+service_type_id int,
 standard_room varchar(45),
 description_other_convenience varchar(45),
 pool_area double,
@@ -113,7 +114,7 @@ foreign key (rent_type_id) references rent_type (rent_type_id)
 
 
 create table contract(
-contract_id int,
+contract_id int auto_increment primary key,
 contract_start_date datetime,
 contract_end_date datetime,
 contract_deposit double,
@@ -124,10 +125,10 @@ service_id int,
 
 foreign key (employee_id) references employee (employee_id),
 foreign key (customer_id) references customer (customer_id),
-foreign key (service_id) references  service (service_id)
+foreign key (service_id) references service (service_id)
 );
 
-create table contrat_detail (
+create table contract_detail (
 contract_detail_id int auto_increment primary key,
 contract_id int,
 attach_service_id int,

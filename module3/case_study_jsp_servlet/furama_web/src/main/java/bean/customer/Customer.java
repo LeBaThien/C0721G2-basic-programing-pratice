@@ -33,6 +33,26 @@ public class Customer {
         this.customerType = customerType;
     }
 
+//    public Customer(String name, String birthDay, String gender, String idCard,
+//                    String phone, String address, CustomerType customerType) {
+//    }
+
+
+    public Customer(String customerName, String customerBirthDay, String customerGender, String customerIdCard,
+                    String customerPhone, String customerAddress, CustomerType customerType) {
+        this.customerName = customerName;
+        this.customerBirthDay = customerBirthDay;
+        this.customerGender = customerGender;
+        this.customerIdCard = customerIdCard;
+        this.customerPhone = customerPhone;
+        this.customerAddress = customerAddress;
+        this.customerType = customerType;
+    }
+
+    public Customer(){
+
+    }
+
     public Integer getCustomerId() {
         return customerId;
     }
@@ -97,17 +117,17 @@ public class Customer {
         this.customerType = customerType;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "customerId=" + customerId +
-                ", customerName='" + customerName + '\'' +
-                ", customerBirthDay='" + customerBirthDay + '\'' +
-                ", customerGender='" + customerGender + '\'' +
-                ", customerIdCard='" + customerIdCard + '\'' +
-                ", customerPhone='" + customerPhone + '\'' +
-                ", customerAddress='" + customerAddress + '\'' +
-                ", customerType=" + customerType +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Customer{" +
+//                "customerId=" + customerId +
+//                ", customerName='" + customerName + '\'' +
+//                ", customerBirthDay='" + customerBirthDay + '\'' +
+//                ", customerGender='" + customerGender + '\'' +
+//                ", customerIdCard='" + customerIdCard + '\'' +
+//                ", customerPhone='" + customerPhone + '\'' +
+//                ", customerAddress='" + customerAddress + '\'' +
+//                ", customerType=" + customerType +
+//                '}';
+//    }
 }

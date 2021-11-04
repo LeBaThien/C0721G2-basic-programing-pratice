@@ -1,13 +1,17 @@
 package repository;
 
 import bean.customer.Customer;
+import bean.customer.CustomerType;
 
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.List;
 
 public interface ICustomerRepository {
     List<Customer> showList();
     void insert(Customer customer);
     void delete(int id);
-    void update(Customer customer);
+    boolean update(Customer customer) throws ParseException, SQLException;
     Customer findById (int id);
+    List<CustomerType> showCustomerType();
 }

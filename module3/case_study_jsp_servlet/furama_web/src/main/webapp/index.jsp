@@ -51,8 +51,8 @@
                     </a>
                     <ul class="dropdown-menu fs-6 bg-secondary fw-bold" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/customerServlet?action=create">Add Customer</a></li>
-                        <li><a class="dropdown-item" href="#">Edit Customer</a></li>
-                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                        <li><a class="dropdown-item" href="/customerServlet">Edit Customer</a></li>
+                        <li><a class="dropdown-item" href="/customerServlet">Delete Customer</a></li>
                         <li><a class="dropdown-item" href="/customerServlet">Show Customer</a></li>
                     </ul>
                 </li>
