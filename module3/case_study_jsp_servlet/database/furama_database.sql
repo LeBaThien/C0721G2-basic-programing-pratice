@@ -33,7 +33,8 @@ customer_phone varchar(45),
 customer_email varchar(45),
 customer_address varchar(45),
 
-foreign key (customer_type_id) references customer_type (customer_type_id)
+foreign key (customer_type_id) references customer_type (customer_type_id) 
+-- on delete cascade
 );
 
 
@@ -124,7 +125,7 @@ customer_id int,
 service_id int,
 
 foreign key (employee_id) references employee (employee_id),
-foreign key (customer_id) references customer (customer_id),
+foreign key (customer_id) references customer (customer_id) on delete set null, 
 foreign key (service_id) references service (service_id)
 );
 

@@ -14,4 +14,6 @@ public interface ICustomerRepository {
     boolean update(Customer customer) throws ParseException, SQLException;
     Customer findById (int id);
     List<CustomerType> showCustomerType();
+    List<Customer> findCustomer(String customerPhone);
+
 }

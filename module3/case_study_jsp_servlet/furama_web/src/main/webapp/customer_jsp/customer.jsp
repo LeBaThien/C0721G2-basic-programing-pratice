@@ -21,12 +21,15 @@
 <div class="container" >
     <div class="row">
         <div class="col-lg-12">
-            <form method="">
-                <input type="text" name="findName" placeholder="Nhập tên">
-                <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">
+            <form method="post">
+<%--                <input type="text" name="findName" placeholder="Nhập tên">--%>
+<%--                <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
                 <input type="text" name="findPhone" placeholder="Nhập phone">
-                <button type="submit">TÌm kiếm</button>
+    <button type="submit" ><a href="/customerServlet?action=findCustomer"> TÌm kiếm</a></button>
+
             </form>
+<%--            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>--%>
+            <a class="btn btn-primary" href="/" role="button">Home</a>
             <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                 <tr style="height: 50px" class="text-center">
@@ -67,10 +70,13 @@
                             <a href="/customerServlet?action=edit&id=${customer.getCustomerId()}"
 <%--                            <a href="/customerServlet?action=edit"--%>
                                role="button" class="btn btn-large btn-warning">Edit</a>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal-${customer.getCustomerId()}">
-                                Delete
-                            </button>
+                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"
+                                <%--                            <a href="/customerServlet?action=edit"--%>
+                               role="button" class="btn btn-large btn-warning">Delete</a>
+<%--                            <button type="button" class="btn btn-primary" data-toggle="modal"--%>
+<%--                                    data-target="#exampleModal-${customer.getCustomerId()}">--%>
+<%--                                Delete--%>
+<%--                            </button>--%>
                         </td>
                     </tr>
                     <!-- Modal -->

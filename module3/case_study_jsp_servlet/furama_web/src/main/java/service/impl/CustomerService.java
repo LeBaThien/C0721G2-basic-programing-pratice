@@ -41,4 +41,9 @@ public class CustomerService implements ICustomerService {
     public List<CustomerType> showCustomerType() {
         return iCustomerRepository.showCustomerType();
     }
+
+    @Override
+    public List<Customer> findCustomer(String customerPhone) {
+        return iCustomerRepository.findCustomer(customerPhone);
+    }
 }

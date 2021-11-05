@@ -57,8 +57,13 @@
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputLyDo">Gender:</label>
-                            <input type="text" name="gender" class="form-control col-12 float-left mt-2"
-                                   id="exampleInputLyDo" placeholder="Enter ">
+                            <select name="gender" id="exampleInputLyDo" class="form-control col-12 float-left">
+                            <option value="1">Nam</option>
+                            <option value="0">Nữ</option>
+
+<%--                            <input type="text" name="gender" class="form-control col-12 float-left mt-2"--%>
+<%--                                   id="exampleInputLyDo" placeholder="Enter ">--%>
+                            </select>
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputLyDo1">Id card:</label>
