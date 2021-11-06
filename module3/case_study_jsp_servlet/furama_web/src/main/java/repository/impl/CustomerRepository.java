@@ -218,7 +218,7 @@ public class CustomerRepository implements ICustomerRepository {
                 String address = resultSet.getString("customer_address");
                 int customerTypeId = Integer.parseInt(resultSet.getString("customer_type_id"));
                 String customerTypeName = resultSet.getString("customer_type_name");
-                customerList.add(new Customer(id1, name, birthday, gender, idCard, phone, address, new CustomerType(customerTypeId, customerTypeName)));
+                customerList.add(new Customer(id1, name, birthday, gender, idCard, phone, address,  new CustomerType(customerTypeId, customerTypeName)));
 
             }
 

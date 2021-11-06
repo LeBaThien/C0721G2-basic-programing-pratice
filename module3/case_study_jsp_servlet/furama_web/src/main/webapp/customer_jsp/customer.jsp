@@ -18,17 +18,18 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<div class="container" >
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <form method="post">
-<%--                <input type="text" name="findName" placeholder="Nhập tên">--%>
-<%--                <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
-                <input type="text" name="findPhone" placeholder="Nhập phone">
-    <button type="submit" ><a href="/customerServlet?action=findCustomer"> TÌm kiếm</a></button>
+            <form action="/customerServlet?action=findCustomer" method="post">
+<%--        <input type="text" name="findName" placeholder="Nhập tên">--%>
+<%--        <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
+<%--            <a href="/customerServlet?action=findCustomer">Tìm Kiếm</a>--%>
+            <input type="text" name="findPhone" placeholder="Nhập phone" >
+            <button type="submit"  > TÌm kiếm</button>
 
             </form>
-<%--            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>--%>
+            <%--            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>--%>
             <a class="btn btn-primary" href="/" role="button">Home</a>
             <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">
                 <thead>
@@ -39,7 +40,7 @@
                     <th>Gender</th>
                     <th>Id card</th>
                     <th>Phone</th>
-<%--                    <th>Email</th>--%>
+                    <%--                    <th>Email</th>--%>
                     <th>Address</th>
                     <th>Customer Type</th>
                     <th>Action</th>
@@ -62,21 +63,21 @@
                         </td>
                         <td>${customer.getCustomerIdCard()}</td>
                         <td>${customer.getCustomerPhone()}</td>
-<%--                        <td>${customer.getCustomerEmail()}</td>--%>
+                            <%--                        <td>${customer.getCustomerEmail()}</td>--%>
                         <td>${customer.getCustomerAddress()}</td>
                         <td>${customer.getCustomerType().getCustomerTypeName()}</td>
 
                         <td class="text-center">
                             <a href="/customerServlet?action=edit&id=${customer.getCustomerId()}"
-<%--                            <a href="/customerServlet?action=edit"--%>
-                               role="button" class="btn btn-large btn-warning">Edit</a>
-                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"
                                 <%--                            <a href="/customerServlet?action=edit"--%>
-                               role="button" class="btn btn-large btn-warning">Delete</a>
-<%--                            <button type="button" class="btn btn-primary" data-toggle="modal"--%>
-<%--                                    data-target="#exampleModal-${customer.getCustomerId()}">--%>
-<%--                                Delete--%>
-<%--                            </button>--%>
+                               role="button" class="btn btn-large btn-warning">Edit</a>
+<%--                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"--%>
+<%--                                &lt;%&ndash;                            <a href="/customerServlet?action=edit"&ndash;%&gt;--%>
+<%--                               role="button" class="btn btn-large btn-warning">Delete</a>--%>
+                                                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                                    data-target="#exampleModal-${customer.getCustomerId()}">
+                                                                Delete
+                                                            </button>
                         </td>
                     </tr>
                     <!-- Modal -->
@@ -91,12 +92,13 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    Bạn có chắc muốn xóa Customer có Id = ${customer.customerId} và Tên là: ${customer.customerName}
+                                    Bạn có chắc muốn xóa Customer có Id = ${customer.customerId} và Tên
+                                    là: ${customer.customerName}
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="/?action=delete&id=${customer.customerId}" role="button" class="btn-danger"> Xác
-                                        nhận </a>
+                                    <a href="/customerServlet?action=delete&id=${customer.customerId}" role="button"
+                                       class="btn-danger"> Xác nhận </a>
                                 </div>
                             </div>
                         </div>

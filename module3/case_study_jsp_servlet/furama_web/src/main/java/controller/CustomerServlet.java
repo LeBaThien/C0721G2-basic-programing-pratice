@@ -4,6 +4,7 @@ import bean.customer.Customer;
 import bean.customer.CustomerType;
 import repository.impl.CustomerRepository;
 import service.impl.CustomerService;
+import utils.CheckValidate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,7 +21,6 @@ import java.util.List;
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customerServlet")
 public class CustomerServlet extends HttpServlet {
     private CustomerRepository customerRepository = new CustomerRepository();
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
@@ -40,9 +40,9 @@ public class CustomerServlet extends HttpServlet {
             case "edit":
                 update(request, response);
                 break;
-            case "delete":
-                delete(request, response);
-                break;
+//            case "delete":
+//                delete(request, response);
+//                break;
             case "findCustomer":
                 findCustomer(request, response);
                 break;
@@ -65,8 +65,14 @@ public class CustomerServlet extends HttpServlet {
             case "edit":
                 showUpdate(request, response);
                 break;
+//            case "delete":
+//                showDelete(request, response);
+//                break;
+//            case "findCustomer":
+//                findCustomer(request, response);
+//                break;
             case "delete":
-                showDelete(request, response);
+                delete(request, response);
                 break;
             default:
                 showList(request, response);
@@ -102,7 +108,12 @@ public class CustomerServlet extends HttpServlet {
 
     public void create(HttpServletRequest request, HttpServletResponse response) {
 //        String customerType = request.getParameter("customerType");
+//        String nameError = null;
+//        boolean flag = false;
         String name = request.getParameter("name");
+//        if(CheckValidate.validateName(name)){
+//            flag = true;
+//        }
         String birthDay = request.getParameter("birthDay");
         String gender = request.getParameter("gender");
         String idCard = request.getParameter("idCard");
@@ -164,8 +175,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     public void findCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String namePhone = request.getParameter("findPhone");
         List<Customer> customerList;
-        customerList = customerRepository.findCustomer(request.getParameter("findPhone"));
+        customerList = customerRepository.findCustomer(namePhone);
 
         request.setAttribute("customerList", customerList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/customer.jsp");

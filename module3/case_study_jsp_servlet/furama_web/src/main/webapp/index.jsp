@@ -95,88 +95,68 @@
 
 <%--<div class="container">--%>
     <div class="row" style="height: 100%" >
-        <div class="col-lg-3 col-md-3 col-sm-3 bg-primary">
-            <div class="row fw-bold fs-5">Link1</div>
-            <div class="row fw-bold fs-5">Link2</div>
-            <div class="row fw-bold fs-5">Link3</div>
+        <div class="col-lg-3 col-md-3 col-sm-3 bg-light">
+            <div class="row fw-bold fs-5" style="margin-top: 50px">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="row fw-bold fs-5"></div>
+            <div class="row fw-bold fs-5"></div>
         </div>
-        <div class="col-lg-7 col-sm-7 col-sm-7 bg-light fs-6">col-7</div>
+        <div class="col-lg-9 col-md-9 col-sm-9 bg-light fs-6">
+            <div class="container-fluid bg-3 text-center">
+                <h3 class="margin text-center fs-3" style="margin-top: 30px">JOINING OUR CULINARY & RECREATIONAL EXPERIENCE</h3><br>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h4 class="fs-4 " style="color:darkgoldenrod;">CULINARY</h4>
+                        <img src="https://furamavietnam.com/wp-content/uploads/2018/08/06-2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                        <p>The resort’s culinary experience features a mixture of the authentic and locally inspired Vietnamese,
+                            Asian, Italian and other European cuisines plus the best imported steaks. The resort presents
+                            guests with varied gastronomic venues – the hip and breezy bar overlooking the beach, the exclusive
+                            Lagoon pool surrounded by a tropical garden, the true Italian flare offered at the Don Cipriani’s,
+                            the refined Asian touch at Café Indochine or the authentic central Vietnam cuisine at the Danaksara.
+
+                        </p>
+<%--                        <img src="" class="img-responsive margin" style="width:100%" alt="Image">--%>
+
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h4 class="fs-4 " style="color:darkgoldenrod;">MEETING & EVENT</h4>
+                        <img src="https://furamavietnam.com/wp-content/uploads/2018/10/02.-ICP-ICP_Furama_Danang_-Ball-Room-4.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                        <p>A well-appointed International Convention Palace with ballrooms can accommodate up to 1,000 people in style,
+                            with another ten function rooms for 50 to 300 people each. A variety of cultural-themed parties on the beach
+                            or around the lagoon, in the ballrooms or outside the resort, with the surprising arrivals of VIPs from Helicopter
+                            landing on the resort’s own Helipad…</p>
+
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h4 class="fs-4 " style="color:darkgoldenrod;">RECREATION</h4>
+                        <img src="https://furamavietnam.com/wp-content/uploads/2018/07/RECREATION.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                        <p>A full range of Water Sports will keep you busy. Stop by the Water Sport House where our
+                            experienced staff are waiting to assist or train you in the use of any of our equipment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row fw-bold fs-5"></div>
+            <div class="row fw-bold fs-5"></div>
+
+        </div>
     </div>
-<%--</div>--%>
 
-
-
-<%--<div class="container" id="footer" style="bottom: auto; width: 100%" >--%>
-<%--    <footer class="py-5">--%>
-<%--        <div class="row" >--%>
-<%--            <div class="col-2">--%>
-<%--                <h5>Developer</h5>--%>
-<%--                <ul class="nav flex-column">--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
-
-<%--            <div class="col-2">--%>
-<%--                <h5>Enterprise</h5>--%>
-<%--                <ul class="nav flex-column">--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
-
-<%--            <div class="col-2">--%>
-<%--                <h5>Company</h5>--%>
-<%--                <ul class="nav flex-column">--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>--%>
-<%--                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>--%>
-<%--                </ul>--%>
-<%--            </div>--%>
-
-<%--            <div class="col-4 offset-1">--%>
-<%--                <form>--%>
-<%--                    <h5>Subscribe to our newsletter</h5>--%>
-<%--                    <p>Monthly digest of whats new and exciting from us.</p>--%>
-<%--                    <div class="d-flex w-100 gap-2">--%>
-<%--                        <label for="newsletter1" class="visually-hidden">Email address</label>--%>
-<%--                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">--%>
-<%--                        <button class="btn btn-primary" type="button">Subscribe</button>--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-
-<%--        <div class="d-flex justify-content-between py-4 my-4 border-top">--%>
-<%--            <p>&copy; 2021 Company, Inc. All rights reserved.</p>--%>
-<%--            <ul class="list-unstyled d-flex">--%>
-<%--                <li class="ms-3"><a class="link-dark" href="#">--%>
-<%--                    <svg class="bi" width="24" height="24">--%>
-<%--                        <use xlink:href="#twitter"/>--%>
-<%--                    </svg>--%>
-<%--                </a></li>--%>
-<%--                <li class="ms-3"><a class="link-dark" href="#">--%>
-<%--                    <svg class="bi" width="24" height="24">--%>
-<%--                        <use xlink:href="#instagram"/>--%>
-<%--                    </svg>--%>
-<%--                </a></li>--%>
-<%--                <li class="ms-3"><a class="link-dark" href="#">--%>
-<%--                    <svg class="bi" width="24" height="24">--%>
-<%--                        <use xlink:href="#facebook"/>--%>
-<%--                    </svg>--%>
-<%--                </a></li>--%>
-<%--            </ul>--%>
-<%--        </div>--%>
-<%--    </footer>--%>
-<%--</div>--%>
 <script rel="script" src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
