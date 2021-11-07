@@ -113,6 +113,19 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+<%--                comment--%>
+                <div class="container mt-3">
+                    <h4>Đăng nhập để bình luận</h4>
+                    <p></p>
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                            <label for="comment">Comments:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
             </div>
             <div class="row fw-bold fs-5"></div>
             <div class="row fw-bold fs-5"></div>

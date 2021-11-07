@@ -49,6 +49,11 @@
                             <label class="col-12 float-left" for="exampleInputVao">Tên khách hàng:</label>
                             <input type="text" name="name" class="form-control col-12 float-left mt-2"
                                    id="exampleInputVao" placeholder="Enter ">
+                            <p style="color: red">
+                                <c:if test="${nameError != null}">
+                                   ${nameError}
+                                </c:if>
+                            </p>
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputRa">BirthDay:</label>
@@ -69,6 +74,11 @@
                             <label class="col-12 float-left" for="exampleInputLyDo1">Id card:</label>
                             <input type="text" name="idCard" class="form-control col-12 float-left mt-2"
                                    id="exampleInputLyDo1" placeholder="Enter ">
+                            <p style="color: red">
+                                <c:if test="${idCardError != null}">
+                                    ${idCardError}
+                                </c:if>
+                            </p>
                         </div>
                         <div class="form-group col-12">
                             <label class="col-12 float-left" for="exampleInputLyDo2">Phone:</label>

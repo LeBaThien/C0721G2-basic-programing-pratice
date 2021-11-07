@@ -30,13 +30,6 @@ public class CustomerServlet extends HttpServlet {
             case "create":
                 create(request, response);
                 break;
-//            case "edit":
-//                try {
-//                    update(request, response);
-//                } catch (SQLException throwables) {
-//                    throwables.printStackTrace();
-//                }
-//                break;
             case "edit":
                 update(request, response);
                 break;
@@ -107,16 +100,22 @@ public class CustomerServlet extends HttpServlet {
     }
 
     public void create(HttpServletRequest request, HttpServletResponse response) {
-//        String customerType = request.getParameter("customerType");
-//        String nameError = null;
-//        boolean flag = false;
+        String customerType = request.getParameter("customerType");
         String name = request.getParameter("name");
-//        if(CheckValidate.validateName(name)){
-//            flag = true;
-//        }
+        String nameError = null;
+        String idCardError = null;
+        boolean flag = false;
+        if(!CheckValidate.validateName(name)){
+            nameError="Name is not right format";
+            flag = true;
+        }
         String birthDay = request.getParameter("birthDay");
         String gender = request.getParameter("gender");
         String idCard = request.getParameter("idCard");
+        if(!CheckValidate.validateIdCard(idCard)){
+            idCardError="Name is not right format";
+            flag = true;
+        }
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
 //
@@ -124,10 +123,17 @@ public class CustomerServlet extends HttpServlet {
         Customer customer = new Customer(name, birthDay, gender,
                 idCard, phone, address, new CustomerType(id));
         try {
-            customerRepository.insert(customer);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/create.jsp");
+            if(flag) {
+                request.setAttribute("nameError", nameError);
+                request.setAttribute("idCardError", idCardError);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/create.jsp");
+                dispatcher.forward(request, response);
+            } else {
+                customerRepository.insert(customer);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("customer_jsp/create.jsp");
 //            request.setAttribute("message", "Da xoa");
-            dispatcher.forward(request, response);
+                dispatcher.forward(request, response);
+            }
 
         } catch (ServletException e) {
             e.printStackTrace();

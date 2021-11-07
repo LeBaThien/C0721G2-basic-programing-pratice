@@ -22,11 +22,11 @@
     <div class="row">
         <div class="col-lg-12">
             <form action="/customerServlet?action=findCustomer" method="post">
-<%--        <input type="text" name="findName" placeholder="Nhập tên">--%>
-<%--        <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
-<%--            <a href="/customerServlet?action=findCustomer">Tìm Kiếm</a>--%>
-            <input type="text" name="findPhone" placeholder="Nhập phone" >
-            <button type="submit"  > TÌm kiếm</button>
+                <%--        <input type="text" name="findName" placeholder="Nhập tên">--%>
+                <%--        <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
+                <%--            <a href="/customerServlet?action=findCustomer">Tìm Kiếm</a>--%>
+                <input type="text" name="findPhone" placeholder="Nhập phone">
+                <button type="submit"> TÌm kiếm</button>
 
             </form>
             <%--            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>--%>
@@ -71,13 +71,13 @@
                             <a href="/customerServlet?action=edit&id=${customer.getCustomerId()}"
                                 <%--                            <a href="/customerServlet?action=edit"--%>
                                role="button" class="btn btn-large btn-warning">Edit</a>
-<%--                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"--%>
-<%--                                &lt;%&ndash;                            <a href="/customerServlet?action=edit"&ndash;%&gt;--%>
-<%--                               role="button" class="btn btn-large btn-warning">Delete</a>--%>
-                                                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                                    data-target="#exampleModal-${customer.getCustomerId()}">
-                                                                Delete
-                                                            </button>
+                                <%--                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"--%>
+                                <%--                                &lt;%&ndash;                            <a href="/customerServlet?action=edit"&ndash;%&gt;--%>
+                                <%--                               role="button" class="btn btn-large btn-warning">Delete</a>--%>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal-${customer.getCustomerId()}">
+                                Delete
+                            </button>
                         </td>
                     </tr>
                     <!-- Modal -->

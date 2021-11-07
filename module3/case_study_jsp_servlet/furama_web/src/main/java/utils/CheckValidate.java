@@ -9,6 +9,7 @@ public class CheckValidate {
     private static Matcher matcher;
     private static Scanner scanner = new Scanner(System.in);
     private static final String CHECK_NAME = "^[[A-za-z]\\n]+$";
+    private static final String CHECK_ID_CARD = "^[0-9]+$";
 
     private static Pattern nameInput(){
         return pattern = Pattern.compile(CHECK_NAME);
@@ -35,15 +36,22 @@ public class CheckValidate {
 //    }
 
     public static boolean validateName(String stringInput){
-        boolean flag = true;
-        while (flag){
 //            stringInput = scanner.nextLine();
             pattern = Pattern.compile(CHECK_NAME);
             matcher = pattern.matcher(stringInput);
             if(matcher.matches()) {
-                flag =false;
+                return true;
             }
+        return false;
+    }
+
+    public static boolean validateIdCard(String stringInput){
+//            stringInput = scanner.nextLine();
+        pattern = Pattern.compile(CHECK_ID_CARD);
+        matcher = pattern.matcher(stringInput);
+        if(matcher.matches()) {
+            return true;
         }
-        return true;
+        return false;
     }
 }
