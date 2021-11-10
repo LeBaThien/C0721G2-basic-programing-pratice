@@ -18,97 +18,91 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<h2>Home</h2>
+<h2 style="text-align: center; margin-top: 50px">Book List</h2>
 <div class="container">
-<%--    <div class="row">--%>
-<%--        <div class="col-lg-12">--%>
-<%--            <form action="/customerServlet?action=findCustomer" method="post">--%>
-<%--                &lt;%&ndash;        <input type="text" name="findName" placeholder="Nhập tên">&ndash;%&gt;--%>
-<%--                &lt;%&ndash;        <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">&ndash;%&gt;--%>
-<%--                &lt;%&ndash;            <a href="/customerServlet?action=findCustomer">Tìm Kiếm</a>&ndash;%&gt;--%>
-<%--                <input type="text" name="findPhone" placeholder="Nhập phone" >--%>
-<%--                <button type="submit"  > TÌm kiếm</button>--%>
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="/customerServlet?action=findCustomer" method="post">
+                <%--        <input type="text" name="findName" placeholder="Nhập tên">--%>
+                <%--        <input type="text" name="findCustomerType" placeholder="Nhập CustomerType">--%>
+                <%--            <a href="/customerServlet?action=findCustomer">Tìm Kiếm</a>--%>
+                <input type="text" name="findPhone" placeholder="Nhập name book" >
+                <button type="submit"  > TÌm kiếm</button>
 
-<%--            </form>--%>
-<%--            &lt;%&ndash;            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>&ndash;%&gt;--%>
-<%--            <a class="btn btn-primary" href="/" role="button">Home</a>--%>
-<%--            <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">--%>
-<%--                <thead>--%>
-<%--                <tr style="height: 50px" class="text-center">--%>
-<%--                    <th>Product id</th>--%>
-<%--                    <th>Product Name</th>--%>
-<%--                    <th>Customer birthday</th>--%>
-<%--                    <th>Gender</th>--%>
-<%--                    <th>Id card</th>--%>
-<%--                    <th>Phone</th>--%>
-<%--                    &lt;%&ndash;                    <th>Email</th>&ndash;%&gt;--%>
-<%--                    <th>Address</th>--%>
-<%--                    <th>Customer Type</th>--%>
-<%--                    <th>Action</th>--%>
-<%--                </tr>--%>
-<%--                </thead>--%>
-<%--                <tbody>--%>
-<%--                <c:forEach var="customer" items="${requestScope['customerList']}" varStatus="count">--%>
-<%--                    <tr>--%>
-<%--                        <td>${customer.customerId}</td>--%>
-<%--                        <td>${customer.getCustomerName()}</td>--%>
-<%--                        <td>${customer.getCustomerBirthDay()}</td>--%>
-<%--                        <td>--%>
-<%--                            <c:if test='${customer.getCustomerGender() == 1}'>--%>
-<%--                                Nam--%>
-<%--                            </c:if>--%>
-<%--                            <c:if test='${customer.getCustomerGender() == 0}'>--%>
-<%--                                Nữ--%>
-<%--                            </c:if>--%>
+            </form>
+            <%--            <button type="button" class="bg-success fw-bold " ><a href="/">Home</a></button>--%>
+            <a class="btn btn-primary" href="/" role="button">Home</a>
+            <table id="tableStudent" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                <tr style="height: 50px" class="text-center">
+                    <th>Mã sách</th>
+                    <th>Tên sách</th>
+                    <th>Tác giả</th>
+                    <th>số lượng</th>
+                    <th>Mô tả chi tiết</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="book" items="${requestScope['bookList']}" varStatus="count">
+                    <tr>
+                        <td>${book.bookId}</td>
+                        <td>${book.nameBook}</td>
+                        <td>${book.author}</td>
+                        <td>${product.description}</td>
+                        <td>${book.numberOfBook}</td>
 
-<%--                        </td>--%>
-<%--                        <td>${customer.getCustomerIdCard()}</td>--%>
-<%--                        <td>${customer.getCustomerPhone()}</td>--%>
-<%--                            &lt;%&ndash;                        <td>${customer.getCustomerEmail()}</td>&ndash;%&gt;--%>
-<%--                        <td>${customer.getCustomerAddress()}</td>--%>
-<%--                        <td>${customer.getCustomerType().getCustomerTypeName()}</td>--%>
 
-<%--                        <td class="text-center">--%>
-<%--                            <a href="/customerServlet?action=edit&id=${customer.getCustomerId()}"--%>
-<%--                                &lt;%&ndash;                            <a href="/customerServlet?action=edit"&ndash;%&gt;--%>
-<%--                               role="button" class="btn btn-large btn-warning">Edit</a>--%>
-<%--                                &lt;%&ndash;                            <a href="/customerServlet?action=delete&id=${customer.getCustomerId()}"&ndash;%&gt;--%>
-<%--                                &lt;%&ndash;                                &lt;%&ndash;                            <a href="/customerServlet?action=edit"&ndash;%&gt;&ndash;%&gt;--%>
-<%--                                &lt;%&ndash;                               role="button" class="btn btn-large btn-warning">Delete</a>&ndash;%&gt;--%>
-<%--                            <button type="button" class="btn btn-primary" data-toggle="modal"--%>
-<%--                                    data-target="#exampleModal-${customer.getCustomerId()}">--%>
-<%--                                Delete--%>
-<%--                            </button>--%>
-<%--                        </td>--%>
-<%--                    </tr>--%>
-<%--                    <!-- Modal -->--%>
-<%--                    <div class="modal fade" id="exampleModal-${customer.getCustomerId()}" tabindex="-1" role="dialog"--%>
-<%--                         aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--                        <div class="modal-dialog" role="document">--%>
-<%--                            <div class="modal-content">--%>
-<%--                                <div class="modal-header">--%>
-<%--                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--%>
-<%--                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                                        <span aria-hidden="true">&times;</span>--%>
-<%--                                    </button>--%>
-<%--                                </div>--%>
-<%--                                <div class="modal-body">--%>
-<%--                                    Bạn có chắc muốn xóa Customer có Id = ${customer.customerId} và Tên--%>
-<%--                                    là: ${customer.customerName}--%>
-<%--                                </div>--%>
+                        <td class="text-center">
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#exampleModal-${book.bookId}">
+                                borrow
+                            </button>
+
+                        </td>
+                    </tr>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal-${book.bookId}" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <c:if test='${book.numberOfBook == 0}'>
+                                        Book có Id = ${book.bookId} này tạm thời hết, vui lòng mượn sách khác!!!
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </c:if>
+                                    <c:if test='${book.numberOfBook > 0}'>
+                                        Book có tên là ${book.nameBook} vẫn đang còn
+                                        <div class="modal-footer">
+                                            <a href="/productServlet?action=create&id=${book.bookId}" role="button"
+                                               type="button" class="btn btn-danger"> Xác nhận </a>
+                                            <a href="/productServlet" role="button"
+                                               type="button" class="btn btn-dark"> close </a>
+                                        </div>
+                                    </c:if>
+
+                                </div>
 <%--                                <div class="modal-footer">--%>
-<%--                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--                                    <a href="/customerServlet?action=delete&id=${customer.customerId}" role="button"--%>
-<%--                                       class="btn-danger"> Xác nhận </a>--%>
+<%--                                    <a href="/customerServlet?action=create&id=${book.bookId}" role="button"--%>
+<%--                                       type="button" class="btn btn-danger"> Xác nhận </a>--%>
 <%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </c:forEach>--%>
-<%--                </tbody>--%>
-<%--            </table>--%>
-<%--        </div>--%>
-<%--    </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
