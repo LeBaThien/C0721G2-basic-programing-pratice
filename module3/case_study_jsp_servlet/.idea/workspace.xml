@@ -2,6 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974c4e90-3e15-4632-b8c7-44ceb7933675" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/CustomerServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/modules/ung_dung_spring_greeting.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/java/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +59,7 @@
       <workItem from="1635819437004" duration="22000" />
       <workItem from="1635941378188" duration="4000" />
       <workItem from="1636212622892" duration="23000" />
+      <workItem from="1636601733543" duration="66000" />
     </task>
     <servers />
   </component>
