@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8b18749-9c4a-4de0-bcdd-4680da54ee66" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/build/classes/java/main/application/controller/EmployeeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/build/classes/java/main/application/model/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/build/libs/form_and_data_binding-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/java/application/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/java/application/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/webapp/WEB-INF/views/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form_and_data_binding/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build/classes/java/main/application/login/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build/classes/java/main/application/login/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build/classes/java/main/application/login/model/Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build/classes/java/main/application/login/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/java/application/login/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/java/application/login/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/java/application/login/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/java/application/login/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../login_app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/service/IProdcutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b2_spring_controller/thuc_hanh/ung_dung_quan_ly_khach_hang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b2_spring_controller/thuc_hanh/ung_dung_quan_ly_khach_hang/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="20t3O3liBQYCcrbGmTw5B8R34Dl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../module3/case_study_jsp_servlet/furama_web" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8b18749-9c4a-4de0-bcdd-4680da54ee66" name="Default Changelist" comment="" />
+      <created>1636850020708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636850020708</updated>
+      <workItem from="1636850024078" duration="2168000" />
+      <workItem from="1636939223320" duration="1337000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1636945988039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1636945988039" />
+    <state x="342" y="130" key="new project wizard" timestamp="1636945989234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1636945989234" />
+  </component>
+</project>

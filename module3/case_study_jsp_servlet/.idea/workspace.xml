@@ -2,27 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="974c4e90-3e15-4632-b8c7-44ceb7933675" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/CustomerServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/java/customer/management/service/impl/SimpleCustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_quan_ly_khach_hang/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/modules/ung_dung_spring_greeting.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/java/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b1_tong_quan_ve_spring/thuc_hanh/ung_dung_spring_greeting/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/build/libs/thu_dien_tu-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/java/application/controller/EmailApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/java/application/model/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/webapp/WEB-INF/views/showUpdate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/bai_tap/thu_dien_tu/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/build/classes/java/main/application/controller/EmployeeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/build/classes/java/main/application/model/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/build/libs/form_and_data_binding-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/java/application/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/java/application/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/webapp/WEB-INF/views/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/webapp/WEB-INF/views/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/form_and_data_binding/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build/classes/java/main/application/login/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build/classes/java/main/application/login/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build/classes/java/main/application/login/model/Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build/classes/java/main/application/login/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/java/application/login/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/java/application/login/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/java/application/login/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/java/application/login/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/login_app/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/java/application/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/java/application/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/java/application/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/java/application/service/IProdcutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/java/application/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/b3_databinding_and_form/thuc_hanh/upload_file/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b2_spring_controller/bai_tap/ung_dung_hien_thi_sandwich/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b2_spring_controller/thuc_hanh/ung_dung_quan_ly_khach_hang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b2_spring_controller/thuc_hanh/ung_dung_quan_ly_khach_hang/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +134,7 @@
       <workItem from="1635941378188" duration="4000" />
       <workItem from="1636212622892" duration="23000" />
       <workItem from="1636601733543" duration="66000" />
+      <workItem from="1636951792707" duration="5000" />
     </task>
     <servers />
   </component>
