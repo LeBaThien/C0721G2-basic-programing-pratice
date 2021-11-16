@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Report</title>
 </head>
 <body>
 <h2>KQ successfully</h2>
+<h3>Language: ${email.language}</h3>
+<h3>The number of page size: ${email.pageSize}</h3>
+<h3>Signature: ${email.signature}</h3>
+<h3>Spams Filters: ${email.spamsFilters}</h3>
+
 </body>
 </html>

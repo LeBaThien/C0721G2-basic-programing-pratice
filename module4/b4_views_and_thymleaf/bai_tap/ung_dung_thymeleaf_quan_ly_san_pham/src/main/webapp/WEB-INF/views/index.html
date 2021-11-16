@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout::head"></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products List</title>
+</head>
+<body>
+<h3>Products List</h3>
+<p>
+    <button style="background-color: #45a049">
+        <a th:href="@{product/create}">
+            Click to add a new products
+        </a>
+    </button>
+
+</p>
+
+<div class="notify">
+        <div th:if="${success}">
+            <span th:text="${success}"></span>
+        </div>
+</div>
+<table id="products">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Information</th>
+            <th>Brand Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+<!--    rowStart để quan sat vòng lặp-->
+    <tr th:each="row,rowStart : ${products}">
+        <td th:text="${rowStart.index}"></td>
+        <td th:text="${row.getProductId()}"></td>
+        <td th:text="${row.getProductName()}"></td>
+        <td th:text="${row.getProductPrice()}"></td>
+        <td th:text="${row.getProductInfo()}"></td>
+        <td th:text="${row.getBrandName()}"></td>
+        <td><a th:href="@{/product/{productId}/edit(productId=${row.getProductId()})}">Edit</a></td>
+        <td><a th:href="@{/product/{productId}/delete(productId=${row.getProductId()})}">Delete</a></td>
+        <td><a th:href="@{/product/{productId}/view(productId=${row.getProductId()})}">View</a></td>
+    </tr>
+    </tbody>
+
+</table>
+<footer th:replace="/layout::footer"></footer>
+</body>
+</html>

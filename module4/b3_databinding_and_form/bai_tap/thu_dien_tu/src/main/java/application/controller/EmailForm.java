@@ -5,6 +5,7 @@ import application.model.Email;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -26,8 +27,8 @@ public class EmailForm {
     }
 
     @PostMapping("")
-    public String create(){
-//        redirectAttributes.addFlashAttribute("mess","create successfully!");
+    public String create(@ModelAttribute ("email") Email email, Model model){
+        model.addAttribute("email", email);
         return "showUpdate";
     }
 }

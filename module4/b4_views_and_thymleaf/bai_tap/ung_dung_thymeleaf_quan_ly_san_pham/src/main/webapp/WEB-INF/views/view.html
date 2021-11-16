@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <button style="background-color: #4CAF50; color: black; font-weight: bold">
+        <a th:href="@{/product}">
+            Back to product List
+        </a>
+    </button>
+</p>
+
+<div id="detail">
+    <div class="prodetail">
+        <label>Id</label>
+        <label th:text="${products.productId}"></label>
+    </div>
+    <div>
+        <label>Product Name</label>
+        <label th:text="${productsproductName}"></label>
+    </div>
+    <div>
+        <label>Product Price</label>
+        <label th:text="${products.productPrice}"></label>
+    </div>
+    <div>
+        <label>Product Information</label>
+        <label th:text="${products.productInfo}"></label>
+    </div>
+    <div>
+        <label>Brand Name</label>
+        <label th:text="${products.brandName}"></label>
+    </div>
+
+</div>
+
+</body>
+<footer th:replace="/layout::footer"></footer>
+</html>
