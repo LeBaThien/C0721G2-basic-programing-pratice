@@ -3,7 +3,7 @@ package model;
 import javax.persistence.*;
 
 
-@Entity(name="customer")
+@Entity
 @Table
 public class Customer implements Cloneable {
     @Id
