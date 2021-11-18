@@ -50,16 +50,19 @@ public class HibernateSongService implements ISongService {
 
     @Override
     public Song findById(int id) {
-        return null;
+        return entityManager.find(Song.class, id);
     }
 
     @Override
     public void update(int id, Song song) {
-
+        entityManager.merge(song);
     }
 
     @Override
     public void remove(int id) {
-
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        entityManager.remove(findById(id));
+        entityTransaction.commit();
     }
 }
