@@ -2,29 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c47792f-8b92-4940-b813-e04259a0a2db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/configuration/AppConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/configuration/AppInit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/controller/BlogController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/model/Blog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/repository/BlogRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/repository/IBlogRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/repository/IGeneralRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/service/BlogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/service/IBlogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/build/classes/java/main/blog_application/service/IGeneralService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/ApplicationCustomerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/repository/IProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/service/province/IProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/java/com/codegym/application_customer/service/province/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/main/resources/templates/province/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer/src/test/java/com/codegym/application_customer/ApplicationCustomerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bai_tap/app_blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/app_blog/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/build/classes/java/main/application/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/build/classes/java/main/application/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_jpa_store_roceduce/build/libs/spring_jpa_store_roceduce-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_jpa_store_roceduce/build/libs/spring_jpa_store_roceduce-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bai_tap/app_blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../b7.Spring_boot/thuc_hanh/application_customer" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -242,7 +255,8 @@
       <updated>1637162289878</updated>
       <workItem from="1637162293258" duration="3486000" />
       <workItem from="1637219202393" duration="9526000" />
-      <workItem from="1637243903197" duration="1210000" />
+      <workItem from="1637243903197" duration="1211000" />
+      <workItem from="1637293752372" duration="2491000" />
     </task>
     <servers />
   </component>
@@ -265,10 +279,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1109" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1637162950513" />
-    <state x="992" y="246" key="FileChooserDialogImpl" timestamp="1637243915682">
+    <state x="992" y="246" key="FileChooserDialogImpl" timestamp="1637316102470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="992" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1637243915682" />
+    <state x="992" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1637316102470" />
     <state width="620" height="220" key="GridCell.Tab.0.bottom" timestamp="1637243828300">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -317,10 +331,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="620" height="220" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637243828300" />
-    <state x="342" y="130" key="new project wizard" timestamp="1637228709666">
+    <state x="342" y="130" key="new project wizard" timestamp="1637294338648">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="342" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1637228709666" />
+    <state x="342" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1637294338648" />
     <state x="1096" y="242" key="run.anything.popup" timestamp="1637162341752">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
