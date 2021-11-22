@@ -38,4 +38,14 @@ public class BlogServiceImpl implements BlogService {
     public Page<Blog> findAllBlogECommerceId(int id, Pageable pageable) {
         return blogRepository.findAllBlogByECommerceId(id, pageable);
     }
+
+    @Override
+    public void save(Blog blog) {
+        blogRepository.save(blog);
+    }
+
+    @Override
+    public void update(int id, Blog blog) {
+        blogRepository.update(id ,blog);
+    }
 }

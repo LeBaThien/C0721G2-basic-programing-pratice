@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs List</title>
+</head>
+<body>
+<a href="/create/blog">Create new blog</a>
+<h1>Blogs List</h1>
+<form>
+    <label for="idSearch">Search by author</label>
+    <input id="idSearch" type="text" name="author">
+    <input type="submit">
+</form>
+<form>
+<label>Filter by Ecommerce</label>
+    <select onchange="this.form.submit()" th:name="eCommerceId" th:value="${eCommerceId}">
+        <option value="" disabled selected>Choose something</option>
+        <th:block th:each="ecom : ${eCommerce}">
+            <option th:value="${ecom.id}" th:text="${ecom.nameECommerce}"></option>
+        </th:block>
+
+    </select>
+</form>
+
+<table border="1">
+    <tr>
+        <th>Id Blog</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Ecommerce</th>
+        <th>Action</th>
+    </tr>
+    <th:block th:each="blog : ${blogs}">
+        <tr>
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.title}"></td>
+            <td th:text="${blog.author}"></td>
+            <td th:if="${blog.eCommerce}" th:text="${blog.eCommerce.nameECommerce}"></td>
+            <td th:unless="${blog.eCommerce}"></td>
+            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+
+<div>
+    <a th:href="@{'/blogs'(page=${blogs.number -1})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}" >Next</a>
+</div>
+
+</body>
+</html>

@@ -2,9 +2,159 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c47792f-8b92-4940-b813-e04259a0a2db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/java/form_register/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/java/form_register/demo/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/java/form_register/demo/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/java/form_register/demo/service/IUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/java/form_register/demo/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/resources/templates/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/bai_tap/form_register/src/test/java/form_register/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/build/classes/java/main/application/controller/PhoneController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/build/libs/custom-validation-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/build/resources/main/validation-message.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/java/application/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/java/application/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/java/application/controller/PhoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/java/application/model/PhoneNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/resources/validation-message.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/custom-validation/src/main/webapp/WEB-INF/views/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/java/application/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/java/application/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/java/application/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/java/application/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b8.Validation/thuc_hanh/validating_form_input1/src/main/webapp/WEB-INF/views/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/6.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/6.7.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/6.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/6.7.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/configuration-cache/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/GranDemonstrationApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/configuration/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/repository/ProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/service/impl/CustomerServiceImplWithSpringData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/java/cg/wbd/grandemonstration/service/impl/ProvinceServiceImplWithSpringData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/resources/templates/customers/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer-management/src/main/resources/templates/customers/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/repository/ProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/CustomerServiceImplWithSpringData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/ProvinceServiceImplWithSpringData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/webapp/WEB-INF/views/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer-management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer-management/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/classes/java/main/configuration/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/classes/java/main/configuration/AppInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/classes/java/main/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/classes/java/main/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/libs/quan_ly_khach_hang-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/libs/quan_ly_khach_hang-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/resources/main/hibernate.conf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/quan_ly_khach_hang/build/resources/main/hibernate.conf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +373,8 @@
       <workItem from="1637162293258" duration="3486000" />
       <workItem from="1637219202393" duration="9526000" />
       <workItem from="1637243920356" duration="4688000" />
+      <workItem from="1637570502535" duration="24000" />
+      <workItem from="1637574751958" duration="36000" />
     </task>
     <servers />
   </component>

@@ -14,4 +14,6 @@ public interface BlogService {
     Page<Blog> findAllBlog(Pageable pageable);
     Page<Blog> findAllBlogByName(String name, Pageable pageable);
     Page<Blog> findAllBlogECommerceId(int id, Pageable pageable);
+    void save (Blog blog);
+    void update (int id, Blog blog);
 }

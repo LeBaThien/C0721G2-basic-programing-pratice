@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<p>
+    <a href="/blogs">Blog list</a>
+</p>
+
+<form th:action="@{/edit/blog}" th:object="${blogs}" method="post" >
+    <table>
+        <tr>
+            <td>title:</td>
+            <td><input type="text" th:field="*{title}"/></td>
+        </tr>
+        <tr>
+            <td>author:</td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td>Ecommerce:</td>
+            <td>
+                <select th:field="*{eCommerce}">
+                    <option th:each="e : ${eCommerceList}"
+                            th:value="${e.id}"
+                            th:text="${e.nameECommerce}"
+                    th:selected="(${blogs.eCommerce}) and (${e.id}) == *{eCommerce.id}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save Blog"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
