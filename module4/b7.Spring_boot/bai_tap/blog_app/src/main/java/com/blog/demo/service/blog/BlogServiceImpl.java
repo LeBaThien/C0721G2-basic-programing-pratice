@@ -8,6 +8,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class BlogServiceImpl implements BlogService {
     @Autowired
@@ -16,6 +18,11 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public List<Blog> findAll() {
         return blogRepository.findAll();
+    }
+
+    @Override
+    public Optional<Blog> findById(Long id) {
+        return Optional.empty();
     }
 
     @Override
@@ -45,7 +52,19 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public void update(int id, Blog blog) {
-        blogRepository.update(id ,blog);
+    public void remove(Long id) {
+
     }
+
+    @Override
+    public void update(int id) {
+
+    }
+
+//    @Override
+//    public void save(int id, Blog blog) {
+//      return  blogRepository.save(id,blog);
+//    }
+
+
 }

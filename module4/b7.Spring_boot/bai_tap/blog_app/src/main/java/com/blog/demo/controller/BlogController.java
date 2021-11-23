@@ -5,8 +5,10 @@ import com.blog.demo.model.Blog;
 import com.blog.demo.model.ECommerce;
 import com.blog.demo.repository.ECommerceRepository;
 
+import com.blog.demo.service.Ecommerce.ECommerceService;
 import com.blog.demo.service.blog.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -28,12 +30,13 @@ public class BlogController {
     @Autowired
     BlogService blogService;
 
+//    @Qualifier("ECommerceService")
     @Autowired
-    ECommerceRepository eCommerceRepository;
+    ECommerceService eCommerceService;
 
     @ModelAttribute("ecommerce")
     public Iterable<ECommerce> eCommerces(){
-        return eCommerceRepository.findAll();
+        return eCommerceService.findAll();
     }
 
 //day la duong dan url
@@ -54,14 +57,14 @@ public class BlogController {
            model.addAttribute("author", author.get());
        }
 
-       model.addAttribute("eCommerce",eCommerceRepository.findAll());
+       model.addAttribute("eCommerce",eCommerceService.findAll());
        return "blog/list";
 //       day la duong dan thu muc
     }
 
     @GetMapping("/create/blog")
     public String showFormCreate(Model model){
-        List<ECommerce> eCommerceList = eCommerceRepository.findAll();
+        List<ECommerce> eCommerceList = eCommerceService.findAll();
         model.addAttribute("blogs",new Blog());
         model.addAttribute("eCommerceList",eCommerceList);
         return "blog/create";
@@ -83,20 +86,23 @@ public class BlogController {
     @GetMapping("edit/blog/{id}")
     public ModelAndView showEditBlogForm(@PathVariable int id, Model model){
         Blog blog = blogService.findBlogById(id);
-        List<ECommerce> eCommerceList = eCommerceRepository.findAll();
+        List<ECommerce> eCommerceList = eCommerceService.findAll();
+        ModelAndView modelAndView = new ModelAndView("blog/edit");
+//        modelAndView.addObject("blogs", blog.get());
+//        Mai hỏi
         model.addAttribute("blogs", blog);
         model.addAttribute("eCommerceList", eCommerceList);
-        ModelAndView modelAndView = new ModelAndView("blog/edit");
+
         return modelAndView;
     }
 
-    @PostMapping("edit/blog")
-    public String updateBlog(@ModelAttribute("blog") Blog blog, RedirectAttributes redirectAttributes){
-         blogService.update(blog);
-
-//        ModelAndView modelAndView = new ModelAndView("blogs");
-//        modelAndView.addObject("message","update successfully!!!");
-        redirectAttributes.addFlashAttribute("message","update successfully!!!");
-        return "redirect:/blogs";
+    @PostMapping("/edit/blog")
+    public ModelAndView updateBlog(@ModelAttribute("blogs") Blog blog, RedirectAttributes redirectAttributes){
+         blogService.save(blog);
+        ModelAndView modelAndView = new ModelAndView("/blog/edit");
+//        modelAndView.addObject("blogs", blog);
+        modelAndView.addObject("message","update successfully!!!");
+//        redirectAttributes.addFlashAttribute("message","update successfully!!!");
+        return modelAndView;
     }
 }

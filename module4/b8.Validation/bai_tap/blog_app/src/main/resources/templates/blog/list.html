@@ -5,6 +5,10 @@
     <title>Blogs List</title>
 </head>
 <body>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+
 <a href="/create/blog">Create new blog</a>
 <h1>Blogs List</h1>
 <form>
@@ -38,7 +42,7 @@
             <td th:text="${blog.author}"></td>
             <td th:if="${blog.eCommerce}" th:text="${blog.eCommerce.nameECommerce}"></td>
             <td th:unless="${blog.eCommerce}"></td>
-            <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+            <td><a th:href="@{/edit/blog/__${blog.id}__ }">Edit</a></td>
             <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
         </tr>
     </th:block>

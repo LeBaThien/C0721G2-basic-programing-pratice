@@ -15,6 +15,10 @@
 
 <form th:action="@{/edit/blog}" th:object="${blogs}" method="post" >
     <table>
+<!--        Chu y nghe-->
+        <tr>
+            <td><input type="hidden" th:field="*{id}"></td>
+        </tr>
         <tr>
             <td>title:</td>
             <td><input type="text" th:field="*{title}"/></td>
@@ -36,7 +40,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Save Blog"></td>
+            <td><input type="submit" value="Update Blog"></td>
         </tr>
     </table>
 </form>

@@ -17,4 +17,10 @@ public interface BlogRepository extends JpaRepository<Blog, Integer> {
     @Query(value= "select * from blog join ecommerce where blog.e_commerce_id = ecommerce.id" +
             " and ecommerce.id = :id", nativeQuery = true)
     Page<Blog> findAllBlogByECommerceId(@Param("id") int id, Pageable pageable);
+
+//    @Query(value= "select * from blog join ecommerce where blog.e_commerce_id = ecommerce.id" +
+//            " and ecommerce.id = :id", nativeQuery = true)
+//    void update(int id, Blog blog);
+//
+//    void e
 }

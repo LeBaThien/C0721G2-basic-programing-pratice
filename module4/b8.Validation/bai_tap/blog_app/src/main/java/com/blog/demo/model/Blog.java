@@ -1,10 +1,14 @@
 package com.blog.demo.model;
 
 
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+
 import javax.persistence.*;
 
 @Entity
-public class Blog {
+public class Blog implements Validator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -49,5 +53,21 @@ public class Blog {
 
     public void seteCommerce(ECommerce eCommerce) {
         this.eCommerce = eCommerce;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return Blog.class.isAssignableFrom(clazz);
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        Blog blog = (Blog) target;
+        String title = blog.getTitle();
+        ValidationUtils.rejectIfEmpty(errors, "title", "title.empty" );
+        if(!(title.length() >20) || (title.length() < 100)){
+            errors.rejectValue("title", "title.length");
+        }
+
     }
 }
