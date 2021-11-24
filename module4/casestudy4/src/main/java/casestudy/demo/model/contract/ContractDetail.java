@@ -7,12 +7,36 @@ public class ContractDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int contractDetailId;
+    @ManyToOne(targetEntity = Contract.class)
     private Contract contract;
+    @ManyToOne(targetEntity = AttachService.class)
     private AttachService attachService;
 
-    @ManyToMany
-    @JoinTable(name = "contract_detail", joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id"));
-    private
+    public ContractDetail(){
 
+    }
+
+    public int getContractDetailId() {
+        return contractDetailId;
+    }
+
+    public void setContractDetailId(int contractDetailId) {
+        this.contractDetailId = contractDetailId;
+    }
+
+    public Contract getContract() {
+        return contract;
+    }
+
+    public void setContract(Contract contract) {
+        this.contract = contract;
+    }
+
+    public AttachService getAttachService() {
+        return attachService;
+    }
+
+    public void setAttachService(AttachService attachService) {
+        this.attachService = attachService;
+    }
 }

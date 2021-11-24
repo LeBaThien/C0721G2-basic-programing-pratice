@@ -26,7 +26,8 @@ public class CustomerServiceImplWithSpringData implements CustomerService {
     }
 
     @Override
-    public Page<Customer> findAll(Pageable pageInfo) {
+    public Page<Customer> findAll(Pageable pageInfo) throws Exception {
+        if (true) throw new Exception("a dummy exception");
         return customerRepository.findAll(pageInfo);
     }
 
@@ -44,8 +45,13 @@ public class CustomerServiceImplWithSpringData implements CustomerService {
     }
 
     @Override
-    public Optional<Customer> findOne(Long id) {
-        return customerRepository.findById(id);
+    public Optional<Customer> findOne(Long id) throws Exception {
+        Optional<Customer> customerOptional = customerRepository.findById(id);
+        if (!customerOptional.isPresent()) {
+            throw new Exception("customer not found!");
+        }
+        return customerOptional;
+//        return customerRepository.findById(id);
     }
 
     @Override

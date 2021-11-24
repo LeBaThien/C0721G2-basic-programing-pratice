@@ -1,7 +1,10 @@
 package casestudy.demo.model.service;
 
 
+import casestudy.demo.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Service {
@@ -20,6 +23,9 @@ public class Service {
     private RentType rentType;
     @ManyToOne(targetEntity = ServiceType.class)
     private ServiceType serviceType;
+
+    @OneToMany(mappedBy = "service")
+    List<Contract> contracts;
 
     public Service(){
 

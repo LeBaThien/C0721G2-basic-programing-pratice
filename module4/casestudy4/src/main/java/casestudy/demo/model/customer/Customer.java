@@ -1,7 +1,10 @@
 package casestudy.demo.model.customer;
 
 
+import casestudy.demo.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -18,6 +21,8 @@ public class Customer {
     @ManyToOne(targetEntity = CustomerType.class)
     private CustomerType customerType;
 
+    @OneToMany(mappedBy = "customer")
+    List<Contract> contracts;
 
     public Customer (){
 
