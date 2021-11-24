@@ -2,117 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2b65816-8376-4c4c-97db-952ecd3e9e35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module4/b7.Spring_boot/bai_tap/.idea/bai_tap.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/service/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/css_style/libary_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/jquery/jquery-3.5.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/borrow_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/listdemo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/aspect/logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b6_JPA/bai_tap/app_blog/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b6_JPA/bai_tap/app_blog/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b6_JPA/thuc_hanh/spring_jpa_store_roceduce/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b6_JPA/thuc_hanh/spring_jpa_store_roceduce/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b6_JPA/thuc_hanh/spring_jpa_store_roceduce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b6_JPA/thuc_hanh/spring_jpa_store_roceduce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/impl/CustomerServiceImplWithSpringData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/impl/CustomerServiceImplWithSpringData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/CustomerServiceImplWithSpringData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/CustomerServiceImplWithSpringData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/ContractDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/contract/ContractDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/model/user/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/bootstrap413/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/jquery/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../module4/b9.AOP_and_exception_handling/bai_tap/library" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -146,11 +104,17 @@
       <option name="presentableId" value="Default" />
       <updated>1636424124358</updated>
       <workItem from="1636424125780" duration="8000" />
-      <workItem from="1637758244061" duration="1647000" />
+      <workItem from="1637758244061" duration="2348000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1037" y="274" key="FileChooserDialogImpl" timestamp="1637764505953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1037" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1637764505953" />
   </component>
 </project>

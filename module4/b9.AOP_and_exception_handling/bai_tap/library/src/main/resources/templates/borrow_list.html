@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Borrow</title>
 </head>
 <body>
+<form>
+    <table>
+        <tr>
+            <th>Id book</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Number of Book</th>
+            <th>Status</th>
+            <td>Action</td>
+        </tr>
+        <th:block th:each="book : ${books}">
+            <tr>
+                <td th:text="${book.bookId}"></td>
+                <td th:text="${book.bookName}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.numberOfBook}"></td>
 
+                <td th:switch="${book.status}">
+                    <p th:case="true">available</p>
+                    <p th:case="false">used</p>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+
+</form>
 </body>
 </html>
