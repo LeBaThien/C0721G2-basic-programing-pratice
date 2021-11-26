@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f769cc24-4a74-45c9-aea1-ed1615953179" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/config/validate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/resources/msg/validation-message.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/luu_ten_user_bang_cookie/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/luu_ten_user_bang_cookie/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_gio_hang/src/main/resources/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_gio_hang/src/main/resources/templates/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_sp_vao_gio_hang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_sp_vao_gio_hang/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/repository/BlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b7.Spring_boot/bai_tap/blog_app/src/main/resources/templates/blog/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/model/Blog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/repository/BlogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/Ecommerce/ECommerceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/IGeneralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/IGeneralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/java/com/blog/demo/service/blog/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/resources/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/resources/templates/blog/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/resources/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai_tap/blog_app/src/main/resources/templates/blog/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/PhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/controller/PhoneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +212,7 @@
       <workItem from="1637565597550" duration="1753000" />
       <workItem from="1637597660004" duration="3168000" />
       <workItem from="1637629114811" duration="1922000" />
+      <workItem from="1637901096692" duration="2000" />
     </task>
     <servers />
   </component>

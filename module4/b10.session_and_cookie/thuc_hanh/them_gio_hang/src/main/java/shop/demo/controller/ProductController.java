@@ -25,7 +25,7 @@ public class ProductController {
 
     @GetMapping("/shop")
     public ModelAndView showShop() {
-        ModelAndView modelAndView = new ModelAndView("/shop");
+        ModelAndView modelAndView = new ModelAndView("page/shop");
         modelAndView.addObject("products", productService.findAll());
         return modelAndView;
     }
@@ -36,7 +36,7 @@ public class ProductController {
                             @RequestParam("action") String action) {
         Optional<Product> productOptional = productService.findById(id);
         if (!productOptional.isPresent()) {
-            return "/error.404";
+            return "page/error.404";
         }
         if (action.equals("show")) {
             cart.addProduct(productOptional.get());
