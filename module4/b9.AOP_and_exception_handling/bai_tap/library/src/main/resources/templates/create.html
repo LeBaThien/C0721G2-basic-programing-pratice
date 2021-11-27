@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add book</title>
 </head>
 <body>
+<h1>Add Book</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<!--private int bookId;-->
+<!--private String bookName;-->
+<!--private String author;-->
+<!--private int numberOfBook;-->
+<!--private boolean status;-->
+<form action="/books/create-b"  method="post" th:object="${books}" >
+    <table>
+        <tr>
+            <td>
+               Input book name: <input type="text" th:field="*{bookName}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Input author: <input type="text" th:field="*{author}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Input number of book: <input type="text" th:field="*{numberOfBook}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <input type="hidden" th:value="*{setStatus(true)}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Add a new book">
+            </td>
+        </tr>
+
+    </table>
+
+
+</form>
 
 </body>
 </html>

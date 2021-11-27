@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends PagingAndSortingRepository<Book,Integer> {
-    List<Book> findAll();
+//    List<Book> findAll();
     List<Book> findBooksByAuthor(String name);
 
 }

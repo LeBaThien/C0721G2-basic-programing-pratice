@@ -12,9 +12,9 @@
     <p th:text="${message}"></p>
 </th:block>
 
-<a href="/create/book">add new book</a>
+<a href="/books/create">add new book</a>
 <h1>Blogs List</h1>
-<form method="post" name="author">
+<form action="/search/author" method="post" name="author">
     <!--    modelAndAttribute="author"-->
     <label for="idSearch">Search by author</label>
     <input id="idSearch" type="text" name="author">

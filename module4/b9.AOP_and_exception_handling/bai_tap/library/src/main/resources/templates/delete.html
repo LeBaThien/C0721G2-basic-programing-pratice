@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/delete/book}" th:object="${books}" method="post" >
+    <table>
+        <!--        Chu y nghe-->
+        <tr>
+            <td><input type="hidden" th:field="*{bookId}"></td>
+        </tr>
+        <tr>
+            <td>Book name: </td>
+            <td><input type="text" th:field="*{bookName}"/></td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td>Number of book:</td>
+            <td><input type="text" th:field="*{numberOfBook}"/></td>
+        </tr>
+        <tr>
+<!--            <td>Status:</td>-->
+
+<!--            <td th:switch="${status}">-->
+<!--                <p th:case="true">available</p>-->
+<!--                <p th:case="false">used</p>-->
+<!--            </td>-->
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete Blog"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
