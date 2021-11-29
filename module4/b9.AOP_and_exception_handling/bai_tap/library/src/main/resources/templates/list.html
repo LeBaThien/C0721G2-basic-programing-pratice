@@ -48,35 +48,8 @@
 
             <td><a th:href="@{/edit/book/__${book.bookId}__ }">Edit</a></td>
             <td><a th:href="@{/delete/book/__${book.bookId}__ }">Delete</a></td>
-<!--            <td><a th:href="@{/borrow/book/__${book.bookId}__ }">Borrow</a></td>-->
-<!--                        <td>-->
-<!--                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"-->
-<!--                                   >-->
-<!--                                borrow-->
-<!--                            </button>-->
-<!--                        </td>-->
-<!--                        &lt;!&ndash; Modal &ndash;&gt;-->
-<!--            <td>-->
-<!--            <form method="post">-->
-<!--                        <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"-->
-<!--                             aria-hidden="true">-->
-<!--                            <div class="modal-dialog">-->
-<!--                                <div class="modal-content">-->
-<!--                                    <div class="modal-header">-->
-<!--                                        <h5 class="modal-title" id="exampleModalLabel">Do you want to borrow?</h5>-->
-<!--                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--                                    </div>-->
-<!--                                    <div class="modal-body">-->
-<!--                                        <p th:text="${book.bookId}"></p>-->
-<!--                                    </div>-->
-<!--                                    <div class="modal-footer">-->
-<!--                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-<!--                                        <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--            </form>-->
+            <td><a th:href="@{/borrow/book/__${book.bookId}__ }">Borrow</a></td>
+
             </td>
         </tr>
     </th:block>
