@@ -47,6 +47,7 @@ public class AppConfiguration implements WebMvcConfigurer {
     public LocaleResolver localeResolver() {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(new Locale("en"));
+//        Mặc định do mình tự để en,
         return localeResolver;
     }
 

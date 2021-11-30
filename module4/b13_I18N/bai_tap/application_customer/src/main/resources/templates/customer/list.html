@@ -17,15 +17,15 @@
     </select>
     <button type="submit">Change language</button>
 </form>
-<!--Language: <a href="?lang=en">English</a> | <a href="?lang=vn">Việt Nam</a>-->
+<!--Language: <a href="?lang=en">English</a> | <a href="?lang=vi">Việt Nam</a>-->
 <h1>Customers</h1>
 <table border="1">
     <tr>
-        <th th:text="fisrtName">First name</th>
-        <th th:text="lastName">Last name</th>
-        <th th:text="province">Province</th>
-        <th th:text="edit">Edit</th>
-        <th th:text="delete">Delete</th>
+        <th th:text="#{firstName}"></th>
+        <th th:text="#{lastName}"></th>
+        <th th:text="#{province}"></th>
+        <th th:text="#{edit}"></th>
+        <th th:text="#{delete}"></th>
     </tr>
     <th:block th:each="customer : ${customers}">
         <tr>
