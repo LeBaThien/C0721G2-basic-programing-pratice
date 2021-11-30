@@ -45,6 +45,16 @@ public class Cart {
         }
     }
 
+    public void decreasingProduct(Product product){
+        if (!checkItemInCart(product)){
+            products.put(product,1);
+        } else {
+            Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
+            Integer newQuantity = itemEntry.getValue() - 1;
+            products.replace(itemEntry.getKey(),newQuantity);
+        }
+    }
+
     public Integer countProductQuantity(){
         Integer productQuantity = 0;
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
@@ -63,5 +73,9 @@ public class Cart {
             payment += entry.getKey().getPrice() * (float) entry.getValue();
         }
         return payment;
+    }
+
+    public void saveProduct(Product product){
+        products.put(product, product.);
     }
 }

@@ -12,7 +12,7 @@ import java.awt.print.Book;
 import java.util.Optional;
 
 @Service
-public class CardService {
+public class CardService implements ICardService {
     @Autowired
     ICardBorrowRepository cardBorrowRepository;
     @Autowired

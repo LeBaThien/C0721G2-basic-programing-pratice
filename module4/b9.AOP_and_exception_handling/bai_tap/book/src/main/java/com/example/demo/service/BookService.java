@@ -1,12 +1,15 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Book;
+import com.example.demo.model.CardBorrow;
+import com.example.demo.model.Status;
 import com.example.demo.repository.IBookRepository;
 import com.example.demo.repository.ICardBorrowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 public class BookService implements IBookService {
@@ -21,7 +24,7 @@ public class BookService implements IBookService {
     }
 
     @Override
-    public Optional< Book > findById(Integer id) {
+    public Optional<Book> findById(Integer id) {
         return bookRepository.findById(id);
     }
 

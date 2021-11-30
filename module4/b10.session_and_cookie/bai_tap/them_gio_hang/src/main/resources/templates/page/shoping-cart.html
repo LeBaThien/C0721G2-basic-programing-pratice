@@ -271,7 +271,8 @@
 <!--                                        $55.00-->
                                     </td>
                                     <td class="shoping__cart__quantity">
-                                        <a id="decrease_button" th:text="${'-'}"></a>
+                                        <a id="decrease_button" th:text="${'-'}"  th:href="@{/reduce/__${product.getKey().id}__(action='show')}"
+                                           th:text="${'-'}"></a>
                                         <span th:text="${product.getValue()}"></span>
                                         <a id="increase_button" th:href="@{/add/__${product.getKey().id}__(action='show')}"
                                            th:text="${'+'}"></a>
@@ -338,7 +339,7 @@
                             </tbody>
                         </table>
 
-                        </form>
+
                     </div>
                 </div>
             </div>
@@ -373,6 +374,7 @@
                 </div>
             </div>
         </div>
+        </form>
     </section>
     <!-- Shoping Cart Section End -->
     <!-- Footer Section Begin -->

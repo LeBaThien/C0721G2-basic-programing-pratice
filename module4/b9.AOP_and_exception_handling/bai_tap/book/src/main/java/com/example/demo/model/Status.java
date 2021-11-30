@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.*;
 import java.awt.*;
 
@@ -24,11 +24,11 @@ public class Status {
         this.id = id;
     }
 
-    public List< CardBorrow > getCardBorrowList() {
+    public List<CardBorrow> getCardBorrowList() {
         return cardBorrowList;
     }
 
-    public void setCardBorrowList(List< CardBorrow > cardBorrowList) {
+    public void setCardBorrowList(List<CardBorrow> cardBorrowList) {
         this.cardBorrowList = cardBorrowList;
     }
 
@@ -39,5 +39,4 @@ public class Status {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }

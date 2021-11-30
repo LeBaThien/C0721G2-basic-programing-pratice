@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create-customer">Create new customer</a>
+
+<form action="" method="get">
+    <select name="lang">
+        <option value="vi">VietNamese</option>
+        <option value="en">English</option>
+        <option value="cn">China</option>
+        <option value="ko">Korean</option>
+        <option value="ja">Japan</option>
+    </select>
+    <button type="submit">Change language</button>
+</form>
+<!--Language: <a href="?lang=en">English</a> | <a href="?lang=vn">Việt Nam</a>-->
+<h1>Customers</h1>
+<table border="1">
+    <tr>
+        <th th:text="fisrtName">First name</th>
+        <th th:text="lastName">Last name</th>
+        <th th:text="province">Province</th>
+        <th th:text="edit">Edit</th>
+        <th th:text="delete">Delete</th>
+    </tr>
+    <th:block th:each="customer : ${customers}">
+        <tr>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+            <td th:if="${customer.province}" th:text="${customer.province.name}"></td>
+            <td th:unless="${customer.province}"></td>
+            <td><a th:href="@{/edit-customer/__${customer.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-customer/__${customer.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
