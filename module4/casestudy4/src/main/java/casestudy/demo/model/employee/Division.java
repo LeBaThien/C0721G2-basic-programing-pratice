@@ -11,7 +11,7 @@ public class Division {
     private String divisionName;
 
     @OneToMany(mappedBy = "division")
-    List<Employee> employees;
+    private List<Employee> employees;
 
     public Division(){
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<a href="/create-customer">Create new customer</a>
+
+
+<form action="" method="get">
+    <select name="lang">
+        <option value="vi">VietNamese</option>
+        <option value="en">English</option>
+        <option value="cn">China</option>
+        <option value="ko">Korean</option>
+        <option value="ja">Japan</option>
+    </select>
+    <button type="submit">Change language</button>
+</form>
+
+<!--Language: <a href="?lang=en">English</a> | <a href="?lang=vi">Việt Nam</a>-->
+<h1>Customers</h1>
+<table border="1">
+    <tr>
+        <th th:text="#{firstName}"></th>
+        <th th:text="#{lastName}"></th>
+        <th th:text="#{province}"></th>
+        <th th:text="#{edit}"></th>
+        <th th:text="#{delete}"></th>
+    </tr>
+    <th:block th:each="customer : ${customers}">
+        <tr>
+            <td th:text="${customer.firstName}"></td>
+            <td th:text="${customer.lastName}"></td>
+            <td th:if="${customer.province}" th:text="${customer.province.name}"></td>
+            <td th:unless="${customer.province}"></td>
+            <td><a th:href="@{/edit-customer/__${customer.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-customer/__${customer.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

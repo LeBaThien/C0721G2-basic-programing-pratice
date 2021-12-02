@@ -11,7 +11,8 @@ public class Position {
     private int positionId;
     private String positionName;
     @OneToMany(mappedBy = "position")
-    List<Employee> employees;
+    private List<Employee> employees;
+
     public Position(){
 
     }

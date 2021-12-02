@@ -1,6 +1,7 @@
 package casestudy.demo.model.employee;
 
 import casestudy.demo.model.contract.Contract;
+import casestudy.demo.model.user.User;
 
 import javax.persistence.*;
 import java.util.List;
@@ -27,8 +28,11 @@ public class Employee {
     @ManyToOne(targetEntity = Division.class)
     private Division division;
 
+    @ManyToOne(targetEntity = User.class)
+    private User user;
+
     @OneToMany(mappedBy = "employee")
-    List<Contract> contracts;
+    private List<Contract> contracts;
 
     public Employee(){
 

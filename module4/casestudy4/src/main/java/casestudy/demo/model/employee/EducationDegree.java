@@ -12,7 +12,7 @@ public class EducationDegree {
     private String educationName;
 
     @OneToMany(mappedBy = "educationDegree")
-    List<Employee> employees;
+    private List<Employee> employees;
     public EducationDegree(){
 
     }

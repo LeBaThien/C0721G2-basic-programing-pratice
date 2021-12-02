@@ -29,7 +29,7 @@ public class Contract {
     private Service service;
 
     @OneToMany(mappedBy = "contract")
-    List<ContractDetail> contractDetails;
+    private List<ContractDetail> contractDetails;
 
 
 

@@ -13,7 +13,7 @@ public class RentType {
     private String rentTypeCost;
 
     @OneToMany(mappedBy = "rentType")
-    List<Service> services;
+    private List<Service> services;
 
     public RentType(){
 

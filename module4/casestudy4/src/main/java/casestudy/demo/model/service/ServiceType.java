@@ -12,7 +12,8 @@ public class ServiceType {
     private String serviceTypeName;
 
     @OneToMany(mappedBy = "serviceType")
-    List<Service> services;
+    private List<Service> services;
+
     public ServiceType(){
 
     }

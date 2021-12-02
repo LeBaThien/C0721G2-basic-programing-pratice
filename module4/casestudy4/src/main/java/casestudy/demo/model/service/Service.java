@@ -25,7 +25,7 @@ public class Service {
     private ServiceType serviceType;
 
     @OneToMany(mappedBy = "service")
-    List<Contract> contracts;
+    private List<Contract> contracts;
 
     public Service(){
 

@@ -2,11 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f769cc24-4a74-45c9-aea1-ed1615953179" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../module3/test/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/ApplicationCustomerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/repository/IProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/province/IProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/province/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n_cn.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n_ja.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n_ko.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/message/i18n_vi.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/main/resources/templates/province/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/application_customer/src/test/java/com/codegym/application_customer/ApplicationCustomerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/controller/SmartphoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/model/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/service/ISmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/java/com/example/demo/service/SmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/main/resources/templates/phones/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/bai_tap/quan_ly_dien_thoai/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/ApplicationCustomerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/controller/ProvinceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/formatter/ProvinceFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/repository/IProvinceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/security/SecurityInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/province/IProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/java/com/codegym/application_customer/service/province/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n_cn.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n_ja.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n_ko.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/message/i18n_vi.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/customer/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/error.404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/province/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/province/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/province/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/province/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/province/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/main/resources/templates/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/bai_tap/application_customer/src/test/java/com/codegym/application_customer/ApplicationCustomerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/security/SecurityInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/resources/templates/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/resources/templates/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/java/com/example/demo/configuration/CustomSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/java/com/example/demo/controller/SecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/java/com/example/demo/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/java/com/example/demo/security/SecurityInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/resources/templates/access-denied.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/resources/templates/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/resources/templates/dba.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../b15_phan_quyen/thuc_hanh/phan_quyen_dua_tren_vai_tro/src/main/resources/templates/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/luu_ten_user_bang_cookie/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/luu_ten_user_bang_cookie/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_gio_hang/src/main/resources/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_gio_hang/src/main/resources/templates/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_sp_vao_gio_hang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b10.session_and_cookie/thuc_hanh/them_sp_vao_gio_hang/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/thuc_hanh/quan_ly_dien_thoai/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b12_jquery_and_ajax/thuc_hanh/quan_ly_dien_thoai/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Division.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/EducationDegree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/EducationDegree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/RentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/RentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/ServiceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/ServiceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/user/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,6 +352,7 @@
       <workItem from="1637597660004" duration="3168000" />
       <workItem from="1637629114811" duration="1922000" />
       <workItem from="1637901096692" duration="2000" />
+      <workItem from="1638439842544" duration="25000" />
     </task>
     <servers />
   </component>

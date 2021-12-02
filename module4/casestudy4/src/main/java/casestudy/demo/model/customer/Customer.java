@@ -22,7 +22,7 @@ public class Customer {
     private CustomerType customerType;
 
     @OneToMany(mappedBy = "customer")
-    List<Contract> contracts;
+    private List<Contract> contracts;
 
     public Customer (){
 
