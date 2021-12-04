@@ -12,7 +12,9 @@ public class Role {
     private int role_id;
     private String role_name;
 
-    @ManyToMany
+//    (fetch = FetchType.EAGER)
+//    Khử đệ quy
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name="user_role", joinColumns= @JoinColumn(name="role_id"), inverseJoinColumns = @JoinColumn(name="user_id"))
     private List<User> users;
 

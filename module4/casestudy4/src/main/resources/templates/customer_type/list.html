@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <head th:replace="/layout :: head">
+    </head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<div>
+    <a class="btn btn-primary" href="/index" role="button">Home</a>
+    <a class="btn btn-primary" href="/customers" role="button">Customer Manager</a>
+    <a class="btn btn-primary" href="/show-customer-type" role="button">Show customer type</a>
+<!--    <a class="btn btn-primary" href="/create-customer" role="button">Create new customer</a>-->
+<!--    <a class="btn btn-primary" href="/edit-customer" role="button">Edit customer</a>-->
+<!--    <a class="btn btn-primary" href="/delete-customer" role="button">Delete customer</a>-->
+<!--    <a class="btn btn-primary" href="/customers" role="button">List customer</a>-->
+<!--    <form style="margin-left: 75%" action="/search-by-phone" method="get">-->
+<!--        <label for="idSearch">Search by phone</label>-->
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <input type="text" placeholder=" Input here to search"-->
+<!--                           id="idSearch" name="customerPhone">-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <input type="submit" value="Search">-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </form>-->
+
+</div>
+
+
+<!--thay doi ngon ngu i18n-->
+<!--<form action="" method="get">-->
+<!--    <select name="lang">-->
+<!--        <option value="vi">VietNamese</option>-->
+<!--        <option value="en">English</option>-->
+<!--        <option value="cn">China</option>-->
+<!--        <option value="ko">Korean</option>-->
+<!--        <option value="ja">Japan</option>-->
+<!--    </select>-->
+<!--    <button type="submit">Change language</button>-->
+<!--</form>-->
+
+<br>
+
+<h4>Customers Manager</h4>
+<table border="1" id="customers">
+    <tr>
+        <th>Customer Type Id</th>
+<!--        <th>Address</th>-->
+<!--        <th>Birthday</th>-->
+<!--        <th>Email</th>-->
+<!--        <th>Gender</th>-->
+<!--        <th>Identification</th>-->
+<!--        <th>Name</th>-->
+<!--        <th>Phone</th>-->
+        <th>Customer Type Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="customer : ${customersType}">
+        <tr>
+            <td th:text="${customer.customerTypeId}"></td>
+            <td th:text="${customer.customerTypeName}"></td>
+
+            <td><a th:href="@{/edit-customer-type/__${customer.customerTypeId}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-customer-type/__${customer.customerTypeId}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<!--phân trang-->
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" th:href="@{'/show-customer-type'(page=${customersType.number -1})}"
+                                 th:if="${customersType.hasPrevious()}">Previous</a></li>
+        <!--        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+        <!--        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+        <!--        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+        <li class="page-item"><span class="page-link" th:text="${customersType.number + 1}"></span></li>
+        <li class="page-item"><a class="page-link">/</a></li>
+        <li class="page-item"><span class="page-link" th:text="${customersType.totalPages}"></span></li>
+        <li class="page-item"><a class="page-link" th:href="@{'show-customer-type'(page=${customersType.number + 1})}"
+                                 th:if="${customersType.hasNext()}">Next</a></li>
+    </ul>
+</nav>
+
+
+<footer th:replace="/layout :: footer"></footer>
+<script rel="script" src="css/bootstrap.min.js"></script>
+</body>
+</html>
