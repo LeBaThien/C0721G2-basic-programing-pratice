@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <head th:replace="/layout :: head">
+    </head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<div>
+    <a class="btn btn-primary" href="/index" role="button">Home</a>
+    <a class="btn btn-primary" href="/create-customer" role="button">Create new customer</a>
+    <a class="btn btn-primary" href="/customers" role="button">List customer</a>
+<!--    <a class="btn btn-primary" href="/create-customer-type" role="button">Create customer type</a>-->
+<!--    <a class="btn btn-primary" href="/edit-customer-type" role="button">Edit customer type</a>-->
+<!--    <a class="btn btn-primary" href="/delete-customer-type" role="button">Delete customer type</a>-->
+    <a class="btn btn-primary" href="/show-customer-type" role="button">Show customer type</a>
+
+    <form style="margin-left: 75%" action="/search-by-phone" method="get">
+        <label for="idSearch">Search by phone</label>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" placeholder=" Input here to search"
+                           id="idSearch" name="customerPhone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Search">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+
+<!--thay doi ngon ngu i18n-->
+<!--<form action="" method="get">-->
+<!--    <select name="lang">-->
+<!--        <option value="vi">VietNamese</option>-->
+<!--        <option value="en">English</option>-->
+<!--        <option value="cn">China</option>-->
+<!--        <option value="ko">Korean</option>-->
+<!--        <option value="ja">Japan</option>-->
+<!--    </select>-->
+<!--    <button type="submit">Change language</button>-->
+<!--</form>-->
+
+<br>
+
+<h4>Customers Manager</h4>
+<table border="1" id="customers">
+    <tr>
+        <th>Id</th>
+        <th>Address</th>
+        <th>Birthday</th>
+        <th>Email</th>
+<!--        <th>Gender</th>-->
+        <th>Identification</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Salary</th>
+        <th>Education degree</th>
+        <th>Position</th>
+        <th>Division</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="employee : ${employees}">
+        <tr>
+            <td th:text="${employee.employeeId}"></td>
+            <td th:text="${employee.address}"></td>
+            <td th:text="${employee.employeeBirthday}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.idCard}"></td>
+            <td th:text="${employee.employeeName}"></td>
+            <td th:text="${employee.phone}"></td>
+            <td th:text="${employee.salary}"></td>
+            <td th:text="${employee.educationDegree.educationName}"></td>
+            <td th:text="${employee.division.divisionName}"></td>
+            <td th:text="${employee.position.positionName}"></td>
+            <!--            <td th:text="${customer.customerType.customerTypeName}"></td>-->
+<!--            <td th:if="${customer.customerType}" th:text="${customer.customerType.customerTypeName}"></td>-->
+<!--            <td th:unless="${customer.customerType}"></td>-->
+            <td><a th:href="@{/edit-employee/__${employee.employeeId}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-employee/__${employee.employeeId}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+<!--phân trang-->
+<!--<div>-->
+<!--    <a th:href="@{'/customers'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+<!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+<!--    <a th:href="@{'customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
+<!--</div>-->
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" th:href="@{'/employees'(page=${employees.number -1})}"
+                                 th:if="${employees.hasPrevious()}">Previous</a></li>
+        <!--        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+        <!--        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+        <!--        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+        <li class="page-item"><span class="page-link" th:text="${employees.number + 1}"></span></li>
+        <li class="page-item"><a class="page-link">/</a></li>
+        <li class="page-item"><span class="page-link" th:text="${employees.totalPages}"></span></li>
+        <li class="page-item"><a class="page-link" th:href="@{'employees'(page=${employees.number + 1})}"
+                                 th:if="${employees.hasNext()}">Next</a></li>
+    </ul>
+</nav>
+
+
+<footer th:replace="/layout :: footer"></footer>
+<script rel="script" src="js/bootstrap.min.js"></script>
+</body>
+</html>

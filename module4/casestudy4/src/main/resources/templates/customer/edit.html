@@ -8,6 +8,12 @@
     <head th:replace="/layout :: head">
 
 </head>
+    <style>
+        .error-color{
+            color: red;
+        }
+    </style>
+</head>
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
 <h1>Edit customer</h1>
 <p>
@@ -25,6 +31,7 @@
         <tr>
             <td>Customer Name:</td>
             <td><input type="text" th:field="*{customerName}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>-->
         </tr>
         <tr>
             <td>Birth day:</td>
@@ -73,7 +80,7 @@
     </table>
 </form>
 <footer th:replace="/layout :: footer"></footer>
-<script rel="script" src="css/bootstrap.min.js"></script>
+<script rel="script" src="js/bootstrap.min.js"></script>
 </body>
 </html>
 

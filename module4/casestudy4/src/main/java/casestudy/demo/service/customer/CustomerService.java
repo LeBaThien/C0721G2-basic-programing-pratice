@@ -1,7 +1,7 @@
 package casestudy.demo.service.customer;
 
 import casestudy.demo.model.customer.Customer;
-import casestudy.demo.repository.ICustomerRepository;
+import casestudy.demo.repository.customer_repository.ICustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
