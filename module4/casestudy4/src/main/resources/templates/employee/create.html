@@ -16,7 +16,7 @@
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
 <h1>Create customer</h1>
 <p>
-    <a class="btn btn-primary" href="/customers" role="button">Back to home</a>
+    <a class="btn btn-primary" href="/employees" role="button">Back to home</a>
 </p>
 <!--Message-->
 <th:block th:if="${message}">
@@ -25,67 +25,90 @@
 
 
 <!--form create-->
-<form th:action="@{/create-customer}" th:object="${customer}" method="post">
+<form th:action="@{/create-employee}" th:object="${employee}" method="post">
     <table style="font-weight: bold; font-size: large">
 
         <tr>
-            <td>Customer Name:</td>
-            <td><input type="text" th:field="*{customerName}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>
+            <td>Employee Name:</td>
+            <td><input type="text" th:field="*{employeeName}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></td>-->
 
         </tr>
         <tr>
             <td>Birth day:</td>
-            <td><input type="date" th:field="*{customerBirthday}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerBirthday')}"
-                th:errors="*{customerBirthday}"></td>
+            <td><input type="date" th:field="*{employeeBirthday}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeeBirthday')}"-->
+<!--                th:errors="*{employeeBirthday}"></td>-->
 
         </tr>
-        <tr>
-            <td>Gender:</td>
-            <td>
-                <select th:field="*{customerGender}">
-                    <option th:value="'Male'" th:text="Male"></option>
-                    <option th:value="'Female'" th:text="Female"></option>
-                </select>
-            </td>
-        </tr>
+<!--        <tr>-->
+<!--            <td>Gender:</td>-->
+<!--            <td>-->
+<!--                <select th:field="*{customerGender}">-->
+<!--                    <option th:value="'Male'" th:text="Male"></option>-->
+<!--                    <option th:value="'Female'" th:text="Female"></option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
         <tr>
             <td>Identification:</td>
-            <td><input type="text" th:field="*{customerIdCard}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}"></td>
+            <td><input type="text" th:field="*{idCard}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{IdCard}"></td>-->
 
         </tr>
         <tr>
             <td>Phone:</td>
-            <td><input type="text" th:field="*{customerPhone}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></td>
+            <td><input type="text" th:field="*{phone}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{Phone}"></td>-->
 
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" th:field="*{customerEmail}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}"></td>
+            <td><input type="text" th:field="*{email}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{email}"></td>-->
 
         </tr>
         <tr>
             <td>Address:</td>
-            <td><input type="text" th:field="*{customerAddress}"/></td>
-            <td class="error-color" th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}"></td>
+            <td><input type="text" th:field="*{address}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{address}"></td>-->
         </tr>
         <tr>
-            <td>Customer Type:</td>
+            <td>Salary:</td>
+            <td><input type="text" th:field="*{salary}"/></td>
+<!--            <td class="error-color" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></td>-->
+        </tr>
+        <tr>
+            <td>Education degree:</td>
             <td>
-                <select th:field="*{customerType}">
-                    <option th:each="p : ${customerType}" th:value="${p.getCustomerTypeId()}"
-                            th:text="${p.customerTypeName}"></option>
+                <select th:field="*{educationDegree}">
+                    <option th:each="p : ${educationDegrees}" th:value="${p.educationDegreeId}"
+                            th:text="${p.educationName}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Position:</td>
+            <td>
+                <select th:field="*{position}">
+                    <option th:each="p : ${positions}" th:value="${p.positionId}"
+                            th:text="${p.positionName}"></option>
+                </select>
+            </td>
+        </tr> <tr>
+            <td>Division:</td>
+            <td>
+                <select th:field="*{division}">
+                    <option th:each="p : ${divisions}" th:value="${p.divisionId}"
+                            th:text="${p.divisionName}"></option>
                 </select>
             </td>
         </tr>
 
         <tr>
             <td></td>
-            <td><input type="submit" value="Create customer"></td>
+            <td><input type="submit" value="Create employee"></td>
         </tr>
     </table>
 </form>

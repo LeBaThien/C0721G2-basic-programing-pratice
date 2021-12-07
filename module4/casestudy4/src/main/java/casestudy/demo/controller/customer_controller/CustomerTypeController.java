@@ -28,25 +28,25 @@ public class CustomerTypeController {
     }
 
 
-//    @GetMapping("/create-customer")
-//    public ModelAndView showCreateForm() {
-//        ModelAndView modelAndView = new ModelAndView("/customer/create");
+    @GetMapping("/create-customer-type")
+    public ModelAndView showCreateFormCustomerType() {
+        ModelAndView modelAndView = new ModelAndView("/customer_type/create");
 //        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
-//        modelAndView.addObject("customer", new Customer());
+        modelAndView.addObject("customerType", new CustomerType());
 //        modelAndView.addObject("customerType", customerTypes );
-//        return modelAndView;
-//    }
+        return modelAndView;
+    }
 //
-//    @PostMapping("/create-customer")
-//    public ModelAndView saveCustomer(@ModelAttribute("customer") Customer customer) {
-//        customerService.save(customer);
-////        ModelAndView modelAndView = new ModelAndView("/customer/create");
-////        dùng redirect chổ này nó có thể tạo liên tục được
-//        ModelAndView modelAndView = new ModelAndView("redirect:/create-customer");
-//        modelAndView.addObject("customer", new Customer());
-//        modelAndView.addObject("message", "New customer created successfully !!!");
-//        return modelAndView;
-//    }
+    @PostMapping("/create-customer-type")
+    public String saveCustomer(@ModelAttribute("customerType") CustomerType customerType, Model model) {
+        customerTypeService.save(customerType);
+//        ModelAndView modelAndView = new ModelAndView("/customer/create");
+//        dùng redirect chổ này nó có thể tạo liên tục được
+//        ModelAndView modelAndView = new ModelAndView("redirect:/create-customer-type");
+        model.addAttribute("customerType", new CustomerType());
+        model.addAttribute("message", "New customer Type created successfully !!!");
+        return "customer_type/create";
+    }
 
     @GetMapping("/show-customer-type")
     public String listCustomersType(Optional<Customer> customer,
@@ -104,25 +104,25 @@ public class CustomerTypeController {
 //        return modelAndView;
 //    }
 //
-//    @GetMapping("/delete-customer/{id}")
-//    public ModelAndView showDeleteForm(@PathVariable int id) {
-//        Optional<Customer> customer = customerService.findById(id);
-//        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
-//        if (customer.isPresent()) {
-//            ModelAndView modelAndView = new ModelAndView("/customer/delete");
-//            modelAndView.addObject("customer", customer.get());
+    @GetMapping("/delete-customer-type/{id}")
+    public ModelAndView showDeleteFormCustomerType(@PathVariable int id) {
+        Optional<CustomerType> customerType = customerTypeService.findById(id);
+        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
+        if (customerType.isPresent()) {
+            ModelAndView modelAndView = new ModelAndView("/customer_type/delete");
+            modelAndView.addObject("customerType", customerType.get());
 //            modelAndView.addObject("customerType", customerTypes );
-//            return modelAndView;
+            return modelAndView;
+
+        } else {
+            ModelAndView modelAndView = new ModelAndView("/error.404");
+            return modelAndView;
+        }
+    }
 //
-//        } else {
-//            ModelAndView modelAndView = new ModelAndView("/error.404");
-//            return modelAndView;
-//        }
-//    }
-//
-//    @PostMapping("/delete-customer")
-//    public String deleteCustomer(@ModelAttribute("customer") Customer customer) {
-//        customerService.remove(customer.getCustomerId());
-//        return "redirect:customers";
-//    }
+    @PostMapping("/delete-customer-type")
+    public String deleteCustomer(@ModelAttribute("customerType") CustomerType customerType) {
+        customerTypeService.remove(customerType.getCustomerTypeId());
+        return "redirect:show-customer-type";
+    }
 }

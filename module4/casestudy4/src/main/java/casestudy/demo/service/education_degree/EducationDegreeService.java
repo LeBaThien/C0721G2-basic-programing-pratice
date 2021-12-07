@@ -3,14 +3,13 @@ package casestudy.demo.service.education_degree;
 
 import casestudy.demo.model.employee.EducationDegree;
 import casestudy.demo.repository.employee_repository.IEducationRepository;
-import casestudy.demo.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
-public class EducationDegreeService implements IEducationDegree {
+public class EducationDegreeService implements IEducationDegreeService {
     @Autowired
     private IEducationRepository educationRepository;
 

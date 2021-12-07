@@ -10,12 +10,14 @@
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
 <div>
     <a class="btn btn-primary" href="/index" role="button">Home</a>
-    <a class="btn btn-primary" href="/create-customer" role="button">Create new customer</a>
-    <a class="btn btn-primary" href="/customers" role="button">List customer</a>
+    <a class="btn btn-primary" href="/create-employee" role="button">Create new employee</a>
+    <a class="btn btn-primary" href="/employees" role="button">List employee</a>
 <!--    <a class="btn btn-primary" href="/create-customer-type" role="button">Create customer type</a>-->
 <!--    <a class="btn btn-primary" href="/edit-customer-type" role="button">Edit customer type</a>-->
 <!--    <a class="btn btn-primary" href="/delete-customer-type" role="button">Delete customer type</a>-->
-    <a class="btn btn-primary" href="/show-customer-type" role="button">Show customer type</a>
+    <a class="btn btn-primary" href="/show-division-type" role="button">Show division type</a>
+    <a class="btn btn-primary" href="/show-education-type" role="button">Show education degree type</a>
+    <a class="btn btn-primary" href="/show-position-type" role="button">Show position type</a>
 
     <form style="margin-left: 75%" action="/search-by-phone" method="get">
         <label for="idSearch">Search by phone</label>
@@ -23,7 +25,7 @@
             <tr>
                 <td>
                     <input type="text" placeholder=" Input here to search"
-                           id="idSearch" name="customerPhone">
+                           id="idSearch" name="employeePhone">
                 </td>
             </tr>
             <tr>

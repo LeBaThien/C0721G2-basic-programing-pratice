@@ -78,20 +78,23 @@ public class CustomerController {
                                       Model model,
                                       @PageableDefault(size=7)Pageable pageable
                                       ) {
-        if(customer.isPresent()){
-            model.addAttribute("customers", customerService.findAllCustomer(pageable));
+        if(!phone.isPresent()){
+//            model.addAttribute("customers", customerService.findAllCustomer(pageable));
+//            model.addAttribute("countCustomer", customerService.countByCustomerId());
 
-//            if(customerTypeId.isPresent()){
-//                model.addAttribute("customers", customerService.findAllCustomer(pageable));
-//                model.addAttribute("customerTypeId", customerTypeId.get());
-//            }else {
-//                model.addAttribute("customers", customerService.findAllCustomer(pageable));
-//            }
+            if(customerTypeId.isPresent()){
+                model.addAttribute("customers", customerService.findCustomerByCustomerTypeId(customerTypeId.get(),pageable));
+                model.addAttribute("customerTypeId", customerTypeId.get());
+            }else {
+                model.addAttribute("customers", customerService.findAllCustomer(pageable));
+            }
         } else {
             model.addAttribute("customers", customerService.findCustomerByCustomerPhone(phone.get(),pageable));
             model.addAttribute("customerPhone", phone.get());
 
         }
+        model.addAttribute("customerType", customerTypeService.findAll());
+        model.addAttribute("totalCustomer", customerService.countByCustomerId());
 //        model.addAttribute("customerType", customerTypeService.findAllCustomerType(pageable));
 //        Iterable<Customer> customers = customerService.findAll();
 //        ModelAndView modelAndView = new ModelAndView("/customer/list");

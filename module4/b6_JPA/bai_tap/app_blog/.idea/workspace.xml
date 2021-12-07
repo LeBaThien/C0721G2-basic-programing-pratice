@@ -2,46 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c47792f-8b92-4940-b813-e04259a0a2db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/java/library/demo/service/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/css_style/libary_style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/bai_tap/library/src/main/resources/templates/listdemo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/aspect/logger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/model/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/CustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/impl/CustomerServiceImplWithSpringData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/classes/java/main/application/service/impl/CustomerServiceImplWithSpringData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/CustomerServiceImplWithSpringData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b9.AOP_and_exception_handling/thuc_hanh/customer_management/src/main/java/application/service/impl/CustomerServiceImplWithSpringData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/AttachService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/ContractDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/contract/ContractDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/user/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/customer_controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/customer_controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/customer_controller/CustomerTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/customer_controller/CustomerTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/employee_controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/employee_controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/repository/customer_repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/repository/customer_repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/customer/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/customer/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/education_degree/EducationDegreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/education_degree/EducationDegreeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/education_degree/IEducationDegree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/service/education_degree/IEducationDegreeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer_type/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/employee/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/employee/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/employee/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/employee/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +60,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -263,6 +242,7 @@
       <workItem from="1637570502535" duration="24000" />
       <workItem from="1637574751958" duration="36000" />
       <workItem from="1637756705451" duration="19000" />
+      <workItem from="1638843798898" duration="56000" />
     </task>
     <servers />
   </component>
@@ -297,54 +277,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="992" y="246" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1637228708508" />
-    <state width="1293" height="196" key="GridCell.Tab.0.bottom" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.0.bottom" timestamp="1638843854645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.0.center" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854645" />
+    <state width="1293" height="291" key="GridCell.Tab.0.center" timestamp="1638843854645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.0.left" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854645" />
+    <state width="1293" height="291" key="GridCell.Tab.0.left" timestamp="1638843854645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.0.right" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854645" />
+    <state width="1293" height="291" key="GridCell.Tab.0.right" timestamp="1638843854645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.1.bottom" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854645" />
+    <state width="1293" height="291" key="GridCell.Tab.1.bottom" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.1.center" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.1.center" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.1.left" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.1.left" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.1.right" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.1.right" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.2.bottom" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.2.bottom" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.2.center" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.2.center" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.2.left" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.2.left" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
-    <state width="1293" height="196" key="GridCell.Tab.2.right" timestamp="1637253677617">
+    <state width="1293" height="291" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
+    <state width="1293" height="291" key="GridCell.Tab.2.right" timestamp="1638843854646">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="196" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1637253677617" />
+    <state width="1293" height="291" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1638843854646" />
     <state x="342" y="130" key="new project wizard" timestamp="1637228709666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

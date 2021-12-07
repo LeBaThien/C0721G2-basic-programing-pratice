@@ -5,5 +5,5 @@ import casestudy.demo.service.IGeneralService;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface IEducationDegree extends IGeneralService<EducationDegree> {
+public interface IEducationDegreeService extends IGeneralService<EducationDegree> {
 }

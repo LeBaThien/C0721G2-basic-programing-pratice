@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class CustomerService implements ICustomerService {
@@ -42,4 +43,22 @@ public class CustomerService implements ICustomerService {
     public Page<Customer> findAllCustomer(Pageable pageable) {
         return customerRepository.findAll(pageable);
     }
+
+    @Override
+    public int countByCustomerId() {
+        List<Customer> customerList = (List<Customer>) customerRepository.findAll();
+        return customerList.size();
+    }
+
+//    @Override
+//    public String countByCustomerId() {
+//        return null;
+//    }
+
+    @Override
+    public Page<Customer> findCustomerByCustomerTypeId(int id, Pageable pageable) {
+        return customerRepository.findCustomerByCustomerTypeId(id,pageable);
+    }
+
+
 }

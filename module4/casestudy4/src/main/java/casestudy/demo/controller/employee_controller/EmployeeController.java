@@ -2,12 +2,12 @@ package casestudy.demo.controller.employee_controller;
 
 
 
+import casestudy.demo.model.employee.Division;
+import casestudy.demo.model.employee.EducationDegree;
 import casestudy.demo.model.employee.Employee;
-import casestudy.demo.repository.employee_repository.IDivisionRepository;
-import casestudy.demo.repository.employee_repository.IEducationRepository;
-import casestudy.demo.repository.employee_repository.IPositionRepository;
+import casestudy.demo.model.employee.Position;
 import casestudy.demo.service.division.IDivisionService;
-import casestudy.demo.service.education_degree.IEducationDegree;
+import casestudy.demo.service.education_degree.IEducationDegreeService;
 import casestudy.demo.service.employee.IEmployeeService;
 import casestudy.demo.service.position.IPositionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class EmployeeController {
     private IPositionService positionService;
 
     @Autowired
-    private IEducationRepository educationRepository;
+    private IEducationDegreeService educationDegreeService;
 
 //    @ModelAttribute("customer-type")
 //    public Iterable<CustomerType> customerTypes(){
@@ -50,37 +50,42 @@ public class EmployeeController {
 //    }
 //
 //
-//    @GetMapping("/create-customer")
-//    public ModelAndView showCreateForm() {
-//        ModelAndView modelAndView = new ModelAndView("/customer/create");
-//        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
-//        modelAndView.addObject("customer", new Customer());
-//        modelAndView.addObject("customerType", customerTypes );
-//        return modelAndView;
-//    }
-//
-//    @PostMapping("/create-customer")
-////    Nên dùng string ,,, chứ ko dùng modelandview, dùng string giữ lại dữ liệu đang tạo mới,
-//    public String saveCustomer(@Valid @ModelAttribute("customer") Customer customer,
-//                               BindingResult bindingResult,
-//                               Model model) {
-//        new Customer().validate(customer, bindingResult);
+    @GetMapping("/create-employee")
+    public ModelAndView showCreateForm() {
+        ModelAndView modelAndView = new ModelAndView("/employee/create");
+        Iterable<Division> divisions = divisionService.findAll();
+        Iterable<EducationDegree> educationDegrees = educationDegreeService.findAll();
+        Iterable<Position> positions = positionService.findAll();
+
+        modelAndView.addObject("employee", new Employee());
+        modelAndView.addObject("divisions", divisions );
+        modelAndView.addObject("educationDegrees", educationDegrees );
+        modelAndView.addObject("positions", positions );
+        return modelAndView;
+    }
+
+    @PostMapping("/create-employee")
+//    Nên dùng string ,,, chứ ko dùng modelandview, dùng string giữ lại dữ liệu đang tạo mới,
+    public String saveEmployee(@Valid @ModelAttribute("employee") Employee employee,
+                               BindingResult bindingResult,
+                               Model model) {
+//        new Employee().validate(employee, bindingResult);
 //        if(bindingResult.hasFieldErrors()){
 //            Iterable<CustomerType> customerTypes = customerTypeService.findAll();
 //            model.addAttribute("customerType", customerTypes );
 //            return "customer/create";
 //
 //        } else {
-//            customerService.save(customer);
-////        ModelAndView modelAndView = new ModelAndView("/customer/create");
-////        dùng redirect chổ này nó có thể tạo liên tục được
-////            ModelAndView modelAndView = new ModelAndView("customer/create");
-//            model.addAttribute("customer", new Customer());
-//            model.addAttribute("message", "New customer created successfully !!!");
-//            return "customer/create";
+            employeeService.save(employee);
+//        ModelAndView modelAndView = new ModelAndView("/customer/create");
+//        dùng redirect chổ này nó có thể tạo liên tục được
+//            ModelAndView modelAndView = new ModelAndView("customer/create");
+            model.addAttribute("employee", new Employee());
+            model.addAttribute("message", "New employee created successfully !!!");
+            return "employee/create";
 //        }
-//
-//    }
+
+    }
 
     @GetMapping("/employees")
     public String listEmployees(Optional<Employee> employee,
@@ -98,13 +103,7 @@ public class EmployeeController {
         return "/employee/list";
     }
 
-//    @GetMapping("/index")
-//    public ModelAndView list() {
-////        Iterable<Customer> customers = customerService.findAll();
-//        ModelAndView modelAndView = new ModelAndView("/page/index");
-////        modelAndView.addObject("customers", customers);
-//        return modelAndView;
-//    }
+
 
 
 //    @GetMapping("/edit-customer/{id}")

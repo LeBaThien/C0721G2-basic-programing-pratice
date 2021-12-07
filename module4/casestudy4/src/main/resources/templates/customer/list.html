@@ -5,108 +5,398 @@
     <title>Title</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <!--    <style>-->
+    <!--        html{-->
+    <!--            background-image: url("http://jmd.im/wp-content/uploads/2017/06/blackiii_thumbnail.jpg");-->
+    <!--        }-->
+    <!--    </style>-->
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+            color: black;
+        }
+
+        /*    sidebar*/
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
     <head th:replace="/layout :: head">
     </head>
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
-<div>
-    <a class="btn btn-primary" href="/index" role="button">Home</a>
-    <a class="btn btn-primary" href="/create-customer" role="button">Create new customer</a>
-    <a class="btn btn-primary" href="/customers" role="button">List customer</a>
-<!--    <a class="btn btn-primary" href="/create-customer-type" role="button">Create customer type</a>-->
-<!--    <a class="btn btn-primary" href="/edit-customer-type" role="button">Edit customer type</a>-->
-<!--    <a class="btn btn-primary" href="/delete-customer-type" role="button">Delete customer type</a>-->
-    <a class="btn btn-primary" href="/show-customer-type" role="button">Show customer type</a>
+<!--navbar-->
 
-    <form style="margin-left: 75%" action="/search-by-phone" method="get">
-        <label for="idSearch">Search by phone</label>
-        <table>
-            <tr>
-                <td>
-                    <input type="text" placeholder=" Input here to search"
-                           id="idSearch" name="customerPhone">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="/index">Home</a>
+        <a href="/create-customer">Create new customer</a>
+        <a href="/customers">List customer</a>
+        <a href="/show-customer-type">Show customer type</a>
+    </div>
 
-</div>
+    <div>
+
+    </div>
+    <div>
+        <button id="main" class="openbtn" onclick="openNav()">☰ Menu Sidebar</button>
+        <a class="btn btn-primary" href="/index" role="button">Home</a>
+        <a class="btn btn-primary" href="/create-customer" role="button">Create new customer</a>
+        <a class="btn btn-primary" href="/customers" role="button">List customer</a>
+        <a class="btn btn-primary" href="/show-customer-type" role="button">Show customer type</a>
+        <button class="btn btn-dark" onclick="myFunction()">Toggle dark mode</button>
+
+    </div>
 
 
-<!--thay doi ngon ngu i18n-->
-<!--<form action="" method="get">-->
-<!--    <select name="lang">-->
-<!--        <option value="vi">VietNamese</option>-->
-<!--        <option value="en">English</option>-->
-<!--        <option value="cn">China</option>-->
-<!--        <option value="ko">Korean</option>-->
-<!--        <option value="ja">Japan</option>-->
-<!--    </select>-->
-<!--    <button type="submit">Change language</button>-->
-<!--</form>-->
+<!--body-->
+    <br>
+    <br>
+    <h4>Customers Manager</h4>
+    <table class="row" style="margin-top: 10px; font-size: 20px">
 
-<br>
-
-<h4>Customers Manager</h4>
-<table border="1" id="customers">
-    <tr>
-        <th>Id</th>
-        <th>Address</th>
-        <th>Birthday</th>
-        <th>Email</th>
-        <th>Gender</th>
-        <th>Identification</th>
-        <th>Name</th>
-        <th>Phone</th>
-        <th>Customer Type</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-    <th:block th:each="customer : ${customers}">
         <tr>
-            <td th:text="${customer.customerId}"></td>
-            <td th:text="${customer.customerAddress}"></td>
-            <td th:text="${customer.customerBirthday}"></td>
-            <td th:text="${customer.customerEmail}"></td>
-            <td th:text="${customer.customerGender}"></td>
-            <td th:text="${customer.customerIdCard}"></td>
-            <td th:text="${customer.customerName}"></td>
-            <td th:text="${customer.customerPhone}"></td>
-            <!--            <td th:text="${customer.customerType.customerTypeName}"></td>-->
-            <td th:if="${customer.customerType}" th:text="${customer.customerType.customerTypeName}"></td>
-            <td th:unless="${customer.customerType}"></td>
-            <td><a th:href="@{/edit-customer/__${customer.customerId}__ }">Edit</a></td>
-            <td><a th:href="@{/delete-customer/__${customer.customerId}__ }">Delete</a></td>
+            <td class="row-cols-3 btn">
+                <!-- Customers Card -->
+                <div class="col-xxl-4 col-xl-12">
+
+                    <div class="card info-card customers-card">
+
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Filter</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Total <span>| Customer</span></h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6 th:text="${totalCustomer}"></h6>
+                                    <span class="text-danger small pt-1 fw-bold">12%</span> <span
+                                        class="text-muted small pt-2 ps-1">decrease</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div><!-- End Customers Card -->
+            </td>
+            <td class="row-cols-3 btn">
+                <!-- Revenue Card -->
+                <div class="col-xxl-4 col-xl-12">
+                    <div class="card info-card revenue-card">
+
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Filter</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body ">
+                            <h5 class="card-title">Revenue <span>| This Month</span></h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-currency-dollar"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>$3,264</h6>
+                                    <span class="text-success small pt-1 fw-bold">8%</span> <span
+                                        class="text-muted small pt-2 ps-1">increase</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- End Revenue Card -->
+            </td>
+            <td class="row-cols-3 btn">
+                <!-- Sales Card -->
+                <div class="col-xxl-4 col-xl-12">
+                    <div class="card info-card sales-card">
+
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Filter</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sales <span>| Today</span></h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-cart"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <h6>145</h6>
+                                    <span class="text-success small pt-1 fw-bold">12%</span> <span
+                                        class="text-muted small pt-2 ps-1">increase</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- End Sales Card -->
+            </td>
+
+            <td class="row-cols-3 zoom btn">
+                <!-- Customers Card -->
+                <div class="col-xxl-4 col-xl-12">
+
+                    <div class="card info-card customers-card">
+
+                        <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                    <h6>Filter</h6>
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                                <li><a class="dropdown-item" href="#">This Year</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Filter <span>| Customer</span></h5>
+
+                            <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div class="ps-3">
+                                    <form>
+                                        <!--                                <span class="text-danger small pt-1 fw-bold">20%</span> <span class="text-muted small pt-2 ps-1">decrease</span>-->
+                                        <h6><label>By Customer Type</label></h6>
+                                        <select onchange="this.form.submit()" th:name="customerTypeId"
+                                                th:value="${customerTypeId}">
+                                            <option value="" disabled selected>Choose customer type</option>
+                                            <th:block th:each="e : ${customerType}">
+                                                <option th:value="${e.customerTypeId}"
+                                                        th:text="${e.customerTypeName}"></option>
+                                            </th:block>
+
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div><!-- End Customers Card -->
+            </td>
+            <td>
+                <form style="margin-left: 50%; margin-top: 0px;" action="/search-by-phone" method="get">
+                    <!--                <label for="idSearch">Search by phone</label>-->
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Input phone name to search "
+                                       id="idSearch" name="customerPhone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Search">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
         </tr>
-    </th:block>
-</table>
-<!--phân trang-->
-<!--<div>-->
-<!--    <a th:href="@{'/customers'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
-<!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
-<!--    <a th:href="@{'customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
-<!--</div>-->
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" th:href="@{'/customers'(page=${customers.number -1})}"
-                                 th:if="${customers.hasPrevious()}">Previous</a></li>
-        <!--        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-        <!--        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-        <!--        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
-        <li class="page-item"><span class="page-link" th:text="${customers.number + 1}"></span></li>
-        <li class="page-item"><a class="page-link">/</a></li>
-        <li class="page-item"><span class="page-link" th:text="${customers.totalPages}"></span></li>
-        <li class="page-item"><a class="page-link" th:href="@{'customers'(page=${customers.number + 1})}"
-                                 th:if="${customers.hasNext()}">Next</a></li>
-    </ul>
-</nav>
+    </table>
 
 
-<footer th:replace="/layout :: footer"></footer>
-<script rel="script" src="js/bootstrap.min.js"></script>
+    <!--thay doi ngon ngu i18n-->
+    <!--<form action="" method="get">-->
+    <!--    <select name="lang">-->
+    <!--        <option value="vi">VietNamese</option>-->
+    <!--        <option value="en">English</option>-->
+    <!--        <option value="cn">China</option>-->
+    <!--        <option value="ko">Korean</option>-->
+    <!--        <option value="ja">Japan</option>-->
+    <!--    </select>-->
+    <!--    <button type="submit">Change language</button>-->
+    <!--</form>-->
+
+    <br>
+
+
+    <table border="1" id="customers">
+        <tr>
+            <th>Id</th>
+            <th>Address</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Identification</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Customer Type</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <th:block th:each="customer : ${customers}">
+            <tr>
+                <td th:text="${customer.customerId}"></td>
+                <td th:text="${customer.customerAddress}"></td>
+                <td th:text="${customer.customerBirthday}"></td>
+                <td th:text="${customer.customerEmail}"></td>
+                <td th:text="${customer.customerGender}"></td>
+                <td th:text="${customer.customerIdCard}"></td>
+                <td th:text="${customer.customerName}"></td>
+                <td th:text="${customer.customerPhone}"></td>
+                <!--            <td th:text="${customer.customerType.customerTypeName}"></td>-->
+                <td th:if="${customer.customerType}" th:text="${customer.customerType.customerTypeName}"></td>
+                <td th:unless="${customer.customerType}"></td>
+                <td><a th:href="@{/edit-customer/__${customer.customerId}__ }">Edit</a></td>
+                <td><a th:href="@{/delete-customer/__${customer.customerId}__ }">Delete</a></td>
+            </tr>
+        </th:block>
+    </table>
+    <!--phân trang-->
+    <!--<div>-->
+    <!--    <a th:href="@{'/customers'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+    <!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+    <!--    <a th:href="@{'customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
+    <!--</div>-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" th:href="@{'/customers'(page=${customers.number -1})}"
+                                     th:if="${customers.hasPrevious()}">Previous</a></li>
+            <!--        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
+            <!--        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
+            <!--        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
+            <li class="page-item"><span class="page-link" th:text="${customers.number + 1}"></span></li>
+            <li class="page-item"><a class="page-link">/</a></li>
+            <li class="page-item"><span class="page-link" th:text="${customers.totalPages}"></span></li>
+            <li class="page-item"><a class="page-link" th:href="@{'customers'(page=${customers.number + 1})}"
+                                     th:if="${customers.hasNext()}">Next</a></li>
+        </ul>
+    </nav>
+
+
+    <footer th:replace="/layout :: footer"></footer>
+    <script rel="script" src="js/bootstrap.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+        //sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
 </body>
 </html>
