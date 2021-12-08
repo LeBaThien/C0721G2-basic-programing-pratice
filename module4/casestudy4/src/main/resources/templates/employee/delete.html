@@ -9,69 +9,75 @@
 
     </head>
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
-<h1>Do you want to delete this customer?</h1>
+
 <p>
-    <a class="btn btn-primary" href="/customers" role="button">Back to home</a>
+    <a class="btn btn-primary" href="/employees" role="button">Back to home</a>
 </p>
 <!--Message-->
 <th:block th:if="${message}">
     <p style="font-size: large; color: darkblue" th:text="${message}"></p>
 </th:block>
-<form th:action="@{/delete-customer}" th:object="${customer}" method="post">
+<form th:action="@{/delete-employee}" th:object="${employee}" method="post">
 
     <table style="font-weight: bold; font-size: large" readonly="">
         <tr>
-            <td>Customer Id:</td>
-            <td><input th:type="text" name="id" th:field="*{customerId}"></td>
+            <td>Employee Id:</td>
+            <td><input th:type="text" name="id" th:field="*{employeeId}" readonly></td>
         </tr>
 
         <tr>
-            <td>Customer Name:</td>
-            <td><input type="text" th:field="*{customerName}"/></td>
+            <td>Employee Name:</td>
+            <td><input type="text" th:field="*{employeeName}" readonly/></td>
         </tr>
         <tr>
             <td>Birth day:</td>
-            <td><input type="date" th:field="*{customerBirthday}"/></td>
+            <td><input type="date" th:field="*{employeeBirthday}" readonly/></td>
         </tr>
-        <tr>
-            <td>Gender:</td>
-            <td>
-                <select th:field="*{customerGender}">
-                    <option th:value="'Male'" th:text="Male"></option>
-                    <option th:value="'Female'" th:text="Female"></option>
-                </select>
-            </td>
-        </tr>
+<!--        <tr>-->
+<!--            <td>Gender:</td>-->
+<!--            <td>-->
+<!--                <select th:field="*{customerGender}">-->
+<!--                    <option th:value="'Male'" th:text="Male"></option>-->
+<!--                    <option th:value="'Female'" th:text="Female"></option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
         <tr>
             <td>Identification:</td>
-            <td><input type="text" th:field="*{customerIdCard}"/></td>
+            <td><input type="text" th:field="*{idCard}" readonly/></td>
         </tr>
         <tr>
             <td>Phone:</td>
-            <td><input type="text" th:field="*{customerPhone}"/></td>
+            <td><input type="text" th:field="*{phone}" readonly/></td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" th:field="*{customerEmail}"/></td>
+            <td><input type="text" th:field="*{email}" readonly/></td>
         </tr>
         <tr>
             <td>Address:</td>
-            <td><input type="text" th:field="*{customerAddress}"/></td>
+            <td><input type="text" th:field="*{address}" readonly/></td>
         </tr>
         <tr>
-            <td>Province:</td>
-            <td>
-                <select name="customerType">
-                    <option th:each="p : ${customerType}"
-                            th:value="${p.customerTypeId}"
-                            th:text="${p.customerTypeName}"
-                            th:selected="(${customer.customerType}) and (${p.customerTypeId} == *{customerType.customerTypeId})"></option>
-                </select>
-            </td>
+            <td>Education degree:</td>
+            <td th:text="${employee.educationDegree.educationName}" readonly></td>
+        </tr>
+        <tr>
+            <td>Division: </td>
+            <td th:text="${employee.division.divisionName}" readonly></td>
+        </tr>
+        <tr>
+            <td>Position: </td>
+            <td th:text="${employee.position.positionName}" readonly></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Delete customer"></td>
+<!--            <td><input type="submit" value="Delete customer"-->
+<!--                th:onclick="'javascript:actionDelete(\'' + ${employee.employeeId}+'\);'">-->
+<!--            </td>-->
+            <td><input type="submit" value="Delete employee"
+                th:onclick="'javascript:actionDelete()'">
+            </td>
         </tr>
     </table>
 </form>

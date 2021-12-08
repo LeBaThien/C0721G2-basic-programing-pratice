@@ -1,6 +1,8 @@
 package casestudy.demo.controller;
 
 
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -9,23 +11,38 @@ import java.security.Principal;
 
 @Controller
 public class UserController {
-//    @GetMapping("/")
-//    public ModelAndView index() {
-//        return new ModelAndView("login/index");
-//    }
-//
-//    @GetMapping("/user")
+    @GetMapping("/")
+    public ModelAndView index() {
+        return new ModelAndView("login/index");
+    }
+
+    //    @GetMapping("/user")
 //    public ModelAndView user(Principal principal) {
 //        // Get authenticated user name from Principal
 //        System.out.println(principal.getName());
-//        return new ModelAndView("login/index");
+//        return new ModelAndView("page/index");
 //    }
-//
 //    @GetMapping("/admin")
 //    public ModelAndView admin() {
 //        // Get authenticated user name from SecurityContext
 //        SecurityContext context = SecurityContextHolder.getContext();
 //        System.out.println(context.getAuthentication().getName());
-//        return new ModelAndView("login/admin");
+//        return new ModelAndView("customer/list");
 //    }
+
+    @GetMapping("/user")
+    public String user(Principal principal) {
+        // Get authenticated user name from Principal
+//        System.out.println(principal.getName());
+        return "page/index";
+    }
+
+//    @GetMapping("/admin")
+//    public String admin() {
+//        // Get authenticated user name from SecurityContext
+////        SecurityContext context = SecurityContextHolder.getContext();
+////        System.out.println(context.getAuthentication().getName());
+//        return "page/index";
+//    }
+
 }

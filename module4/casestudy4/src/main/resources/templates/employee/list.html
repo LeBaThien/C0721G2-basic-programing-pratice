@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <head th:replace="/layout :: head">
     </head>
+    <script>
+        // $(document).ready(function () {
+        //     $("")
+        // })
+        function showDelete(employeeId) {
+            $.ajax({
+                type:"GET",
+                url: "delete-employee/" + employeeId,
+                dataType:"HTML",
+                success: function(data){
+                    $(".modal-body").html(data);
+                    $("#staticBackdrop").modal("show")
+                }
+            })
+        }
+
+        function actionDelete() {
+            $.ajax({
+                type: "POST",
+                url: "delete-employee/",
+                dataType: "HTML",
+                success: function (data) {
+                    let message ="Delete successfully!!!"
+                    setTimeout(function () {
+                        $("#staticBackdrop").modal("hide");
+                    }, 2000);
+                    $("#customers").html(data);
+                    $(".modal-body").html(message);
+                }
+            })
+        }
+
+    </script>
+</head>
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
 <div>
     <a class="btn btn-primary" href="/index" role="button">Home</a>
@@ -88,23 +122,46 @@
 <!--            <td th:if="${customer.customerType}" th:text="${customer.customerType.customerTypeName}"></td>-->
 <!--            <td th:unless="${customer.customerType}"></td>-->
             <td><a th:href="@{/edit-employee/__${employee.employeeId}__ }">Edit</a></td>
-            <td><a th:href="@{/delete-employee/__${employee.employeeId}__ }">Delete</a></td>
+            <td><button id="clickDelete"  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        th:onclick="'javascript:showDelete(\''+${employee.employeeId}+'\');'">
+
+<!--                <button  class="delete_ajax btn btn-success">Delete</button>-->
+<!--                <input type="hidden" th:value="${row.id}">-->
+<!--                <a th:href="@{/delete-employee/__${employee.employeeId}__ }">Delete</a>-->
+                Delete
+            </button></td>
         </tr>
     </th:block>
 </table>
+<!--modal delete-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    <h4>Do you want to delete this customer?</h4>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+<!--                ...-->
+            </div>
+            <div class="modal-footer">
+<!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Delete</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--phân trang-->
-<!--<div>-->
-<!--    <a th:href="@{'/customers'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
-<!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
-<!--    <a th:href="@{'customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
-<!--</div>-->
 <nav aria-label="Page navigation example">
     <ul class="pagination">
         <li class="page-item"><a class="page-link" th:href="@{'/employees'(page=${employees.number -1})}"
                                  th:if="${employees.hasPrevious()}">Previous</a></li>
-        <!--        <li class="page-item"><a class="page-link" href="#">1</a></li>-->
-        <!--        <li class="page-item"><a class="page-link" href="#">2</a></li>-->
-        <!--        <li class="page-item"><a class="page-link" href="#">3</a></li>-->
         <li class="page-item"><span class="page-link" th:text="${employees.number + 1}"></span></li>
         <li class="page-item"><a class="page-link">/</a></li>
         <li class="page-item"><span class="page-link" th:text="${employees.totalPages}"></span></li>

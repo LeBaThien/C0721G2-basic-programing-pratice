@@ -1,7 +1,6 @@
 package casestudy.demo.controller.employee_controller;
 
 
-
 import casestudy.demo.model.employee.Division;
 import casestudy.demo.model.employee.EducationDegree;
 import casestudy.demo.model.employee.Employee;
@@ -21,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.Optional;
+
 @Controller
 public class EmployeeController {
     @Autowired
@@ -40,7 +40,7 @@ public class EmployeeController {
 //        return customerTypeService.findAll();
 //    }
 
-//    @GetMapping("/search-by-phone")
+    //    @GetMapping("/search-by-phone")
 //    public ModelAndView searchCustomersByPhone(@RequestParam("customerPhone") String phoneCustomer, Pageable pageable) {
 //
 //        Iterable<Customer> customers = customerService.findCustomerByCustomerPhone(phoneCustomer, pageable );
@@ -58,9 +58,9 @@ public class EmployeeController {
         Iterable<Position> positions = positionService.findAll();
 
         modelAndView.addObject("employee", new Employee());
-        modelAndView.addObject("divisions", divisions );
-        modelAndView.addObject("educationDegrees", educationDegrees );
-        modelAndView.addObject("positions", positions );
+        modelAndView.addObject("divisions", divisions);
+        modelAndView.addObject("educationDegrees", educationDegrees);
+        modelAndView.addObject("positions", positions);
         return modelAndView;
     }
 
@@ -76,13 +76,13 @@ public class EmployeeController {
 //            return "customer/create";
 //
 //        } else {
-            employeeService.save(employee);
+        employeeService.save(employee);
 //        ModelAndView modelAndView = new ModelAndView("/customer/create");
 //        dùng redirect chổ này nó có thể tạo liên tục được
 //            ModelAndView modelAndView = new ModelAndView("customer/create");
-            model.addAttribute("employee", new Employee());
-            model.addAttribute("message", "New employee created successfully !!!");
-            return "employee/create";
+        model.addAttribute("employee", new Employee());
+        model.addAttribute("message", "New employee created successfully !!!");
+        return "/employee/create";
 //        }
 
     }
@@ -91,9 +91,9 @@ public class EmployeeController {
     public String listEmployees(Optional<Employee> employee,
 //                                Optional<String> phone,
                                 Model model,
-                                @PageableDefault(size=7)Pageable pageable
+                                @PageableDefault(size = 7) Pageable pageable
     ) {
-        if(employee.isPresent()){
+        if (employee.isPresent()) {
             model.addAttribute("employees", employeeService.findAllEmployee(pageable));
 
         }
@@ -104,9 +104,7 @@ public class EmployeeController {
     }
 
 
-
-
-//    @GetMapping("/edit-customer/{id}")
+    //    @GetMapping("/edit-customer/{id}")
 //    public ModelAndView showEditForm(@PathVariable int id) {
 //        Optional<Customer> customer = customerService.findById(id);
 //        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
@@ -130,26 +128,30 @@ public class EmployeeController {
 //        return modelAndView;
 //    }
 //
-//    @GetMapping("/delete-customer/{id}")
-//    public ModelAndView showDeleteForm(@PathVariable int id) {
-//        Optional<Customer> customer = customerService.findById(id);
-//        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
-//        if (customer.isPresent()) {
-//            ModelAndView modelAndView = new ModelAndView("/customer/delete");
-//            modelAndView.addObject("customer", customer.get());
-//            modelAndView.addObject("customerType", customerTypes );
-//            return modelAndView;
-//
-//        } else {
-//            ModelAndView modelAndView = new ModelAndView("/error.404");
-//            return modelAndView;
-//        }
-//    }
-//
-//    @PostMapping("/delete-customer")
-//    public String deleteCustomer(@ModelAttribute("customer") Customer customer) {
-//        customerService.remove(customer.getCustomerId());
-//        return "redirect:customers";
-//    }
+    @GetMapping("/delete-employee/{id}")
+    public ModelAndView showDeleteForm(@PathVariable int id) {
+        Optional<Employee> employee = employeeService.findById(id);
+        Iterable<Division> divisions = divisionService.findAll();
+        Iterable<EducationDegree> educationDegrees = educationDegreeService.findAll();
+        Iterable<Position> positions = positionService.findAll();
+        if (employee.isPresent()) {
+            ModelAndView modelAndView = new ModelAndView("/employee/delete");
+            modelAndView.addObject("employee", employee.get());
+            modelAndView.addObject("divisions", divisions);
+            modelAndView.addObject("educationDegrees", educationDegrees);
+            modelAndView.addObject("positions", positions);
+            return modelAndView;
+        } else {
+            ModelAndView modelAndView = new ModelAndView("/error.404");
+            return modelAndView;
+        }
+    }
+
+    //
+    @PostMapping("/delete-employee")
+    public String deleteEmployee(@ModelAttribute("employee") Employee employee) {
+        employeeService.remove(employee.getEmployeeId());
+        return "redirect:employees";
+    }
 
 }
