@@ -15,67 +15,91 @@
     </style>
 </head>
 <body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
-<h1>Edit customer</h1>
+<h1>Edit employee</h1>
 <p>
-    <a class="btn btn-primary" href="/customers" role="button">Back to home</a>
+    <a class="btn btn-primary" href="/employees" role="button">Back to home</a>
 </p>
 <!--Message-->
 <th:block th:if="${message}">
     <p style="font-size: large; color: darkblue" th:text="${message}"></p>
 </th:block>
 
-<form th:action="@{/edit-customer}" th:object="${customer}" method="post">
-    <input th:type="hidden" name="id" th:field="*{customerId}">
+<form th:action="@{/edit-employee}" th:object="${employee}" method="post">
+    <input th:type="hidden" name="id" th:field="*{employeeId}">
     <table style="font-weight: bold; font-size: large">
 
         <tr>
-            <td>Customer Name:</td>
-            <td><input type="text" th:field="*{customerName}"/></td>
+            <td>Employee Name:</td>
+            <td><input type="text" th:field="*{employeeName}"/></td>
 <!--            <td class="error-color" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>-->
         </tr>
         <tr>
             <td>Birth day:</td>
-            <td><input type="date" th:field="*{customerBirthday}"/></td>
+            <td><input type="date" th:field="*{employeeBirthday}"/></td>
         </tr>
-        <tr>
-            <td>Gender:</td>
-            <td>
-                <select th:field="*{customerGender}">
-                    <option th:value="'Male'" th:text="Male"></option>
-                    <option th:value="'Female'" th:text="Female"></option>
-                </select>
-            </td>
-        </tr>
+<!--        <tr>-->
+<!--            <td>Gender:</td>-->
+<!--            <td>-->
+<!--                <select th:field="*{customerGender}">-->
+<!--                    <option th:value="'Male'" th:text="Male"></option>-->
+<!--                    <option th:value="'Female'" th:text="Female"></option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
         <tr>
             <td>Identification:</td>
-            <td><input type="text" th:field="*{customerIdCard}"/></td>
+            <td><input type="text" th:field="*{idCard}"/></td>
         </tr>
         <tr>
             <td>Phone:</td>
-            <td><input type="text" th:field="*{customerPhone}"/></td>
+            <td><input type="text" th:field="*{phone}"/></td>
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" th:field="*{customerEmail}"/></td>
+            <td><input type="text" th:field="*{email}"/></td>
         </tr>
         <tr>
             <td>Address:</td>
-            <td><input type="text" th:field="*{customerAddress}"/></td>
+            <td><input type="text" th:field="*{address}"/></td>
+        </tr>
+
+        <tr>
+            <td>Salary:</td>
+            <td><input type="text" th:field="*{salary}"/></td>
+            <!--            <td class="error-color" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></td>-->
         </tr>
         <tr>
-            <td>Province:</td>
+            <td>Education degree:</td>
             <td>
-                <select name="customerType">
-                    <option th:each="p : ${customerType}"
-                            th:value="${p.customerTypeId}"
-                            th:text="${p.customerTypeName}"
-                            th:selected="(${customer.customerType}) and (${p.customerTypeId} == *{customerType.customerTypeId})"></option>
+                <select th:field="*{educationDegree}">
+                    <option th:each="p : ${educationDegrees}" th:value="${p.educationDegreeId}"
+                            th:text="${p.educationName}"></option>
                 </select>
             </td>
         </tr>
+
+        <tr>
+            <td>Position:</td>
+            <td>
+                <select th:field="*{position}">
+                    <option th:each="p : ${positions}" th:value="${p.positionId}"
+                            th:text="${p.positionName}"></option>
+                </select>
+            </td>
+        </tr> <tr>
+        <td>Division:</td>
+        <td>
+            <select th:field="*{division}">
+                <option th:each="p : ${divisions}" th:value="${p.divisionId}"
+                        th:text="${p.divisionName}"></option>
+            </select>
+        </td>
+    </tr>
+
         <tr>
             <td></td>
-            <td><input type="submit" value="Update customer"></td>
+            <td><input type="submit" value="Edit employee"
+            th:onclick="'javascript:actionEdit()'"></td>
         </tr>
     </table>
 </form>

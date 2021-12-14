@@ -11,6 +11,7 @@
         // $(document).ready(function () {
         //     $("")
         // })
+        //delete function
         function showDelete(employeeId) {
             $.ajax({
                 type:"GET",
@@ -38,10 +39,42 @@
                 }
             })
         }
+        //edit function
+        function showEdit(employeeId) {
+            $.ajax({
+                type:"GET",
+                url: "edit-employee/" + employeeId,
+                dataType:"HTML",
+                success: function(data){
+                    $(".modal-body").html(data);
+                    $("#staticBackdrop").modal("show")
+                }
+            })
+        }
+
+        function actionEdit() {
+            $.ajax({
+                type: "POST",
+                url: "edit-employee/",
+                dataType: "HTML",
+                success:function (data) {
+                    let message ="Edit successfully!!!"
+                    setTimeout(function () {
+                        $("#staticBackdrop").modal("hide");
+                    }, 2000);
+                    $("#customers").html(data);
+                    $(".modal-body").html(message);
+                }
+            })
+        }
 
     </script>
 </head>
-<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px" >
+<th:block th:if="${message}">
+    <p style="font-size: large; color: darkblue" th:text="${message}"></p>
+</th:block>
 <div>
     <a class="btn btn-primary" href="/index" role="button">Home</a>
     <a class="btn btn-primary" href="/create-employee" role="button">Create new employee</a>
@@ -121,7 +154,10 @@
             <!--            <td th:text="${customer.customerType.customerTypeName}"></td>-->
 <!--            <td th:if="${customer.customerType}" th:text="${customer.customerType.customerTypeName}"></td>-->
 <!--            <td th:unless="${customer.customerType}"></td>-->
-            <td><a th:href="@{/edit-employee/__${employee.employeeId}__ }">Edit</a></td>
+<!--            <td><a th:href="@{/edit-employee/__${employee.employeeId}__ }">Edit</a></td>-->
+            <td><button id="clickEdit"  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        th:onclick="'javascript:showEdit(\''+${employee.employeeId}+'\');'">Edit</button></td>
+
             <td><button id="clickDelete"  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                         th:onclick="'javascript:showDelete(\''+${employee.employeeId}+'\');'">
 
@@ -142,12 +178,15 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="staticBackdropLabel">
-                    <h4>Do you want to delete this customer?</h4>
+<!--                    <h4>Do you want to delete this customer?</h4>-->
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" >
 <!--                ...-->
+<!--                <th:block th:if="${message}">-->
+<!--                    <p style="font-size: large; color: darkblue" th:text="${message}"></p>-->
+<!--                </th:block>-->
             </div>
             <div class="modal-footer">
 <!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->

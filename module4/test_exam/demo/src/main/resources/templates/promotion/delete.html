@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Showtime</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <head th:replace="/layout :: head">
+
+    </head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<h1>Do you want to delete this promotion?</h1>
+<p>
+    <a class="btn btn-primary" href="/promotion" role="button">No, and back to home</a>
+</p>
+<!--Message-->
+<th:block th:if="${message}">
+    <p style="font-size: large; color: darkblue" th:text="${message}"></p>
+</th:block>
+<form th:action="@{/delete-promotion}" th:object="${promotion}" method="post">
+
+    <table style="font-weight: bold; font-size: large" readonly="">
+        <tr>
+            <td>Showtime Id:</td>
+            <td><input th:type="text" name="id" th:field="*{id}" readonly></td>
+        </tr>
+
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" th:field="*{title}" readonly/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Delete promotion"
+                       th:onclick="'javascript:actionDelete()'">
+            </td>
+        </tr>
+    </table>
+</form>
+<footer th:replace="/layout :: footer"></footer>
+<script rel="script" src="js/bootstrap.min.js"></script>
+</body>
+</html>

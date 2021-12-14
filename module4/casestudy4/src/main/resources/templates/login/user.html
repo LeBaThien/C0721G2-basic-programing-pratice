@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Spring Security Example</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
 </head>
 <body>
 <h2>Spring Security Example</h2>
@@ -14,7 +15,8 @@
 </div>
 <br/>
 <div sec:authorize="isAuthenticated()">
-    <a th:href="@{/}">Home</a> | <a th:href="@{/logout}">Logout</a>
+    <a th:href="@{/}" role="button">Home</a> | <a th:href="@{/logout}"  role="button">Logout</a>
 </div>
+<script rel="script" src="js/bootstrap.min.js"></script>
 </body>
 </html>

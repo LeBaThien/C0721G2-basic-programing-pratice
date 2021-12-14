@@ -127,12 +127,22 @@ public class CustomerController {
     }
 
     @PostMapping("/edit-customer")
-    public ModelAndView updateCustomer(@ModelAttribute("customer") Customer customer) {
-        customerService.save(customer);
-        ModelAndView modelAndView = new ModelAndView("/customer/edit");
-        modelAndView.addObject("customer", customer);
-        modelAndView.addObject("message", "Customer updated successfully");
-        return modelAndView;
+    public String updateCustomer(@Valid @ModelAttribute("customer") Customer customer,
+                                       BindingResult bindingResult, Model model ) {
+        new Customer().validate(customer, bindingResult);
+        if(bindingResult.hasFieldErrors()){
+//            Thêm cái này thì nếu load lại trang sẽ kèm dữ liệu, loại khách hàng, nên sẽ ko mất
+            Iterable<CustomerType> customerTypes = customerTypeService.findAll();
+            model.addAttribute("customerType", customerTypes );
+           return "customer/edit";
+        }else {
+            customerService.save(customer);
+//            ModelAndView modelAndView = new ModelAndView("/customer/edit");
+            model.addAttribute("customer", customer);
+            model.addAttribute("message", "Customer updated successfully");
+            return "customer/edit";
+        }
+
     }
 
     @GetMapping("/delete-customer/{id}")

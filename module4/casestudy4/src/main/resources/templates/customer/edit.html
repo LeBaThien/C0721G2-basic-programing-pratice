@@ -31,11 +31,13 @@
         <tr>
             <td>Customer Name:</td>
             <td><input type="text" th:field="*{customerName}"/></td>
-<!--            <td class="error-color" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>-->
+            <td class="error-color" th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></td>
         </tr>
         <tr>
             <td>Birth day:</td>
             <td><input type="date" th:field="*{customerBirthday}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('customerBirthday')}"
+                th:errors="*{customerBirthday}"></td>
         </tr>
         <tr>
             <td>Gender:</td>
@@ -49,18 +51,23 @@
         <tr>
             <td>Identification:</td>
             <td><input type="text" th:field="*{customerIdCard}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('customerIdCard')}" th:errors="*{customerIdCard}"></td>
         </tr>
         <tr>
             <td>Phone:</td>
             <td><input type="text" th:field="*{customerPhone}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('customerPhone')}" th:errors="*{customerPhone}"></td>
         </tr>
         <tr>
             <td>Email:</td>
             <td><input type="text" th:field="*{customerEmail}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('customerEmail')}" th:errors="*{customerEmail}"></td>
+
         </tr>
         <tr>
             <td>Address:</td>
             <td><input type="text" th:field="*{customerAddress}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('customerAddress')}" th:errors="*{customerAddress}"></td>
         </tr>
         <tr>
             <td>Province:</td>

@@ -131,5 +131,8 @@ public class Customer implements Validator {
         if(!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")){
             errors.rejectValue("customerEmail", "customerEmail.matches");
         }
+        if(!phone.matches("^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$")){
+            errors.rejectValue("customerPhone", "customerPhone.matches");
+        }
     }
 }

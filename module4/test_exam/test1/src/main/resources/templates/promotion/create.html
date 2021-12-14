@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <head th:replace="/layout :: head">
+    </head>
+    <style>
+        .error-color{
+            color: red;
+        }
+    </style>
+</head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<h1>Create showtime</h1>
+<p>
+    <a class="btn btn-primary" href="/showtime" role="button">Back to home</a>
+</p>
+<!--Message-->
+<th:block th:if="${message}">
+    <p style="font-size: large; color: darkblue" th:text="${message}"></p>
+</th:block>
+
+
+<!--form create-->
+<form th:action="@{/create-showtime}" th:object="${showtime}" method="post">
+    <table style="font-weight: bold; font-size: large">
+
+        <tr>
+            <td>Showtime Code:</td>
+            <td><input type="text" th:field="*{showtimeCode}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('showtimeCode')}" th:errors="*{showtimeCode}"></td>
+            <td>
+                <th:block th:if="${message1}">
+                    <p style="font-size: large; color: darkblue" th:text="${message1}"></p>
+                </th:block>
+            </td>
+        </tr>
+        <tr>
+            <td>date:</td>
+            <td><input type="date" th:field="*{date}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('date')}"
+                th:errors="*{date}"></td>
+
+        </tr>
+<!--        <tr>-->
+<!--            <td>Film name:</td>-->
+<!--            <td>-->
+<!--                <select th:field="*{film}">-->
+<!--                    <option th:value="'Male'" th:text="Male"></option>-->
+<!--                    <option th:value="'Female'" th:text="Female"></option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
+        <tr>
+            <td>Number of ticket:</td>
+            <td><input type="text" th:field="*{numberOfTicket}"/></td>
+            <td class="error-color" th:if="${#fields.hasErrors('numberOfTicket')}" th:errors="*{numberOfTicket}"></td>
+
+        </tr>
+
+        <tr>
+            <td>Film name:</td>
+            <td>
+                <select th:field="*{film}">
+                    <option th:each="p : ${film}" th:value="${p.getFilmId()}"
+                            th:text="${p.getFilmName()}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create showtime"></td>
+        </tr>
+    </table>
+</form>
+<footer th:replace="/layout :: footer"></footer>
+<script rel="script" src="js/bootstrap.min.js"></script>
+</body>
+</html>

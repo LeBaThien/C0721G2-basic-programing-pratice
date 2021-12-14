@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+            color: black;
+        }
+
+        /*    sidebar*/
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <head th:replace="/layout :: head">
+    </head>
+    <script>
+        function showDelete(id) {
+            $.ajax({
+                type: "GET",
+                url: "delete-promotion/" + id,
+                dataType: "HTML",
+                success: function (data) {
+                    $(".modal-body").html(data);
+                    $("#staticBackdrop").modal("show")
+                }
+            })
+        }
+
+        function actionDelete() {
+            $.ajax({
+                type: "POST",
+                url: "delete-promotion/",
+                dataType: "HTML",
+                success: function (data) {
+                    let message = "Delete successfully!!!"
+                    setTimeout(function () {
+                        $("#staticBackdrop").modal("hide");
+                    }, 2000);
+                    $("#customers").html(data);
+                    $(".modal-body").html(message);
+                }
+            })
+        }
+
+
+    </script>
+</head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<!--navbar-->
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/index">Home</a>
+    <a href="/create-promotion">Create new promotion</a>
+    <a href="/promotion">List promotion</a>
+
+</div>
+
+<div>
+
+</div>
+<div>
+    <button id="main" class="openbtn" onclick="openNav()">☰ Menu Sidebar</button>
+    <a class="btn btn-primary" href="/index" role="button">Home</a>
+    <a class="btn btn-primary" href="/create-promotion" role="button">Create promotion</a>
+    <a class="btn btn-primary" href="/promotion" role="button">List promotion</a>
+    <button class="btn btn-dark" onclick="myFunction()">Toggle dark mode</button>
+
+</div>
+
+
+<!--body-->
+<br>
+<br>
+<h4>Promotion Manager</h4>
+<table class="row" style="margin-top: 10px; font-size: 20px">
+
+    <tr>
+
+        <td>
+            <form style="margin-left: 50%; margin-top: 0px;" action="/search-by-discount" method="get">
+                <!--                <label for="idSearch">Search by phone</label>-->
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Input discount to search "
+                                   id="idSearch" name="discount">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Search">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <form style="margin-left: 50%; margin-top: 0px;" action="/search-by-date-start" method="get">
+                <!--                <label for="idSearch">Search by phone</label>-->
+                <table>
+                    <tr>
+                        <td>
+                            <input type="date" placeholder="Input date start to search "
+                                   id="idSearch2" name="date-start">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Search date start">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form style="margin-left: 50%; margin-top: 0px;" action="/search-by-date-end" method="get">
+                <!--                <label for="idSearch">Search by phone</label>-->
+                <table>
+                    <tr>
+                        <td>
+                            <input type="date" placeholder="Input end date to search "
+                                   id="idSearch1" name="date-end">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Search date end">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+
+
+<br>
+
+
+<table border="1" id="customers">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Date start</th>
+        <th>Date End</th>
+        <th>Discount</th>
+        <th>Details</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="s : ${promotion}">
+        <tr>
+            <td th:text="${s.id}"></td>
+            <td th:text="${s.title}"></td>
+            <td th:text="${s.dateStart}"></td>
+            <td th:text="${s.dateEnd}"></td>
+            <td th:text="${s.discount}"></td>
+            <td th:text="${s.details}"></td>
+            <td><a th:href="@{/edit-promotion/__${s.id}__ }">Edit</a></td>
+            <td>
+                <button id="clickDelete" type="button" class="btn btn-light" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        th:onclick="'javascript:showDelete(\''+${s.id}+'\');'">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </th:block>
+</table>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    <!--                    <h4>Do you want to delete this customer?</h4>-->
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+<script rel="script" src="js/bootstrap.min.js"></script>
+
+<script>
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    //sidebar
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+</body>
+</html>

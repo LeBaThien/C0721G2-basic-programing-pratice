@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <!--    <style>-->
+    <!--        html{-->
+    <!--            background-image: url("http://jmd.im/wp-content/uploads/2017/06/blackiii_thumbnail.jpg");-->
+    <!--        }-->
+    <!--    </style>-->
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+            color: black;
+        }
+
+        /*    sidebar*/
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <head th:replace="/layout :: head">
+    </head>
+    <script>
+        // function showDelete(id) {
+        //     $.ajax({
+        //         type:"GET",
+        //         url: "delete-showtime/" + id,
+        //         dataType:"HTML",
+        //         success: function(data){
+        //             $(".modal-body").html(data);
+        //             $("#staticBackdrop").modal("show")
+        //         }
+        //     })
+        // }
+        //
+        // function actionDelete() {
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "delete-showtime/",
+        //         dataType: "HTML",
+        //         success: function (data) {
+        //             let message ="Delete successfully!!!"
+        //             setTimeout(function () {
+        //                 $("#staticBackdrop").modal("hide");
+        //             }, 2000);
+        //             $("#customers").html(data);
+        //             $(".modal-body").html(message);
+        //         }
+        //     })
+        // }
+
+
+
+    </script>
+</head>
+<body style="margin-top: 50px; margin-left: 10px; margin-right: 10px">
+<!--navbar-->
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="/index">Home</a>
+        <a href="/create-customer">Create new promotion</a>
+        <a href="/customers">List promotion</a>
+<!--        <a href="/show-customer-type">Show customer type</a>-->
+    </div>
+
+    <div>
+
+    </div>
+    <div>
+        <button id="main" class="openbtn" onclick="openNav()">☰ Menu Sidebar</button>
+        <a class="btn btn-primary" href="/index" role="button">Home</a>
+        <a class="btn btn-primary" href="/create-showtime" role="button">Create promotion</a>
+        <a class="btn btn-primary" href="/showtime" role="button">List promotion</a>
+        <a class="btn btn-primary" href="/show-film" role="button">Show promotion list</a>
+        <button class="btn btn-dark" onclick="myFunction()">Toggle dark mode</button>
+
+    </div>
+
+
+<!--body-->
+    <br>
+    <br>
+    <h4>Promotion Manager</h4>
+    <table class="row" style="margin-top: 10px; font-size: 20px">
+
+        <tr>
+<!--            <td class="row-cols-3 btn">-->
+<!--                &lt;!&ndash; Customers Card &ndash;&gt;-->
+<!--                <div class="col-xxl-4 col-xl-12">-->
+
+<!--                    <div class="card info-card customers-card">-->
+
+<!--                        <div class="filter">-->
+<!--                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+<!--                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+<!--                                <li class="dropdown-header text-start">-->
+<!--                                    <h6>Filter</h6>-->
+<!--                                </li>-->
+
+<!--                                <li><a class="dropdown-item" href="#">Today</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Month</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Year</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Total <span>| Customer</span></h5>-->
+
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                                    <i class="bi bi-people"></i>-->
+<!--                                </div>-->
+<!--                                <div class="ps-3">-->
+<!--&lt;!&ndash;                                    <h6 th:text="${totalCustomer}"></h6>&ndash;&gt;-->
+<!--                                    <span class="text-danger small pt-1 fw-bold">12%</span> <span-->
+<!--                                        class="text-muted small pt-2 ps-1">decrease</span>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>&lt;!&ndash; End Customers Card &ndash;&gt;-->
+<!--            </td>-->
+<!--            <td class="row-cols-3 btn">-->
+<!--                &lt;!&ndash; Revenue Card &ndash;&gt;-->
+<!--                <div class="col-xxl-4 col-xl-12">-->
+<!--                    <div class="card info-card revenue-card">-->
+
+<!--                        <div class="filter">-->
+<!--                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+<!--                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+<!--                                <li class="dropdown-header text-start">-->
+<!--                                    <h6>Filter</h6>-->
+<!--                                </li>-->
+
+<!--                                <li><a class="dropdown-item" href="#">Today</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Month</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Year</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+<!--                        <div class="card-body ">-->
+<!--                            <h5 class="card-title">Revenue <span>| This Month</span></h5>-->
+
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                                    <i class="bi bi-currency-dollar"></i>-->
+<!--                                </div>-->
+<!--                                <div class="ps-3">-->
+<!--                                    <h6>$3,264</h6>-->
+<!--                                    <span class="text-success small pt-1 fw-bold">8%</span> <span-->
+<!--                                        class="text-muted small pt-2 ps-1">increase</span>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>&lt;!&ndash; End Revenue Card &ndash;&gt;-->
+<!--            </td>-->
+<!--            <td class="row-cols-3 btn">-->
+<!--                &lt;!&ndash; Sales Card &ndash;&gt;-->
+<!--                <div class="col-xxl-4 col-xl-12">-->
+<!--                    <div class="card info-card sales-card">-->
+
+<!--                        <div class="filter">-->
+<!--                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+<!--                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+<!--                                <li class="dropdown-header text-start">-->
+<!--                                    <h6>Filter</h6>-->
+<!--                                </li>-->
+
+<!--                                <li><a class="dropdown-item" href="#">Today</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Month</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Year</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Sales <span>| Today</span></h5>-->
+
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                                    <i class="bi bi-cart"></i>-->
+<!--                                </div>-->
+<!--                                <div class="ps-3">-->
+<!--                                    <h6>145</h6>-->
+<!--                                    <span class="text-success small pt-1 fw-bold">12%</span> <span-->
+<!--                                        class="text-muted small pt-2 ps-1">increase</span>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>&lt;!&ndash; End Sales Card &ndash;&gt;-->
+<!--            </td>-->
+
+<!--            <td class="row-cols-3 zoom btn">-->
+<!--                &lt;!&ndash; Customers Card &ndash;&gt;-->
+<!--                <div class="col-xxl-4 col-xl-12">-->
+
+<!--                    <div class="card info-card customers-card">-->
+
+<!--                        <div class="filter">-->
+<!--                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>-->
+<!--                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">-->
+<!--                                <li class="dropdown-header text-start">-->
+<!--                                    <h6>Filter</h6>-->
+<!--                                </li>-->
+
+<!--                                <li><a class="dropdown-item" href="#">Today</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Month</a></li>-->
+<!--                                <li><a class="dropdown-item" href="#">This Year</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+<!--                        <div class="card-body">-->
+<!--                            <h5 class="card-title">Filter <span>| Customer</span></h5>-->
+
+<!--                            <div class="d-flex align-items-center">-->
+<!--                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">-->
+<!--                                    <i class="bi bi-people"></i>-->
+<!--                                </div>-->
+<!--                                <div class="ps-3">-->
+<!--                                    <form>-->
+<!--                                        &lt;!&ndash;                                <span class="text-danger small pt-1 fw-bold">20%</span> <span class="text-muted small pt-2 ps-1">decrease</span>&ndash;&gt;-->
+<!--                                        <h6><label>By Customer Type</label></h6>-->
+<!--&lt;!&ndash;                                        <select onchange="this.form.submit()" th:name="customerTypeId"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                th:value="${customerTypeId}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <option value="" disabled selected>Choose customer type</option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <th:block th:each="e : ${customerType}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <option th:value="${e.customerTypeId}"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        th:text="${e.customerTypeName}"></option>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </th:block>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        </select>&ndash;&gt;-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>&lt;!&ndash; End Customers Card &ndash;&gt;-->
+<!--            </td>-->
+            <td>
+                <form style="margin-left: 50%; margin-top: 0px;" action="/search-by-film-name" method="get">
+                    <!--                <label for="idSearch">Search by phone</label>-->
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="Input film name to search "
+                                       id="idSearch" name="filmName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Search">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+
+    <!--thay doi ngon ngu i18n-->
+    <!--<form action="" method="get">-->
+    <!--    <select name="lang">-->
+    <!--        <option value="vi">VietNamese</option>-->
+    <!--        <option value="en">English</option>-->
+    <!--        <option value="cn">China</option>-->
+    <!--        <option value="ko">Korean</option>-->
+    <!--        <option value="ja">Japan</option>-->
+    <!--    </select>-->
+    <!--    <button type="submit">Change language</button>-->
+    <!--</form>-->
+
+    <br>
+
+
+    <table border="1" id="customers">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Date start</th>
+            <th>Date End</th>
+            <th>Discount</th>
+            <th>Details</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <th:block th:each="s : ${promotion}">
+            <tr>
+                <td th:text="${s.id}"></td>
+                <td th:text="${s.title}"></td>
+                <td th:text="${s.dateStart}"></td>
+                <td th:text="${s.dateEnd}"></td>
+                <td th:text="${s.discount}"></td>
+                <td th:text="${s.details}"></td>
+
+<!--                <td th:if="${s.film}" th:text="${s.film.filmName}"></td>-->
+<!--                <td th:unless="${s.film}"></td>-->
+                <td><a th:href="@{/edit-showtime/__${s.id}__ }">Edit</a></td>
+<!--                <td><a th:href="@{/delete-showtime/__${s.id}__ }">Delete</a></td>-->
+                <td><button id="clickDelete"  type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                            th:onclick="'javascript:showDelete(\''+${s.id}+'\');'">
+                    Delete
+                </button></td>
+            </tr>
+        </th:block>
+    </table>
+    <!--phân trang-->
+    <!--<div>-->
+    <!--    <a th:href="@{'/customers'(page=${customers.number -1})}" th:if="${customers.hasPrevious()}">Previous</a>-->
+    <!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+    <!--    <a th:href="@{'customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}" >Next</a>-->
+    <!--</div>-->
+<!--    <nav aria-label="Page navigation example">-->
+<!--        <ul class="pagination">-->
+<!--            <li class="page-item"><a class="page-link" th:href="@{'/customers'(page=${customers.number -1})}"-->
+<!--                                     th:if="${customers.hasPrevious()}">Previous</a></li>-->
+<!--            &lt;!&ndash;        <li class="page-item"><a class="page-link" href="#">1</a></li>&ndash;&gt;-->
+<!--            &lt;!&ndash;        <li class="page-item"><a class="page-link" href="#">2</a></li>&ndash;&gt;-->
+<!--            &lt;!&ndash;        <li class="page-item"><a class="page-link" href="#">3</a></li>&ndash;&gt;-->
+<!--            <li class="page-item"><span class="page-link" th:text="${customers.number + 1}"></span></li>-->
+<!--            <li class="page-item"><a class="page-link">/</a></li>-->
+<!--            <li class="page-item"><span class="page-link" th:text="${customers.totalPages}"></span></li>-->
+<!--            <li class="page-item"><a class="page-link" th:href="@{'customers'(page=${customers.number + 1})}"-->
+<!--                                     th:if="${customers.hasNext()}">Next</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                    <!--                    <h4>Do you want to delete this customer?</h4>-->
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" >
+                <!--                ...-->
+                <!--                <th:block th:if="${message}">-->
+                <!--                    <p style="font-size: large; color: darkblue" th:text="${message}"></p>-->
+                <!--                </th:block>-->
+            </div>
+            <div class="modal-footer">
+                <!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                <!--                <button type="button" class="btn btn-primary">Delete</button>-->
+            </div>
+        </div>
+    </div>
+</div>
+    <footer th:replace="/layout :: footer"></footer>
+    <script rel="script" src="js/bootstrap.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+        //sidebar
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

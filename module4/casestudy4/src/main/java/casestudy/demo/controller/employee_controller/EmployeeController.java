@@ -104,28 +104,38 @@ public class EmployeeController {
     }
 
 
-    //    @GetMapping("/edit-customer/{id}")
-//    public ModelAndView showEditForm(@PathVariable int id) {
-//        Optional<Customer> customer = customerService.findById(id);
-//        Iterable<CustomerType> customerTypes = customerTypeService.findAll();
-//        if (customer.isPresent()) {
-//            ModelAndView modelAndView = new ModelAndView("/customer/edit");
-//            modelAndView.addObject("customer", customer.get());
-//            modelAndView.addObject("customerType", customerTypes );
-//            return modelAndView;
-//        } else {
-//            ModelAndView modelAndView = new ModelAndView("/error.404");
-//            return modelAndView;
-//        }
-//    }
+        @GetMapping("/edit-employee/{id}")
+    public ModelAndView showEditForm(@PathVariable int id) {
+        Optional<Employee> employee = employeeService.findById(id);
+            Iterable<Division> divisions = divisionService.findAll();
+            Iterable<EducationDegree> educationDegrees = educationDegreeService.findAll();
+            Iterable<Position> positions = positionService.findAll();
+        if (employee.isPresent()) {
+            ModelAndView modelAndView = new ModelAndView("/employee/edit");
+            modelAndView.addObject("employee", employee.get());
+            modelAndView.addObject("divisions", divisions);
+            modelAndView.addObject("educationDegrees", educationDegrees);
+            modelAndView.addObject("positions", positions);
+            return modelAndView;
+        } else {
+            ModelAndView modelAndView = new ModelAndView("/error.404");
+            return modelAndView;
+        }
+    }
 //
-//    @PostMapping("/edit-customer")
-//    public ModelAndView updateCustomer(@ModelAttribute("customer") Customer customer) {
-//        customerService.save(customer);
-//        ModelAndView modelAndView = new ModelAndView("/customer/edit");
-//        modelAndView.addObject("customer", customer);
-//        modelAndView.addObject("message", "Customer updated successfully");
-//        return modelAndView;
+    @PostMapping("/edit-employee")
+    public ModelAndView updateEmployee(@ModelAttribute("employee") Employee employee) {
+        employeeService.save(employee);
+        ModelAndView modelAndView = new ModelAndView("redirect:employees");
+        modelAndView.addObject("employee", employee);
+//        modelAndView.addObject("message", "Edited successfully !!!");
+        return modelAndView;
+    }
+
+//    @PostMapping("/edit-employee")
+//    public String updateEmployee(@ModelAttribute("employee") Employee employee) {
+//        employeeService.save(employee);
+//        return "redirect:employees";
 //    }
 //
     @GetMapping("/delete-employee/{id}")
