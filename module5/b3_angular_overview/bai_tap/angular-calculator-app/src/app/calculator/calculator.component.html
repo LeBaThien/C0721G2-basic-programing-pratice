@@ -1,0 +1,33 @@
+<p>calculator works!</p>
+<h2>Hello world</h2>
+<div>
+Input number 1: <input type="number" class="form-input" [value]="first"
+  (change)="onFirstChange($event.target.value)"/>
+Input number 2: <input type="number" class="form-input" [value]="second"
+(change)="onSecondChange($event.target.value)"/>
+<br>
+<br>
+<select
+class="form-input"
+[value]="operator"
+(change)="onSelectChange($event.target.value)">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+<!--<button value="+">Addition(+)</button>-->
+<!--<br>-->
+<!--<button value="-">Subtraction(-)</button>-->
+<!--<br>-->
+<!--<button value="*">Multiplication(*)</button>-->
+<!--<br>-->
+<!--<button value="/">Division(/)</button>-->
+</div>
+<br>
+<div>
+  <button (click)="calculate()">
+    Submit
+  </button>
+</div>
+<h2> Result is: {{output}} </h2>
