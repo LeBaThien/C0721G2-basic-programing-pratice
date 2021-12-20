@@ -1,0 +1,55 @@
+<p>customer works ac!</p>
+<div>
+  <form *ngIf="isShowForm">
+    <table style="font-weight: bold; font-size: large">
+
+      <tr>
+        <td>Customer Name:</td>
+        <td><input type="text"/></td>
+      </tr>
+      <tr>
+        <td>Birth day:</td>
+        <td><input type="date" /></td>
+
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>Identification:</td>
+      </tr>
+      <tr>
+        <td>Phone:</td>
+        <td><input type="text" /></td>
+
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="text"/></td>
+
+
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>Customer Type:</td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Create customer"></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<button (click)="isShowForm = true" *ngIf="!isShowForm">
+  Create customer
+</button>
+
