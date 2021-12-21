@@ -1,0 +1,48 @@
+<p style="font-weight: bold; font-size: xx-large; margin-left: 50%; margin-top: 50px">login-app works!</p>
+
+<form class="margin"
+  [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      formControlName="email"
+      name="email"
+      type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div *ngIf="!email.valid && (email.dirty || email.touched)" class="error">
+        <div [hidden]="!email.errors.required">
+            <p>Email is required</p>
+        </div>
+      <div [hidden]="!email.errors.pattern">
+            <p>Email is not right format</p>
+        </div>
+    </div>
+
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+      formControlName="password"
+      name="password"
+      type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div *ngIf="!password.valid && (password.dirty || password.touched)" class="error">
+    <div [hidden]="!password.errors.required">
+      <p>Password is required</p>
+    </div>
+    <div [hidden]="!password.errors.minlength">
+      <p>Email is min length 6 character</p>
+    </div>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button
+    [disabled]="!loginForm.valid"
+    type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,3 +1,5 @@
 export interface Customer {
-  // customerList: [] ;
+  // id: number;
+  // customerName: string;
+  //
 }

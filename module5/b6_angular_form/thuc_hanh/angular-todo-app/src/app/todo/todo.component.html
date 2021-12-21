@@ -3,7 +3,9 @@
 </h2>
 
 <div class="col-md-8 offset-md-2">
-  <input type="text" class="form-control" [formControl]="content" (change)="change()"/>
+  <label>
+    <input type="text" class="form-control" [formControl]="content" (change)="change()"/>
+  </label>
   <ul>
     <li (click)="toggleTodo(i)"
         [class.complete]="todo.complete"

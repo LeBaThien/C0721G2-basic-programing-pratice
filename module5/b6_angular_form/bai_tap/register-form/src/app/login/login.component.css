@@ -1,0 +1,9 @@
+.margin{
+  margin-left: 50%;
+  margin-right: 10%;
+  font-size: xx-large;
+}
+.error{
+  color: red;
+  background-color: yellow;
+}
