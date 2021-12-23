@@ -36,6 +36,6 @@ export class LoginComponent implements OnInit {
   //   console.log(registerForm.value);
   // }
   onSubmit() {
-    console.log(this.registerForm.value)
+    console.log(this.registerForm.value);
   }
 }

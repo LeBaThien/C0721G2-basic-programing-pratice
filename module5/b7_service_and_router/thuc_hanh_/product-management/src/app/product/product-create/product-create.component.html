@@ -1,0 +1,33 @@
+<p>product-create works!</p>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Mã sản phẩm</td>
+      <td><label>
+        <input type="number" formControlName="id">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm</td>
+      <td><label>
+        <input type="text" formControlName="name">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><label>
+        <input type="number" formControlName="price">
+      </label></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><label>
+        <input type="text" formControlName="description">
+      </label></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>
