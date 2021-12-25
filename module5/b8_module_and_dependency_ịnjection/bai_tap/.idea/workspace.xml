@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e4f798e-4f87-4eff-a85e-dc4c90cea9b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bai_tap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/category/category-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/category/category.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/model/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/model/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-create/product-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-create/product-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-create/product-create.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-create/product-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-delete/product-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-delete/product-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-delete/product-delete.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-delete/product-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-edit/product-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-edit/product-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-edit/product-edit.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-edit/product-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-list/product-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-list/product-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-list/product-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-list/product-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/product/product.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/service/category.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/service/category.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/service/product.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/service/product.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/nav-bar/nav-bar.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/nav-bar/nav-bar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/nav-bar/nav-bar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/nav-bar/nav-bar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/shared-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/app/shared/shared.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/advance-product-management/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/image-slider/image-slider.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slide/img-slide.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slide/img-slide.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slide/img-slide.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slide/img-slide.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slider/img-slider.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slider/img-slider.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slider/img-slider.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/app/img-slider/img-slider.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image-slide/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="22j4XjNivqMVvOzAhZ9GwkUUpqe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../b9_ket_noi_backend/thuc_hanh" />
+    <property name="ts.external.directory.path" value="D:\codegym_final\module5\b8_module_and_dependency_ịnjection\bai_tap\advance-product-management\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codegym_final\module5\b8_module_and_dependency_ịnjection\bai_tap\advance-product-management\src\app\shared" />
+      <recent name="D:\codegym_final\module5\b8_module_and_dependency_ịnjection\bai_tap\advance-product-management\src\app\product" />
+      <recent name="D:\codegym_final\module5\b8_module_and_dependency_ịnjection\bai_tap\advance-product-management\src\app\category" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e4f798e-4f87-4eff-a85e-dc4c90cea9b6" name="Default Changelist" comment="" />
+      <created>1640337703938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640337703938</updated>
+      <workItem from="1640337705296" duration="10139000" />
+      <workItem from="1640395810418" duration="73000" />
+      <workItem from="1640396025359" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1220" y="279" key="FileChooserDialogImpl" timestamp="1640396046303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1220" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1640396046303" />
+  </component>
+</project>
