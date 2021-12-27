@@ -1,28 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {Component, NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CustomerComponent } from './customer/customer.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { ServiceComponent } from './service/service.component';
-import { ContractComponent } from './contract/contract.component';
-import { ContractDetailComponent } from './contract-detail/contract-detail.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import {CommonModule} from '@angular/common';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+// import {SharedModule} from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
-    EmployeeComponent,
-    ServiceComponent,
-    ContractComponent,
-    ContractDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    ReactiveFormsModule
+    // SharedModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

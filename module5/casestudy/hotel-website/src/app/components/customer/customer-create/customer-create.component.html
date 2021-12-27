@@ -1,0 +1,36 @@
+<p>customer-create works!</p>
+<form>
+  <table [formGroup]="customerForm" (ngSubmit)="submit()">
+
+    <tr>
+      <td>Customer Name</td>
+      <input type="text" name="name" formControlName="name">
+    </tr>
+    <tr>
+      <td>Birth day</td>
+      <input type="date" formControlName="birthDay">
+    </tr>
+    <tr>
+      <td>Id card</td>
+      <input type="text" formControlName="idCard">
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <input type="text" formControlName="phone">
+    </tr>
+    <tr>
+      <td>Email</td>
+      <input type="text" formControlName="email">
+    </tr>
+    <tr>
+      <td>Address</td>
+      <input type="text" formControlName="address">
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
+    </tr>
+  </table>
+</form>

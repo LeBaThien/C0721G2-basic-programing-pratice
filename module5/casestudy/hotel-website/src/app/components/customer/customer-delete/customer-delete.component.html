@@ -1,0 +1,14 @@
+<p>customer-delete works!</p>
+
+<form [formGroup]="customerForm" (ngSubmit)="deleteCustomer(id)">
+  <table>
+    <tr>
+      <td>Customer Name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Xoá</button></td>
+    </tr>
+  </table>
+</form>
