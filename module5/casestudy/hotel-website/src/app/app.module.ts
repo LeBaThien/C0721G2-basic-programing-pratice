@@ -1,29 +1,31 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {Component, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import {CommonModule} from '@angular/common';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-// import {SharedModule} from './shared/shared.module';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {EmployeeDeleteComponent} from './components/employee/employee-delete/employee-delete.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    EmployeeDeleteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule,
     Ng2SearchPipeModule,
     FormsModule,
-    ReactiveFormsModule
-    // SharedModule,
-
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    MatDialogModule,
 
   ],
   providers: [],

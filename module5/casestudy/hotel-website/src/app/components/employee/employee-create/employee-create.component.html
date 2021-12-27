@@ -3,55 +3,79 @@
   <div class="form-group ">
     <p>Name</p>
     <input formControlName="name" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input name</p>
+    <p *ngIf="formCreateEmployee.controls.name.errors?.required
+    && formCreateEmployee.controls.name.touched" class="text-danger">Please input name</p>
   </div>
   <div class="form-group">
     <p>Position</p>
     <input formControlName="position" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input position</p>
+    <p *ngIf="formCreateEmployee.controls.position.errors?.required
+    && formCreateEmployee.controls.position.touched" class="text-danger">Please input position</p>
   </div>
   <div class="form-group">
     <p>Education</p>
-    <input formControlName="education" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input education</p>
+    <input formControlName="education" class="form-control" type="text" >
+    <p *ngIf="formCreateEmployee.controls.education.errors?.required
+    && formCreateEmployee.controls.education.touched" class="text-danger">Please input education</p>
   </div>
   <div class="form-group">
     <p>Division</p>
     <input formControlName="division" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input division</p>
+    <p *ngIf="formCreateEmployee.controls.division.errors?.required
+    && formCreateEmployee.controls.division.touched" class="text-danger">Please input division</p>
   </div>
   <div class="form-group">
     <p>Birth Day</p>
-    <input formControlName="birthDay" class="form-control" type="date">
-    <p *ngIf="false" class="text-danger">Please dat of birth name</p>
+<!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="maxDate" [min]="minDate" matInput [matDatepicker]="myDatepicker" formControlName="birthDay" class="form-control" placeholder="choose birthday">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formCreateEmployee.controls.birthDay.errors?.required
+    && formCreateEmployee.controls.birthDay.touched" class="text-danger">Please dat of birth name</p>
+
   </div>
   <div class="form-group">
     <p>Id card</p>
     <input formControlName="idCard" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input ID card</p>
+    <p *ngIf="formCreateEmployee.controls.idCard.errors?.required
+    && formCreateEmployee.controls.idCard.touched" class="text-danger">Please input ID card</p>
+    <p *ngIf="formCreateEmployee.controls.idCard.errors?.pattern
+    && formCreateEmployee.controls.idCard.touched" class="text-danger">ID card is not right format</p>
   </div>
   <div class="form-group">
     <p>Salary</p>
     <input formControlName="salary" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input salary</p>
+    <p *ngIf="formCreateEmployee.controls.salary.errors?.required
+    && formCreateEmployee.controls.salary.touched" class="text-danger">Please input salary</p>
+    <p *ngIf="formCreateEmployee.controls.salary.errors?.pattern
+    && formCreateEmployee.controls.salary.touched" class="text-danger">Salary is not right format</p>
   </div>
   <div class="form-group">
     <p>Email</p>
     <input formControlName="email" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input email</p>
+    <p *ngIf="formCreateEmployee.controls.email.errors?.required
+    && formCreateEmployee.controls.email.touched" class="text-danger">Please input email</p>
+    <p *ngIf="formCreateEmployee.controls.email.errors?.email
+    && formCreateEmployee.controls.email.touched" class="text-danger">Email is not right format</p>
   </div>
   <div class="form-group">
     <p>Phone</p>
     <input formControlName="phone" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input phone</p>
+    <p *ngIf="formCreateEmployee.controls.phone.errors?.required
+    && formCreateEmployee.controls.phone.touched" class="text-danger">Please input phone</p>
+    <p *ngIf="formCreateEmployee.controls.phone.errors?.pattern
+    && formCreateEmployee.controls.phone.touched" class="text-danger">Phone is not right format</p>
   </div>
   <div class="form-group">
     <p>Address</p>
     <input formControlName="address" class="form-control" type="text">
-    <p *ngIf="false" class="text-danger">Please input address</p>
+    <p *ngIf="formCreateEmployee.controls.address.errors?.required
+    && formCreateEmployee.controls.address.touched" class="text-danger">Please input address</p>
   </div>
 </form>
 
 <div class="col-24 d-flex justify-content-center mt-4">
-  <button (click)="addNewEmployee()"  class="btn btn-success">Add employee</button>
+  <button [disabled]="formCreateEmployee.invalid" (click)="addNewEmployee()"  class="btn btn-success">Add employee</button>
 </div>

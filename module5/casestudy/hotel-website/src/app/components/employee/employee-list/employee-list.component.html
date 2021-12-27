@@ -34,15 +34,15 @@
       <td>{{employee.position}}</td>
       <td>{{employee.education}}</td>
       <td>{{employee.division}}</td>
-      <td>{{employee.birthDay}}</td>
+      <td>{{employee.birthDay | date: "MM-dd-yyyy"  }}</td>
       <td>{{employee.idCard}}</td>
       <td>{{employee.salary}}</td>
       <td>{{employee.email}}</td>
       <td>{{employee.phone}}</td>
       <td>{{employee.address}}</td>
       <td>
-        <button class="btn btn-sm btn-warning me-3">Edit</button>
-        <button class="btn btn-sm btn-danger">Delete</button>
+        <button class="btn btn-sm btn-warning me-3" [routerLink]="['/employee-edit/' + employee.id]">Edit</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(employee.id)">Delete</button>
       </td>
 <!--      <td><a [routerLink]="['/employee/edit',employee.id]">Edit</a></td>-->
 <!--      <td><a [routerLink]="['/employee/delete',employee.id]">Delete</a></td>-->

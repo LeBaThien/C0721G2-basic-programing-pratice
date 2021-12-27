@@ -1,0 +1,9 @@
+<h2>Confirm for removing</h2>
+<hr>
+<p class="my-3">Are you sure to delete <span class="text-danger fw-bold">{{employeeOfFullName}}</span> ?<br> Note: the action cannot be undone !!!</p>
+<div class="row">
+   <span>
+     <button  [mat-dialog-close] class="btn btn-warning me-3">Exit</button>
+      <button (click)="deleteEmployee()" class="btn btn-danger">Delete</button>
+  </span>
+</div>

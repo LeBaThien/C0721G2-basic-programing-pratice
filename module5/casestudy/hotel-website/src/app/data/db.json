@@ -12,30 +12,30 @@
   ],
   "employees": [
     {
-      "id": 1,
-      "name": "Nguyễn Công trứ",
+      "name": "Nguyễn Hoàng",
       "position": "Giám sát địch vụ",
       "education": "Đại học",
       "division": "Dịch vụ",
-      "birthDay": "1997/02/04",
-      "idCard": 23432423,
+      "birthDay": "1991-07-18T17:00:00.000Z",
+      "idCard": "122343567",
       "salary": 2400,
-      "email": "tru@gmail.com",
-      "phone": 62836841,
-      "address": "Đà Nẵng"
+      "email": "hoang@gmail.com",
+      "phone": "0906836841",
+      "address": "Đà Nẵng",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Nguyễn Hồng tâm",
+      "name": "Nguyễn Hồng Tâm",
       "position": "Sale manager",
       "education": "Đại học",
       "division": "Sale - Marketing",
-      "birthDay": "1997/02/04",
-      "idCard": 41232423,
+      "birthDay": "2021-12-13T17:00:00.000Z",
+      "idCard": "421232423",
       "salary": 3400,
       "email": "tam@gmail.com",
-      "phone": 62836841,
-      "address": "Đà Nẵng"
+      "phone": "0906283684",
+      "address": "Đà Nẵng",
+      "id": 2
     },
     {
       "name": "thien",
@@ -62,6 +62,32 @@
       "phone": "0901232412",
       "address": "Quang Nam",
       "id": 4
+    },
+    {
+      "name": "Võ Ngọc Tuấn",
+      "position": "Hr manager",
+      "education": "Đại học",
+      "division": "HR",
+      "birthDay": "2021-12-01",
+      "idCard": "124143412",
+      "salary": "14122",
+      "email": "tuanvongoc6852@gmail.com",
+      "phone": "0902312412",
+      "address": "quang nam",
+      "id": 6
+    },
+    {
+      "name": "Võ Ngọc Tuấn",
+      "position": "Hr manager",
+      "education": "Đại học",
+      "division": "HR",
+      "birthDay": "2021-12-01",
+      "idCard": "124143412",
+      "salary": "14122",
+      "email": "tuanvongoc6852@gmail.com",
+      "phone": "0902312412",
+      "address": "quang nam",
+      "id": 7
     }
   ]
 }

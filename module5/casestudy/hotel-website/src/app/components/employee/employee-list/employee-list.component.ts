@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EmployeesService} from '../../../service/employees.service';
+import {MatDialog} from '@angular/material/dialog';
+import {EmployeeDeleteComponent} from '../employee-delete/employee-delete.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -7,10 +9,13 @@ import {EmployeesService} from '../../../service/employees.service';
   styleUrls: ['./employee-list.component.css'],
 })
 export class EmployeeListComponent implements OnInit {
-  public employees;
+  employees;
+  p = 0;
+  term = '';
 
   constructor(
-    public employeeService: EmployeesService
+    public employeeService: EmployeesService,
+    public dialog: MatDialog
   ) {
   }
 
@@ -22,4 +27,19 @@ export class EmployeeListComponent implements OnInit {
     });
   }
 
+  openDialog(employeeId): void {
+    this.employeeService.getEmployeeById(employeeId).subscribe(dataEmployee => {
+      const dialogRef = this.dialog.open(EmployeeDeleteComponent, {
+        width: '500px',
+        data: {data1: dataEmployee},
+        disableClose: true
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+        //gọi lại hàm, để khi xoa thì đổ lại dữ liệu, dữ liệu sẽ đc cập nhật lại
+        this.ngOnInit();
+      });
+    });
+  }
 }
