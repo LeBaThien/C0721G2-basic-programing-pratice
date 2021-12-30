@@ -2,12 +2,53 @@
   "customers": [
     {
       "id": 2,
-      "name": "Phan Đăn Lưu",
+      "name": "Phan Đăng Lưu",
       "birthDay": "1992-05-03",
       "idCard": 53431293,
-      "Phone": 5450372,
+      "phone": 5450372,
       "email": "phandang@gmail.com",
-      "address": "Quảng Nam"
+      "address": "Quảng Nam",
+      "customerType": {
+        "id": 1,
+        "customerTypeName": "member"
+      }
+    },
+    {
+      "name": "Le Ba Thien",
+      "birthDay": "2021-12-08T17:00:00.000Z",
+      "idCard": "123456789",
+      "phone": "0907668312",
+      "email": "lethien6852@gmail.com",
+      "address": "quang nam assssssssss",
+      "customerType": "[object Object],[object Object],[object Object]",
+      "id": 3
+    },
+    {
+      "name": "Thái Phiên",
+      "birthDay": "2021-12-01T17:00:00.000Z",
+      "idCard": "123156453",
+      "phone": "0909738344",
+      "email": "thaiphien68@gmail.com",
+      "address": "Đà Nẵng",
+      "customerType": {
+        "id": 2,
+        "customerTypeName": "Silver"
+      },
+      "id": 4
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "customerTypeName": "member"
+    },
+    {
+      "id": 2,
+      "customerTypeName": "Silver"
+    },
+    {
+      "id": 3,
+      "customerTypeName": "Gold"
     }
   ],
   "employees": [

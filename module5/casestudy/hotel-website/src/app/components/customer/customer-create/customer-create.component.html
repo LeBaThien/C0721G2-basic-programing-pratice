@@ -1,36 +1,83 @@
-<p>customer-create works!</p>
-<form>
-  <table [formGroup]="customerForm" (ngSubmit)="submit()">
+<h3 class="text-center"> Add new customer</h3>
+<form [formGroup]="formCreateCustomer" class="w-75 mx-auto mt-3">
+  <div class="form-group ">
+    <p>Customer Name</p>
+    <input formControlName="name" class="form-control" type="text">
+    <p *ngIf="formCreateCustomer.controls.name.errors?.required
+    && formCreateCustomer.controls.name.touched" class="text-danger">Please input customer name</p>
+  </div>
 
-    <tr>
-      <td>Customer Name</td>
-      <input type="text" name="name" formControlName="name">
-    </tr>
-    <tr>
-      <td>Birth day</td>
-      <input type="date" formControlName="birthDay">
-    </tr>
-    <tr>
-      <td>Id card</td>
-      <input type="text" formControlName="idCard">
-    </tr>
-    <tr>
-      <td>Phone</td>
-      <input type="text" formControlName="phone">
-    </tr>
-    <tr>
-      <td>Email</td>
-      <input type="text" formControlName="email">
-    </tr>
-    <tr>
-      <td>Address</td>
-      <input type="text" formControlName="address">
-    </tr>
-    <tr>
-      <td></td>
-      <td>
-        <button>Tạo mới</button>
-      </td>
-    </tr>
-  </table>
+
+  <div class="form-group">
+    <p>Birth Day</p>
+    <!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="maxDate" [min]="minDate" matInput [matDatepicker]="myDatepicker" formControlName="birthDay"
+             class="form-control" placeholder="choose birthday">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formCreateCustomer.controls.birthDay.errors?.required
+    && formCreateCustomer.controls.birthDay.touched" class="text-danger">Please date of birth name</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Id card</p>
+    <input formControlName="idCard" class="form-control" type="text">
+    <p *ngIf="formCreateCustomer.controls.idCard.errors?.required
+    && formCreateCustomer.controls.idCard.touched" class="text-danger">Please input ID card</p>
+    <p *ngIf="formCreateCustomer.controls.idCard.errors?.pattern
+    && formCreateCustomer.controls.idCard.touched" class="text-danger">ID card is not right format</p>
+  </div>
+
+  <div class="form-group">
+    <p>Phone</p>
+    <input formControlName="phone" class="form-control" type="text">
+    <p *ngIf="formCreateCustomer.controls.phone.errors?.required
+    && formCreateCustomer.controls.phone.touched" class="text-danger">Please input phone</p>
+    <p *ngIf="formCreateCustomer.controls.phone.errors?.pattern
+    && formCreateCustomer.controls.phone.touched" class="text-danger">Phone is not right format</p>
+  </div>
+
+  <div class="form-group">
+    <p>Email</p>
+    <input formControlName="email" class="form-control" type="text">
+    <p *ngIf="formCreateCustomer.controls.email.errors?.required
+    && formCreateCustomer.controls.email.touched" class="text-danger">Please input email</p>
+    <p *ngIf="formCreateCustomer.controls.email.errors?.email
+    && formCreateCustomer.controls.email.touched" class="text-danger">Email is not right format</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Address</p>
+    <input formControlName="address" class="form-control" type="text">
+    <p *ngIf="formCreateCustomer.controls.address.errors?.required
+    && formCreateCustomer.controls.address.touched" class="text-danger">Please input address</p>
+  </div>
+
+  <p>Select customer type</p>
+<!--  <select class="form-control" formControlName="customerType" >-->
+<!--    <option [value]="customerTypes" class="opt1" >{{customerTypes.customerTypeName}}</option>-->
+<!--    <option [value]="customerTypes" *ngFor="let item of customerTypes  ">{{item.customerTypeName}}</option>-->
+<!--  </select>-->
+  <select  class="form-control" formControlName="customerType" >
+
+    <option *ngFor="let option of customerTypes " [ngValue]="option" >{{option.customerTypeName}}</option>
+  </select>
+
+
+<!--  <select [(ngModel)]="customerTypes">-->
+<!--    <option value="member" >Member </option >-->
+<!--    <option value="silver">Silver</option>-->
+<!--    <option value="silver">Gold</option>-->
+<!--  </select>-->
+
 </form>
+
+<div class="col-24 d-flex justify-content-center mt-4">
+  <button [disabled]="formCreateCustomer.invalid" (click)="addNewCustomer()" class="btn btn-success">Add employee
+  </button>
+</div>
+

@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./employee-create.component.css']
 })
 export class EmployeeCreateComponent implements OnInit {
-  formCreateEmployee: FormGroup
+  formCreateEmployee: FormGroup;
   maxDate = new Date();
   minDate = new Date(1990, 0, 1);
 

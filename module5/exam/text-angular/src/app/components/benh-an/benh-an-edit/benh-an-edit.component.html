@@ -1,0 +1,82 @@
+<h3 class="text-center"> Chỉnh sửa bệnh án </h3>
+<form [formGroup]="formEditBenhAn" class="w-75 mx-auto mt-3">
+  <div class="form-group ">
+    <p>Mã bệnh án</p>
+    <input formControlName="maBenhAn" class="form-control" type="text" readonly>
+    <p *ngIf="formEditBenhAn.controls.maBenhAn.errors?.required
+    && formEditBenhAn.controls.maBenhAn.touched" class="text-danger">Vui lòng điền "Mã bệnh án"</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Mã bệnh nhân</p>
+    <input formControlName="maBenhNhan" class="form-control" type="text" readonly>
+    <p *ngIf="formEditBenhAn.controls.maBenhNhan.errors?.required
+    && formEditBenhAn.controls.maBenhNhan.touched" class="text-danger">Vui lòng điền "Mã bệnh nhân"</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Tên bệnh nhân</p>
+    <input formControlName="tenBenhNhan" class="form-control" type="text">
+    <p *ngIf="formEditBenhAn.controls.tenBenhNhan.errors?.required
+    && formEditBenhAn.controls.tenBenhNhan.touched" class="text-danger">Vui lòng điền "Tên Bệnh Nhân"</p>
+    <p *ngIf="formEditBenhAn.controls.tenBenhNhan.errors?.pattern
+    && formEditBenhAn.controls.tenBenhNhan.touched" class="text-danger">Tên bệnh nhân không chứa ký tự số</p>
+  </div>
+
+
+  <div class="form-group">
+    <p>Ngày Nhập Viện</p>
+    <!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="maxDate" [min]="minDate" matInput [matDatepicker]="myDatepicker" formControlName="ngayNhapVien"
+             class="form-control" placeholder="chọn ngày nhập viện">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formEditBenhAn.controls.ngayNhapVien.errors?.required
+    && formEditBenhAn.controls.ngayNhapVien.touched" class="text-danger">Vui lòng chọn ngày nhập viện</p>
+  </div>
+
+  <div class="form-group">
+    <p>Ngày xuất Viện</p>
+    <!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="" [min]="minDate" matInput [matDatepicker]="myDatepicker1" formControlName="ngayRaVien"
+             class="form-control" placeholder="chọn ngày ra viện">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker1></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formEditBenhAn.controls.ngayRaVien.errors?.required
+    && formEditBenhAn.controls.ngayRaVien.touched" class="text-danger">Vui lòng chọn ngày xuất viện</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Lý do nhập viện</p>
+    <input formControlName="lyDo" class="form-control" type="text">
+    <p *ngIf="formEditBenhAn.controls.lyDo.errors?.required
+    && formEditBenhAn.controls.lyDo.touched" class="text-danger">Vui lòng điền lý do nhập viện</p>
+  </div>
+
+
+
+  <div class="form-group ">
+    <p>Phương pháp điều trị</p>
+    <input formControlName="phuongPhap" class="form-control" type="text">
+    <p *ngIf="formEditBenhAn.controls.phuongPhap.errors?.required
+    && formEditBenhAn.controls.phuongPhap.touched" class="text-danger">Vui lòng điền phương pháp điều trị</p>
+  </div>
+  <div class="form-group ">
+    <p>Bác sĩ điều trị</p>
+    <input formControlName="bacSi" class="form-control" type="text">
+    <p *ngIf="formEditBenhAn.controls.bacSi.errors?.required
+    && formEditBenhAn.controls.bacSi.touched" class="text-danger">Vui lòng điền bác sĩ điều trị</p>
+  </div>
+
+</form>
+
+<div class="col-24 d-flex justify-content-center mt-4">
+  <button [disabled]="formEditBenhAn.invalid" (click)="editBenhAn()" class="btn btn-success">Chỉnh sửa
+  </button>
+</div>
+
+

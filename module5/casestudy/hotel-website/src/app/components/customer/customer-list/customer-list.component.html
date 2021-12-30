@@ -1,13 +1,15 @@
 <div class="row justify-content-right ">
   <h2>Danh sách khách hàng</h2>
   <div class="d-flex">
-    <input class="form-control me-3 " type="text" style="width: 400px" placeholder="Tìm kiếm theo tên khách hàng">
+
+    <input  [(ngModel)]="term"
+      class="form-control me-3 " type="text" style="width: 400px" placeholder="Tìm kiếm theo tên khách hàng">
     <button class="btn btn-outline-success">Search</button>
   </div>
 </div>
 
 <div class="row mt-3">
-  <button class="btn btn-success" style="width: 100px">Thêm mới</button>
+  <button [routerLink]="['/customer-create']" class="btn btn-success" style="width: 100px">Thêm mới</button>
   <table class="table mt-3 table-striped" style="font-size: 12px;">
     <thead>
     <tr>
@@ -18,48 +20,25 @@
       <th>Phone</th>
       <th>Email</th>
       <th>Address</th>
+      <th>Customer type</th>
       <th colspan="2">Action</th>
     </tr>
-    <tr *ngFor="let customer of customers; index as i">
-      <td>{{i + 1}}</td>
+    <tr *ngFor="let customer of customers |  paginate: { itemsPerPage: 2, currentPage: p }">
+      <td>{{customer.id}}</td>
       <td>{{customer.name}}</td>
-      <td>{{customer.birthDay}}</td>
+      <td>{{customer.birthDay | date: "MM-dd-yyyy"  }}</td>
       <td>{{customer.idCard}}</td>
       <td>{{customer.phone}}</td>
       <td>{{customer.email}}</td>
       <td>{{customer.address}}</td>
+      <td>{{customer.customerType.customerTypeName }}</td>
       <td >
-        <button class="btn btn-sm btn-warning me-3">Edit</button>
-        <button class="btn btn-sm btn-danger">Delete</button>
+        <button class="btn btn-sm btn-warning me-3" [routerLink]="['/customer-edit/' + customer.id]">Edit</button>
+<!--        <button class="btn btn-sm btn-danger" (click)="openDialog(customer.id)">Delete</button>-->
       </td>
-<!--      <td><a [routerLink]="['/customer-edit',customer.id]">Edit</a></td>-->
-<!--      <td><a [routerLink]="['/customer-delete',customer.id]">Delete</a></td>-->
     </tr>
     </thead>
   </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
-<!--<a routerLink="/customer/create">Tạo mới khách hàng</a>-->
-<!--<table>-->
-<!--  <tr>-->
-<!--    <td>Id</td>-->
-<!--    <td>Customer Name</td>-->
-<!--    <td>Birth day</td>-->
-<!--    <td>Id card</td>-->
-<!--    <td>Phone</td>-->
-<!--    <td>Email</td>-->
-<!--    <td>Address</td>-->
-<!--    <td colspan="2"></td>-->
-<!--  </tr>-->
-<!--  <tr *ngFor="let customer of customers; index as i">-->
-<!--    <td>{{i + 1}}</td>-->
-<!--    <td>{{customer.name}}</td>-->
-<!--    <td>{{customer.birthDay}}</td>-->
-<!--    <td>{{customer.idCard}}</td>-->
-<!--    <td>{{customer.phone}}</td>-->
-<!--    <td>{{customer.email}}</td>-->
-<!--    <td>{{customer.address}}</td>-->
-<!--    <td><a [routerLink]="['/customer/edit',customer.id]">Edit</a></td>-->
-<!--    <td><a [routerLink]="['/customer/delete',customer.id]">Delete</a></td>-->
-<!--  </tr>-->
-<!--</table>-->

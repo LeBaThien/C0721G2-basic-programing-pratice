@@ -9,13 +9,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {EmployeeDeleteComponent} from './components/employee/employee-delete/employee-delete.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CustomerTypeListComponent } from './components/customer-type/customer-type-list/customer-type-list.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeDeleteComponent,
   ],
   imports: [
     BrowserModule,

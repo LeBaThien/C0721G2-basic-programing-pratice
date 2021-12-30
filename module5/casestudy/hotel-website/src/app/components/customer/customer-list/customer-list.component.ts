@@ -9,21 +9,39 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customer: Customer | undefined;
-  customers: Customer[] = [];
+  p = 0;
+  term = '';
+  customers: Customer[];
+
   private subscription: Subscription | undefined;
+
   constructor(private customerService: CustomerService) {
   }
 
   ngOnInit() {
-      this.subscription = this.customerService.getAllCustomer().subscribe(
-        data =>{
-          this.customers = data;
-        }, error => {
-          console.log('lay danh sach khach hang that bai');
-        }
-      );
+    this.subscription = this.customerService.getAllCustomer().subscribe(data => {
+        this.customers = data;
+      }, error => {
+        console.log(this.customers);
+      }
+    );
   }
+
+  // openDialog(customerId): void {
+  //   this.customerService.findById(customerId).subscribe(dataCustomer => {
+  //     const dialogRef = this.dialog.open(CustomerDeleteComponent, {
+  //       width: '500px',
+  //       data: {data1: dataCustomer},
+  //       disableClose: true
+  //     });
+  //
+  //     dialogRef.afterClosed().subscribe(result => {
+  //       console.log('The dialog was closed');
+  //       //gọi lại hàm, để khi xoa thì đổ lại dữ liệu, dữ liệu sẽ đc cập nhật lại
+  //       this.ngOnInit();
+  //     });
+  //   });
+  // }
 
   // getAll() {
   //   this.customerService.getAll().subscribe(customers => {

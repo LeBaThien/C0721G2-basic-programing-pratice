@@ -1,0 +1,103 @@
+<h3 class="text-center"> Thêm mới bệnh án </h3>
+<form [formGroup]="formCreateBenhAn" class="w-75 mx-auto mt-3">
+  <div class="form-group ">
+    <p>Mã bệnh án</p>
+    <input formControlName="maBenhAn" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.maBenhAn.errors?.required
+    && formCreateBenhAn.controls.maBenhAn.touched" class="text-danger">Vui lòng điền "Mã bệnh án"</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Mã bệnh nhân</p>
+    <input formControlName="maBenhNhan" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.maBenhNhan.errors?.required
+    && formCreateBenhAn.controls.maBenhNhan.touched" class="text-danger">Vui lòng điền "Mã bệnh nhân"</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Tên bệnh nhân</p>
+    <input formControlName="tenBenhNhan" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.tenBenhNhan.errors?.required
+    && formCreateBenhAn.controls.tenBenhNhan.touched" class="text-danger">Vui lòng điền "Tên Bệnh Nhân"</p>
+    <p *ngIf="formCreateBenhAn.controls.tenBenhNhan.errors?.pattern
+    && formCreateBenhAn.controls.tenBenhNhan.touched" class="text-danger">Tên bệnh nhân không chứa ký tự số</p>
+
+  </div>
+
+
+  <div class="form-group">
+    <p>Ngày Nhập Viện</p>
+    <!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="maxDate" [min]="minDate" matInput [matDatepicker]="myDatepicker" formControlName="ngayNhapVien"
+             class="form-control" placeholder="chọn ngày nhập viện">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formCreateBenhAn.controls.ngayNhapVien.errors?.required
+    && formCreateBenhAn.controls.ngayNhapVien.touched" class="text-danger">Vui lòng chọn ngày nhập viện</p>
+  </div>
+
+  <div class="form-group">
+    <p>Ngày xuất Viện</p>
+    <!--    <input  type="date">-->
+    <mat-form-field>
+      <input [max]="" [min]="minDate" matInput [matDatepicker]="myDatepicker1" formControlName="ngayRaVien"
+             class="form-control" placeholder="chọn ngày ra viện">
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker1"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker1></mat-datepicker>
+    </mat-form-field>
+    <p *ngIf="formCreateBenhAn.controls.ngayRaVien.errors?.required
+    && formCreateBenhAn.controls.ngayRaVien.touched" class="text-danger">Vui lòng chọn ngày xuất viện</p>
+  </div>
+
+  <div class="form-group ">
+    <p>Lý do nhập viện</p>
+    <input formControlName="lyDo" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.lyDo.errors?.required
+    && formCreateBenhAn.controls.lyDo.touched" class="text-danger">Vui lòng điền lý do nhập viện</p>
+  </div>
+
+
+
+  <div class="form-group ">
+    <p>Phương pháp điều trị</p>
+    <input formControlName="phuongPhap" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.phuongPhap.errors?.required
+    && formCreateBenhAn.controls.phuongPhap.touched" class="text-danger">Vui lòng điền phương pháp điều trị</p>
+  </div>
+  <div class="form-group ">
+    <p>Bác sĩ điều trị</p>
+    <input formControlName="bacSi" class="form-control" type="text">
+    <p *ngIf="formCreateBenhAn.controls.bacSi.errors?.required
+    && formCreateBenhAn.controls.bacSi.touched" class="text-danger">Vui lòng điền bác sĩ điều trị</p>
+  </div>
+
+
+  <!--  <div class="form-group ">-->
+  <!--    <p>Status</p>-->
+  <!--    &lt;!&ndash;    <input formControlName="status" class="form-control" type="text">&ndash;&gt;-->
+  <!--    <select class="form-select" formControlName="status" >-->
+  <!--      <option value="" disabled selected>Select text</option>-->
+  <!--      <option value="Đã phản hồi">Đã phản hổi</option>-->
+  <!--      <option value="Chưa phản hồi">Chưa phản hổi</option>-->
+  <!--    </select>-->
+  <!--    <p *ngIf="formCreateBenhAn.controls.status.errors?.required-->
+  <!--    && formCreateBenhAn.controls.status.touched" class="text-danger">Please input status</p>-->
+  <!--  </div>-->
+
+  <!--  <div class="form-group">-->
+  <!--    <p>Select question type</p>-->
+  <!--    <select class="form-control" formControlName="questionType">-->
+  <!--      <option *ngFor="let option of questionTypes " [ngValue]="option" selected>{{option.name}}</option>-->
+  <!--    </select>-->
+  <!--  </div>-->
+
+</form>
+
+<div class="col-24 d-flex justify-content-center mt-4">
+  <button [disabled]="formCreateBenhAn.invalid" (click)="addNewBenhAn()" class="btn btn-success">Thêm mới
+  </button>
+</div>
+
+

@@ -17,14 +17,22 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {EmployeeEditComponent} from './components/employee/employee-edit/employee-edit.component';
+import {CustomerEditComponent} from './components/customer/customer-edit/customer-edit.component';
+import {CustomerCreateComponent} from './components/customer/customer-create/customer-create.component';
+import {CustomerTypeListComponent} from './components/customer-type/customer-type-list/customer-type-list.component';
+import {EmployeeDeleteComponent} from "./components/employee/employee-delete/employee-delete.component";
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'customer/customer-list', component: CustomerListComponent},
   {path: 'employee-list', component: EmployeeListComponent},
   {path: 'employee-create', component: EmployeeCreateComponent},
   {path: 'employee-edit/:id', component: EmployeeEditComponent},
+  {path: 'employee-delete/:id', component: EmployeeDeleteComponent},
+  {path: 'customer-list', component: CustomerListComponent},
+  {path: 'customer-create', component: CustomerCreateComponent},
+  // {path: 'customer-create', component: CustomerTypeListComponent},
+  {path: 'customer-edit/:id', component: CustomerEditComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
 
@@ -34,11 +42,13 @@ const routes: Routes = [
     HomeComponent,
     PageNotFoundComponent,
     EmployeeListComponent,
-    CustomerListComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
-    // FormsModule,
-
+    EmployeeDeleteComponent,
+    CustomerListComponent,
+    CustomerCreateComponent,
+    CustomerEditComponent,
+    CustomerTypeListComponent,
   ],
   imports: [
     CommonModule,
