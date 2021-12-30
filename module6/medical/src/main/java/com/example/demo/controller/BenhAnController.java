@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+//dùng này để ko bị lõi api
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/benhans")
 public class BenhAnController {
     @Autowired
