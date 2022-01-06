@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39fbd45d-58d3-49bd-8b1e-c164e8542c98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../case_study_jsp_servlet/furama_web/.idea/furama_web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../case_study_jsp_servlet/furama_web/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/.idea/front_end.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/model/customer-type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/model/customer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/service/customer.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/app/service/customertype.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/1_Plan/front_end/bat-dong-san/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/controller/CustomerTypeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/repository/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/service/customer/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/service/customer_type/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/java/com/example/demo/service/customer_type/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/batdongsan/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/prototype/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/prototype/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/prototype/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/prototype/.idea/prototype.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module6/prototype/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_jsp_servlet/furama_web/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_jsp_servlet/furama_web/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b11_webservice_and_restful/bai_tap/blog_app/src/main/java/com/blog/demo/model/ECommerce.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b11_webservice_and_restful/bai_tap/blog_app/src/main/java/com/blog/demo/model/ECommerce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/repository/customer_repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/casestudy4/src/main/java/casestudy/demo/repository/customer_repository/ICustomerRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="23GGBDLwOBOP9tdQZMuFrapUed9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39fbd45d-58d3-49bd-8b1e-c164e8542c98" name="Default Changelist" comment="" />
+      <created>1641352872538</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641352872538</updated>
+      <workItem from="1641352873714" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

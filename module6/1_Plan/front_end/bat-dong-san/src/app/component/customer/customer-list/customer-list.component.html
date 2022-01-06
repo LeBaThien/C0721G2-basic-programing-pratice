@@ -1,0 +1,66 @@
+
+<div class="row justify-content-right ">
+  <h2>Danh sách khách hàng</h2>
+  <div class="d-flex">
+<!--    <form (ngSubmit)="findCustomerByPhone(customerPhone.value)">-->
+      <input
+        [(ngModel)]="customerPhone"
+        (ngModelChange)="findCustomerByPhone()"
+        name="customerPhone"
+              class="form-control me-3 " type="text" style="width: 400px" placeholder="Tìm kiếm theo số điện thoại">
+      <button class="btn btn-outline-success" >Search</button>
+<!--    </form>-->
+<!--    [(ngModel)]="customers"-->
+<!--    </form>-->
+  </div>
+</div>
+
+<div class="">
+  <form>
+    <input (ngModelChange)="searchAnything(key.value)"
+           #key="ngModel" ngModel=""
+           type="search" name="key" id="searchName" class="formControl"
+           placeholder="Search anything">
+  </form>
+</div>
+
+<div class="row mt-3">
+  <button [routerLink]="['/customer-create']" class="btn btn-success" style="width: 100px">Thêm mới</button>
+  <table class="table mt-3 table-striped" style="font-size: 12px;">
+    <thead>
+    <tr>
+<!--      <th (click) = "sort('id')">Id&nbsp;<i class="fa fa-sort"></i></th>-->
+      <th>Id</th>
+      <th>Mã khách hàng</th>
+      <th>Tên khách hàng</th>
+      <th>Ngày sinh</th>
+      <th>Địa chỉ</th>
+      <th>Số điện thoại</th>
+      <th>Email</th>
+      <th>Loại khách hàng</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let item of customers">
+      <td>{{item.id}}</td>
+      <td>{{item.customerCode}}</td>
+      <td>{{item.customerName}}</td>
+      <td>{{item.dateOfBirth | date: "dd-MM-yyyy"}}</td>
+      <td>{{item.customerAddress }}</td>
+      <td>{{item.customerPhone }}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.customerType.customerTypeName }}</td>
+      <td >
+        <button class="btn btn-sm btn-warning me-3" [routerLink]="['/customer-edit/' + item.id]">Edit</button>
+        <button class="btn btn-sm btn-danger" (click)="openDialog(item.id)">Delete</button>
+      </td>
+    </tr>
+    </thead>
+  </table>
+<!--  <pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>
+
+

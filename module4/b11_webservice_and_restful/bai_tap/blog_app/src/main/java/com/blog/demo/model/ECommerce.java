@@ -11,7 +11,7 @@ public class ECommerce {
     private String nameECommerce;
 
     @OneToMany(mappedBy ="eCommerce")
-    List<Blog> blogs;
+    private List<Blog> blogs;
 
     public ECommerce(){}
 
