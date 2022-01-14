@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.Option;
 import javax.websocket.server.PathParam;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CyclicBarrier;
@@ -91,8 +92,22 @@ public class CustomerController {
         if(!customerOptional.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        customerService.remove(id);
+        customerService.updateById(id);
         return new ResponseEntity<>(customerOptional.get(), HttpStatus.NO_CONTENT);
     }
+
+//    public static void main(String[] args) {
+//        int count = 0;
+//        int [] arr1 = {};
+//        int [] arr = {1,2,2,1,3,2,4,4,2};
+//        for(int i = 1; i < arr.length; i++){
+//            if (arr[0] == arr[i]) {
+//                count++;
+//            }
+//
+////            System.out.println(count);
+//        }
+//        System.out.println();
+//    }
 
 }

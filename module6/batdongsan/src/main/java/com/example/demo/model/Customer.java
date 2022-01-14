@@ -9,8 +9,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
-@SQLDelete(sql = "UPDATE customer SET deleted = true WHERE id=?")
-@Where(clause = "deleted=false")
+//@SQLDelete(sql = "UPDATE customer SET deleted = true WHERE id=?")
+//@Where(clause = "deleted=false")
 //Custom quyền xem cho tất cả record(đã xóa) cho admin
 //<strong>@FilterDef(name = "deletedProductFilter", parameters = @ParamDef(name = "isDeleted", type = "boolean"))
 //@Filter(name = "deletedProductFilter", condition = "deleted = :isDeleted")</strong>
