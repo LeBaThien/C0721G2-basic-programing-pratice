@@ -2,35 +2,117 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f769cc24-4a74-45c9-aea1-ed1615953179" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/security/SecurityInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/message/validation-message.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/login/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/login/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/login/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module1/B18_lap_trinh_huong_doi_tuong2/Baitap/game don gian/objects" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/security/SecurityInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b14_spring_security/thuc_hanh/su_dung_spring_security/src/main/java/com/example/demo/security/SecurityInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../b5_thao_tac_voi_csdl_va_orm/thuc_hanh/customer_management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/application/controller/PhoneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/application/controller/PhoneController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/custom-validation-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/custom-validation-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/java/casestudy/demo/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../casestudy4/src/main/resources/templates/page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/.idea/front_end.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-create/customer-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-delete/customer-delete.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-edit/customer-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer-list/customer-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer/customer-list-demo/customer-list-demo.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer/customer-list-demo/customer-list-demo.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer/customer-list-demo/customer-list-demo.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/customer/customer/customer-list-demo/customer-list-demo.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/component/page-not-found/page-not-found.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/model/customer-type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/model/customer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/service/customer.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/app/service/customertype.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/1_Plan/front_end/bat-dong-san/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_DetailDesign_ThienLB/project-module6-thien-Use-Case.drawio (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_DetailDesign_ThienLB/project-module6-thien-class-diagram.drawio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/.idea/[C0721G2]_Prototype_ThienLB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB/Danh sách khách hàng.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/.idea/prototype.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/List.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/adminStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/[C0721G2]_Prototype_ThienLB_abc/adminStyle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/service/customer/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module6/batdongsan/src/main/java/com/example/demo/service/customer/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/customer_list_and_delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/IGeneralService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/controller/BenhAnController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/model/BenhAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/repository/IBenhAnRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/service/BenhAnService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/java/com/example/demo/service/IBenhAnService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/medical/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module6/web-admin.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,6 +322,7 @@
       <workItem from="1638439842544" duration="25000" />
       <workItem from="1638756777530" duration="92000" />
       <workItem from="1638758866540" duration="5322000" />
+      <workItem from="1641875577992" duration="20000" />
     </task>
     <servers />
   </component>

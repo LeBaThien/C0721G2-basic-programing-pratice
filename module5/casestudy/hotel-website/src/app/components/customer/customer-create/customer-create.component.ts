@@ -4,7 +4,7 @@ import {CustomerService} from '../../../service/customer.service';
 import {Router} from '@angular/router';
 import {CustomerType} from '../../../model/customer-type';
 import {CustomerTypeService} from '../../../service/customer-type.service';
-import {Subscription} from "rxjs";
+  import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-customer-create',

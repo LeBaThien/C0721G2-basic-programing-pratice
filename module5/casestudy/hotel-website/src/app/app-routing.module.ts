@@ -20,7 +20,7 @@ import {EmployeeEditComponent} from './components/employee/employee-edit/employe
 import {CustomerEditComponent} from './components/customer/customer-edit/customer-edit.component';
 import {CustomerCreateComponent} from './components/customer/customer-create/customer-create.component';
 import {CustomerTypeListComponent} from './components/customer-type/customer-type-list/customer-type-list.component';
-import {EmployeeDeleteComponent} from "./components/employee/employee-delete/employee-delete.component";
+import {EmployeeDeleteComponent} from './components/employee/employee-delete/employee-delete.component';
 
 
 const routes: Routes = [
